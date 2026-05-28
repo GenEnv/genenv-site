@@ -450,6 +450,7 @@ function renderClusterMap() {
     <svg aria-hidden="true" focusable="false" preserveAspectRatio="none">${edges}</svg>
     ${nodes}
   `;
+  clusterMap.appendChild(heroPanel);
   clusterMap.querySelectorAll(".map-node").forEach((node) => {
     node.addEventListener("mouseenter", () => {
       clusterMap.classList.add("is-near");
@@ -553,6 +554,7 @@ function hideSelection() {
 
 function resetHomeMap(event) {
   if (event?.target?.closest?.(".map-node")) return;
+  if (event?.target?.closest?.(".hero-panel")) return;
   hideSelection();
   clearLegendFilter();
 }
@@ -599,12 +601,21 @@ function positionHeroPanel(node) {
   const size = gridSize();
   const panelWidth = window.innerWidth < 760 ? size * 9 : size * 10;
   const panelHeight = panelWidth;
-  const left = Math.min(Math.max(point.x - panelWidth / 2, size), rect.width - panelWidth - size);
-  const top = Math.min(Math.max(point.y - panelHeight / 2, size), rect.height - panelHeight - size);
+  const margin = size;
+  const canOpenRight = point.x + size + panelWidth <= rect.width - margin;
+  const canOpenDown = point.y + size + panelHeight <= rect.height - margin;
+  const rawLeft = canOpenRight ? point.x + size : point.x - size - panelWidth;
+  const rawTop = canOpenDown ? point.y + size : point.y - size - panelHeight;
+  const left = snapPixel(Math.min(Math.max(rawLeft, margin), rect.width - panelWidth - margin));
+  const top = snapPixel(Math.min(Math.max(rawTop, margin), rect.height - panelHeight - margin));
+  const originX = canOpenRight ? "0" : "100%";
+  const originY = canOpenDown ? "0" : "100%";
   heroPanel.style.left = `${left}px`;
   heroPanel.style.top = `${top}px`;
   heroPanel.style.setProperty("--panel-width", `${panelWidth}px`);
   heroPanel.style.setProperty("--panel-height", `${panelHeight}px`);
+  heroPanel.style.setProperty("--panel-origin-x", originX);
+  heroPanel.style.setProperty("--panel-origin-y", originY);
 }
 
 function nodePoint(node) {
