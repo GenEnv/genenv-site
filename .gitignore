@@ -1,0 +1,37 @@
+.DS_Store
+Thumbs.db
+
+# Local source/archive media should live outside the web repo.
+media-source/
+source-media/
+raw-media/
+originals/
+
+# Large editing exports and temporary files.
+*.psd
+*.ai
+*.indd
+*.blend
+*.3dm
+*.gh
+*.ghx
+*.ppt
+*.pptx
+*.mov
+*.mkv
+*.avi
+
+# Keep web-ready video intentional; remove this exception only when a file is meant to ship.
+!assets/**/*.mp4
+
+# Extracted source images from slide decks; keep optimized web assets instead.
+assets/site-media/*.png
+assets/site-media/*.jpg
+assets/site-media/*.jpeg
+
+# Local server/build artifacts.
+.vercel/
+.netlify/
+dist/
+build/
+node_modules/

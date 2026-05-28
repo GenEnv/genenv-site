@@ -1,0 +1,228 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Generative Environments Lab is a research and design lab for generative media, spatial tools, and environmental imagination."
+    />
+    <title>Generative Environments Lab</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Newsreader:opsz,wght@6..72,400;6..72,500&family=Pixelify+Sans:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="site-shell">
+      <header class="site-header" aria-label="Site header">
+        <a class="brand" href="#top" aria-label="Generative Environments Lab home">
+          <span>Generative</span>
+          <span>Environments</span>
+          <span>Lab</span>
+        </a>
+
+        <nav class="nav-links" aria-label="Primary navigation">
+          <a href="#index">Index</a>
+          <a href="#projects">Projects</a>
+          <a href="#teaching">Teaching</a>
+          <a href="#writing">Writing</a>
+          <a href="#people">People</a>
+          <a href="#about">About</a>
+        </nav>
+      </header>
+
+      <main id="top">
+        <section class="hero" aria-labelledby="hero-title">
+          <div class="hero-mini-header">
+            <div>
+              <p>genenv.ai</p>
+              <h1 id="hero-title">Generative Environments Lab</h1>
+            </div>
+          </div>
+          <div id="clusterMap" class="cluster-map" aria-label="Lab field map"></div>
+          <div class="hero-overlay">
+            <aside class="hero-panel is-empty" aria-label="Selected node">
+              <p class="panel-kicker">Select a node</p>
+              <a id="activeProjectLink" href="#index"><h2 id="activeProjectTitle">Lab field</h2></a>
+              <p id="activeProjectMeta">Projects / teaching / people</p>
+              <div class="panel-image" aria-hidden="true"></div>
+              <p id="activeProjectDescription">The homepage maps research projects, course archives, and people as connected agents.</p>
+            </aside>
+          </div>
+          <div class="cluster-legend" aria-label="Legend">
+            <button type="button" data-filter="research"><i class="legend-research"></i>Research</button>
+            <button type="button" data-filter="tool"><i class="legend-tool"></i>Tools</button>
+            <button type="button" data-filter="teaching"><i class="legend-teaching"></i>Teaching</button>
+            <button type="button" data-filter="writing"><i class="legend-writing"></i>Writing</button>
+            <button type="button" data-filter="people"><i class="legend-people"></i>People</button>
+          </div>
+        </section>
+
+        <section id="index" class="section index-section" aria-labelledby="index-title">
+          <div class="section-heading">
+            <p class="eyebrow">Index</p>
+            <h2 id="index-title">Selected work.</h2>
+            <p>Research, tools, courses, exhibitions, and writing from a lab in formation.</p>
+          </div>
+
+          <div class="filter-bar" role="list" aria-label="Filter project index">
+            <button class="filter-chip is-active" data-filter="all" type="button">All</button>
+            <button class="filter-chip" data-filter="research" type="button">Research</button>
+            <button class="filter-chip" data-filter="tool" type="button">Tools</button>
+            <button class="filter-chip" data-filter="course" type="button">Courses</button>
+            <button class="filter-chip" data-filter="publication" type="button">Publications</button>
+            <button class="filter-chip" data-filter="exhibition" type="button">Exhibitions</button>
+          </div>
+
+          <div id="projectGrid" class="project-grid" aria-live="polite"></div>
+        </section>
+
+        <section id="projects" class="section split-section" aria-labelledby="projects-title">
+          <div>
+            <p class="eyebrow">Projects</p>
+            <h2 id="projects-title">Current work.</h2>
+          </div>
+          <div class="compact-list">
+            <article>
+              <span>2026</span>
+              <strong>Human-AI Co-Design Framework for Performance-Aware Constructed Environments</strong>
+            </article>
+            <article>
+              <span>2026</span>
+              <strong>Decoding Urban Form</strong>
+            </article>
+            <article>
+              <span>2025-2026</span>
+              <strong>GenAI & LLM-Enabled Co-Design</strong>
+            </article>
+            <article>
+              <span>2026</span>
+              <strong>Trees and Materials: Digital Thermal Sandbox for Microclimate Simulation</strong>
+            </article>
+            <article>
+              <span>2025-2027</span>
+              <strong>Democratizing the Design of Vancouver's Public Spaces with AI</strong>
+            </article>
+          </div>
+        </section>
+
+        <section id="teaching" class="section teaching-section" aria-labelledby="teaching-title">
+          <div class="section-heading">
+            <p class="eyebrow">Teaching</p>
+            <h2 id="teaching-title">Course archives.</h2>
+            <p>Courses are treated as public research environments, with selected student work credited inside each archive.</p>
+          </div>
+          <div class="course-list">
+            <article class="course-row">
+              <span>UBC 2025 W2</span>
+              <h3>DES 212: Design Media II</h3>
+              <p>Design media, representation, computation, and critical tool use.</p>
+            </article>
+            <article class="course-row">
+              <span>UBC 2025 W1</span>
+              <h3>ARCH 515: Design Media I (LARC)</h3>
+              <p>Media foundations for landscape architecture.</p>
+            </article>
+            <article class="course-row">
+              <span>UBC 2025 W1</span>
+              <h3>ARCH 540: Studio V: Designing the Design</h3>
+              <p>Studio as a space for designing design systems and methods.</p>
+            </article>
+            <article class="course-row">
+              <span>USC 2022-2024</span>
+              <h3>ARCH 639: Media for Landscape Architecture III: Dynamic Systems</h3>
+              <p>Dynamic systems, computational workflows, and landscape media.</p>
+            </article>
+          </div>
+        </section>
+
+        <section id="writing" class="section writing-section" aria-labelledby="writing-title">
+          <div>
+            <p class="eyebrow">Writing</p>
+            <h2 id="writing-title">Publications.</h2>
+          </div>
+          <div class="writing-list">
+            <a href="#" aria-label="Computational lexicalization">
+              <span>2026</span>
+              <strong>Computational lexicalization: Development and practice of a design agent framework</strong>
+              <em>Architectural Journal, in press</em>
+            </a>
+            <a href="#" aria-label="Generative planting at scale">
+              <span>2024</span>
+              <strong>Reinventing planting design in landscape architecture: A generative AI approach</strong>
+              <em>Journal of Digital Landscape Architecture</em>
+            </a>
+            <a href="#" aria-label="AI education">
+              <span>2024</span>
+              <strong>Integrating generative AI into landscape architecture education</strong>
+              <em>Journal of Digital Landscape Architecture</em>
+            </a>
+            <a href="#" aria-label="RiverGAN">
+              <span>2022</span>
+              <strong>RiverGAN: Fluvial landform generation based on physical simulations and GAN</strong>
+              <em>Journal of Digital Landscape Architecture</em>
+            </a>
+          </div>
+        </section>
+
+        <section id="people" class="section people-section" aria-labelledby="people-title">
+          <div>
+            <p class="eyebrow">People</p>
+            <h2 id="people-title">People.</h2>
+          </div>
+          <div class="people-grid">
+            <article>
+              <div class="portrait-mark"></div>
+              <h3>Xun Liu</h3>
+              <p>Assistant Professor, UBC School of Architecture + Landscape Architecture</p>
+              <a href="https://xlstudio.org/">xlstudio.org</a>
+            </article>
+            <article>
+              <div class="portrait-mark"></div>
+              <h3>Research Assistants</h3>
+              <p>Current work includes Decoding Urban Form and GenAI & LLM-Enabled Co-Design.</p>
+            </article>
+            <article>
+              <div class="portrait-mark"></div>
+              <h3>Students + Collaborators</h3>
+              <p>Graduate supervision, course archives, workshops, and selected student projects.</p>
+            </article>
+          </div>
+        </section>
+
+        <section id="about" class="section about-section" aria-labelledby="about-title">
+          <p class="eyebrow">About</p>
+          <h2 id="about-title">Generative Environments Lab studies spatial AI, design media, and computational methods for constructed environments.</h2>
+          <div class="about-copy">
+            <p>
+              Founded by Xun Liu at UBC SALA, the lab connects architecture, landscape architecture, artificial
+              intelligence, and design computation.
+            </p>
+            <p>
+              The website is an evolving archive of research projects, tools, teaching, exhibitions, publications,
+              and selected student work.
+            </p>
+          </div>
+        </section>
+      </main>
+
+      <footer class="site-footer">
+        <span>Generative Environments Lab</span>
+        <span>genenv.ai</span>
+        <a href="mailto:hello@genenv.ai">hello@genenv.ai</a>
+      </footer>
+    </div>
+
+    <dialog id="projectDialog" class="project-dialog">
+      <button class="dialog-close" type="button" aria-label="Close project">Close</button>
+      <div id="dialogContent"></div>
+    </dialog>
+
+    <script src="content.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
