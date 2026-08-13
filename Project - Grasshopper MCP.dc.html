@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700&amp;family=IBM+Plex+Mono:wght@400;500;600;700&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet">
+<script src="image-slot.js"></script>
+<style>
+  html, body { margin: 0; padding: 0; background: #0b2a61; }
+  a { color: #ffd35c; text-decoration: none; }
+  a:hover { color: #ffe49a; }
+  ::selection { background: rgba(255,211,92,.35); }
+</style>
+</helmet>
+<div style="min-height:100vh;background-color:#0b2a61;background-image:radial-gradient(rgba(234,242,255,.10) 1px, transparent 1px);background-size:26px 26px;color:#eaf2ff;font-family:Inter,sans-serif">
+  <header data-screen-label="Header" style="display:flex;justify-content:space-between;align-items:center;padding:18px 4.5vw;border-bottom:1px solid rgba(234,242,255,.16)">
+    <a href="index.html" style="font-family:Archivo,sans-serif;font-weight:700;font-size:17px;letter-spacing:.02em;color:#f4f8ff">GenEnv Lab</a>
+    <div style="display:flex;align-items:center;gap:22px">
+      <span style="font:600 9.5px/1 'IBM Plex Mono',monospace;letter-spacing:.2em;text-transform:uppercase;color:rgba(234,242,255,.5)">Research</span>
+      <a href="index.html" style="font:600 10px/1 'IBM Plex Mono',monospace;letter-spacing:.16em;text-transform:uppercase;border:1px solid rgba(255,211,92,.55);padding:8px 12px">← Project index</a>
+    </div>
+  </header>
+
+  <section data-screen-label="Hero" style="display:grid;grid-template-columns:minmax(380px,1fr) minmax(420px,560px);gap:5vw;align-items:center;padding:64px 4.5vw 56px;max-width:1560px;margin:0 auto;box-sizing:border-box">
+    <div>
+      <div style="width:46px;height:3px;background:#ffd35c;margin:0 0 20px"></div>
+      <p style="margin:0;font:600 10px/1.7 'IBM Plex Mono',monospace;letter-spacing:.22em;text-transform:uppercase;color:#ffd35c">Tool · LLM + Agents + Parametric · Archive</p>
+      <h1 style="margin:14px 0 0;font-family:Archivo,sans-serif;font-weight:700;font-size:clamp(42px,4.4vw,68px);line-height:.98;text-transform:uppercase;color:#f4f8ff;text-wrap:balance">Grasshopper MCP v2</h1>
+      <p style="margin:18px 0 0;font-family:Archivo,sans-serif;font-weight:600;font-size:20px;color:rgba(234,242,255,.85)">Driving Grasshopper by conversation.</p>
+      <p style="margin:16px 0 0;font:400 15px/1.7 Inter,sans-serif;color:rgba(234,242,255,.68);max-width:480px">This open-source project enables language models to work directly with Rhino and Grasshopper, translating conversational instructions into visible and editable 3D modeling operations. It can inspect definitions, adjust parameters, connect components, troubleshoot workflows, and build new geometry. Powered by the Model Context Protocol (MCP), the system treats AI autonomy as a design variable through five <strong style="color:#f4f8ff;font-weight:600">Scenario modes</strong>: Inspect for read-only analysis, Tune for parameter changes, Coach for guided edits with explanations, Execute for running curated components and plugins, and Author for building definitions from scratch.</p>
+      <div style="display:flex;gap:34px;margin:28px 0 0;flex-wrap:wrap">
+        <div><p style="margin:0;font:500 9.5px/1.5 'IBM Plex Mono',monospace;letter-spacing:.16em;text-transform:uppercase;color:rgba(234,242,255,.55)">Duration</p><p style="margin:5px 0 0;font:500 13px/1.5 Inter,sans-serif;color:#f4f8ff">2026.06 — 2026.07</p></div>
+        <div><p style="margin:0;font:500 9.5px/1.5 'IBM Plex Mono',monospace;letter-spacing:.16em;text-transform:uppercase;color:rgba(234,242,255,.55)">Team</p><p style="margin:5px 0 0;font:500 13px/1.5 Inter,sans-serif;color:#f4f8ff">Xun Liu <span style="color:rgba(234,242,255,.5)">— PI</span><br>Christina Chiu <span style="color:rgba(234,242,255,.5)">— RA, testing + docs</span></p></div>
+      </div>
+      <div style="display:flex;gap:14px;margin:30px 0 0">
+        <a href="https://genenv.github.io/rhino-gh-mcp/" target="_blank" style="font:600 10.5px/1 'IBM Plex Mono',monospace;letter-spacing:.16em;text-transform:uppercase;background:#ffd35c;color:#081f4d;padding:12px 18px">Field guide →</a>
+        <a href="https://github.com/GenEnv/rhino-gh-mcp" target="_blank" style="font:600 10.5px/1 'IBM Plex Mono',monospace;letter-spacing:.16em;text-transform:uppercase;border:1px solid rgba(234,242,255,.4);color:#eaf2ff;padding:12px 18px">Source</a>
+      </div>
+    </div>
+    <div style="border:1px solid rgba(234,242,255,.22);background:#0d2f6b">
+      <div style="display:flex;justify-content:space-between;align-items:center;padding:11px 15px;border-bottom:1px solid rgba(234,242,255,.16)">
+        <span style="font:600 9px/1 'IBM Plex Mono',monospace;letter-spacing:.2em;text-transform:uppercase;color:rgba(234,242,255,.5)">Calibrated agency</span>
+      </div>
+      <div style="display:flex;justify-content:center;padding:8px 4px 2px">{{ heroIcon }}</div>
+    </div>
+  </section>
+
+  <section data-screen-label="Related projects" style="border-top:1px solid rgba(234,242,255,.16);padding:52px 4.5vw 64px;max-width:1560px;margin:0 auto;box-sizing:border-box">
+    <h2 style="margin:0;font-family:Archivo,sans-serif;font-weight:700;font-size:26px;text-transform:uppercase;color:#f4f8ff">Related projects</h2>
+    <div style="display:flex;flex-wrap:wrap;gap:22px;margin:24px 0 0">
+      <a href="index.html" style="border:1px solid rgba(234,242,255,.22);background:#0d2f6b;padding:20px 22px;display:flex;flex-direction:column;gap:8px;flex:0 1 420px;min-width:280px;box-sizing:border-box" style-hover="border-color:#ffd35c">
+        <span style="font:600 9px/1 'IBM Plex Mono',monospace;letter-spacing:.2em;text-transform:uppercase;color:#ffd35c">Research · Agents + Parametric</span>
+        <span style="font-family:Archivo,sans-serif;font-weight:700;font-size:18px;text-transform:uppercase;color:#f4f8ff">Landscape Agent</span>
+      </a>
+      <a href="https://github.com/GenEnv/rhino-gh-mcp" target="_blank" style="border:1px solid rgba(234,242,255,.22);background:#0d2f6b;padding:20px 22px;display:flex;flex-direction:column;gap:8px;flex:0 1 420px;min-width:280px;box-sizing:border-box" style-hover="border-color:#ffd35c">
+        <span style="font:600 9px/1 'IBM Plex Mono',monospace;letter-spacing:.2em;text-transform:uppercase;color:#ffd35c">Tool · Archive</span>
+        <span style="font-family:Archivo,sans-serif;font-weight:700;font-size:18px;text-transform:uppercase;color:#f4f8ff">Grasshopper MCP v1</span>
+      </a>
+    </div>
+  </section>
+
+  <footer style="border-top:1px solid rgba(234,242,255,.16);display:flex;justify-content:space-between;align-items:center;padding:22px 4.5vw;max-width:1560px;margin:0 auto;box-sizing:border-box">
+    <a href="index.html" style="font:600 10px/1 'IBM Plex Mono',monospace;letter-spacing:.18em;text-transform:uppercase">← Project index</a>
+  </footer>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;iconDrift&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Hero icon&quot;}}">
+class Component extends DCLogic {
+  state = { tt: 0, mode: this.props.defaultMode ?? "coach" };
+  _mA = { u: 0.3, active: false }; _cyc = 0.05;
+
+  componentDidMount() {
+    this._t0 = performance.now();
+    this._last = 0;
+    const loop = () => {
+      const tt = (performance.now() - this._t0) / 1000;
+      const dt = tt - this._last;
+      if (dt >= 0.033) {
+        this._last = tt;
+        if (this._mA.active) this._cyc += (this._mA.u - this._cyc) * 0.16;
+        else if (this.props.iconDrift ?? true) this._cyc = (this._cyc + dt / 16) % 1;
+        this.setState({ tt });
+      }
+      this._raf = requestAnimationFrame(loop);
+    };
+    this._raf = requestAnimationFrame(loop);
+  }
+  componentWillUnmount() { if (this._raf) cancelAnimationFrame(this._raf); }
+
+  c01(x) { return Math.min(1, Math.max(0, x)); }
+  sm(x) { const t = this.c01(x); return t * t * (3 - 2 * t); }
+  svgXY(e) { const r = e.currentTarget.getBoundingClientRect(); return [(e.clientX - r.left) * 470 / r.width, (e.clientY - r.top) * 300 / r.height]; }
+  onMoveA = (e) => { this._mA = { u: this.c01((this.svgXY(e)[0] - 30) / 410), active: true }; };
+  onLeaveA = () => { this._mA.active = false; };
+
+  prism(Pf, pts, z0, z1, kb, o) {
+    const S = (p) => p[0].toFixed(1) + "," + p[1].toFixed(1);
+    const n = pts.length;
+    const bot = pts.map((p) => Pf(p[0], p[1], z0));
+    const top = pts.map((p) => Pf(p[0], p[1], z1));
+    const faces = [];
+    for (let i = 0; i < n; i++) {
+      const j = (i + 1) % n;
+      faces.push({ d: (pts[i][0] + pts[j][0] + pts[i][1] + pts[j][1]) / 2, pts: [bot[i], bot[j], top[j], top[i]], fill: Math.abs(pts[j][0] - pts[i][0]) >= Math.abs(pts[j][1] - pts[i][1]) ? o.fillL : o.fillR });
+    }
+    faces.sort((a, b) => a.d - b.d);
+    const els = faces.map((f, i2) => React.createElement("polygon", { key: kb + "s" + i2, points: f.pts.map(S).join(" "), fill: f.fill, stroke: o.stroke, strokeWidth: o.sw, strokeLinejoin: "round", strokeDasharray: o.dash || null }));
+    els.push(React.createElement("polygon", { key: kb + "t", points: top.map(S).join(" "), fill: o.fillT, stroke: o.stroke, strokeWidth: o.sw, strokeLinejoin: "round", strokeDasharray: o.dash || null }));
+    return els;
+  }
+
+  ground(P, els, kb) {
+    for (let i = 0; i <= 5; i++) {
+      const gq = i * 0.6;
+      const a = P(gq, 0, 0), b = P(gq, 3, 0), c = P(0, gq, 0), d = P(3, gq, 0);
+      const st = "rgba(234,242,255," + (i % 5 ? ".09" : ".22") + ")";
+      els.push(React.createElement("line", { key: kb + "gu" + i, x1: a[0], y1: a[1], x2: b[0], y2: b[1], stroke: st, strokeWidth: 1 }));
+      els.push(React.createElement("line", { key: kb + "gv" + i, x1: c[0], y1: c[1], x2: d[0], y2: d[1], stroke: st, strokeWidth: 1 }));
+    }
+    const t1 = P(-0.2, 3, 0), t2 = P(0.3, 3, 0), t3 = P(0, 2.7, 0), t4 = P(0, 3.2, 0);
+    els.push(React.createElement("line", { key: kb + "d1", x1: t1[0], y1: t1[1], x2: t2[0], y2: t2[1], stroke: "rgba(255,211,92,.85)", strokeWidth: 1 }));
+    els.push(React.createElement("line", { key: kb + "d2", x1: t3[0], y1: t3[1], x2: t4[0], y2: t4[1], stroke: "rgba(255,211,92,.85)", strokeWidth: 1 }));
+  }
+
+  iconA(t, s, cyc) {
+    const YEL = "#ffd35c";
+    const P = (x, y, z) => [(x - y) * 0.866 * s, (x + y - 3) * 0.5 * s - z * 0.8 * s];
+    const sw = 1.1, LN = "rgba(234,242,255,.92)";
+    const FT = "#1a4694", FL = "#0f316f", FR = "#0b2a61";
+    const els = [];
+    this.ground(P, els, "a");
+    // 1 · TEXT — standing prompt sheet on the west corner, lines typing in
+    els.push.apply(els, this.prism(P, [[0.1, 2.05], [0.28, 2.05], [0.28, 2.95], [0.1, 2.95]], 0, 1.45, "asheet", { stroke: LN, sw: sw * 0.85, fillT: FT, fillL: FL, fillR: FR }));
+    for (let i = 0; i < 7; i++) {
+      const prog = this.sm((cyc - 0.02 - i * 0.02) / 0.06);
+      if (prog <= 0.01) continue;
+      const z = 1.3 - i * 0.17;
+      const a = P(0.28, 2.13, z), b = P(0.28, 2.13 + (0.74 - (i % 2) * 0.2) * prog, z);
+      els.push(React.createElement("line", { key: "atx" + i, x1: a[0], y1: a[1], x2: b[0], y2: b[1], stroke: "rgba(234,242,255,.7)", strokeWidth: 0.9 }));
+    }
+    // 3 · MODEL — lofted twisted tower on the east corner, grows on run
+    const twist = 0.95 * this.sm((cyc - 0.55) / 0.3);
+    const grow = this.sm((cyc - 0.5) / 0.3);
+    const fp0 = [[2.02, 0.12], [3.0, 0.12], [3.0, 1.1], [2.02, 1.1], [2.02, 0.12]].map(([x, y]) => P(x, y, 0));
+    els.push(React.createElement("path", { key: "afp", d: fp0.map((p, i) => (i ? "L " : "M ") + p[0].toFixed(1) + " " + p[1].toFixed(1)).join(" "), fill: "none", stroke: "rgba(234,242,255,.3)", strokeWidth: 0.8, strokeDasharray: "3 4" }));
+    const sp0 = P(2.51, 0.61, 0), sp1 = P(2.51, 0.61, 0.05 + 1.85 * grow);
+    els.push(React.createElement("line", { key: "aspine", x1: sp0[0], y1: sp0[1], x2: sp1[0], y2: sp1[1], stroke: "rgba(234,242,255,.45)", strokeWidth: 0.9 }));
+    for (let i = 0; i < 10; i++) {
+      const app = this.sm((cyc - 0.5 - i * 0.03) / 0.09);
+      if (app <= 0.01) continue;
+      const ang = twist * i * 0.17, half = 0.46 * (1 - 0.04 * i) * (0.3 + 0.7 * app);
+      const cx = 2.51, cy = 0.61, ca = Math.cos(ang), sa = Math.sin(ang);
+      const pts = [[-half, -half], [half, -half], [half, half], [-half, half]].map(([x, y]) => [cx + x * ca - y * sa, cy + x * sa + y * ca]);
+      const z = 0.02 + i * 0.185;
+      els.push.apply(els, this.prism(P, pts, z, z + 0.085, "apl" + i, { stroke: LN, sw, dash: "5 4", fillT: FT, fillL: FL, fillR: FR }));
+      pts.forEach(([px, py], ci) => {
+        const c1 = P(px, py, z + 0.085), c2 = P(px + (cx - px) * 0.18, py + (cy - py) * 0.18, z + 0.085);
+        els.push(React.createElement("line", { key: "atk" + i + "_" + ci, x1: c1[0], y1: c1[1], x2: c2[0], y2: c2[1], stroke: "rgba(234,242,255,.5)", strokeWidth: 0.6 }));
+      });
+    }
+    // 2 · GRAPH — parameter network floating mid-site, between text and model
+    const nodes = [[0.85, 2.0], [1.35, 1.55], [1.15, 1.0], [1.95, 1.25], [1.85, 0.7]];
+    const zN = 1.15;
+    const wires = [
+      { a: P(0.28, 2.5, 0.75), b: P(nodes[0][0], nodes[0][1], zN - 0.1), k: 0 },
+      { a: P(nodes[0][0], nodes[0][1], zN), b: P(nodes[1][0], nodes[1][1], zN - 0.05), k: 1 },
+      { a: P(nodes[1][0], nodes[1][1], zN), b: P(nodes[2][0], nodes[2][1], zN - 0.05), k: 2 },
+      { a: P(nodes[1][0], nodes[1][1], zN), b: P(nodes[3][0], nodes[3][1], zN - 0.05), k: 3 },
+      { a: P(nodes[3][0], nodes[3][1], zN), b: P(nodes[4][0], nodes[4][1], zN - 0.05), k: 4 },
+      { a: P(nodes[4][0], nodes[4][1], zN - 0.1), b: P(2.51, 0.61, 1.65), k: 5 },
+    ];
+    nodes.forEach(([x, y], i) => {
+      const g = P(x, y, 0), n0 = P(x, y, zN - 0.09);
+      els.push(React.createElement("line", { key: "adrop" + i, x1: n0[0], y1: n0[1], x2: g[0], y2: g[1], stroke: "rgba(234,242,255,.22)", strokeWidth: 0.8, strokeDasharray: "2 4" }));
+      const sh = 0.13, shp = [[x - sh, y - sh], [x + sh, y - sh], [x + sh, y + sh], [x - sh, y + sh]].map(([a, b]) => P(a, b, 0));
+      els.push(React.createElement("polygon", { key: "ashad" + i, points: shp.map((p) => p[0].toFixed(1) + "," + p[1].toFixed(1)).join(" "), fill: "none", stroke: "rgba(234,242,255,.25)", strokeWidth: 0.7, strokeDasharray: "2 3" }));
+    });
+    wires.forEach((w) => {
+      const prog = this.sm((cyc - 0.18 - w.k * 0.055) / 0.08);
+      if (prog <= 0.01) return;
+      const mx = (w.a[0] + w.b[0]) / 2, my = Math.min(w.a[1], w.b[1]) - 14;
+      els.push(React.createElement("path", { key: "awire" + w.k, d: "M " + w.a[0].toFixed(1) + " " + w.a[1].toFixed(1) + " Q " + mx.toFixed(1) + " " + my.toFixed(1) + " " + w.b[0].toFixed(1) + " " + w.b[1].toFixed(1), fill: "none", stroke: "rgba(255,211,92,.85)", strokeWidth: 1.2, pathLength: 1, strokeDasharray: 1, strokeDashoffset: (1 - prog).toFixed(3) }));
+    });
+    const run = (cyc - 0.52) / 0.34;
+    if (run > 0 && run < 1) {
+      const wi = Math.min(wires.length - 1, Math.floor(run * wires.length));
+      const u = run * wires.length - wi;
+      const w = wires[wi];
+      const mx = (w.a[0] + w.b[0]) / 2, my = Math.min(w.a[1], w.b[1]) - 14;
+      const px = (1 - u) * (1 - u) * w.a[0] + 2 * (1 - u) * u * mx + u * u * w.b[0];
+      const py = (1 - u) * (1 - u) * w.a[1] + 2 * (1 - u) * u * my + u * u * w.b[1];
+      els.push(React.createElement("circle", { key: "apulse", cx: px.toFixed(1), cy: py.toFixed(1), r: 3.2, fill: YEL }));
+    }
+    const fb = this.sm((cyc - 0.86) / 0.1);
+    if (fb > 0.01) {
+      const fa = P(2.51, 0.61, 1.95), fbp = P(0.28, 2.5, 1.1);
+      const fmx = (fa[0] + fbp[0]) / 2, fmy = Math.min(fa[1], fbp[1]) - 34;
+      els.push(React.createElement("path", { key: "afb", d: "M " + fa[0].toFixed(1) + " " + fa[1].toFixed(1) + " Q " + fmx.toFixed(1) + " " + fmy.toFixed(1) + " " + fbp[0].toFixed(1) + " " + fbp[1].toFixed(1), fill: "none", stroke: "rgba(234,242,255,.55)", strokeWidth: 0.9, strokeDasharray: "3 4", opacity: fb.toFixed(3) }));
+    }
+    nodes.forEach(([x, y], i) => {
+      const on = this.sm((cyc - 0.18 - i * 0.055) / 0.08) >= 1;
+      const h = 0.15;
+      els.push.apply(els, this.prism(P, [[x - h - 0.07, y - 0.05], [x - h, y - 0.05], [x - h, y + 0.05], [x - h - 0.07, y + 0.05]], zN - 0.04, zN + 0.04, "andpw" + i, { stroke: LN, sw: 0.7, fillT: FT, fillL: FL, fillR: FR }));
+      els.push.apply(els, this.prism(P, [[x + h, y - 0.05], [x + h + 0.07, y - 0.05], [x + h + 0.07, y + 0.05], [x + h, y + 0.05]], zN - 0.04, zN + 0.04, "andpe" + i, { stroke: LN, sw: 0.7, fillT: FT, fillL: FL, fillR: FR }));
+      els.push.apply(els, this.prism(P, [[x - h, y - h], [x + h, y - h], [x + h, y + h], [x - h, y + h]], zN - 0.09, zN + 0.09, "and" + i, { stroke: on ? YEL : LN, sw, fillT: on ? "rgba(255,211,92,.28)" : FT, fillL: FL, fillR: FR }));
+    });
+    return els;
+  }
+
+  hero(cyc) {
+    const YEL = "#ffd35c";
+    const x0 = 30, x1 = 440, y = 279;
+    const stage = cyc < 0.16 ? "INTENT" : cyc < 0.5 ? "CONTEXT" : cyc < 0.86 ? "ACTION" : "FEEDBACK";
+    const cx = x0 + (x1 - x0) * cyc;
+    const overlay = [
+      React.createElement("line", { key: "sb", x1: x0, y1: y, x2: x1, y2: y, stroke: "rgba(234,242,255,.2)", strokeWidth: 1 }),
+      React.createElement("line", { key: "sp", x1: x0, y1: y, x2: cx, y2: y, stroke: YEL, strokeWidth: 2 }),
+      React.createElement("circle", { key: "st", cx: cx, cy: y, r: 3, fill: YEL }),
+      React.createElement("text", { key: "sl", x: cx, y: y - 7, textAnchor: "middle", fontSize: 8.5, fill: YEL, fontFamily: "'IBM Plex Mono',monospace", letterSpacing: ".14em" }, stage),
+    ];
+    return React.createElement("svg", { key: "hero", width: 470, height: 300, viewBox: "0 0 470 300", style: { display: "block", maxWidth: "100%", height: "auto", cursor: "crosshair" }, onMouseMove: this.onMoveA, onMouseLeave: this.onLeaveA },
+      React.createElement("g", { transform: "translate(235,150)" }, this.iconA(this.state.tt, 66, cyc)),
+      React.createElement("g", { key: "ov" }, overlay));
+  }
+
+  renderVals() {
+    const MODES = [
+      { id: "inspect", name: "Inspect", tag: "read-only", may: "Read the canvas and document only — it changes nothing. The whole deliverable is the written read-out: data-flow pipeline, per-slider effects, plain-language recap.", when: "Auditing or explaining a definition you were handed — safe to run on a client\u2019s file.", gate: 1 },
+      { id: "tune", name: "Tune", tag: "parameters only", may: "Change slider and parameter values only — never the topology. It re-aims behavior through the controls the definition already exposes.", when: "Iterating a finished definition on its exposed controls. If the control you need isn\u2019t a slider, move up the dial.", gate: 2 },
+      { id: "coach", name: "Coach", tag: "the default", may: "Tune values and add components from the active Skill\u2019s allowed set — no scripting. Every change is highlighted on the live canvas and explained, closing with a \u201cwhat I changed\u201d block.", when: "Learning. A fix becomes a lesson, not a black box — it\u2019s the default mode for a reason.", gate: 3 },
+      { id: "execute", name: "Execute", tag: "curated + plugins", may: "Run curated components and scripts — including third-party plugins like Ladybug Tools — end to end on the existing canvas.", when: "Running an existing or plugin workflow: climate studies, analysis pipelines, batch operations.", gate: 4 },
+      { id: "author", name: "Author", tag: "full build", may: "Add, wire, and script components freely — the full build, from an empty canvas up. Native recipes first; scripts only where warranted.", when: "Building a definition from scratch: a landform, a facade, a piece of jewelry.", gate: 5 },
+    ];
+    const sel = MODES.find((m) => m.id === this.state.mode) || MODES[2];
+    const GATE_LBL = ["read", "parameters", "add curated", "run scripts", "script freely"];
+    return {
+      heroIcon: this.hero(this._cyc),
+      modes: MODES.map((m) => ({
+        n: "0" + (MODES.indexOf(m) + 1), name: m.name, tag: m.tag,
+        numColor: "#ffd35c",
+        btnStyle: "display:flex;flex-direction:column;align-items:flex-start;gap:7px;padding:16px 16px 14px;cursor:pointer;text-align:left;border:1px solid " + (m.id === sel.id ? "#ffd35c" : "rgba(234,242,255,.25)") + ";background:" + (m.id === sel.id ? "rgba(255,211,92,.12)" : "transparent"),
+        onPick: () => this.setState({ mode: m.id }),
+      })),
+      selName: sel.name, selMay: sel.may, selWhen: sel.when,
+      gates: GATE_LBL.map((label, i) => ({
+        label,
+        fillStyle: "height:8px;width:" + (i < sel.gate ? 100 : 0) + "%;background:" + (i < sel.gate ? "#ffd35c" : "transparent") + ";transition:width .35s",
+      })),
+    };
+  }
+}
+</script>
+</body>
+</html>

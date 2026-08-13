@@ -1,228 +1,1314 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-      name="description"
-      content="Generative Environments Lab is a research and design lab for generative media, spatial tools, and environmental imagination."
-    />
-    <title>Generative Environments Lab</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Newsreader:opsz,wght@6..72,400;6..72,500&family=Pixelify+Sans:wght@400;500;600&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="styles.css" />
-  </head>
-  <body>
-    <div class="site-shell">
-      <header class="site-header" aria-label="Site header">
-        <a class="brand" href="#top" aria-label="Generative Environments Lab home">
-          <span>Generative</span>
-          <span>Environments</span>
-          <span>Lab</span>
-        </a>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>GenEnv — Generative Environments Lab</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet data-dc-atomics="">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="crossorigin">
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700&amp;family=IBM+Plex+Mono:wght@400;500;600&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet">
+  <script src="./image-slot.js"></script>
+  <style>
+    body{margin:0;background:#10357c}
+    ::selection{background:#ffd35c;color:#081f4d}
+    a{color:#eaf2ff}a:hover{color:#ffd35c}
+    ::-webkit-scrollbar{width:11px;background:#081f4d}
+    ::-webkit-scrollbar-thumb{background:#1a4694;border:2px solid #081f4d}
+    @keyframes genenvFlow{to{stroke-dashoffset:-26}}
+    @keyframes genenvCard{from{transform:scale(.18);opacity:0}to{transform:scale(1);opacity:1}}
+    @keyframes genenvStem{from{transform:scaleY(0)}to{transform:scaleY(1)}}
+    @keyframes genenvPing{0%{box-shadow:0 0 0 0 rgba(255,211,92,.5)}100%{box-shadow:0 0 0 11px rgba(255,211,92,0)}}
+    @keyframes genenvCue{0%{transform:scaleY(0);transform-origin:top}45%{transform:scaleY(1);transform-origin:top}55%{transform:scaleY(1);transform-origin:bottom}100%{transform:scaleY(0);transform-origin:bottom}}
+  </style>
+</helmet>
 
-        <nav class="nav-links" aria-label="Primary navigation">
-          <a href="#index">Index</a>
-          <a href="#projects">Projects</a>
-          <a href="#teaching">Teaching</a>
-          <a href="#writing">Writing</a>
-          <a href="#people">People</a>
-          <a href="#about">About</a>
-        </nav>
-      </header>
+<div style="position:relative;background:#10357c;color:#eaf2ff;font-family:'IBM Plex Mono',monospace;font-size:12px">
 
-      <main id="top">
-        <section class="hero" aria-labelledby="hero-title">
-          <div class="hero-mini-header">
-            <div>
-              <p>genenv.ai</p>
-              <h1 id="hero-title">Generative Environments Lab</h1>
+  <header style="{{ hdrStyle }}">
+    <button onClick="{{ goTop }}" style="display:flex;align-items:center;gap:13px;background:none;border:0;padding:0;cursor:pointer">
+      <span style="font-family:Archivo,sans-serif;font-weight:700;font-size:17px;letter-spacing:.02em;color:#f4f8ff">GenEnv Lab</span>
+    </button>
+    <nav style="display:flex;align-items:center;gap:24px;font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.14em;text-transform:uppercase">
+      <button onClick="{{ goTop }}" style="background:none;border:0;padding:0;cursor:pointer;font:inherit;letter-spacing:inherit;text-transform:inherit;color:rgba(234,242,255,.62)" style-hover="color:#ffd35c">About</button><button onClick="{{ goResearch }}" style="background:none;border:0;padding:0;cursor:pointer;font:inherit;letter-spacing:inherit;text-transform:inherit;color:rgba(234,242,255,.62)" style-hover="color:#ffd35c">Research</button>
+      <button onClick="{{ goTeaching }}" style="background:none;border:0;padding:0;cursor:pointer;font:inherit;letter-spacing:inherit;text-transform:inherit;color:rgba(234,242,255,.62)" style-hover="color:#ffd35c">Teaching</button>
+      
+      <button onClick="{{ goAbout }}" style="background:none;border:0;padding:0;cursor:pointer;font:inherit;letter-spacing:inherit;text-transform:inherit;color:rgba(234,242,255,.62)" style-hover="color:#ffd35c">People</button>
+      <button onClick="{{ goIndex }}" style="background:none;border:0;padding:0;cursor:pointer;font:inherit;letter-spacing:inherit;text-transform:inherit;color:rgba(234,242,255,.62)" style-hover="color:#ffd35c">Index</button>
+      <button onClick="{{ goJoin }}" style="background:none;border:1px solid rgba(255,211,92,.55);padding:6px 12px;cursor:pointer;font:inherit;letter-spacing:inherit;text-transform:inherit;color:#ffd35c" style-hover="background:rgba(255,211,92,.12)">Join →</button>
+    </nav>
+  </header>
+
+  <div data-screen-label="Home story" style="position:relative;height:1200vh">
+    <div style="position:sticky;top:0;height:100vh;overflow:hidden;background:radial-gradient(ellipse 72% 60% at 50% 44%, rgba(234,242,255,.05), transparent 70%),#10357c">
+
+      <svg style="position:absolute;left:0;top:0;width:100%;height:100%;display:block">{{ scene }}</svg>
+
+      <div style="position:absolute;left:4.5vw;top:25vh;z-index:30;width:min(1100px,80vw);pointer-events:none">
+        <div style="{{ cap0Fx }}">
+          <div style="width:46px;height:3px;background:#ffd35c;margin:0 0 20px"></div>
+          <p style="margin:0;font:600 10.5px/1.75 'IBM Plex Mono',monospace;letter-spacing:.24em;text-transform:uppercase;color:#ffd35c">The University of British Columbia<br>School of Architecture and Landscape Architecture</p>
+          <h1 style="margin:20px 0 0;font-family:Archivo,sans-serif;font-weight:700;font-size:clamp(48px,5.6vw,82px);line-height:.97;text-transform:uppercase;color:#f4f8ff;text-wrap:balance">Generative Environments Lab</h1>
+          <div style="margin:24px 0 0;font:400 15.5px/1.65 Inter,sans-serif;color:rgba(234,242,255,.78);max-width:620px"><div style="font-size: 13px">Designing environments means negotiating rules, data, materials, climates, and multiple forms of intelligence. GenEnv treats these conditions as active materials for design. We develop generative and agentic AI methods that interpret complex environments, reason through constraints, and work within professional design tools, while keeping outcomes editable, traceable, and open to human judgment.<br><br>Based at UBC SALA, the lab brings together faculty, researchers, alumni, and collaborators across architecture, landscape architecture, and urbanism. Research, teaching, and toolmaking operate as a shared practice.</div></div>
+          <p style="margin:14px 0 0;font:400 14px/1.68 Inter,sans-serif;color:rgba(234,242,255,.62);max-width:620px"><br></p>
+        </div>
+      </div>
+
+      
+
+      <div style="position:absolute;inset:0;z-index:32;pointer-events:none;overflow:hidden">
+        <sc-if value="{{ hovOpen }}" hint-placeholder-val="{{ false }}">
+          <div style="{{ hovCardStyle }}">
+            <h3 style="margin:0;font:600 12.5px/1.35 'IBM Plex Mono',monospace;letter-spacing:.06em;text-transform:uppercase;color:#ffd35c">{{ hovTitle }}</h3>
+            <p style="margin:6px 0 0;font:400 11.5px/1.55 Inter,sans-serif;color:rgba(234,242,255,.78)">{{ hovDesc }}</p>
+          </div>
+        </sc-if>
+      </div>
+
+      <div style="position:absolute;left:50%;bottom:9vh;transform:translateX(-50%);z-index:30;text-align:center;pointer-events:none">
+        <div style="{{ capEndFx }}">
+          <button onClick="{{ goIndex }}" style="pointer-events:auto;background:none;border:1px solid rgba(255,211,92,.6);color:#ffd35c;padding:11px 20px;cursor:pointer;font:600 10px/1 'IBM Plex Mono',monospace;letter-spacing:.18em;text-transform:uppercase" style-hover="background:rgba(255,211,92,.12)">Project index ↓</button>
+        </div>
+      </div>
+
+      <div style="position:absolute;right:30px;top:76px;z-index:40;display:flex;flex-direction:column;align-items:flex-end">
+        <div style="{{ hudFx }}">
+          <p style="margin:0;font:600 9px/1 'IBM Plex Mono',monospace;letter-spacing:.2em;text-transform:uppercase;color:rgba(234,242,255,.6);text-align:right">{{ hudLabel }}</p>
+          <div style="display:flex;flex-direction:column;gap:5px;align-items:flex-end;margin:9px 0 0">
+            <sc-for list="{{ hudTicks }}" as="tk" hint-placeholder-count="6">
+              <button style="{{ tk.style }}" onClick="{{ tk.onGo }}" title="{{ tk.name }}"></button>
+            </sc-for>
+          </div>
+        </div>
+      </div>
+
+      <div style="position:absolute;left:50%;bottom:26px;transform:translateX(-50%);z-index:30;pointer-events:none;text-align:center">
+        <div style="{{ cueFx }}">
+          <p style="margin:0 0 8px;font:600 8.5px/1 'IBM Plex Mono',monospace;letter-spacing:.3em;color:rgba(234,242,255,.55)">SCROLL</p>
+          <div style="width:1px;height:34px;background:rgba(255,211,92,.8);margin:0 auto;animation:genenvCue 1.6s ease-in-out infinite"></div>
+        </div>
+      </div>
+
+      <button onClick="{{ openLegend }}" title="Form language" style="position:absolute;left:28px;bottom:24px;z-index:40;width:34px;height:34px;display:flex;align-items:center;justify-content:center;background:rgba(8,31,77,.85);border:1px solid rgba(234,242,255,.3);cursor:pointer;opacity:.55" style-hover="opacity:1;border-color:rgba(255,211,92,.7)">
+        <svg width="16" height="16" viewBox="0 0 16 16"><path d="M8 1 L14 4.5 L14 11.5 L8 15 L2 11.5 L2 4.5 Z M2 4.5 L8 8 L14 4.5 M8 8 L8 15" fill="none" stroke="#ffd35c" stroke-width="1.1" stroke-linejoin="round"></path></svg>
+      </button>
+
+    </div>
+  </div>
+
+  <sc-if value="{{ pageOpen }}" hint-placeholder-val="{{ false }}">
+    <div data-screen-label="Project sheet" style="position:fixed;inset:0;z-index:80;background:#0a2757;overflow:auto">
+      <div style="position:sticky;top:0;z-index:5;display:flex;justify-content:space-between;align-items:center;gap:16px;background:rgba(8,31,77,.96);border-bottom:1px solid rgba(234,242,255,.3);padding:14px 34px">
+        <button onClick="{{ closeSheet }}" style="background:none;border:0;padding:0;cursor:pointer;font:600 10px/1 'IBM Plex Mono',monospace;letter-spacing:.16em;text-transform:uppercase;color:rgba(234,242,255,.7)" style-hover="color:#ffd35c">← Back to map</button>
+        <span style="font:600 9px/1 'IBM Plex Mono',monospace;letter-spacing:.18em;text-transform:uppercase;color:rgba(234,242,255,.45)">{{ sSlug }}</span>
+      </div>
+      <div style="display:grid;grid-template-columns:minmax(320px,520px) 1fr;gap:56px;align-items:start;padding:64px 6vw 90px;max-width:1400px;margin:0 auto">
+        <div>
+          <p style="margin:0 0 14px;font:600 9.5px/1.4 'IBM Plex Mono',monospace;letter-spacing:.2em;text-transform:uppercase;color:#ffd35c">{{ sKicker }}</p>
+          <h2 style="margin:0;font-family:Archivo,sans-serif;font-weight:700;font-size:clamp(38px,4vw,58px);line-height:.99;text-transform:uppercase;color:#f4f8ff;text-wrap:balance">{{ sTitle }}</h2>
+          <sc-if value="{{ sIsWork }}" hint-placeholder-val="{{ true }}">
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:1px;background:rgba(234,242,255,.22);border:1px solid rgba(234,242,255,.22);margin:22px 0 0">
+            <div style="background:#081f4d;padding:9px 12px"><p style="margin:0;font:600 8px/1 'IBM Plex Mono',monospace;letter-spacing:.18em;color:rgba(234,242,255,.45)">TYPE</p><p style="margin:5px 0 0;font:500 11px/1.2 'IBM Plex Mono',monospace;color:#eaf2ff">{{ sType }}</p></div>
+            <div style="background:#081f4d;padding:9px 12px"><p style="margin:0;font:600 8px/1 'IBM Plex Mono',monospace;letter-spacing:.18em;color:rgba(234,242,255,.45)">YEAR</p><p style="margin:5px 0 0;font:500 11px/1.2 'IBM Plex Mono',monospace;color:#eaf2ff">{{ sYear }}</p></div>
+            <div style="background:#081f4d;padding:9px 12px"><p style="margin:0;font:600 8px/1 'IBM Plex Mono',monospace;letter-spacing:.18em;color:rgba(234,242,255,.45)">STATUS</p><p style="margin:5px 0 0;font:500 11px/1.2 'IBM Plex Mono',monospace;color:#ffd35c">{{ sStatus }}</p></div>
+            <div style="background:#081f4d;padding:9px 12px"><p style="margin:0;font:600 8px/1 'IBM Plex Mono',monospace;letter-spacing:.18em;color:rgba(234,242,255,.45)">VENUE / FUNDING</p><p style="margin:5px 0 0;font:500 11px/1.2 'IBM Plex Mono',monospace;color:#eaf2ff">{{ sVenue }}</p></div>
+          </div>
+          </sc-if>
+          <p style="margin:22px 0 0;font:400 14.5px/1.68 Inter,sans-serif;color:rgba(234,242,255,.74)">{{ sDesc }}</p>
+          <sc-if value="{{ sHasContact }}" hint-placeholder-val="{{ false }}">
+            <div style="display:flex;flex-direction:column;gap:9px;border-top:1px solid rgba(234,242,255,.22);margin:28px 0 0;padding:18px 0 0">
+              <sc-for list="{{ sContacts }}" as="c" hint-placeholder-count="0">
+                <p style="margin:0;font:500 10.5px/1.6 'IBM Plex Mono',monospace;letter-spacing:.08em;text-transform:uppercase;color:rgba(234,242,255,.6)">{{ c.label }} · <a href="{{ c.href }}" style="color:#ffd35c;text-decoration:none;text-transform:none">{{ c.email }}</a></p>
+              </sc-for>
             </div>
-          </div>
-          <div id="clusterMap" class="cluster-map" aria-label="Lab field map"></div>
-          <div class="hero-overlay">
-            <aside class="hero-panel is-empty" aria-label="Selected node">
-              <p class="panel-kicker">Select a node</p>
-              <a id="activeProjectLink" href="#index"><h2 id="activeProjectTitle">Lab field</h2></a>
-              <p id="activeProjectMeta">Projects / teaching / people</p>
-              <div class="panel-image" aria-hidden="true"></div>
-              <p id="activeProjectDescription">The homepage maps research projects, course archives, and people as connected agents.</p>
-            </aside>
-          </div>
-          <div class="cluster-legend" aria-label="Legend">
-            <button type="button" data-filter="research"><i class="legend-research"></i>Research</button>
-            <button type="button" data-filter="tool"><i class="legend-tool"></i>Tools</button>
-            <button type="button" data-filter="teaching"><i class="legend-teaching"></i>Teaching</button>
-            <button type="button" data-filter="writing"><i class="legend-writing"></i>Writing</button>
-            <button type="button" data-filter="people"><i class="legend-people"></i>People</button>
-          </div>
-        </section>
+          </sc-if>
+        </div>
+        <sc-if value="{{ sIsWork }}" hint-placeholder-val="{{ true }}">
+        <div style="min-width:0">{{ pageSlot }}</div>
+        </sc-if>
+      </div>
+    </div>
+  </sc-if>
 
-        <section id="index" class="section index-section" aria-labelledby="index-title">
-          <div class="section-heading">
-            <p class="eyebrow">Index</p>
-            <h2 id="index-title">Selected work.</h2>
-            <p>Research, tools, courses, exhibitions, and writing from a lab in formation.</p>
-          </div>
+  <sc-if value="{{ legendOpen }}" hint-placeholder-val="{{ false }}">
+    <div data-screen-label="Form language" style="position:fixed;inset:0;z-index:85;background:rgba(8,31,77,.97);overflow:auto">
+      <div style="position:sticky;top:0;z-index:5;display:flex;justify-content:space-between;align-items:center;gap:16px;background:rgba(8,31,77,.96);border-bottom:1px solid rgba(234,242,255,.3);padding:22px 34px">
+        <span style="font:600 10px/1 'IBM Plex Mono',monospace;letter-spacing:.2em;text-transform:uppercase;color:#ffd35c">Form language — form follows the work</span>
+        <button onClick="{{ closeLegend }}" style="background:none;border:0;padding:0;cursor:pointer;font:600 10px/1 'IBM Plex Mono',monospace;letter-spacing:.16em;text-transform:uppercase;color:rgba(234,242,255,.7)" style-hover="color:#ffd35c">Close ×</button>
+      </div>
+      <div style="padding:72px 6vw 100px;max-width:1400px;margin:0 auto">
+        <p style="margin:0 0 64px;font:400 13.5px/1.65 Inter,sans-serif;color:rgba(234,242,255,.62);max-width:560px">Every block's massing comes from the kind of work it holds — the family carries the meaning, the data sets the size. Status is drawn, not badged: funded work stands on a full-plot plinth, archive work is a dashed ghost, in-press writing is drafted in long dash.</p>
+        <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:rgba(234,242,255,.18);border:1px solid rgba(234,242,255,.18)">
+          <sc-for list="{{ legendTiles }}" as="tile" hint-placeholder-count="0">
+            <div style="background:#0a2757;padding:40px 28px 32px;display:flex;flex-direction:column;gap:16px;align-items:center">
+              {{ tile.svg }}
+              <p style="margin:0;font:600 10px/1.2 'IBM Plex Mono',monospace;letter-spacing:.18em;text-transform:uppercase;color:#f4f8ff;text-align:center">{{ tile.name }}</p>
+              <p style="margin:0;font:400 10.5px/1.5 Inter,sans-serif;color:rgba(234,242,255,.55);text-align:center">{{ tile.projects }}</p>
+            </div>
+          </sc-for>
+        </div>
+      </div>
+    </div>
+  </sc-if>
 
-          <div class="filter-bar" role="list" aria-label="Filter project index">
-            <button class="filter-chip is-active" data-filter="all" type="button">All</button>
-            <button class="filter-chip" data-filter="research" type="button">Research</button>
-            <button class="filter-chip" data-filter="tool" type="button">Tools</button>
-            <button class="filter-chip" data-filter="course" type="button">Courses</button>
-            <button class="filter-chip" data-filter="publication" type="button">Publications</button>
-            <button class="filter-chip" data-filter="exhibition" type="button">Exhibitions</button>
-          </div>
-
-          <div id="projectGrid" class="project-grid" aria-live="polite"></div>
-        </section>
-
-        <section id="projects" class="section split-section" aria-labelledby="projects-title">
-          <div>
-            <p class="eyebrow">Projects</p>
-            <h2 id="projects-title">Current work.</h2>
-          </div>
-          <div class="compact-list">
-            <article>
-              <span>2026</span>
-              <strong>Human-AI Co-Design Framework for Performance-Aware Constructed Environments</strong>
-            </article>
-            <article>
-              <span>2026</span>
-              <strong>Decoding Urban Form</strong>
-            </article>
-            <article>
-              <span>2025-2026</span>
-              <strong>GenAI & LLM-Enabled Co-Design</strong>
-            </article>
-            <article>
-              <span>2026</span>
-              <strong>Trees and Materials: Digital Thermal Sandbox for Microclimate Simulation</strong>
-            </article>
-            <article>
-              <span>2025-2027</span>
-              <strong>Democratizing the Design of Vancouver's Public Spaces with AI</strong>
-            </article>
-          </div>
-        </section>
-
-        <section id="teaching" class="section teaching-section" aria-labelledby="teaching-title">
-          <div class="section-heading">
-            <p class="eyebrow">Teaching</p>
-            <h2 id="teaching-title">Course archives.</h2>
-            <p>Courses are treated as public research environments, with selected student work credited inside each archive.</p>
-          </div>
-          <div class="course-list">
-            <article class="course-row">
-              <span>UBC 2025 W2</span>
-              <h3>DES 212: Design Media II</h3>
-              <p>Design media, representation, computation, and critical tool use.</p>
-            </article>
-            <article class="course-row">
-              <span>UBC 2025 W1</span>
-              <h3>ARCH 515: Design Media I (LARC)</h3>
-              <p>Media foundations for landscape architecture.</p>
-            </article>
-            <article class="course-row">
-              <span>UBC 2025 W1</span>
-              <h3>ARCH 540: Studio V: Designing the Design</h3>
-              <p>Studio as a space for designing design systems and methods.</p>
-            </article>
-            <article class="course-row">
-              <span>USC 2022-2024</span>
-              <h3>ARCH 639: Media for Landscape Architecture III: Dynamic Systems</h3>
-              <p>Dynamic systems, computational workflows, and landscape media.</p>
-            </article>
-          </div>
-        </section>
-
-        <section id="writing" class="section writing-section" aria-labelledby="writing-title">
-          <div>
-            <p class="eyebrow">Writing</p>
-            <h2 id="writing-title">Publications.</h2>
-          </div>
-          <div class="writing-list">
-            <a href="#" aria-label="Computational lexicalization">
-              <span>2026</span>
-              <strong>Computational lexicalization: Development and practice of a design agent framework</strong>
-              <em>Architectural Journal, in press</em>
-            </a>
-            <a href="#" aria-label="Generative planting at scale">
-              <span>2024</span>
-              <strong>Reinventing planting design in landscape architecture: A generative AI approach</strong>
-              <em>Journal of Digital Landscape Architecture</em>
-            </a>
-            <a href="#" aria-label="AI education">
-              <span>2024</span>
-              <strong>Integrating generative AI into landscape architecture education</strong>
-              <em>Journal of Digital Landscape Architecture</em>
-            </a>
-            <a href="#" aria-label="RiverGAN">
-              <span>2022</span>
-              <strong>RiverGAN: Fluvial landform generation based on physical simulations and GAN</strong>
-              <em>Journal of Digital Landscape Architecture</em>
-            </a>
-          </div>
-        </section>
-
-        <section id="people" class="section people-section" aria-labelledby="people-title">
-          <div>
-            <p class="eyebrow">People</p>
-            <h2 id="people-title">People.</h2>
-          </div>
-          <div class="people-grid">
-            <article>
-              <div class="portrait-mark"></div>
-              <h3>Xun Liu</h3>
-              <p>Assistant Professor, UBC School of Architecture + Landscape Architecture</p>
-              <a href="https://xlstudio.org/">xlstudio.org</a>
-            </article>
-            <article>
-              <div class="portrait-mark"></div>
-              <h3>Research Assistants</h3>
-              <p>Current work includes Decoding Urban Form and GenAI & LLM-Enabled Co-Design.</p>
-            </article>
-            <article>
-              <div class="portrait-mark"></div>
-              <h3>Students + Collaborators</h3>
-              <p>Graduate supervision, course archives, workshops, and selected student projects.</p>
-            </article>
-          </div>
-        </section>
-
-        <section id="about" class="section about-section" aria-labelledby="about-title">
-          <p class="eyebrow">About</p>
-          <h2 id="about-title">Generative Environments Lab studies spatial AI, design media, and computational methods for constructed environments.</h2>
-          <div class="about-copy">
-            <p>
-              Founded by Xun Liu at UBC SALA, the lab connects architecture, landscape architecture, artificial
-              intelligence, and design computation.
-            </p>
-            <p>
-              The website is an evolving archive of research projects, tools, teaching, exhibitions, publications,
-              and selected student work.
-            </p>
-          </div>
-        </section>
-      </main>
-
-      <footer class="site-footer">
-        <span>Generative Environments Lab</span>
-        <span>genenv.ai</span>
-        <a href="mailto:hello@genenv.ai">hello@genenv.ai</a>
-      </footer>
+  <section data-screen-label="Index" style="position:relative;background:#10357c;border-top:1px double rgba(234,242,255,.4);padding:92px 6vw 110px">
+    <div style="display:flex;justify-content:space-between;align-items:flex-end;gap:30px;flex-wrap:wrap">
+      <div>
+        <p style="margin:0 0 12px;font:600 9.5px/1 'IBM Plex Mono',monospace;letter-spacing:.2em;text-transform:uppercase;color:#ffd35c">Index</p>
+        <h2 style="margin:0;font-family:Archivo,sans-serif;font-weight:700;font-size:clamp(40px,4.4vw,64px);line-height:.98;text-transform:uppercase;color:#f4f8ff">Project index</h2>
+      </div>
     </div>
 
-    <dialog id="projectDialog" class="project-dialog">
-      <button class="dialog-close" type="button" aria-label="Close project">Close</button>
-      <div id="dialogContent"></div>
-    </dialog>
+    <div style="display:flex;gap:10px;flex-wrap:wrap;margin:36px 0 0">
+      <sc-for list="{{ filters }}" as="f" hint-placeholder-count="7">
+        <button style="{{ f.style }}" onClick="{{ f.onPick }}">{{ f.label }}<span style="opacity:.5;margin-left:7px">{{ f.count }}</span></button>
+      </sc-for>
+    </div>
 
-    <script src="content.js"></script>
-    <script src="script.js"></script>
-  </body>
+    <div style="display:grid;grid-template-columns:1fr 350px;gap:44px;align-items:start;margin:26px 0 0">
+      <div>
+        <div style="border-top:1px solid rgba(234,242,255,.4)">
+          <sc-for list="{{ rows }}" as="r" hint-placeholder-count="8">
+            <div style="{{ r.style }}" onMouseEnter="{{ r.onEnter }}" onClick="{{ r.onOpen }}">
+              <span style="width:52px;flex:none;font:500 10px/1 'IBM Plex Mono',monospace;color:rgba(234,242,255,.5)">{{ r.yr }}</span>
+              <i style="{{ r.chip }}"></i>
+              <span style="flex:1;min-width:200px;font:600 21px/1.05 Inter,sans-serif;text-transform:uppercase;color:#f4f8ff">{{ r.title }}</span>
+              <span style="width:290px;flex:none;font:400 11px/1.4 Inter,sans-serif;color:rgba(234,242,255,.55)">{{ r.line }}</span>
+              <span style="{{ r.statusStyle }}">{{ r.status }}</span>
+            </div>
+          </sc-for>
+        </div>
+        <sc-if value="{{ archShow }}" hint-placeholder-val="{{ false }}">
+          <p style="margin:34px 0 0;font:600 9.5px/1 'IBM Plex Mono',monospace;letter-spacing:.2em;text-transform:uppercase;color:#ffd35c">Selected archive projects</p>
+          <div style="border-top:1px solid rgba(234,242,255,.4);margin:12px 0 0">
+            <sc-for list="{{ archRows }}" as="r" hint-placeholder-count="3">
+              <div style="{{ r.style }}" onMouseEnter="{{ r.onEnter }}" onClick="{{ r.onOpen }}">
+                <span style="width:52px;flex:none;font:500 10px/1 'IBM Plex Mono',monospace;color:rgba(234,242,255,.5)">{{ r.yr }}</span>
+                <i style="{{ r.chip }}"></i>
+                <span style="flex:1;min-width:200px;font:600 21px/1.05 Inter,sans-serif;text-transform:uppercase;color:#f4f8ff">{{ r.title }}</span>
+                <span style="width:290px;flex:none;font:400 11px/1.4 Inter,sans-serif;color:rgba(234,242,255,.55)">{{ r.line }}</span>
+                <span style="{{ r.statusStyle }}">{{ r.status }}</span>
+              </div>
+            </sc-for>
+          </div>
+        </sc-if>
+      </div>
+      <div style="position:sticky;top:90px">
+        <div style="border:1px solid rgba(234,242,255,.4);background:#0a2757">
+          <div style="height:210px;background:repeating-linear-gradient(45deg,rgba(234,242,255,.06) 0 9px,transparent 9px 18px);border-bottom:1px solid rgba(234,242,255,.3);display:flex;align-items:center;justify-content:center;padding:20px;text-align:center">
+            <p style="margin:0;font:500 9.5px/1.9 'IBM Plex Mono',monospace;letter-spacing:.12em;text-transform:uppercase;color:rgba(234,242,255,.6)">Media slot<br><span style="color:#ffd35c">{{ prevSlug }}</span><br>awaiting real media</p>
+          </div>
+          <div style="padding:15px 17px 17px">
+            <p style="margin:0;font:600 9px/1.4 'IBM Plex Mono',monospace;letter-spacing:.16em;text-transform:uppercase;color:rgba(234,242,255,.5)">{{ prevMeta }}</p>
+            <p style="margin:7px 0 0;font-family:Archivo,sans-serif;font-weight:700;font-size:19px;line-height:1.05;text-transform:uppercase;color:#f4f8ff">{{ prevTitle }}</p>
+            <p style="margin:8px 0 0;font:400 11.5px/1.55 Inter,sans-serif;color:rgba(234,242,255,.6)">{{ prevLine }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer style="display:flex;align-items:center;justify-content:space-between;gap:24px;flex-wrap:wrap;border-top:1px solid rgba(234,242,255,.3);padding:26px 6vw;background:#081f4d">
+    <div style="display:flex;align-items:baseline;gap:12px">
+      <span style="font-family:Archivo,sans-serif;font-weight:700;font-size:14px;color:#f4f8ff">GenEnv</span>
+      <span style="font:500 9px/1 'IBM Plex Mono',monospace;letter-spacing:.16em;text-transform:uppercase;color:rgba(234,242,255,.5)">Generative Environments Lab</span>
+    </div>
+    <span style="font:500 9px/1 'IBM Plex Mono',monospace;letter-spacing:.16em;text-transform:uppercase;color:rgba(234,242,255,.5)">UBC SALA · Vancouver BC</span>
+    <div style="display:flex;gap:22px;align-items:center">
+      <a href="mailto:genenvlab@gmail.com" style="font:500 9px/1 'IBM Plex Mono',monospace;letter-spacing:.14em;color:#eaf2ff;text-decoration:none" style-hover="color:#ffd35c">genenvlab@gmail.com</a>
+      <button onClick="{{ goTop }}" style="background:none;border:0;padding:0;cursor:pointer;font:600 9px/1 'IBM Plex Mono',monospace;letter-spacing:.16em;text-transform:uppercase;color:rgba(234,242,255,.62)" style-hover="color:#ffd35c">Back to plan ↑</button>
+      <span style="font:500 9px/1 'IBM Plex Mono',monospace;color:rgba(234,242,255,.4)">© 2026</span>
+    </div>
+  </footer>
+
+</div>
+
+<template id="__bundler_thumbnail"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><rect width="100" height="100" fill="#1a1a1a"></rect><text x="50" y="58" font-family="monospace" font-size="26" fill="#e8e4dc" text-anchor="middle">GE</text></svg></template></x-dc>
+<script type="text/x-dc" data-dc-script data-props="{
+  &quot;roadFlow&quot;: { &quot;editor&quot;: &quot;boolean&quot;, &quot;default&quot;: false, &quot;tsType&quot;: &quot;boolean&quot;, &quot;section&quot;: &quot;Scene&quot; },
+  &quot;focusDim&quot;: { &quot;editor&quot;: &quot;range&quot;, &quot;default&quot;: 0.15, &quot;min&quot;: 0.05, &quot;max&quot;: 0.6, &quot;step&quot;: 0.05, &quot;tsType&quot;: &quot;number&quot;, &quot;section&quot;: &quot;Scene&quot; },
+  &quot;showHud&quot;: { &quot;editor&quot;: &quot;boolean&quot;, &quot;default&quot;: true, &quot;tsType&quot;: &quot;boolean&quot;, &quot;section&quot;: &quot;Chrome&quot; }
+}">
+const YEL = "#ffd35c";
+const DIST = { research: "#6cb7ff", teaching: "#ff6f61", about: "#8fd6a8", join: "#f5df7a" };
+const DISTRICT_LBL = { research: "Research", teaching: "Teaching", about: "People", join: "Join" };
+const CAT = { projects: "#6cb7ff", writing: "#c994ff", archive: "#7fd0c9", teaching: "#ff6f61", workshop: "#ff9e7d", platform: "#f091c9", students: "#ffa94d", about: "#8fd6a8", join: "#f5df7a" };
+const CAT_LBL = { projects: "Projects", writing: "Writing", archive: "Archive", teaching: "Teaching", workshop: "Workshops", platform: "Teaching platform", students: "Student work", about: "People", join: "Join" };
+
+// Module grid: standard plot 5, pitch 6 (columns 0/6/12/18…); small unit 2, pitch 3 — a 2x2 cluster of smalls fills one big plot.
+// Zone frames snap to integer grid lines: subzone = block bbox +1, district = +2 (so frames nest with a 1-module gap).
+const PROJECTS = [
+  { id: "uf", title: "Decoding Urban Form", year: "2026 —", type: "Research", status: "hiring", dist: "research", cat: "projects", fund: "SSHRC", venue: "SSHRC", href: "Project - Decoding Urban Form.dc.html", desc: "Reading the city's tissue computationally: parcel fabric, block form, and zoning code. The Vancouver successor to the Code2Code line of work.", line: "the Vancouver Code2Code · SSHRC", slug: "decoding-urban-form", lineage: "Lineage — Code2Code · NYC DCP", map: { u: 0, v: 0, f: 5, arch: "uficon" } },
+  { id: "c2", title: "Code2Code", year: "2018 — 2019", type: "Archive", status: "archive", dist: "research", cat: "archive", venue: "NYC Dept. of City Planning", href: "Project - Code2Code.dc.html", desc: "A line of work beginning with NYC Department of City Planning and moving toward transparent urban form visualization, AI agents, and RAG workflows.", line: "urban form · AI agents · RAG workflows", slug: "code2code", map: { u: 0, v: 14, f: 5, arch: "c2icon" } },
+  { id: "mcp", title: "Grasshopper MCP v2", year: "2026", type: "Tool", status: "current", dist: "research", cat: "projects", venue: "GitHub + live demo", href: "Project - Grasshopper MCP.dc.html", desc: "An evolving tool that connects LLM agents to Grasshopper through MCP, tool calls, skills, and multiple modes of interaction.", line: "LLM agents inside Grasshopper", slug: "grasshopper-mcp", map: { u: 12, v: 0, f: 5, arch: "mcpicon" } },
+  { id: "np1", title: "More coming soon", ph: true, year: "", type: "", status: "", dist: "research", cat: "projects", venue: "", desc: "", line: "", slug: "np1", map: { u: 6, v: 6, f: 5 } },
+  { id: "np2", title: "More coming soon", ph: true, year: "", type: "", status: "", dist: "research", cat: "projects", venue: "", desc: "", line: "", slug: "np2", map: { u: 12, v: 6, f: 5 } },
+  { id: "np3", title: "More coming soon", ph: true, year: "", type: "", status: "", dist: "research", cat: "projects", venue: "", desc: "", line: "", slug: "np3", map: { u: 18, v: 6, f: 5 } },
+  { id: "hac", title: "Human-AI Co-Design", year: "2026 —", type: "Research", status: "hiring", dist: "research", cat: "projects", fund: "NSERC", venue: "NSERC", desc: "A co-design framework for performance-aware constructed environments, pairing human designers with AI agents.", line: "performance-aware co-design · NSERC", slug: "human-ai-co-design", map: { u: 6, v: 0, f: 5, arch: "unit" } },
+  { id: "th", title: "Digital Thermal Sandbox", year: "2026 —", type: "Research", status: "current", dist: "research", cat: "projects", fund: "LACF", venue: "LACF", href: "Project - Digital Thermal Sandbox.dc.html", desc: "A sandbox where thermal behavior is read while the form is still moving. Microclimate feedback for early design.", line: "microclimate feedback for early design", slug: "digital-thermal-sandbox", map: { u: 18, v: 0, f: 5, arch: "sandbox" } },
+
+  { id: "pl", title: "Generative Planting", year: "2024", type: "Writing", status: "published", dist: "research", cat: "archive", venue: "JoDLA / ASLA", desc: "Generative methods for species mixes and planting plans at scale.", line: "planting design at scale", slug: "generative-planting", map: { u: 6, v: 14, f: 5 } },
+  { id: "lex", title: "Computational Lexicalization", year: "2026", type: "Writing", status: "in press", dist: "research", cat: "writing", venue: "Architectural Journal", desc: "A theoretical article for Architectural Journal on design agents, computational design, and language-based modeling.", line: "the theory behind the design agents", slug: "computational-lexicalization", lineage: "Companion to — Grasshopper MCP", map: { u: 24, v: 0, f: 2, pu: 3.9, arch: "unit" } },
+  { id: "diss", title: "AI + Landscapes", year: "2025", type: "PhD dissertation", status: "published", dist: "research", cat: "writing", venue: "", desc: "PhD dissertation on artificial intelligence and landscapes: how machine intelligence can read, model, and generate landscape environments.", line: "AI methods for landscape environments", slug: "ai-landscapes", map: { u: 24, v: 3, f: 2, pu: 3.9, arch: "unit" } },
+
+  { id: "na1", title: "More coming soon", ph: true, year: "", type: "", status: "", dist: "research", cat: "archive", venue: "", desc: "", line: "", slug: "na1", map: { u: 12, v: 14, f: 5 } },
+
+  { id: "a515", title: "ARCH 515", year: "2026", type: "Course", status: "course", dist: "teaching", cat: "teaching", venue: "UBC SALA", desc: "MLA design media: representation and computational workflows for landscape architecture. Selected student work is credited inside the course archive.", line: "MLA design media", slug: "arch-515", map: { u: 54, v: 0, f: 5, arch: "unit" } },
+  { id: "d212", title: "DES 212", year: "2026", type: "Course", status: "course", dist: "teaching", cat: "teaching", venue: "UBC SALA", desc: "BDES design media: foundations of design representation and computation. Selected student work is credited inside the course archive.", line: "BDES design media", slug: "des-212", map: { u: 60, v: 0, f: 5, arch: "unit" } },
+  { id: "a540", title: "ARCH 540", year: "2026", type: "Option studio", status: "course", dist: "teaching", cat: "teaching", venue: "UBC SALA", desc: "Architecture option studio: generative and agentic workflows tested at studio scale. Selected student work is credited inside the course archive.", line: "architecture option studio", slug: "arch-540", map: { u: 54, v: 6, f: 5, arch: "unit" } },
+  { id: "ad", title: "AI4DM", year: "2026 —", type: "Teaching platform", status: "in development", dist: "teaching", cat: "platform", venue: "UBC SALA", href: "Project - AI4DM.dc.html", desc: "A teaching platform for design representation in the age of generative AI, reconnecting AI workflows with the broader culture of design media.", line: "AI + design media teaching platform", slug: "ai4dm", map: { u: 34, v: 8, f: 5, arch: "ai4dmicon" } },
+  { id: "la", title: "Landscape Agent", year: "2025", type: "Workshop / Research", status: "published", dist: "teaching", cat: "workshop", venue: "DigitalFUTURES · NeurIPS Creative AI", desc: "A DigitalFUTURES workshop and research project testing landform modeling tasks with AI agents; published in the NeurIPS Creative AI track.", line: "agentic landform modeling · NeurIPS", slug: "landscape-agents", map: { u: 54, v: 14, f: 5, arch: "unit" } },
+
+  { id: "sims", title: "Arch Sims", year: "—", type: "Graduate project", status: "current", dist: "teaching", cat: "students", venue: "UBC SALA", desc: "A graduate project developed in the lab as supervised work, a directed study.", line: "graduate project · directed study", slug: "arch-sims", lineage: "Supervised work — directed study", map: { u: 34, v: 0, f: 5, arch: "unit" } },
+  { id: "story", title: "Story Editor", year: "—", type: "Graduate project", status: "current", dist: "teaching", cat: "students", venue: "UBC SALA", desc: "A graduate project developed in the lab as supervised work, a directed study.", line: "graduate project · directed study", slug: "story-editor", lineage: "Supervised work — directed study", map: { u: 40, v: 0, f: 5, arch: "unit" } },
+  { id: "s212", title: "Selected work — DES 212", lbl: "Selected · DES 212", year: "—", type: "Course archive", status: "curating", dist: "teaching", cat: "students", venue: "UBC SALA", desc: "Selected student work from DES 212, credited with permission, the course's public archive.", line: "from the BDES media course", slug: "selected-des-212", lineage: "From — DES 212", map: { u: 46, v: 0, f: 2, arch: "unit" } },
+  { id: "s515", title: "Selected work — ARCH 515", lbl: "Selected · ARCH 515", year: "—", type: "Course archive", status: "curating", dist: "teaching", cat: "students", venue: "UBC SALA", desc: "Selected student work from ARCH 515, credited with permission, the course's public archive.", line: "from the MLA media course", slug: "selected-arch-515", lineage: "From — ARCH 515", map: { u: 49, v: 0, f: 2, arch: "unit" } },
+  { id: "s540", title: "Selected work — ARCH 540", lbl: "Selected · ARCH 540", year: "—", type: "Course archive", status: "curating", dist: "teaching", cat: "students", venue: "UBC SALA", desc: "Selected student work from the ARCH 540 option studio, credited with permission, the course's public archive.", line: "from the option studio", slug: "selected-arch-540", lineage: "From — ARCH 540", map: { u: 46, v: 3, f: 2, arch: "unit" } },
+
+  { id: "t515", title: "ARCH 515 \u00b7 2025", year: "2025", type: "Course archive", status: "archive", dist: "teaching", cat: "archive", venue: "UBC SALA", desc: "Past edition. Selected projects to be curated.", line: "course archive", slug: "arch515-2025", map: { u: 34, v: 23, f: 5, arch: "unit", off: true } },
+  { id: "t212", title: "DES 212 \u00b7 2025", year: "2025", type: "Course archive", status: "archive", dist: "teaching", cat: "archive", venue: "UBC SALA", desc: "Past edition. Selected projects to be curated.", line: "course archive", slug: "des212-2025", map: { u: 40, v: 23, f: 5, arch: "unit", off: true } },
+  { id: "t540", title: "ARCH 540 \u00b7 2025", year: "2025", type: "Course archive", status: "archive", dist: "teaching", cat: "archive", venue: "UBC SALA", desc: "Past edition. Selected projects to be curated.", line: "course archive", slug: "arch540-2025", map: { u: 46, v: 23, f: 5, arch: "unit", off: true } },
+
+  { id: "people", title: "People", year: "—", type: "Lab", status: "current", dist: "about", cat: "about", venue: "UBC SALA", desc: "Faculty, graduate researchers, and alumni: the people behind the lab's projects.", line: "who is in the lab", slug: "people" },
+  { id: "pp1", title: "Faculty 01", year: "—", type: "Faculty", status: "placeholder", dist: "about", cat: "about", venue: "UBC SALA", desc: "Real name, role, and portrait to drop in.", line: "placeholder profile", slug: "person-01", map: { u: 38, v: 25, f: 5, arch: "unit" } },
+  { id: "pp2", title: "Researcher 01", year: "—", type: "Graduate researcher", status: "placeholder", dist: "about", cat: "about", venue: "UBC SALA", desc: "Real name, role, and portrait to drop in.", line: "placeholder profile", slug: "person-02", map: { u: 44, v: 25, f: 5, arch: "unit" } },
+  { id: "pp3", title: "Researcher 02", year: "—", type: "Graduate researcher", status: "placeholder", dist: "about", cat: "about", venue: "UBC SALA", desc: "Real name, role, and portrait to drop in.", line: "placeholder profile", slug: "person-03", map: { u: 50, v: 25, f: 5, arch: "unit" } },
+  { id: "pp4", title: "Researcher 03", year: "—", type: "Graduate researcher", status: "placeholder", dist: "about", cat: "about", venue: "UBC SALA", desc: "Real name, role, and portrait to drop in.", line: "placeholder profile", slug: "person-04", map: { u: 38, v: 31, f: 5, arch: "unit" } },
+  { id: "pp5", title: "Alum 01", year: "—", type: "Alumni", status: "placeholder", dist: "about", cat: "about", venue: "UBC SALA", desc: "Real name, role, and portrait to drop in.", line: "placeholder profile", slug: "person-05", map: { u: 44, v: 31, f: 5, arch: "unit" } },
+  { id: "pp6", title: "Alum 02", year: "—", type: "Alumni", status: "placeholder", dist: "about", cat: "about", venue: "UBC SALA", desc: "Real name, role, and portrait to drop in.", line: "placeholder profile", slug: "person-06", map: { u: 50, v: 31, f: 5, arch: "unit" } },
+  { id: "open", title: "Openings", year: "2026", type: "Opportunity", status: "open", dist: "join", cat: "join", venue: "UBC SALA", desc: "PhD positions and research assistantships on the lab's funded projects. Contact the lab with a focused proposal and relevant work.", line: "PhD + RA on funded projects", slug: "openings", map: { u: 21, v: 25, f: 5, arch: "unit" } },
+  { id: "partners", title: "Partners", year: "2026", type: "Collaboration", status: "open", dist: "join", cat: "join", venue: "", desc: "External collaborators: workshops, open tools, and industry pilots.", line: "workshops · tools · pilots", slug: "partners", map: { u: 27, v: 25, f: 5, arch: "unit" } },
+];
+const BY_ID = {};
+PROJECTS.forEach((p) => { BY_ID[p.id] = p; });
+
+const FEED_MAIN = ["uf", "hac", "mcp", "th", "lex", "diss", "ad", "a540", "s540", "d212", "s212", "a515", "s515", "sims", "story", "open", "partners", "people", "la"];
+const FEED_ARCH = ["c2", "pl", "t515", "t212", "t540"];
+const FILTERS = [["all", "All"], ["projects", "Projects"], ["writing", "Writing"], ["teaching", "Teaching"], ["workshop", "Workshops"], ["platform", "Platform"], ["students", "Student work"], ["about", "People"], ["join", "Join"], ["archive", "Archive"]];
+
+const ROADS = [
+  { a: "c2", b: "uf", w: 3 },
+  { a: "lex", b: "mcp", w: 2 },
+  { a: "ad", b: "d212", w: 1 },
+  { a: "uf", b: "open", w: 1 },
+  { a: "hac", b: "open", w: 1 },
+  { a: "sims", b: "story", w: 1 },
+  { a: "d212", b: "s212", w: 2, stu: true },
+  { a: "a515", b: "s515", w: 2, stu: true },
+  { a: "a540", b: "s540", w: 2, stu: true },
+];
+
+const WIN = {
+  projects: { a: 0.275, b: 0.32 },
+  writing: { a: 0.37, b: 0.4 },
+  archive: { a: 0.405, b: 0.43 },
+  teaching: { a: 0.505, b: 0.55 },
+  students: { a: 0.585, b: 0.645 },
+  join: { a: 0.705, b: 0.795 },
+};
+
+const SUBZONES = [
+  { lbl: "Projects", color: CAT.projects, ids: ["uf", "hac", "mcp", "th", "np1", "np2", "np3"], win: WIN.projects },
+  { lbl: "Writing", color: CAT.writing, ids: ["lex", "diss"], win: WIN.writing },
+  { lbl: "Archive", color: CAT.archive, ids: ["c2", "pl", "na1"], win: WIN.archive },
+  { lbl: "Supervised student work", color: CAT.students, ids: ["sims", "story", "s212", "s515", "s540"], win: { a: 0.505, b: 0.535 } },
+  { lbl: "Courses", color: CAT.teaching, ids: ["a515", "d212", "a540"], win: { a: 0.535, b: 0.565 } },
+  { lbl: "Teaching platform", color: CAT.platform, ids: ["ad"], win: { a: 0.565, b: 0.595 } },
+  { lbl: "Workshops", color: CAT.workshop, ids: ["la"], win: { a: 0.595, b: 0.625 } },
+];
+
+const CHAPTERS = [
+  { n: "01", name: "About", mid: 0.002, start: 0 },
+  { n: "02", name: "Research", mid: 0.3, start: 0.24 },
+  { n: "03", name: "Teaching", mid: 0.6, start: 0.46 },
+  { n: "04", name: "Join", mid: 0.73, start: 0.675 },
+  { n: "05", name: "About", mid: 0.83, start: 0.785 },
+  { n: "06", name: "The city", mid: 0.96, start: 0.895 },
+];
+
+const ARCH_NAMES = { tower: "Tower", fabric: "Fabric", terrain: "Terrain", stack: "Stack", tablet: "Tablet", sandbox: "Sandbox", ai4dmicon: "Prompt to image", c2icon: "Zoning envelope", bridge: "Bridge", cluster: "Cluster", podium: "Podium", sheaf: "Sheaf", canopy: "Canopy", unit: "Unit", plot: "Plot", mcpicon: "Canvas as plan", uficon: "Fabric read" };
+
+class Component extends DCLogic {
+  state = { prog: 0, sy: 0, vw: 1440, vh: 900, hover: null, lastHover: null, filter: "all", feedHover: null, detail: null, page: null, legend: false, anim: null, rScroll: 0, tScroll: 0 };
+
+  componentDidMount() {
+    this._measure = () => this.setState({ vw: window.innerWidth, vh: window.innerHeight });
+    this._measure();
+    window.addEventListener("resize", this._measure);
+    this._onScroll = () => { this._scT = performance.now(); this._kick(false); };
+    window.addEventListener("scroll", this._onScroll, { passive: true });
+    this._onKey = (e) => {
+      if (e.key !== "Escape") return;
+      if (this.state.page) this._closeSheet();
+      else if (this.state.legend) this._setLegend(false);
+    };
+    window.addEventListener("keydown", this._onKey);
+    // Mock: wheel inside the Research frame scrolls the district's reserved row instead of the page.
+    this._onWheel = (e) => {
+      if (this.state.page || this.state.legend) return;
+      const zones = [["rScroll", this._rFrame], ["tScroll", this._tFrame]];
+      for (const [key, fr] of zones) {
+        if (!fr) continue;
+        if (e.clientX < fr.x0 || e.clientX > fr.x1 || e.clientY < fr.y0 || e.clientY > fr.y1) continue;
+        const s = this.state[key] || 0;
+        if (e.deltaY > 0 ? s >= 1 : s <= 0) return;
+        e.preventDefault();
+        this.setState({ [key]: Math.min(1, Math.max(0, s + e.deltaY / 700)) });
+        return;
+      }
+    };
+    window.addEventListener("wheel", this._onWheel, { passive: false });
+    this._kick(true);
+  }
+  componentWillUnmount() {
+    window.removeEventListener("resize", this._measure);
+    window.removeEventListener("scroll", this._onScroll);
+    window.removeEventListener("keydown", this._onKey);
+    window.removeEventListener("wheel", this._onWheel);
+    document.body.style.overflow = "";
+    if (this._raf) cancelAnimationFrame(this._raf);
+    if (this._aRaf) cancelAnimationFrame(this._aRaf);
+  }
+
+  _lock(on) { document.body.style.overflow = on ? "hidden" : ""; }
+  _openProj(id) {
+    const m = BY_ID[id];
+    if (m.href) { window.location.href = m.href; return; }
+    this._lock(true);
+    this.setState({ page: id, hover: null });
+  }
+  _closeSheet() { this._lock(false); this.setState({ page: null }); }
+  _setLegend(on) { this._lock(on); this.setState({ legend: on }); }
+
+  // Hovering an animated icon (LLM+agent family) runs its pipeline cycle, like in Icon Studies.
+  _hoverOn(id) {
+    this.setState({ hover: id, lastHover: id });
+    const mm = BY_ID[id], a2 = mm && mm.map && mm.map.arch;
+    if ((a2 === "mcpicon" || a2 === "uficon" || a2 === "sandbox" || a2 === "ai4dmicon" || a2 === "c2icon") && !this._aRaf) {
+      this._a0 = performance.now();
+      const loop = (now) => {
+        const h = this.state.hover, hm = h && BY_ID[h];
+        const ar = hm && hm.map && hm.map.arch;
+        if (ar !== "mcpicon" && ar !== "uficon" && ar !== "sandbox" && ar !== "ai4dmicon" && ar !== "c2icon") { this._aRaf = null; if (this.state.anim != null) this.setState({ anim: null }); return; }
+        this.setState({ anim: ((now - this._a0) / 4600) % 1 });
+        this._aRaf = requestAnimationFrame(loop);
+      };
+      this._aRaf = requestAnimationFrame(loop);
+    }
+  }
+
+  _targetProg() {
+    const vh = window.innerHeight || 900;
+    return Math.min(1, Math.max(0, window.scrollY / (11 * vh)));
+  }
+  _kick(snap) {
+    if (snap) this.setState({ prog: this._targetProg(), sy: window.scrollY });
+    if (this._raf) return;
+    const step = () => {
+      const t = this._targetProg(), c = this.state.prog;
+      const n = c + (t - c) * 0.095;
+      const sy = window.scrollY;
+      const rs = t < 0.24 || t > 0.46 ? 0 : this.state.rScroll;
+      const ts = t < 0.46 || t > 0.68 ? 0 : this.state.tScroll;
+      if (Math.abs(t - n) < 0.0005 && Math.abs(sy - this.state.sy) < 0.5) {
+        this._raf = null;
+        this.setState({ prog: t, sy, rScroll: rs, tScroll: ts });
+        return;
+      }
+      this.setState({ prog: n, sy, rScroll: rs, tScroll: ts });
+      this._raf = requestAnimationFrame(step);
+    };
+    this._raf = requestAnimationFrame(step);
+  }
+  _go(p) {
+    const vh = window.innerHeight || 900;
+    window.scrollTo({ top: p * 11 * vh, behavior: "smooth" });
+  }
+  _goFeed(filter) {
+    const vh = window.innerHeight || 900;
+    window.scrollTo({ top: 12 * vh, behavior: "smooth" });
+    if (filter) this.setState({ filter });
+  }
+
+  ss(x, a, b) {
+    const t = Math.min(1, Math.max(0, (x - a) / ((b - a) || 1e-6)));
+    return t * t * t * (t * (t * 6 - 15) + 10);
+  }
+  bell(x, a, b, f) { return this.ss(x, a - f, a) * (1 - this.ss(x, b, b + f)); }
+  c01(x) { return Math.min(1, Math.max(0, x)); }
+
+  prism(Pf, pts, z0, z1, kb, o) {
+    const S = (p) => p[0].toFixed(1) + "," + p[1].toFixed(1);
+    const n = pts.length;
+    const bot = pts.map((p) => Pf(p[0], p[1], z0));
+    const top = pts.map((p) => Pf(p[0], p[1], z1));
+    // Collapsed to plan: a single crisp outline instead of degenerate side faces doubling every stroke.
+    if (Math.abs(top[0][0] - bot[0][0]) + Math.abs(top[0][1] - bot[0][1]) < 0.7) {
+      return [React.createElement("polygon", { key: kb + "t", points: top.map(S).join(" "), fill: o.fillT, stroke: o.stroke, strokeWidth: o.sw, strokeLinejoin: "round", strokeDasharray: o.dash || null })];
+    }
+    const faces = [];
+    for (let i = 0; i < n; i++) {
+      const j = (i + 1) % n;
+      const du = Math.abs(pts[j][0] - pts[i][0]), dv = Math.abs(pts[j][1] - pts[i][1]);
+      faces.push({ d: (pts[i][0] + pts[j][0] + pts[i][1] + pts[j][1]) / 2, pts: [bot[i], bot[j], top[j], top[i]], fill: du >= dv ? o.fillL : o.fillR });
+    }
+    faces.sort((a, b) => a.d - b.d);
+    const els = faces.map((f, i2) => React.createElement("polygon", { key: kb + "s" + i2, points: f.pts.map(S).join(" "), fill: f.fill, stroke: o.stroke, strokeWidth: o.sw, strokeLinejoin: "round", strokeDasharray: o.dash || null }));
+    els.push(React.createElement("polygon", { key: kb + "t", points: top.map(S).join(" "), fill: o.fillT, stroke: o.stroke, strokeWidth: o.sw, strokeLinejoin: "round", strokeDasharray: o.dash || null }));
+    return els;
+  }
+
+  _wireDraw(els, wires, kb, stg, anim, swD) {
+    wires.forEach((w2, wi2) => {
+      const prog = stg(0.2 + wi2 * 0.075, 0.28 + wi2 * 0.075);
+      if (prog <= 0.01) return;
+      els.push(React.createElement("path", { key: kb + "wr" + wi2, d: "M " + w2[0][0].toFixed(1) + " " + w2[0][1].toFixed(1) + " Q " + w2[1][0].toFixed(1) + " " + w2[1][1].toFixed(1) + " " + w2[2][0].toFixed(1) + " " + w2[2][1].toFixed(1), fill: "none", stroke: YEL, strokeOpacity: 0.85, strokeWidth: swD * 1.5, pathLength: 1, strokeDasharray: 1, strokeDashoffset: (1 - prog).toFixed(3) }));
+    });
+    if (anim == null) return;
+    const run = (anim - 0.55) / 0.3;
+    if (run <= 0 || run >= 1) return;
+    const wi2 = Math.min(wires.length - 1, Math.floor(run * wires.length)), uu = run * wires.length - wi2;
+    const w2 = wires[wi2], iu = 1 - uu;
+    els.push(React.createElement("circle", { key: kb + "pulse", cx: (iu * iu * w2[0][0] + 2 * iu * uu * w2[1][0] + uu * uu * w2[2][0]).toFixed(1), cy: (iu * iu * w2[0][1] + 2 * iu * uu * w2[1][1] + uu * uu * w2[2][1]).toFixed(1), r: 3.2, fill: YEL }));
+  }
+
+  shapesFor(Pl, arch, opt) {
+    const els = [];
+    const kb = opt.kb || arch;
+    const k = opt.k || 1;
+    const swD = opt.sw * 0.6;
+    if (opt.plinth) {
+      els.push.apply(els, this.prism(Pl, [[0, 0], [4, 0], [4, 4], [0, 4]], 0, 0.42, kb + "plinth", { stroke: opt.stroke, sw: opt.sw, fillT: "#16418f", fillL: "#0d2c66", fillR: "#0a2559" }));
+      const basePl = Pl;
+      Pl = (u, v, w) => basePl(u, v, w + 0.42);
+    }
+    const rect = (x0, y0, x1, y1) => [[x0, y0], [x1, y0], [x1, y1], [x0, y1]];
+    const prism = (pts, z0, z1, ov) => { els.push.apply(els, this.prism(Pl, pts, z0, z1, kb + "p" + els.length, Object.assign({ stroke: opt.stroke, sw: opt.sw, dash: opt.dash, fillT: opt.fillT, fillL: opt.fillL, fillR: opt.fillR }, ov || {}))); };
+    const ln = (a, b, ex) => els.push(React.createElement("line", Object.assign({ key: kb + "l" + els.length, x1: a[0].toFixed(1), y1: a[1].toFixed(1), x2: b[0].toFixed(1), y2: b[1].toFixed(1), stroke: opt.stroke, strokeWidth: opt.sw }, ex || {})));
+
+    if (arch === "unit") {
+      prism(rect(0.5, 0.5, 3.5, 3.5), 0, 1.3);
+    } else if (arch === "terrain") {
+      prism([[0.2, 0.6], [2.2, 0], [3.9, 0.5], [4, 3.2], [2, 4], [0, 3.1]], 0, 0.55);
+      prism([[0.9, 1.1], [3.1, 0.8], [3.4, 2.7], [1.7, 3.2]], 0.55, 1.15);
+      prism([[1.5, 1.6], [2.6, 1.4], [2.8, 2.3], [1.9, 2.5]], 1.15, 1.8);
+    } else if (arch === "canopy") {
+      prism([[0, 0.7], [3.5, 0], [4, 2.9], [1.2, 4], [0, 3]], 0, 0.4);
+      [[0.9, 1.3, 0.5], [2.1, 0.85, 0.62], [3.15, 1.7, 0.5], [1.5, 2.7, 0.75], [2.85, 3.0, 0.55], [0.75, 3.3, 0.4]].forEach(([x, y, s], ii) => {
+        const b = Pl(x, y, 0.4), tp = Pl(x, y, 0.4 + s * 2.3);
+        ln(b, tp);
+        els.push(React.createElement("circle", { key: kb + "c" + ii, cx: tp[0].toFixed(1), cy: tp[1].toFixed(1), r: ((5 + s * 11) * k).toFixed(1), fill: "rgba(122,224,178,.16)", stroke: opt.stroke, strokeWidth: opt.sw }));
+      });
+    } else if (arch === "tower") {
+      prism(rect(0.5, 0.5, 3.5, 3.5), 0, 1.7);
+      [[1.5], [2.5]].forEach(([yk]) => {
+        ln(Pl(3.5, yk, 0), Pl(3.5, yk, 1.7), { strokeOpacity: 0.4, strokeWidth: swD });
+        ln(Pl(yk, 3.5, 0), Pl(yk, 3.5, 1.7), { strokeOpacity: 0.4, strokeWidth: swD });
+      });
+      prism(rect(0.9, 0.9, 3.1, 3.1), 1.7, 2.9);
+      prism(rect(1.3, 1.3, 2.7, 2.7), 2.9, 3.9);
+      prism(rect(1.7, 1.7, 2.3, 2.3), 3.9, 4.7);
+      ln(Pl(2, 2, 4.7), Pl(2, 2, 5.15));
+    } else if (arch === "fabric") {
+      prism(rect(0, 0, 4, 4), 0, 0.28);
+      const H = [[1.2, 0.6, 1.5], [0.9, 0, 1.0], [1.4, 0.7, 0.5]];
+      for (let j = 0; j < 3; j++) for (let i = 0; i < 3; i++) {
+        const h = H[j][i];
+        if (h) prism(rect(0.35 + i * 1.25, 0.35 + j * 1.25, 1.3 + i * 1.25, 1.3 + j * 1.25), 0.28, 0.28 + h);
+      }
+    } else if (arch === "stack") {
+      prism(rect(0.4, 0.4, 3.6, 3.6), 0, 1);
+      prism(rect(0.9, 0.9, 3.1, 3.1), 1, 2.2);
+      prism(rect(1.45, 1.45, 2.55, 2.55), 2.2, 3.5);
+      const nt = Pl(2, 2, 4.5);
+      ln(Pl(2, 2, 3.5), nt);
+      els.push(React.createElement("rect", { key: kb + "nd", x: (nt[0] - 3.2 * k).toFixed(1), y: (nt[1] - 3.2 * k).toFixed(1), width: (6.4 * k).toFixed(1), height: (6.4 * k).toFixed(1), fill: YEL }));
+    } else if (arch === "tablet") {
+      prism(rect(0.6, 1.75, 3.4, 2.2), 0, 2.6);
+      [0.65, 1.25, 1.85].forEach((h) => ln(Pl(1.0, 2.2, h), Pl(3.0, 2.2, h), { strokeOpacity: 0.5, strokeWidth: swD }));
+      prism(rect(3.05, 3.05, 3.7, 3.7), 0, 0.62);
+      const a1 = Pl(3.37, 3.37, 0.62), a2 = Pl(2.5, 2.2, 1.75), am = Pl(3.2, 2.7, 1.7);
+      els.push(React.createElement("path", { key: kb + "lk", d: "M " + a1[0].toFixed(1) + " " + a1[1].toFixed(1) + " Q " + am[0].toFixed(1) + " " + am[1].toFixed(1) + " " + a2[0].toFixed(1) + " " + a2[1].toFixed(1), fill: "none", stroke: YEL, strokeWidth: 0.9, strokeDasharray: "4 4" }));
+    } else if (arch === "podium") {
+      prism(rect(0.9, 0.02, 3.1, 0.22), 0, 1.9);
+      prism(rect(0, 0.45, 4, 1.6), 0, 0.5);
+      prism(rect(0, 1.6, 4, 2.8), 0, 1.05);
+      prism(rect(0, 2.8, 4, 4), 0, 1.6);
+    } else if (arch === "sheaf") {
+      prism(rect(0.5, 0.7, 3.5, 3.3), 0, 0.16);
+      prism(rect(0.65, 0.55, 3.65, 3.15), 0.16, 0.32);
+      prism(rect(0.4, 0.8, 3.4, 3.4), 0.32, 0.48);
+      prism(rect(0.6, 0.62, 3.6, 3.22), 0.48, 0.64);
+    } else if (arch === "sandbox") {
+      // Digital Thermal Sandbox: sand table; dot field = heat readings in relief; canopies cool it. Hover sweeps the what-if canopy across the plot.
+      const anim = opt.anim;
+      prism(rect(0.2, 0.2, 3.8, 3.8), 0, 0.28);
+      const wifX = anim == null ? 1.15 : 0.6 + 2.8 * this.ss(anim, 0.05, 0.95);
+      const wifY = anim == null ? 2.6 : 2.6 - 0.9 * Math.sin(this.ss(anim, 0.05, 0.95) * Math.PI);
+      const can7 = [[1.0, 1.1, 0.55], [1.9, 2.9, 0.7], [3.0, 3.1, 0.5], [wifX, wifY, 0.62]];
+      const ht7 = (x, y) => {
+        let h = 0.48 + 0.34 * Math.exp(-((x - 3.1) * (x - 3.1) + (y - 0.9) * (y - 0.9)) / 1.5);
+        can7.forEach(([cx, cy, r]) => { h -= 0.5 * Math.exp(-((x - cx) * (x - cx) + (y - cy) * (y - cy)) / (r * r * 1.1)); });
+        return h;
+      };
+      const N7 = 11;
+      for (let ii = 0; ii < N7; ii++) for (let jj = 0; jj < N7; jj++) {
+        const x = 0.35 + ii * 3.3 / (N7 - 1), y = 0.35 + jj * 3.3 / (N7 - 1);
+        const hn = this.c01((ht7(x, y) - 0.08) / 0.6);
+        const d = Pl(x, y, 0.3 + 0.75 * hn);
+        els.push(React.createElement("circle", { key: kb + "hd" + ii + "_" + jj, cx: d[0].toFixed(1), cy: d[1].toFixed(1), r: ((0.6 + 2.4 * hn) * k * 2).toFixed(1), fill: hn > 0.62 ? "rgba(255,211,92," + (0.14 + 0.32 * hn).toFixed(2) + ")" : "rgba(234,242,255," + (0.12 + 0.42 * hn).toFixed(2) + ")" }));
+      }
+      const NC = 10, xq0 = 0.2, wq = 3.6;
+      const Fq = [];
+      for (let ii = 0; ii <= NC; ii++) { Fq.push([]); for (let jj = 0; jj <= NC; jj++) Fq[ii].push(ht7(xq0 + ii * wq / NC, xq0 + jj * wq / NC)); }
+      [0.4, 0.56].forEach((L, li) => {
+        for (let ii = 0; ii < NC; ii++) for (let jj = 0; jj < NC; jj++) {
+          const xa = xq0 + ii * wq / NC, ya = xq0 + jj * wq / NC, dq = wq / NC;
+          const v = [Fq[ii][jj], Fq[ii + 1][jj], Fq[ii + 1][jj + 1], Fq[ii][jj + 1]];
+          const pts = [];
+          const edge = (va, vb, pa, pb) => { if ((va < L) !== (vb < L)) { const tq = (L - va) / (vb - va); pts.push([pa[0] + (pb[0] - pa[0]) * tq, pa[1] + (pb[1] - pa[1]) * tq]); } };
+          edge(v[0], v[1], [xa, ya], [xa + dq, ya]);
+          edge(v[1], v[2], [xa + dq, ya], [xa + dq, ya + dq]);
+          edge(v[2], v[3], [xa + dq, ya + dq], [xa, ya + dq]);
+          edge(v[3], v[0], [xa, ya + dq], [xa, ya]);
+          for (let pi = 0; pi + 1 < pts.length; pi += 2) {
+            const a = Pl(pts[pi][0], pts[pi][1], 0.31), b = Pl(pts[pi + 1][0], pts[pi + 1][1], 0.31);
+            els.push(React.createElement("line", { key: kb + "ct" + li + "_" + ii + "_" + jj + "_" + pi, x1: a[0].toFixed(1), y1: a[1].toFixed(1), x2: b[0].toFixed(1), y2: b[1].toFixed(1), stroke: li ? "rgba(255,211,92,.4)" : "rgba(234,242,255,.32)", strokeWidth: swD * (li ? 1 : 0.8) }));
+          }
+        }
+      });
+      [[0.55, 0.55], [3.45, 0.55], [3.45, 3.45], [0.55, 3.45]].forEach(([x, y], ii) => {
+        const hot = ht7(x, y) > 0.5;
+        ln(Pl(x, y, 0.28), Pl(x, y, 1.05), { strokeOpacity: 0.5, strokeWidth: swD * 0.8 });
+        const dtop = Pl(x, y, 1.05);
+        els.push(React.createElement("circle", { key: kb + "sd" + ii, cx: dtop[0].toFixed(1), cy: dtop[1].toFixed(1), r: (1.9 * k * 2).toFixed(1), fill: hot ? "rgba(255,211,92,.55)" : "#eaf2ff" }));
+      });
+      const hts7 = [0.85, 1.05, 0.75, 0.95];
+      can7.forEach(([cx, cy, r], ii) => {
+        const last = ii === 3;
+        ln(Pl(cx, cy, 0.28), Pl(cx, cy, 0.28 + hts7[ii]), { strokeOpacity: 0.75 });
+        const tp = Pl(cx, cy, 0.28 + hts7[ii]);
+        els.push(React.createElement("circle", { key: kb + "cn" + ii, cx: tp[0].toFixed(1), cy: tp[1].toFixed(1), r: (r * 24 * k).toFixed(1), fill: "rgba(122,224,178,.14)", stroke: last ? YEL : "rgba(122,224,178,.75)", strokeWidth: swD * (last ? 1.2 : 1), strokeDasharray: last ? "5 4" : null }));
+      });
+    } else if (arch === "cluster") {
+      prism(rect(0.2, 0.2, 1.9, 1.9), 0, 1.2);
+      prism(rect(2.2, 0.4, 3.8, 2.0), 0, 0.8);
+      prism(rect(0.5, 2.3, 2.1, 3.9), 0, 0.9);
+      prism(rect(2.4, 2.4, 3.7, 3.7), 0, 1.5);
+      ln(Pl(1.05, 1.05, 1.2), Pl(3.05, 3.05, 1.5), { strokeDasharray: "3 4", strokeOpacity: 0.55, strokeWidth: swD });
+    } else if (arch === "plot") {
+      const S3 = (p) => p[0].toFixed(1) + "," + p[1].toFixed(1);
+      const c4 = [Pl(0, 0, 0), Pl(4, 0, 0), Pl(4, 4, 0), Pl(0, 4, 0)];
+      els.push(React.createElement("polygon", { key: kb + "pl", points: c4.map(S3).join(" "), fill: "rgba(255,211,92,.05)", stroke: "rgba(255,211,92,.8)", strokeWidth: opt.sw, strokeDasharray: "6 6" }));
+      [[0.25, 0.25], [3.75, 0.25], [3.75, 3.75], [0.25, 3.75]].forEach(([x, y], ii) => {
+        const b = Pl(x, y, 0), tp = Pl(x, y, 0.6);
+        ln(b, tp, { stroke: "rgba(255,211,92,.9)" });
+        if (ii === 0 || ii === 2) els.push(React.createElement("polygon", { key: kb + "fg" + ii, points: tp[0].toFixed(1) + "," + tp[1].toFixed(1) + " " + (tp[0] + 8 * k).toFixed(1) + "," + (tp[1] + 2.5 * k).toFixed(1) + " " + tp[0].toFixed(1) + "," + (tp[1] + 5.5 * k).toFixed(1), fill: "rgba(255,211,92,.9)" }));
+      });
+      prism(rect(1.5, 1.5, 2.5, 2.5), 0, 1.1, { fillT: "rgba(255,211,92,.06)", fillL: "rgba(255,211,92,.02)", fillR: "rgba(255,211,92,.02)", stroke: "rgba(255,211,92,.85)", dash: "5 5" });
+    } else if (arch === "mcpicon") {
+      // 3a "canvas as plan": prompt slab, floating node graph, wire corridors, twisting stack. Hover (opt.anim) runs the pipeline; opt.flat crossfades prompt ticks plan⇄face.
+      const fl = opt.flat || 0, anim = opt.anim;
+      const stg = (a, b) => (anim == null ? 1 : this.ss(anim, a, b));
+      prism([[0.25, 0.6], [0.85, 0.6], [0.85, 3.4], [0.25, 3.4]], 0, 1.6, { dash: "6 4" });
+      for (let ii = 0; ii < 6; ii++) {
+        const tp = stg(0.02 + ii * 0.026, 0.1 + ii * 0.026);
+        if (tp <= 0.01) continue;
+        if (fl > 0.03) ln(Pl(0.38, 0.88 + ii * 0.44, 0), Pl(0.38 + (0.34 - (ii % 2) * 0.1) * tp, 0.88 + ii * 0.44, 0), { strokeOpacity: (0.78 * fl).toFixed(2), strokeWidth: swD * 1.7 });
+        if (ii < 4 && fl < 0.97) { const hz = 1.38 - ii * 0.22; ln(Pl(0.85, 0.8, hz), Pl(0.85, 0.8 + (1.9 - (ii % 2) * 0.5) * tp, hz), { strokeOpacity: (0.55 * (1 - fl)).toFixed(2), strokeWidth: swD }); }
+      }
+      const nds = [[1.65, 1.0], [2.8, 1.55], [1.95, 2.45]];
+      nds.forEach(([x, y], ii) => {
+        const on = anim != null && this.ss(anim, 0.2 + ii * 0.075, 0.28 + ii * 0.075) >= 1;
+        ln(Pl(x, y, 0), Pl(x, y, 1.19), { strokeDasharray: "2 4", strokeOpacity: 0.35, strokeWidth: swD });
+        prism(rect(x - 0.31, y - 0.23, x + 0.31, y + 0.23), 1.19, 1.41, on ? { fillT: "rgba(255,211,92,.18)", stroke: YEL } : null);
+      });
+      const wires = [];
+      const wire = (a, b) => wires.push([a, [(a[0] + b[0]) / 2, Math.min(a[1], b[1]) - 9 * k], b]);
+      wire(Pl(0.85, 1.2, 0.8), Pl(1.34, 1.0, 1.3));
+      wire(Pl(1.96, 1.0, 1.3), Pl(2.49, 1.55, 1.3));
+      wire(Pl(3.11, 1.55, 1.3), Pl(1.64, 2.45, 1.3));
+      wire(Pl(2.26, 2.45, 1.3), Pl(2.55, 2.82, 0.9));
+      const c4p = [[2.43, 2.43], [3.67, 2.43], [3.67, 3.67], [2.43, 3.67]].map(([x, y]) => Pl(x, y, 0));
+      els.push(React.createElement("polygon", { key: kb + "fp", points: c4p.map((p) => p[0].toFixed(1) + "," + p[1].toFixed(1)).join(" "), fill: "none", stroke: opt.stroke, strokeOpacity: 0.3, strokeWidth: swD, strokeDasharray: "3 4" }));
+      const tw = anim == null ? 1 : this.ss(anim, 0.55, 0.85);
+      for (let ii = 0; ii < 5; ii++) {
+        const half = 0.62 - ii * 0.105, ang = ii * (7 + 15 * tw) * Math.PI / 180, ca = Math.cos(ang), sa = Math.sin(ang);
+        const pts = [[-half, -half], [half, -half], [half, half], [-half, half]].map(([x, y]) => [3.05 + x * ca - y * sa, 3.05 + x * sa + y * ca]);
+        prism(pts, ii * 0.34, ii * 0.34 + 0.26, ii === 4 && anim != null && tw >= 1 ? { fillT: "rgba(255,211,92,.16)", stroke: YEL } : null);
+      }
+      ln(Pl(3.05, 3.05, 1.62), Pl(3.05, 3.05, 1.97), { strokeOpacity: 0.6, strokeWidth: swD });
+      this._wireDraw(els, wires, kb, stg, anim, swD);
+    } else if (arch === "uficon") {
+      // Decoding Urban Form v2: prompt slab reads the bylaws; four parcels on the zoning field; the code plane (max height / FAR) sweeps down and cuts them — excess ghosts above the line.
+      prism([[0.25, 0.6], [0.85, 0.6], [0.85, 3.4], [0.25, 3.4]], 0, 1.6, { dash: "6 4" });
+      const fl = opt.flat || 0, anim = opt.anim;
+      const stg = (a, b) => (anim == null ? 1 : this.ss(anim, a, b));
+      for (let ii = 0; ii < 6; ii++) {
+        const tp = stg(0.02 + ii * 0.026, 0.1 + ii * 0.026);
+        if (tp <= 0.01) continue;
+        if (fl > 0.03) ln(Pl(0.38, 0.88 + ii * 0.44, 0), Pl(0.38 + (0.34 - (ii % 2) * 0.1) * tp, 0.88 + ii * 0.44, 0), { strokeOpacity: (0.78 * fl).toFixed(2), strokeWidth: swD * 1.7 });
+        if (ii < 4 && fl < 0.97) { const hz = 1.38 - ii * 0.22; ln(Pl(0.85, 0.8, hz), Pl(0.85, 0.8 + (1.9 - (ii % 2) * 0.5) * tp, hz), { strokeOpacity: (0.55 * (1 - fl)).toFixed(2), strokeWidth: swD }); }
+      }
+      const S6 = (p) => p[0].toFixed(1) + "," + p[1].toFixed(1);
+      const frU = [[1.15, 0.15], [3.85, 0.15], [3.85, 2.85], [1.15, 2.85]].map(([x, y]) => Pl(x, y, 0));
+      els.push(React.createElement("polygon", { key: kb + "uff", points: frU.map(S6).join(" "), fill: "rgba(255,211,92,.07)", stroke: "rgba(255,211,92,.7)", strokeWidth: swD, strokeDasharray: "7 5" }));
+      const zP = anim == null ? 1.4 : 2.6 - 1.2 * this.ss(anim, 0.45, 0.8);
+      const pcs = [{ u: 1.35, v: 0.35, h: 1.6 }, { u: 2.55, v: 0.35, h: 2.35 }, { u: 1.35, v: 1.55, h: 1.1 }, { u: 2.55, v: 1.55, h: 0.9 }];
+      pcs.slice().sort((a, b) => (a.u + a.v) - (b.u + b.v)).forEach((c, ii) => {
+        const gp = stg(0.18 + ii * 0.055, 0.32 + ii * 0.055);
+        if (gp <= 0.01) return;
+        const H = Math.min(c.h * gp, zP);
+        prism(rect(c.u, c.v, c.u + 1.0, c.v + 1.0), 0, H);
+        if (c.h * gp > zP + 0.03) {
+          const gc = [[c.u, c.v], [c.u + 1.0, c.v], [c.u + 1.0, c.v + 1.0], [c.u, c.v + 1.0]];
+          els.push(React.createElement("polygon", { key: kb + "urim" + ii, points: gc.map(([x, y]) => Pl(x, y, H)).map(S6).join(" "), fill: "rgba(255,211,92,.22)", stroke: YEL, strokeWidth: swD * 1.15, strokeDasharray: "3 3" }));
+          const gb = gc.map(([x, y]) => Pl(x, y, zP + 0.2)), gt = gc.map(([x, y]) => Pl(x, y, 0.2 + c.h * gp));
+          els.push(React.createElement("polygon", { key: kb + "ugb" + ii, points: gb.map(S6).join(" "), fill: "none", stroke: "rgba(234,242,255,.35)", strokeWidth: swD * 0.7, strokeDasharray: "3 3" }));
+          els.push(React.createElement("polygon", { key: kb + "ugt" + ii, points: gt.map(S6).join(" "), fill: "none", stroke: "rgba(234,242,255,.35)", strokeWidth: swD * 0.7, strokeDasharray: "3 3" }));
+          for (let ci = 0; ci < 4; ci++) ln(gb[ci], gt[ci], { strokeOpacity: 0.35, strokeWidth: swD * 0.7, strokeDasharray: "3 3" });
+        }
+      });
+      if (fl < 0.9) {
+        const plU = [[1.03, 0.03], [3.97, 0.03], [3.97, 2.97], [1.03, 2.97]].map(([x, y]) => Pl(x, y, zP));
+        els.push(React.createElement("polygon", { key: kb + "upl", points: plU.map(S6).join(" "), fill: "rgba(255,211,92,.1)", stroke: "rgba(255,211,92,.85)", strokeWidth: swD * 1.15, strokeDasharray: "7 5", opacity: (1 - fl).toFixed(2) }));
+      }
+      const wires = [];
+      const wire = (a, b) => wires.push([a, [(a[0] + b[0]) / 2, Math.min(a[1], b[1]) - 9 * k], b]);
+      wire(Pl(0.85, 2.3, 0.8), Pl(1.35, 2.05, 0.5));
+      this._wireDraw(els, wires, kb, stg, anim, swD);
+    } else if (arch === "ai4dmicon") {
+      // AI4DM: AI image generation — a standing prompt sheet writes itself, the beam crosses to a low light-table,
+      // and the print denoises from pixel cells into a framed landscape. The image sits on the table's TOP face so it reads in plan first.
+      const fl = opt.flat || 0, anim = opt.anim;
+      const stg = (a, b) => (anim == null ? 1 : this.ss(anim, a, b));
+      const S8 = (pp) => pp[0].toFixed(1) + "," + pp[1].toFixed(1);
+      prism(rect(0.3, 1.0, 0.9, 3.0), 0, 1.5);
+      for (let i = 0; i < 6; i++) {
+        const tp = stg(0.02 + i * 0.022, 0.1 + i * 0.022);
+        if (tp <= 0.01) continue;
+        if (fl > 0.03) ln(Pl(0.42, 1.2 + i * 0.3, 0), Pl(0.42 + (0.38 - (i % 2) * 0.12) * tp, 1.2 + i * 0.3, 0), { strokeOpacity: (0.78 * fl).toFixed(2), strokeWidth: swD * 1.7 });
+        if (fl < 0.97) ln(Pl(0.9, 1.14, 1.36 - i * 0.2), Pl(0.9, 1.14 + (1.6 - (i % 2) * 0.5) * tp, 1.36 - i * 0.2), { strokeOpacity: (0.7 * (1 - fl)).toFixed(2), strokeWidth: swD });
+      }
+      prism(rect(1.55, 0.55, 3.75, 3.45), 0, 0.3);
+      const bm = stg(0.16, 0.3);
+      if (bm > 0.01 && bm < 0.99) {
+        const a = Pl(0.9, 2.0, 0.75), b2 = Pl(1.85, 2.0, 0.32);
+        els.push(React.createElement("line", { key: kb + "beam", x1: a[0].toFixed(1), y1: a[1].toFixed(1), x2: b2[0].toFixed(1), y2: b2[1].toFixed(1), stroke: YEL, strokeOpacity: 0.85, strokeWidth: swD * 1.4, pathLength: 1, strokeDasharray: 1, strokeDashoffset: (1 - bm).toFixed(3) }));
+      }
+      const px = stg(0.28, 0.72);
+      const ord = [13, 6, 21, 2, 17, 9, 24, 0, 11, 19, 4, 15, 7, 22, 1, 10, 18, 5, 23, 12, 3, 16, 8, 20, 14];
+      if (px > 0.01) ord.forEach((oi, idx) => {
+        if (px * 25 < idx + 0.5) return;
+        const cu = 1.85 + (oi % 5) * 0.34, cv = 0.85 + Math.floor(oi / 5) * 0.48;
+        const q = [Pl(cu, cv, 0.31), Pl(cu + 0.26, cv, 0.31), Pl(cu + 0.26, cv + 0.38, 0.31), Pl(cu, cv + 0.38, 0.31)];
+        els.push(React.createElement("polygon", { key: kb + "px" + idx, points: q.map(S8).join(" "), fill: "rgba(234,242,255,.18)", stroke: "rgba(234,242,255,.3)", strokeWidth: swD * 0.5 }));
+      });
+      const im = stg(0.68, 0.88);
+      if (im > 0.01) {
+        const fr = [Pl(1.75, 0.75, 0.31), Pl(3.55, 0.75, 0.31), Pl(3.55, 3.25, 0.31), Pl(1.75, 3.25, 0.31)];
+        els.push(React.createElement("polygon", { key: kb + "imf", points: fr.map(S8).join(" "), fill: "rgba(255,211,92,.06)", stroke: YEL, strokeWidth: swD * 1.3, opacity: im.toFixed(2) }));
+        const hz = [[1.95, 2.75], [2.2, 2.75], [2.7, 1.45], [3.2, 2.75], [3.45, 2.75]].map(([u, v]) => Pl(u, v, 0.31));
+        els.push(React.createElement("polyline", { key: kb + "imh", points: hz.map(S8).join(" "), fill: "none", stroke: YEL, strokeWidth: swD * 1.2, opacity: im.toFixed(2), strokeLinejoin: "round", pathLength: 1, strokeDasharray: 1, strokeDashoffset: (1 - im).toFixed(3) }));
+        const sun = Pl(3.12, 1.18, 0.31);
+        els.push(React.createElement("circle", { key: kb + "ims", cx: sun[0].toFixed(1), cy: sun[1].toFixed(1), r: (swD * 3).toFixed(1), fill: "none", stroke: YEL, strokeWidth: swD, opacity: im.toFixed(2) }));
+      }
+    } else if (arch === "c2icon") {
+      // Code2Code — sky exposure plane cuts the envelope; yellow FAR floors stack inside (see icon9 comments).
+      const anim = opt.anim;
+      const stg = (a, b) => (anim == null ? 1 : this.ss(anim, a, b));
+      const S9 = (pp) => pp[0].toFixed(1) + "," + pp[1].toFixed(1);
+    // Sky exposure plane → envelope → buildable floors: the dashed plane leans back from the street,
+    // cuts the extruded lot into the zoning envelope, and the usable form stacks up inside as yellow
+    // FAR floor plates stepping back under the slope (cf. the "three height districts" zoning diagrams).
+    // Plan: street line, plane footprint, envelope rect, nested floor outlines — all readable on the ground.
+    const po9 = (pts, o2) => els.push(React.createElement("polygon", Object.assign({ key: "q" + els.length, points: pts.map(([x, y, z]) => S9(Pl(x, y, z))).join(" "), strokeLinejoin: "round" }, o2)));
+    const p1 = stg(0.03, 0.2), p2 = stg(0.24, 0.42);
+    if (p1 > 0.01) ln(Pl(0.3, 3.8, 0), Pl(0.3 + 3.4 * p1, 3.8, 0), { stroke: YEL, strokeOpacity: 0.85, strokeWidth: swD * 1.05 * 1.2, strokeDasharray: "6 4" });
+    if (p2 > 0.01) {
+      const zs = (z) => z * p2;
+      const eo = { fill: "rgba(234,242,255,.05)", stroke: opt.stroke, strokeOpacity: 0.75, strokeWidth: opt.sw * 0.85, strokeDasharray: opt.dash || null };
+      po9([[0.6, 0.5, 0], [3.4, 0.5, 0], [3.4, 0.5, zs(2.4)], [0.6, 0.5, zs(2.4)]], eo);
+      po9([[0.6, 3.3, 0], [0.6, 3.3, zs(1.075)], [0.6, 1.53, zs(2.4)], [0.6, 0.5, zs(2.4)], [0.6, 0.5, 0]], eo);
+      po9([[0.6, 1.53, zs(2.4)], [3.4, 1.53, zs(2.4)], [3.4, 0.5, zs(2.4)], [0.6, 0.5, zs(2.4)]], eo);
+      po9([[0.6, 3.3, zs(1.075)], [3.4, 3.3, zs(1.075)], [3.4, 1.53, zs(2.4)], [0.6, 1.53, zs(2.4)]], eo);
+      po9([[3.4, 3.3, 0], [3.4, 3.3, zs(1.075)], [3.4, 1.53, zs(2.4)], [3.4, 0.5, zs(2.4)], [3.4, 0.5, 0]], eo);
+      po9([[0.6, 3.3, 0], [3.4, 3.3, 0], [3.4, 3.3, zs(1.075)], [0.6, 3.3, zs(1.075)]], eo);
+    }
+    for (let i = 0; i < 8; i++) {
+      const gf = stg(0.46 + i * 0.045, 0.54 + i * 0.045);
+      if (gf <= 0.01) continue;
+      const zi = 0.12 + i * 0.28;
+      const vm = Math.min(3.1, 3.8 - (zi + 0.09 - 0.7) / 0.75);
+      if (vm < 1.0) continue;
+      const fe = this.prism(Pl, [[0.8, 0.7], [3.2, 0.7], [3.2, vm], [0.8, vm]], zi, zi + 0.09, "fl" + i, { stroke: "rgba(255,211,92,.9)", sw: opt.sw * 0.6, fillT: "rgba(255,211,92,.45)", fillL: "rgba(255,211,92,.22)", fillR: "rgba(255,211,92,.16)" });
+      els.push(React.createElement("g", { key: "flg" + i, opacity: gf.toFixed(2) }, fe));
+    }
+    if (p1 > 0.01) {
+      const vF = 3.8 - 2.27 * p1, zF = 0.7 + 0.75 * (3.8 - vF);
+      po9([[0.6, 3.8, 0.7], [3.4, 3.8, 0.7], [3.4, vF, zF], [0.6, vF, zF]], { fill: "rgba(255,211,92,.06)", stroke: YEL, strokeOpacity: 0.9, strokeWidth: swD * 1.05 * 1.1, strokeDasharray: "6 4" });
+      ln(Pl(0.6, 3.8, 0), Pl(0.6, 3.8, 0.7), { stroke: YEL, strokeOpacity: 0.7 * p1, strokeWidth: swD * 1.05, strokeDasharray: "3 3" });
+      ln(Pl(3.4, 3.8, 0), Pl(3.4, 3.8, 0.7), { stroke: YEL, strokeOpacity: 0.7 * p1, strokeWidth: swD * 1.05, strokeDasharray: "3 3" });
+    }
+    return els;
+    } else if (arch === "bridge") {    } else if (arch === "bridge") {
+      prism(rect(0.2, 1.2, 1.2, 2.8), 0, 2.0);
+      prism(rect(2.8, 1.2, 3.8, 2.8), 0, 2.0);
+      prism(rect(0.2, 1.55, 3.8, 2.45), 2.0, 2.4);
+      const nb = Pl(2, 2, 2.4), nt = Pl(2, 2, 3.4);
+      ln(nb, nt);
+      ln(Pl(0.7, 2, 2.4), nt, { strokeDasharray: "3 4", strokeOpacity: 0.6 });
+      ln(Pl(3.3, 2, 2.4), nt, { strokeDasharray: "3 4", strokeOpacity: 0.6 });
+      els.push(React.createElement("circle", { key: kb + "nd", cx: nt[0].toFixed(1), cy: nt[1].toFixed(1), r: (6.5 * k).toFixed(1), fill: YEL, stroke: opt.stroke, strokeWidth: opt.sw }));
+    }
+    return els;
+  }
+
+  renderVals() {
+    const p = this.state.prog, vw = this.state.vw, vh = this.state.vh;
+    const hover = this.state.hover, filter = this.state.filter, feedHover = this.state.feedHover;
+    const page = this.state.page ? BY_ID[this.state.page] : null;
+    const roadFlow = this.props.roadFlow ?? false;
+    const dim = this.props.focusDim ?? 0.15;
+    const showHud = this.props.showHud ?? true;
+    const LN = "rgba(234,242,255,.9)";
+    const C30 = Math.cos(Math.PI / 6), EI = 26, EP = 24;
+    const CW = EI * C30, SH = EI * 0.5;
+    const basis = (t) => ({ ux: EP + (CW - EP) * t, uy: SH * t, vx: -CW * t, vy: EP + (SH - EP) * t, wz: EI * t });
+
+    const U0 = -3, U1 = 54, V0 = -3, V1 = 31;
+    const cU = (U0 + U1) / 2, cV = (V0 + V1) / 2;
+    const fitInfo = (t, pw, ph) => {
+      const Bt = basis(t);
+      let x0 = 1e9, x1 = -1e9, y0 = 1e9, y1 = -1e9;
+      [[U0, V0], [U1, V0], [U1, V1], [U0, V1]].forEach(([u, v]) => [0, 5.2].forEach((w) => {
+        const x = u * Bt.ux + v * Bt.vx, y = u * Bt.uy + v * Bt.vy - w * Bt.wz;
+        x0 = Math.min(x0, x); x1 = Math.max(x1, x); y0 = Math.min(y0, y); y1 = Math.max(y1, y);
+      }));
+      return {
+        z: Math.min(vw * pw / (x1 - x0), vh * ph / (y1 - y0)),
+        ox: (x0 + x1) / 2 - (cU * Bt.ux + cV * Bt.vx),
+        oy: (y0 + y1) / 2 - (cU * Bt.uy + cV * Bt.vy),
+      };
+    };
+    const FP = fitInfo(0, 0.9, 0.82), FA = fitInfo(1, 0.94, 0.92);
+    const fp = FP.z, fa = FA.z;
+    // Chapter zoom: research (widest, 30 modules) fits at the left margin; 21-module frame height plus the title band fit vertically.
+    const zCh = Math.min(vw * 0.9 / (35 * EP), (vh * 0.88 - 50) / (19 * EP));
+    const ctr = (F, z) => ({ ax: 0.5 - F.ox * z / vw, ay: 0.5 - F.oy * z / vh });
+    const aX = ctr(FA, fa * 0.97);
+    aX.ax += 0.02;
+
+    const K = [
+      { p: 0.0, t: 1, u: cU, v: cV, z: fa * 0.97, ax: aX.ax, ay: aX.ay },
+      { p: 0.14, t: 1, u: cU, v: cV, z: fa * 0.97, ax: aX.ax, ay: aX.ay },
+      // One zoom for every chapter, and one shared anchor: each district pins its frame's TOP-LEFT corner
+      // to the same screen point, so title + first icon sit in the identical spot on every chapter page.
+      { p: 0.27, t: 0, u: -2, v: -2, z: zCh, ax: 0.07, ay: 0.16 },
+      { p: 0.42, t: 0, u: -2, v: -2, z: zCh, ax: 0.07, ay: 0.16 },
+      { p: 0.5, t: 0, u: 32, v: -2, z: zCh, ax: 0.07, ay: 0.16 },
+      { p: 0.64, t: 0, u: 32, v: -2, z: zCh, ax: 0.07, ay: 0.16 },
+      { p: 0.7, t: 0, u: 19, v: 23, z: zCh, ax: 0.07, ay: 0.16 },
+      { p: 0.76, t: 0, u: 19, v: 23, z: zCh, ax: 0.07, ay: 0.16 },
+      { p: 0.8, t: 0, u: 36, v: 23, z: zCh, ax: 0.07, ay: 0.16 },
+      { p: 0.86, t: 0, u: 36, v: 23, z: zCh, ax: 0.07, ay: 0.16 },
+      { p: 0.92, t: 1, u: cU, v: cV, z: fa * 0.97, ax: aX.ax, ay: aX.ay },
+      { p: 1.0, t: 1, u: cU, v: cV, z: fa * 0.945, ax: aX.ax, ay: aX.ay },
+    ];
+    let cam = K[K.length - 1];
+    if (p <= K[0].p) cam = K[0];
+    else for (let i = 0; i < K.length - 1; i++) {
+      const A = K[i], B2 = K[i + 1];
+      if (p <= B2.p) {
+        const l = this.ss(p, A.p, B2.p);
+        const o = {};
+        ["t", "u", "v", "z", "ax", "ay"].forEach((f) => { o[f] = A[f] + (B2[f] - A[f]) * l; });
+        cam = o;
+        break;
+      }
+    }
+    const B = basis(cam.t);
+    const P = (u, v, w) => [vw * cam.ax + ((u - cam.u) * B.ux + (v - cam.v) * B.vx) * cam.z, vh * cam.ay + ((u - cam.u) * B.uy + (v - cam.v) * B.vy - w * B.wz) * cam.z];
+    const zf = cam.z / fa;
+
+    const bR = this.bell(p, 0.27, 0.42, 0.028);
+    const bT = this.bell(p, 0.5, 0.64, 0.028);
+    const bJ = this.bell(p, 0.7, 0.76, 0.028);
+    const bA = this.bell(p, 0.8, 0.86, 0.03); // About: text page over a dimmed map, now after Join
+    const rScroll = this.state.rScroll || 0, rShift = rScroll * 10.5; // research-frame scroll mock
+    const tScroll = this.state.tScroll || 0, tShift = tScroll * 10.5; // teaching-frame scroll mock
+    const dO = {
+      research: this.c01(1 - (bT + bJ + bA) * (1 - dim)),
+      teaching: this.c01(1 - (bR + bJ + bA) * (1 - dim)),
+      about: this.c01(1 - (bR + bT + bJ) * (1 - dim)),
+      join: this.c01(1 - (bR + bT + bA) * (1 - dim)),
+    };
+    const mO = (m) => dO[m.dist];
+
+    const growth = (m) => (m.cat === "archive" ? 0.85 : 1);
+
+    const out = {};
+    const sceneEls = [];
+
+    const inv = (x, y) => {
+      const dx = (x - vw * cam.ax) / cam.z, dy = (y - vh * cam.ay) / cam.z;
+      const det = B.ux * B.vy - B.vx * B.uy || 1e-6;
+      return [cam.u + (dx * B.vy - dy * B.vx) / det, cam.v + (dy * B.ux - dx * B.uy) / det];
+    };
+    let gu0 = 1e9, gu1 = -1e9, gv0 = 1e9, gv1 = -1e9;
+    [[0, 0], [vw, 0], [0, vh], [vw, vh]].forEach(([x, y]) => {
+      const [u, v] = inv(x, y);
+      gu0 = Math.min(gu0, u); gu1 = Math.max(gu1, u); gv0 = Math.min(gv0, v); gv1 = Math.max(gv1, v);
+    });
+    gu0 = Math.floor(gu0) - 2; gu1 = Math.ceil(gu1) + 2; gv0 = Math.floor(gv0) - 2; gv1 = Math.ceil(gv1) + 2;
+    const gEls = [];
+    if ((gu1 - gu0) < 130 && (gv1 - gv0) < 130) {
+      for (let m2 = gu0; m2 <= gu1; m2++) {
+        const a = P(m2, gv0, 0), b = P(m2, gv1, 0);
+        gEls.push(React.createElement("line", { key: "gu" + m2, x1: a[0].toFixed(1), y1: a[1].toFixed(1), x2: b[0].toFixed(1), y2: b[1].toFixed(1), stroke: m2 % 5 === 0 ? "rgba(234,242,255,.13)" : "rgba(234,242,255,.05)", strokeWidth: 1 }));
+      }
+      for (let m2 = gv0; m2 <= gv1; m2++) {
+        const a = P(gu0, m2, 0), b = P(gu1, m2, 0);
+        gEls.push(React.createElement("line", { key: "gv" + m2, x1: a[0].toFixed(1), y1: a[1].toFixed(1), x2: b[0].toFixed(1), y2: b[1].toFixed(1), stroke: m2 % 5 === 0 ? "rgba(234,242,255,.13)" : "rgba(234,242,255,.05)", strokeWidth: 1 }));
+      }
+    }
+    sceneEls.push(React.createElement("g", { key: "grid" }, gEls));
+
+    if (cam.t > 0.96 && zf < 1.9) {
+      const vEls = [];
+      const kC = cam.u - cam.v;
+      const k0 = Math.floor(kC - (vw * cam.ax) / (CW * cam.z)) - 1;
+      const k1 = Math.ceil(kC + (vw * (1 - cam.ax)) / (CW * cam.z)) + 1;
+      for (let k2 = k0; k2 <= k1; k2++) {
+        const x = vw * cam.ax + (k2 - kC) * CW * cam.z;
+        vEls.push(React.createElement("line", { key: "vk" + k2, x1: x.toFixed(1), y1: 0, x2: x.toFixed(1), y2: vh, stroke: "rgba(234,242,255,.045)", strokeWidth: 1 }));
+      }
+      sceneEls.push(React.createElement("g", { key: "vert", style: { opacity: (cam.t - 0.96) * 25 } }, vEls));
+    }
+
+    const MAPPED = PROJECTS.filter((m) => m.map);
+    const fpOf = (m) => m.map.f || 5;
+    const center = (m) => [m.map.u + fpOf(m) / 2, m.map.v + fpOf(m) / 2];
+
+    const members = {};
+    MAPPED.forEach((m) => { if (m.map.off) return; (members[m.dist] = members[m.dist] || []).push(m); });
+    const zoomFade = 1 - this.ss(zf, 2.6, 3.4);
+    const S = (pt) => pt[0].toFixed(1) + "," + pt[1].toFixed(1);
+    const flatTag = (key, x, y, txt, col, fs, op) => {
+      const chw = fs * 0.78, rh = fs * 1.45;
+      const wdt = txt.length * chw + fs * 1.2;
+      const np = P(x, y, 0);
+      const mtx = "matrix(" + (B.ux * cam.z).toFixed(3) + " " + (B.uy * cam.z).toFixed(3) + " " + (B.vx * cam.z).toFixed(3) + " " + (B.vy * cam.z).toFixed(3) + " " + np[0].toFixed(1) + " " + np[1].toFixed(1) + ")";
+      return React.createElement("g", { key, transform: mtx, opacity: op.toFixed(3) }, [
+        React.createElement("rect", { key: "b", x: 0, y: 0, width: wdt, height: rh, fill: "#081f4d", fillOpacity: 0.88, stroke: col, strokeWidth: fs * 0.09 }),
+        React.createElement("text", { key: "t", x: fs * 0.6, y: rh * 0.72, fontSize: fs, fill: col, letterSpacing: ".16em", fontWeight: 600, fontFamily: "'IBM Plex Mono',monospace" }, txt),
+      ]);
+    };
+    // Grid-aligned zone frames: bbox of member blocks, padded then snapped to integer grid lines.
+    const frameOf = (mem, pad) => {
+      let u0 = 1e9, u1 = -1e9, v0 = 1e9, v1 = -1e9;
+      mem.forEach((m) => { const hf = fpOf(m); u0 = Math.min(u0, m.map.u); v0 = Math.min(v0, m.map.v); u1 = Math.max(u1, m.map.u + hf + (m.map.pu || 0)); v1 = Math.max(v1, m.map.v + hf); });
+      return [Math.round(u0 - pad), Math.round(v0 - pad), Math.round(u1 + pad), Math.round(v1 + pad)];
+    };
+    const frPts = (fr) => [[fr[0], fr[1]], [fr[2], fr[1]], [fr[2], fr[3]], [fr[0], fr[3]]].map((pt) => P(pt[0], pt[1], 0));
+    const zEls = [], zTags = [], rzEls = [], rzTags = [], tzEls = [], tzTags = [];
+    const CH_BELL = { research: bR, teaching: bT, join: bJ, about: bA };
+    const distFrames = {};
+    Object.keys(members).forEach((id) => {
+      const fr = frameOf(members[id], 2);
+      distFrames[id] = fr;
+      const col = DIST[id];
+      const zo = dO[id] * zoomFade;
+      zEls.push(React.createElement("polygon", { key: "zp" + id, points: frPts(fr).map(S).join(" "), fill: col, fillOpacity: 0.05 * zo, stroke: col, strokeOpacity: (0.5 - 0.14 * cam.t) * zo, strokeWidth: 1, strokeDasharray: "8 6", strokeLinejoin: "miter" }));
+    });
+    SUBZONES.forEach((sz, si) => {
+      const mem = sz.ids.map((id) => BY_ID[id]);
+      const dist = mem[0].dist;
+      const fr = frameOf(mem, 1);
+      if (dist === "research") { fr[1] -= rShift; fr[3] -= rShift; }
+      if (dist === "teaching") { fr[1] -= tShift; fr[3] -= tShift; }
+      const chB = this.bell(p, sz.win.a, sz.win.b, 0.04);
+      const zo = dO[dist] * zoomFade;
+      const zzE = dist === "research" ? rzEls : dist === "teaching" ? tzEls : zEls;
+      const zzT = dist === "research" ? rzTags : dist === "teaching" ? tzTags : zTags;
+      zzE.push(React.createElement("polygon", { key: "sz" + si, points: frPts(fr).map(S).join(" "), fill: sz.color, fillOpacity: 0.05 * chB * zo, stroke: sz.color, strokeOpacity: (0.24 + 0.55 * chB) * zo, strokeWidth: 1, strokeDasharray: "3 3", strokeLinejoin: "miter" }));
+      zzT.push(flatTag("st" + si, fr[0], fr[1] - 0.75, sz.lbl.toUpperCase(), sz.color, 0.48, this.c01(zo)));
+    });
+    sceneEls.push(React.createElement("g", { key: "zones" }, zEls));
+    // Chapter titles: name + brief drawn in the plan, top-left aligned to the district frame (pushed above models later).
+    const CH_DESC = {
+      research: "We investigate how artificial intelligence can interpret, generate, and transform architectural, landscape, and urban environments through new design tools, models, and workflows.",
+      teaching: "Courses run as public research environments \u2014 with resources, workshops, and selected student work growing around them, each walled on the plan.",
+      join: "The ways in: PhD students and research assistants on the lab's funded projects, and external collaborators with focused proposals and relevant work.",
+      about: "Faculty, graduate researchers, and alumni — the people behind the lab's projects. One block per person; placeholder plots until real profiles land.",
+    };
+    const wrapLn = (t2, maxC) => {
+      const ls = []; let cur = "";
+      t2.split(" ").forEach((w) => { if ((cur + " " + w).trim().length > maxC) { ls.push(cur.trim()); cur = w; } else { cur = cur + " " + w; } });
+      if (cur.trim()) ls.push(cur.trim());
+      return ls;
+    };
+    // One persistent title per district: the same name + underline lives on the plan at every zoom level;
+    // only the description lines fade in when the chapter is focused (no cross-fade between two labels).
+    const hEls = [];
+    Object.keys(distFrames).forEach((id) => {
+      const fr = distFrames[id];
+      const tOp = this.c01(dO[id] * zoomFade);
+      if (tOp < 0.02) return;
+      const b = this.c01((CH_BELL[id] || 0) * (1 - this.ss(cam.t, 0.3, 0.6)));
+      const dLines = CH_DESC[id] ? wrapLn(CH_DESC[id], Math.max(70, Math.min(100, Math.floor(((fr[2] - fr[0]) - 9) / 0.19)))) : [];
+      const np = P(fr[0], fr[1] - 2.46, 0);
+      const mtx = "matrix(" + (B.ux * cam.z).toFixed(3) + " " + (B.uy * cam.z).toFixed(3) + " " + (B.vx * cam.z).toFixed(3) + " " + (B.vy * cam.z).toFixed(3) + " " + np[0].toFixed(1) + " " + np[1].toFixed(1) + ")";
+      const fs = 0.72, rh = fs * 1.45, wdt = DISTRICT_LBL[id].length * fs * 0.78 + fs * 1.2;
+      const kids = [
+        React.createElement("rect", { key: "bx", x: 0, y: 0.25, width: wdt, height: rh, fill: "#081f4d", fillOpacity: 0.88, stroke: DIST[id], strokeWidth: fs * 0.09 }),
+        React.createElement("text", { key: "nm", x: fs * 0.6, y: 0.25 + rh * 0.72, fontSize: fs, fill: DIST[id], fontWeight: 600, fontFamily: "'IBM Plex Mono',monospace", letterSpacing: ".16em" }, DISTRICT_LBL[id].toUpperCase()),
+      ];
+      if (b > 0.02) dLines.forEach((dl, di) => kids.push(React.createElement("text", { key: "ds" + di, x: (wdt + 0.6).toFixed(2), y: (0.62 + di * 0.55).toFixed(2), fontSize: 0.38, fill: "rgba(234,242,255,.68)", fillOpacity: b.toFixed(3), fontFamily: "Inter,sans-serif" }, dl)));
+      hEls.push(React.createElement("g", { key: "ch" + id, transform: mtx, opacity: tOp.toFixed(3) }, kids));
+    });
+
+    const rdEls = [];
+    ROADS.forEach((rd, i) => {
+      const ma = BY_ID[rd.a], mb = BY_ID[rd.b];
+      const ca = center(ma), cb = center(mb);
+      const bend = [cb[0], ca[1]];
+      const d = [ca, bend, cb].map((pt, j) => (j ? "L " : "M ") + P(pt[0], pt[1], 0).map((n) => n.toFixed(1)).join(" ")).join(" ");
+      let ro = Math.min(mO(ma), mO(mb));
+      if (ma.dist === "research" && mb.dist === "research") ro *= 1 - rScroll;
+      if (ma.dist === "teaching" && mb.dist === "teaching") ro *= 1 - tScroll;
+      if (ro < 0.02) return;
+      const base = { fill: "none", strokeLinecap: "square", strokeLinejoin: "miter", opacity: ro };
+      if (rd.stu) {
+        rdEls.push(React.createElement("path", Object.assign({ key: "r" + i, d, stroke: CAT.students, strokeOpacity: 0.75, strokeWidth: 1.6, strokeDasharray: "3 5" }, base)));
+      } else if (hover === rd.a || hover === rd.b) {
+        // Roads highlight yellow only when a connected project is hovered.
+        rdEls.push(React.createElement("path", Object.assign({ key: "r" + i + "a", d, stroke: "rgba(255,211,92,.18)", strokeWidth: 7 }, base)));
+        rdEls.push(React.createElement("path", Object.assign({ key: "r" + i + "b", d, stroke: "rgba(255,211,92,.85)", strokeWidth: 2.4 }, base)));
+        if (roadFlow) rdEls.push(React.createElement("path", { key: "r" + i + "c", d, fill: "none", stroke: "rgba(255,255,255,.9)", strokeWidth: 1.1, strokeDasharray: "10 9", opacity: ro, style: { animation: "genenvFlow .95s linear infinite" } }));
+      } else if (rd.w >= 2) {
+        rdEls.push(React.createElement("path", Object.assign({ key: "r" + i, d, stroke: "rgba(234,242,255,.5)", strokeWidth: 2 }, base)));
+      } else {
+        rdEls.push(React.createElement("path", Object.assign({ key: "r" + i, d, stroke: "rgba(234,242,255,.26)", strokeWidth: 1.2 }, base)));
+      }
+      if (!rd.stu) {
+        const bp = P(bend[0], bend[1], 0);
+        rdEls.push(React.createElement("circle", { key: "re" + i, cx: bp[0].toFixed(1), cy: bp[1].toFixed(1), r: 2, fill: "rgba(234,242,255,.45)", opacity: ro }));
+      }
+    });
+    sceneEls.push(React.createElement("g", { key: "roads" }, rdEls));
+
+    const flv = this.c01(1 - cam.t * 1.3);
+    const rClipOn = flv > 0.5 && !!distFrames.research;
+    if (rClipOn) sceneEls.push(React.createElement("clipPath", { key: "rclipdef", id: "genenvRClip" }, React.createElement("polygon", { points: frPts(distFrames.research).map(S).join(" ") })));
+    const tClipOn = flv > 0.5 && !!distFrames.teaching;
+    if (tClipOn) sceneEls.push(React.createElement("clipPath", { key: "tclipdef", id: "genenvTClip" }, React.createElement("polygon", { points: frPts(distFrames.teaching).map(S).join(" ") })));
+    const order = MAPPED.slice().sort((a, b) => (a.map.u + a.map.v) - (b.map.u + b.map.v));
+    const rM = [], tM = [], oM = [];
+    order.forEach((m) => {
+      const sc = m.map.sc || 1, g = Math.max(growth(m), 0.001);
+      const o = mO(m);
+      if (o < 0.015) return;
+      const fq = fpOf(m) / 4;
+      const mv = m.map.v + (m.dist === "research" ? -rShift : m.dist === "teaching" ? -tShift : 0);
+      const Pl = (du, dv, w) => P(m.map.u + du * fq, mv + dv * fq, w * fq * sc * g);
+      const hot = hover === m.id;
+      const ghost = m.status === "archive";
+      const draft = m.status === "in press";
+      const isDash = (m.cat === "archive" && !m.map.arch) || m.ph;
+      const isFlat = m.cat === "students" && fpOf(m) <= 2;
+      const stroke = hot ? YEL : ghost ? "rgba(234,242,255,.55)" : LN;
+      const shapes = (isDash || isFlat) ? [] : this.shapesFor(Pl, m.map.arch, {
+        stroke, sw: hot ? 1.8 : 1.15,
+        dash: ghost ? "3 4" : draft ? "7 4" : null,
+        fillT: ghost ? "rgba(26,70,148,.38)" : "#1a4694",
+        fillL: ghost ? "rgba(15,49,111,.38)" : "#0f316f",
+        fillR: ghost ? "rgba(11,42,97,.38)" : "#0b2a61",
+        k: fq * sc * cam.z, kb: m.id, plinth: !!m.fund,
+        flat: flv, anim: hot && this.state.anim != null ? this.state.anim : null,
+      });
+      const hf = fpOf(m);
+      // Card sheet (flat view): filled plot, module grid, survey ticks — Icon Studies' card frame on every project.
+      const cardEls = [];
+      if (isDash) {
+        // Archive entries stay flat: a dashed plot with the name written inside, no 3D massing.
+        const cpts = [[0, 0], [hf, 0], [hf, hf], [0, hf]].map(([du, dv]) => P(m.map.u + du, mv + dv, 0));
+        cardEls.push(React.createElement("polygon", { key: "dz", points: cpts.map(S).join(" "), fill: "rgba(234,242,255,.03)", stroke: hot ? YEL : "rgba(234,242,255,.5)", strokeWidth: hot ? 1.4 : 1, strokeDasharray: "5 5", strokeLinejoin: "miter" }));
+        const cc = P(m.map.u + hf / 2, mv + hf / 2, 0);
+        const fsD = 0.3 * EP * cam.z, availD = (hf - 0.5) * EP * cam.z;
+        const txtD = m.title.toUpperCase();
+        const dAttrs = { key: "dt", x: cc[0].toFixed(1), y: cc[1].toFixed(1), fontSize: fsD.toFixed(1), fill: hot ? YEL : "rgba(234,242,255,.6)", textAnchor: "middle", fontFamily: "'IBM Plex Mono',monospace", letterSpacing: ".12em" };
+        if (txtD.length * fsD * 0.68 > availD) { dAttrs.textLength = availD.toFixed(1); dAttrs.lengthAdjust = "spacingAndGlyphs"; }
+        cardEls.push(React.createElement("text", dAttrs, txtD));
+      } else if (isFlat) {
+        // Small square: flat plot only (publications, selected student work) — no 3D massing.
+        const cpts = [[0, 0], [hf, 0], [hf, hf], [0, hf]].map(([du, dv]) => P(m.map.u + du, mv + dv, 0));
+        cardEls.push(React.createElement("polygon", { key: "fz", points: cpts.map(S).join(" "), fill: "#0d3373", fillOpacity: 0.55, stroke: hot ? YEL : "rgba(234,242,255,.75)", strokeWidth: hot ? 1.4 : 1.1, strokeDasharray: draft ? "7 4" : undefined, strokeLinejoin: "miter" }));
+      } else if (flv > 0.02) {
+        const cpts = [[0, 0], [hf, 0], [hf, hf], [0, hf]].map(([du, dv]) => P(m.map.u + du, mv + dv, 0));
+        cardEls.push(React.createElement("polygon", { key: "cf", points: cpts.map(S).join(" "), fill: "#0d3373", fillOpacity: (0.9 * flv).toFixed(2), stroke: hot ? YEL : "rgba(234,242,255,.8)", strokeOpacity: flv.toFixed(2), strokeWidth: 1.25 }));
+        for (let gi = 1; gi < hf; gi++) {
+          const a1 = P(m.map.u + gi, mv, 0), b1 = P(m.map.u + gi, mv + hf, 0);
+          const a2 = P(m.map.u, mv + gi, 0), b2 = P(m.map.u + hf, mv + gi, 0);
+          cardEls.push(React.createElement("line", { key: "cgu" + gi, x1: a1[0].toFixed(1), y1: a1[1].toFixed(1), x2: b1[0].toFixed(1), y2: b1[1].toFixed(1), stroke: "rgba(234,242,255,.09)", strokeWidth: 1, opacity: flv.toFixed(2) }));
+          cardEls.push(React.createElement("line", { key: "cgv" + gi, x1: a2[0].toFixed(1), y1: a2[1].toFixed(1), x2: b2[0].toFixed(1), y2: b2[1].toFixed(1), stroke: "rgba(234,242,255,.09)", strokeWidth: 1, opacity: flv.toFixed(2) }));
+        }
+        [[0, 0], [hf, 0], [hf, hf], [0, hf]].forEach(([du, dv], ti) => {
+          const th = [P(m.map.u + du - 0.14, mv + dv, 0), P(m.map.u + du + 0.14, mv + dv, 0)];
+          const tv = [P(m.map.u + du, mv + dv - 0.14, 0), P(m.map.u + du, mv + dv + 0.14, 0)];
+          cardEls.push(React.createElement("line", { key: "th" + ti, x1: th[0][0].toFixed(1), y1: th[0][1].toFixed(1), x2: th[1][0].toFixed(1), y2: th[1][1].toFixed(1), stroke: "rgba(255,211,92,.75)", strokeWidth: 1, opacity: flv.toFixed(2) }));
+          cardEls.push(React.createElement("line", { key: "tv" + ti, x1: tv[0][0].toFixed(1), y1: tv[0][1].toFixed(1), x2: tv[1][0].toFixed(1), y2: tv[1][1].toFixed(1), stroke: "rgba(255,211,92,.75)", strokeWidth: 1, opacity: flv.toFixed(2) }));
+        });
+      }
+      const ring = hot ? React.createElement("polygon", {
+        key: m.id + "ring",
+        points: [[-0.45, -0.45], [hf + 0.45, -0.45], [hf + 0.45, hf + 0.45], [-0.45, hf + 0.45]].map(([du, dv]) => P(m.map.u + du, mv + dv, 0)).map(S).join(" "),
+        fill: "rgba(255,211,92,.07)", stroke: YEL, strokeWidth: 1.2, strokeDasharray: "5 4", strokeLinejoin: "miter",
+      }) : null;
+      const el = React.createElement("g", {
+        key: m.id, opacity: o, style: { cursor: m.ph ? "default" : "pointer" },
+        onClick: m.ph ? undefined : (e) => { e.stopPropagation(); this._openProj(m.id); },
+        onMouseEnter: m.ph ? undefined : () => this._hoverOn(m.id),
+        onMouseLeave: m.ph ? undefined : () => this.setState({ hover: null }),
+      }, [React.createElement("g", { key: m.id + "card" }, cardEls), ring, React.createElement("g", { key: m.id + "b", style: { transform: hot && flv < 0.5 ? "translateY(-5px)" : "translateY(0)", transition: "transform .16s ease" } }, shapes)]);
+      (m.dist === "research" ? rM : m.dist === "teaching" ? tM : oM).push(el);
+    });
+
+    sceneEls.push(React.createElement("g", { key: "models" }, [
+      React.createElement("g", { key: "rm", clipPath: rClipOn ? "url(#genenvRClip)" : undefined }, rzEls.concat(rM)),
+      React.createElement("g", { key: "tm", clipPath: tClipOn ? "url(#genenvTClip)" : undefined }, tzEls.concat(tM)),
+      React.createElement("g", { key: "om" }, oM),
+    ]));
+
+    // Standing name plates: text on a vertical plane in the iso projection, like signage in the model.
+    const endHide = this.ss(p, 0.87, 0.92);
+    const tagEls = [], rTagEls = [], tTagEls = [];
+    MAPPED.forEach((m) => {
+      if (m.ph || (m.cat === "archive" && !m.map.arch)) return;
+      const lf = fpOf(m);
+      const mv = m.map.v + (m.dist === "research" ? -rShift : m.dist === "teaching" ? -tShift : 0);
+      const np0 = P(m.map.u + lf / 2, mv + lf + 0.4, 0);
+      const distB = m.dist === "research" ? bR : m.dist === "teaching" ? bT : m.dist === "about" ? bA : bJ;
+      const base = distB * (1 - endHide);
+      const lo = Math.max(base, hover === m.id ? 1 : 0) * mO(m);
+      if (lo < 0.03) return;
+      const hot2 = hover === m.id;
+      const txt = (m.lbl || m.title).toUpperCase();
+      const flat = cam.t < 0.5;
+      if (flat) {
+        // Card caption: one fixed title size everywhere; long titles wrap to two balanced lines instead of squeezing.
+        // Writing entries put the plate to the RIGHT of the plot (one-module gap) instead of below it.
+        const isWr = m.cat === "writing";
+        const fs = 0.28, padX = 0.3, wf = 0.62;
+        const pw = isWr ? 2.4 : Math.max(lf, 2.3);
+        const avail = pw - padX - 0.18;
+        let lines = [txt];
+        if (txt.length * wf * fs > avail && txt.indexOf(" ") > 0) {
+          const words = txt.split(" ");
+          let best = null;
+          for (let bi = 1; bi < words.length; bi++) {
+            const l1 = words.slice(0, bi).join(" "), l2 = words.slice(bi).join(" ");
+            const over = Math.max(l1.length, l2.length);
+            if (!best || over < best.over) best = { over, l: [l1, l2] };
+          }
+          lines = best.l;
+        }
+        // If the longest line still overflows, widen the plate (up to ~1.7 modules past the plot) before compressing.
+        const need = Math.max(...lines.map((lt) => lt.length)) * wf * fs + padX + 0.18;
+        const pw2 = Math.max(pw, Math.min(need, isWr ? 4 : lf + 1.7));
+        const avail2 = pw2 - padX - 0.18;
+        const rh = lines.length === 2 ? 1.0 : 0.6;
+        const npl = isWr ? P(m.map.u + lf + 1, mv + 0.2, 0) : P(m.map.u, mv + lf + 0.28, 0);
+        const mtx = "matrix(" + (B.ux * cam.z).toFixed(3) + " " + (B.uy * cam.z).toFixed(3) + " " + (B.vx * cam.z).toFixed(3) + " " + (B.vy * cam.z).toFixed(3) + " " + npl[0].toFixed(1) + " " + npl[1].toFixed(1) + ")";
+        const kids = [
+          React.createElement("rect", { key: "b", x: 0, y: 0, width: pw2, height: rh, fill: "#081f4d", fillOpacity: 0.92, stroke: hot2 ? YEL : CAT[m.cat], strokeOpacity: hot2 ? 1 : 0.5, strokeWidth: 0.045 }),
+          React.createElement("rect", { key: "c", x: 0, y: 0, width: 0.1, height: rh, fill: CAT[m.cat] }),
+        ];
+        lines.forEach((lt, li) => {
+          const tAttrs = { key: "t" + li, x: padX, y: lines.length === 2 ? 0.12 + fs * (1.02 + li * 1.38) : rh / 2 + fs * 0.36, fontSize: fs, fill: hot2 ? YEL : "#eaf2ff", letterSpacing: ".05em", fontWeight: 600, fontFamily: "'IBM Plex Mono',monospace" };
+          if (lt.length * wf * fs > avail2) { tAttrs.textLength = avail2; tAttrs.lengthAdjust = "spacingAndGlyphs"; }
+          kids.push(React.createElement("text", tAttrs, lt));
+        });
+        const cEl = React.createElement("g", { key: "pt" + m.id, transform: mtx, opacity: lo.toFixed(3) }, kids);
+        (m.dist === "research" ? rTagEls : m.dist === "teaching" ? tTagEls : tagEls).push(cEl);
+      } else {
+        const fs = 0.4, rh = fs * 1.55;
+        const wdt = txt.length * fs * 0.62 + fs * 1.2;
+        const stag = Math.round(m.map.u / 5) % 2;
+        const mtx = "matrix(" + (B.ux * cam.z).toFixed(3) + " " + (B.uy * cam.z).toFixed(3) + " 0 " + (B.wz * cam.z).toFixed(3) + " " + np0[0].toFixed(1) + " " + np0[1].toFixed(1) + ")";
+        const y0 = -(0.3 + stag * 1.0) - rh;
+        tagEls.push(React.createElement("g", { key: "pt" + m.id, transform: mtx, opacity: lo.toFixed(3) }, [
+          React.createElement("rect", { key: "b", x: (-wdt / 2).toFixed(2), y: y0.toFixed(2), width: wdt.toFixed(2), height: rh.toFixed(2), fill: "#081f4d", fillOpacity: 0.9, stroke: hot2 ? YEL : CAT[m.cat], strokeOpacity: hot2 ? 1 : 0.5, strokeWidth: 0.045 }),
+          React.createElement("text", { key: "t", x: 0, y: (y0 + rh * 0.68).toFixed(2), fontSize: fs, fill: hot2 ? YEL : "#eaf2ff", textAnchor: "middle", letterSpacing: ".08em", fontWeight: 600, fontFamily: "'IBM Plex Mono',monospace" }, txt),
+        ]));
+      }
+    });
+    sceneEls.push(React.createElement("g", { key: "ptags", style: { pointerEvents: "none" } }, [
+      React.createElement("g", { key: "rt", clipPath: rClipOn ? "url(#genenvRClip)" : undefined }, rTagEls),
+      React.createElement("g", { key: "tt", clipPath: tClipOn ? "url(#genenvTClip)" : undefined }, tTagEls),
+      React.createElement("g", { key: "ot" }, tagEls),
+    ]));
+    // Zone labels + chapter titles render above models so nothing occludes them.
+    sceneEls.push(React.createElement("g", { key: "rztags", clipPath: rClipOn ? "url(#genenvRClip)" : undefined, style: { pointerEvents: "none" } }, rzTags));
+    sceneEls.push(React.createElement("g", { key: "tztags", clipPath: tClipOn ? "url(#genenvTClip)" : undefined, style: { pointerEvents: "none" } }, tzTags));
+    sceneEls.push(React.createElement("g", { key: "ztags", style: { pointerEvents: "none" } }, zTags));
+    sceneEls.push(React.createElement("g", { key: "chapters", style: { pointerEvents: "none" } }, hEls));
+    this._rFrame = null;
+
+    this._tFrame = null;
+    if (tClipOn && bT > 0.5) {
+      const frT = distFrames.teaching;
+      const c0 = P(frT[0], frT[1], 0), c1 = P(frT[2], frT[3], 0);
+      this._tFrame = { x0: Math.min(c0[0], c1[0]), x1: Math.max(c0[0], c1[0]), y0: Math.min(c0[1], c1[1]), y1: Math.max(c0[1], c1[1]) };
+      const t0 = P(frT[2] + 0.5, frT[1], 0), t1 = P(frT[2] + 0.5, frT[3], 0);
+      const trackH = t1[1] - t0[1], thumbH = trackH * 0.75, thumbY = t0[1] + (trackH - thumbH) * tScroll;
+      const hp = P(frT[2], frT[1] - 0.55, 0);
+      sceneEls.push(React.createElement("g", { key: "tscroll", opacity: bT.toFixed(3), style: { pointerEvents: "none" } }, [
+        React.createElement("line", { key: "tr", x1: t0[0].toFixed(1), y1: t0[1].toFixed(1), x2: t1[0].toFixed(1), y2: t1[1].toFixed(1), stroke: "rgba(234,242,255,.18)", strokeWidth: 2 }),
+        React.createElement("rect", { key: "th", x: (t0[0] - 1.5).toFixed(1), y: thumbY.toFixed(1), width: 3, height: thumbH.toFixed(1), fill: tScroll > 0.01 ? YEL : "rgba(234,242,255,.45)" }),
+        React.createElement("text", { key: "hx", x: hp[0].toFixed(1), y: hp[1].toFixed(1), fontSize: (0.32 * EP * cam.z).toFixed(1), fill: "rgba(234,242,255,.5)", textAnchor: "end", fontFamily: "'IBM Plex Mono',monospace", letterSpacing: ".16em" }, "SCROLL INSIDE THE FRAME: 03 ARCHIVE COURSES BELOW"),
+      ]));
+    }
+
+    const na = Math.atan2(-B.vy, -B.vx) * 180 / Math.PI + 90;
+    sceneEls.push(React.createElement("g", { key: "north", transform: "translate(" + (vw - 52) + "," + (vh - 58) + ")", opacity: 0.9 }, [
+      React.createElement("circle", { key: "c", r: 19, fill: "rgba(8,31,77,.9)", stroke: "rgba(255,211,92,.5)", strokeWidth: 1 }),
+      React.createElement("g", { key: "g", transform: "rotate(" + na.toFixed(1) + ")" }, [
+        React.createElement("line", { key: "l", x1: 0, y1: 12, x2: 0, y2: -2, stroke: YEL, strokeWidth: 1.2 }),
+        React.createElement("polygon", { key: "p", points: "0,-11 -4,-2 4,-2", fill: YEL }),
+        React.createElement("text", { key: "n", x: 0, y: -13, fontSize: 7, fill: YEL, textAnchor: "middle", fontFamily: "'IBM Plex Mono',monospace" }, "N"),
+      ]),
+    ]));
+
+    out.scene = React.createElement("g", { key: "scene", opacity: ((0.28 + 0.72 * this.ss(p, 0.055, 0.105)) * (1 - 0.85 * bA)).toFixed(3) }, sceneEls);
+
+    const fx = (o, ty) => "opacity:" + o.toFixed(3) + ";transform:translateY(" + ty.toFixed(1) + "px)" + (o < 0.02 ? ";visibility:hidden" : "");
+    const o0 = 1 - this.ss(p, 0.085, 0.12);
+    out.cap0Fx = fx(o0, -this.ss(p, 0.085, 0.12) * 14);
+    const oEnd = this.ss(p, 0.915, 0.955);
+    out.capEndFx = fx(oEnd, (1 - oEnd) * 12);
+    out.cueFx = fx(1 - this.ss(p, 0.18, 0.23), 0);
+
+    const hv = this.state.hover ? BY_ID[this.state.hover] : null;
+    out.hovOpen = !!hv && p > 0.1 && p < 0.97;
+    if (hv) {
+      out.hovTitle = (hv.lbl || hv.title).toUpperCase();
+      out.hovDesc = hv.desc;
+      // Callout scales up from below the hovered icon (past its name plate), like the plate growing into a card.
+      const hm = hv.map || {}, hf = hm.f || 5;
+      const hu = hm.u || 0;
+      const hmv = (hm.v || 0) + (hv.dist === "research" ? -rShift : hv.dist === "teaching" ? -tShift : 0);
+      // Card grows straight out of the project's name plate (plate top edge), covering the plate.
+      const crn = [[0, 0], [hf, 0], [hf, hf], [0, hf]].map(([du, dv]) => P(hu + du, hmv + dv, 0));
+      const ayTop = Math.min(...crn.map((c) => c[1]));
+      const wrFlat = hv.cat === "writing" && flv > 0.5;
+      const pl0 = wrFlat ? P(hu + hf + 1, hmv + 0.2, 0) : P(hu + hf / 2, hmv + hf + 0.3, 0);
+      const cw = 270, cardH = 108;
+      const below = wrFlat || pl0[1] + cardH < vh - 14;
+      const cl = Math.max(16, Math.min(vw - cw - 16, wrFlat ? pl0[0] - 8 : pl0[0] - cw / 2));
+      const ct = below ? pl0[1] - 6 : ayTop - cardH - 14;
+      const still = performance.now() - (this._scT || 0) > 200;
+      const ease = "cubic-bezier(.2,.7,.25,1)";
+      const tr = still ? ";transition:left .32s " + ease + ",top .32s " + ease : "";
+      out.hovCardStyle = "position:absolute;width:" + cw + "px;box-sizing:border-box;left:" + cl.toFixed(1) + "px;top:" + ct.toFixed(1) + "px;background:rgba(8,31,77,.96);border:1px solid rgba(255,211,92,.9);border-left:3px solid " + (CAT[hv.cat] || YEL) + ";padding:9px 12px 11px;transform-origin:" + (pl0[0] - cl).toFixed(1) + "px " + (below ? 10 : cardH - 10) + "px;animation:genenvCard .28s cubic-bezier(.2,.8,.3,1) both" + tr;
+    }
+
+    let ci = 0;
+    CHAPTERS.forEach((c, i) => { if (p >= c.start) ci = i; });
+    out.hudLabel = CHAPTERS[ci].n + " — " + CHAPTERS[ci].name;
+    out.hudTicks = CHAPTERS.map((c, i) => ({
+      name: c.n + " " + c.name,
+      onGo: () => this._go(c.mid),
+      style: "width:" + (i === ci ? 26 : 14) + "px;height:2px;border:0;padding:0;background:" + (i === ci ? YEL : "rgba(234,242,255,.3)") + ";cursor:pointer;transition:width .25s,background .25s",
+    }));
+    out.hudFx = showHud ? "opacity:.92" : "display:none";
+
+    const pv = this.state.sy / (vh || 1);
+    const atFeed = this.ss(pv, 11.3, 11.75);
+    const ho = Math.max(1 - this.ss(p, 0.085, 0.125), atFeed);
+    out.hdrStyle = "position:fixed;left:0;top:0;right:0;z-index:60;display:flex;align-items:center;justify-content:space-between;gap:20px;padding:0 34px;height:58px;opacity:" + ho.toFixed(3) + ";pointer-events:" + (ho > 0.4 ? "auto" : "none") + ";background:" + (atFeed > 0.5 ? "rgba(8,31,77,.94)" : "linear-gradient(rgba(16,53,124,.9),rgba(16,53,124,0))") + ";border-bottom:1px solid rgba(234,242,255," + (atFeed > 0.5 ? "0.22" : "0") + ")";
+
+    out.goTop = () => window.scrollTo({ top: 0, behavior: "smooth" });
+    out.goResearch = () => this._go(0.3);
+    out.goTeaching = () => this._go(0.6);
+    out.goAbout = () => this._go(0.83);
+    out.goJoin = () => this._go(0.73);
+    out.goIndex = () => this._goFeed(null);
+
+    out.pageOpen = !!page;
+    if (page) {
+      out.sSlug = page.slug;
+      out.sKicker = CAT_LBL[page.cat];
+      out.sTitle = page.title;
+      out.sType = page.type;
+      out.sYear = page.year;
+      out.sStatus = page.status;
+      out.sVenue = page.venue || "—";
+      out.sDesc = page.desc;
+      out.sIsWork = page.dist === "research" || page.dist === "teaching";
+      out.sHasContact = page.dist === "join";
+      out.sContacts = page.id === "open"
+        ? [{ label: "Prospective PhD applicants", email: "xliu@sala.ubc.ca", href: "mailto:xliu@sala.ubc.ca" }, { label: "Lab / general", email: "genenvlab@gmail.com", href: "mailto:genenvlab@gmail.com" }]
+        : [{ label: "Contact", email: "genenvlab@gmail.com", href: "mailto:genenvlab@gmail.com" }];
+      out.pageSlot = React.createElement("div", { key: page.id, style: { position: "relative", height: "min(56vh, 480px)", border: "1px solid rgba(234,242,255,.35)" } },
+        React.createElement("image-slot", { key: page.slug, id: "genenv-sheet-" + page.id, shape: "rect", placeholder: page.slug + " / hero — drop real media", style: { position: "absolute", inset: 0 } }));
+    }
+    out.closeSheet = () => this._closeSheet();
+
+    out.legendOpen = this.state.legend;
+    out.openLegend = () => this._setLegend(true);
+    out.closeLegend = () => this._setLegend(false);
+    if (this.state.legend) {
+      const s = 0.68;
+      const lux = CW * s, luy = SH * s, lvx = -CW * s, lvy = SH * s, lwz = EI * s;
+      const archOrder = Array.from(new Set(PROJECTS.filter((pr) => pr.map && pr.map.arch).map((pr) => pr.map.arch)));
+      out.legendTiles = archOrder.map((arch) => {
+        const Pl = (u, v, w) => [110 + (u - 2) * lux + (v - 2) * lvx, 118 + (u - 2) * luy + (v - 2) * lvy - w * lwz];
+        const svg = React.createElement("svg", { key: "lg" + arch, width: 220, height: 160, viewBox: "0 0 220 160", style: { display: "block" } },
+          this.shapesFor(Pl, arch, { stroke: LN, sw: 1.05, fillT: "#1a4694", fillL: "#0f316f", fillR: "#0b2a61", k: 0.62, kb: "lg" + arch }));
+        const users = PROJECTS.filter((pr) => pr.map && pr.map.arch === arch).map((pr) => pr.title);
+        return { name: ARCH_NAMES[arch], projects: users.join(" · "), svg };
+      });
+    }
+
+    out.filters = FILTERS.map(([key, label]) => {
+      const act = filter === key;
+      const pool = FEED_MAIN.concat(FEED_ARCH).map((fid) => BY_ID[fid]); const count = key === "all" ? pool.length : pool.filter((f) => f.cat === key).length;
+      return {
+        label,
+        count: String(count).padStart(2, "0"),
+        onPick: () => this.setState({ filter: key }),
+        style: "display:inline-flex;align-items:center;border:1px solid " + (act ? "rgba(255,211,92,.7)" : "rgba(234,242,255,.3)") + ";padding:6px 11px;background:" + (act ? "rgba(255,211,92,.08)" : "transparent") + ";color:" + (act ? "#ffd35c" : "rgba(234,242,255,.75)") + ";cursor:pointer;font-family:'IBM Plex Mono',monospace;font-size:9.5px;letter-spacing:.1em;text-transform:uppercase;transition:color .15s,border-color .15s",
+      };
+    });
+    const mkRow = (f, i, list) => ({
+      yr: i === 0 || list[i - 1].year !== f.year ? f.year : "",
+      title: f.title, line: f.line, status: f.status + (f.fund ? " · funded" : ""),
+      chip: "width:8px;height:8px;flex:none;display:inline-block;background:" + CAT[f.cat],
+      statusStyle: "width:110px;flex:none;text-align:right;font:600 9px/1.2 'IBM Plex Mono',monospace;letter-spacing:.08em;text-transform:uppercase;color:" + (["published", "archive", "course", "curating"].includes(f.status) ? "rgba(234,242,255,.45)" : "#ffd35c"),
+      onEnter: () => this.setState({ feedHover: f.id }),
+      onOpen: () => this._openProj(f.id),
+      style: "display:flex;align-items:center;gap:14px;padding:11px 10px 11px 0;border-bottom:1px solid rgba(234,242,255,.12);background:" + (feedHover === f.id ? "rgba(234,242,255,.05)" : "transparent") + ";transition:background .15s;cursor:pointer",
+    });
+    const mainList = FEED_MAIN.map((id) => BY_ID[id]).filter((f) => filter === "all" || f.cat === filter);
+    const archList = FEED_ARCH.map((id) => BY_ID[id]).filter((f) => filter === "all" || f.cat === filter);
+    out.rows = mainList.map((f, i) => mkRow(f, i, mainList));
+    out.archRows = archList.map((f, i) => mkRow(f, i, archList));
+    out.archShow = archList.length > 0;
+
+    const cur = (feedHover && BY_ID[feedHover]) || mainList[0] || archList[0] || PROJECTS[0];
+    out.prevSlug = cur.slug + " / hero";
+    out.prevTitle = cur.title;
+    out.prevMeta = (cur.year === "—" ? "ongoing" : cur.year) + " · " + CAT_LBL[cur.cat] + " · " + cur.status;
+    out.prevLine = cur.line;
+
+    return out;
+  }
+}
+</script>
+</body>
 </html>

@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+
+<helmet>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700&amp;family=IBM+Plex+Mono:wght@400;500;600;700&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet">
+<style>
+  html, body { margin: 0; padding: 0; background: #0b2a61; }
+  a { color: #ffd35c; text-decoration: none; }
+  a:hover { color: #ffe49a; }
+  ::selection { background: rgba(255,211,92,.35); }
+</style>
+</helmet>
+<div style="min-height:100vh;background-color:#0b2a61;background-image:radial-gradient(rgba(234,242,255,.10) 1px, transparent 1px);background-size:26px 26px;color:#eaf2ff;font-family:Inter,sans-serif">
+  <header data-screen-label="Header" style="display:flex;justify-content:space-between;align-items:center;padding:18px 4.5vw;border-bottom:1px solid rgba(234,242,255,.16)">
+    <a href="index.html" style="font-family:Archivo,sans-serif;font-weight:700;font-size:17px;letter-spacing:.02em;color:#f4f8ff">GenEnv Lab</a>
+    <div style="display:flex;align-items:center;gap:22px">
+      <span style="font:600 9.5px/1 'IBM Plex Mono',monospace;letter-spacing:.2em;text-transform:uppercase;color:rgba(234,242,255,.5)">Research</span>
+      <a href="index.html" style="font:600 10px/1 'IBM Plex Mono',monospace;letter-spacing:.16em;text-transform:uppercase;border:1px solid rgba(255,211,92,.55);padding:8px 12px">← Project index</a>
+    </div>
+  </header>
+
+  <section data-screen-label="Hero" style="display:grid;grid-template-columns:minmax(380px,1fr) minmax(420px,560px);gap:5vw;align-items:center;padding:64px 4.5vw 56px;max-width:1560px;margin:0 auto;box-sizing:border-box">
+    <div>
+      <div style="width:46px;height:3px;background:#ffd35c;margin:0 0 20px"></div>
+      <p style="margin:0;font:600 10px/1.7 'IBM Plex Mono',monospace;letter-spacing:.22em;text-transform:uppercase;color:#ffd35c">Research · Microclimate · Landscape · Simulation</p>
+      <h1 style="margin:14px 0 0;font-family:Archivo,sans-serif;font-weight:700;font-size:clamp(42px,4.4vw,68px);line-height:.98;text-transform:uppercase;color:#f4f8ff;text-wrap:balance">Digital Thermal Sandbox</h1>
+      <p style="margin:18px 0 0;font-family:Archivo,sans-serif;font-weight:600;font-size:20px;color:rgba(234,242,255,.85)">Testing landscape strategies against urban heat.</p>
+      <p style="margin:16px 0 0;font:400 15px/1.7 Inter,sans-serif;color:rgba(234,242,255,.68);max-width:500px">Digital Thermal Sandbox investigates how planting and material decisions influence outdoor thermal conditions. As Canadian cities experience hotter summers, landscape architects need more accessible ways to understand how tree canopy, vegetation, pavement, and building materials interact to shape urban microclimates. The project combines environmental sensing, three-dimensional landscape modeling, and simulation to create an interactive environment for testing design-based “what-if” scenarios.</p>
+      <div style="display:flex;gap:34px;margin:28px 0 0;flex-wrap:wrap">
+        <div><p style="margin:0;font:500 9.5px/1.5 'IBM Plex Mono',monospace;letter-spacing:.16em;text-transform:uppercase;color:rgba(234,242,255,.55)">Duration</p><p style="margin:5px 0 0;font:500 13px/1.5 Inter,sans-serif;color:#f4f8ff">2026 — Ongoing</p></div>
+        <div><p style="margin:0;font:500 9.5px/1.5 'IBM Plex Mono',monospace;letter-spacing:.16em;text-transform:uppercase;color:rgba(234,242,255,.55)">Status</p><p style="margin:5px 0 0;font:500 13px/1.5 Inter,sans-serif;color:#f4f8ff">Work in progress</p></div>
+      </div>
+      <div style="display:flex;gap:14px;margin:30px 0 0">
+        <a href="#" style="font:600 10.5px/1 'IBM Plex Mono',monospace;letter-spacing:.16em;text-transform:uppercase;background:#ffd35c;color:#081f4d;padding:12px 18px">Live sandbox →</a>
+        <a href="#" style="font:600 10.5px/1 'IBM Plex Mono',monospace;letter-spacing:.16em;text-transform:uppercase;border:1px solid rgba(234,242,255,.4);color:#eaf2ff;padding:12px 18px">Source</a>
+      </div>
+    </div>
+    <div style="border:1px solid rgba(234,242,255,.22);background:#0d2f6b">
+      <div style="display:flex;justify-content:space-between;align-items:center;padding:11px 15px;border-bottom:1px solid rgba(234,242,255,.16)">
+        <span style="font:600 9px/1 'IBM Plex Mono',monospace;letter-spacing:.2em;text-transform:uppercase;color:rgba(234,242,255,.5)">Living laboratory</span>
+      </div>
+      <div style="display:flex;justify-content:center;padding:8px 4px 2px">{{ heroIcon }}</div>
+    </div>
+  </section>
+
+  <section data-screen-label="About" style="border-top:1px solid rgba(234,242,255,.16);padding:52px 4.5vw 56px;max-width:1560px;margin:0 auto;box-sizing:border-box">
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:44px">
+      <div>
+        <p style="margin:0;font:600 9.5px/1 'IBM Plex Mono',monospace;letter-spacing:.22em;text-transform:uppercase;color:#ffd35c">Living laboratories — Winnipeg &amp; Vancouver</p>
+        <p style="margin:14px 0 0;font:400 15px/1.7 Inter,sans-serif;color:rgba(234,242,255,.68)">University campuses in Winnipeg and Vancouver serve as living laboratories for comparing different canopy forms, planting configurations, and surface materials. The research aims to connect measured environmental conditions with design exploration, allowing landscape architects to evaluate heat-mitigation strategies earlier in the design process. Its findings will be translated into practical guidance for climate-responsive landscape design.</p>
+      </div>
+      <div>
+        <p style="margin:0;font:600 9.5px/1 'IBM Plex Mono',monospace;letter-spacing:.22em;text-transform:uppercase;color:#ffd35c">Status &amp; support</p>
+        <p style="margin:14px 0 0;font:400 15px/1.7 Inter,sans-serif;color:rgba(234,242,255,.68)">This work-in-progress project is supported by the Landscape Architecture Canada Foundation (LACF). The current stage focuses on developing and calibrating the digital workflow, building the interactive sandbox, and testing initial landscape scenarios. More details are coming soon.</p>
+      </div>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:44px;margin:44px 0 0">
+      <div>
+        <p style="margin:0;font:600 9.5px/1 'IBM Plex Mono',monospace;letter-spacing:.22em;text-transform:uppercase;color:rgba(234,242,255,.55)">UM Team</p>
+        <p style="margin:10px 0 0;font:400 14px/1.8 Inter,sans-serif;color:#f4f8ff">Dr. Yuhao Lu <span style="color:rgba(234,242,255,.5)">— PI</span><br>Marc Ballelos<br>Jenelle Schellenberg<br>Bayan Shaeri<br>Shiza Jawed<br>Dale Wiebe<br>Michael Fitzpatrick<br>Vanessa Vermeulen<br>Kevin Handkamer</p>
+      </div>
+      <div>
+        <p style="margin:0;font:600 9.5px/1 'IBM Plex Mono',monospace;letter-spacing:.22em;text-transform:uppercase;color:rgba(234,242,255,.55)">UBC / GenEnv Lab Team</p>
+        <p style="margin:10px 0 0;font:400 14px/1.8 Inter,sans-serif;color:#f4f8ff">Dr. Xun Liu<br>Christina Chiu<br>Conrad Jabo</p>
+      </div>
+      <div>
+        <p style="margin:0;font:600 9.5px/1 'IBM Plex Mono',monospace;letter-spacing:.22em;text-transform:uppercase;color:rgba(234,242,255,.55)">ETH Zürich Team</p>
+        <p style="margin:10px 0 0;font:400 14px/1.8 Inter,sans-serif;color:#f4f8ff">Dr. Justin McCarty</p>
+      </div>
+    </div>
+  </section>
+
+  <footer style="border-top:1px solid rgba(234,242,255,.16);display:flex;justify-content:space-between;align-items:center;padding:22px 4.5vw;max-width:1560px;margin:0 auto;box-sizing:border-box">
+    <a href="index.html" style="font:600 10px/1 'IBM Plex Mono',monospace;letter-spacing:.18em;text-transform:uppercase">← Project index</a>
+  </footer>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;iconDrift&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Hero icon&quot;}}">
+class Component extends DCLogic {
+  state = { tt: 0 };
+  _cyc = 0.05;
+  _mC = { x: 1.15, y: 2.6, active: false }; _cC = { x: 1.15, y: 2.6 };
+
+  componentDidMount() {
+    this._t0 = performance.now(); this._last = 0;
+    const loop = () => {
+      const tt = (performance.now() - this._t0) / 1000;
+      const dt = tt - this._last;
+      if (dt >= 0.033) {
+        this._last = tt;
+        if (this.props.iconDrift ?? true) this._cyc = (this._cyc + dt / 16) % 1;
+        const txC = this._mC.active ? this._mC.x : (this.props.iconDrift ?? true) ? 1.15 + 0.55 * Math.sin(tt * 0.11) : this._cC.x;
+        const tyC = this._mC.active ? this._mC.y : (this.props.iconDrift ?? true) ? 2.5 + 0.5 * Math.cos(tt * 0.09) : this._cC.y;
+        this._cC.x += (txC - this._cC.x) * 0.16; this._cC.y += (tyC - this._cC.y) * 0.16;
+        this.setState({ tt });
+      }
+      this._raf = requestAnimationFrame(loop);
+    };
+    this._raf = requestAnimationFrame(loop);
+  }
+  componentWillUnmount() { if (this._raf) cancelAnimationFrame(this._raf); }
+
+  svgXY(e) { const r = e.currentTarget.getBoundingClientRect(); return [(e.clientX - r.left) * 470 / r.width, (e.clientY - r.top) * 300 / r.height]; }
+  onMoveC = (e) => { const p = this.svgXY(e); const A = (p[0] - 235) / (0.866 * 44), B = (p[1] - 148) / (0.5 * 44) + 4; this._mC = { x: Math.min(3.7, Math.max(0.3, (B + A) / 2)), y: Math.min(3.7, Math.max(0.3, (B - A) / 2)), active: true }; };
+  onLeaveC = () => { this._mC.active = false; };
+
+  _heat7(x, y, can) {
+    let h = 0.48 + 0.34 * Math.exp(-((x - 3.1) * (x - 3.1) + (y - 0.9) * (y - 0.9)) / 1.5);
+    can.forEach(([cx, cy, r]) => { h -= 0.5 * Math.exp(-((x - cx) * (x - cx) + (y - cy) * (y - cy)) / (r * r * 1.1)); });
+    return h;
+  }
+  _can7(cur) { return [[1.0, 1.1, 0.55], [1.9, 2.9, 0.7], [3.0, 3.1, 0.5], [cur.x, cur.y, 0.62]]; }
+  _ctr7(can) {
+    const N = 12, x0 = 0.2, y0 = 0.2, w = 3.6;
+    const F = [];
+    for (let i = 0; i <= N; i++) { F.push([]); for (let j = 0; j <= N; j++) F[i].push(this._heat7(x0 + i * w / N, y0 + j * w / N, can)); }
+    const out = [];
+    [0.4, 0.56].forEach((L, li) => {
+      for (let i = 0; i < N; i++) for (let j = 0; j < N; j++) {
+        const xa = x0 + i * w / N, ya = y0 + j * w / N, dx = w / N;
+        const v = [F[i][j], F[i + 1][j], F[i + 1][j + 1], F[i][j + 1]];
+        const pts = [];
+        const edge = (va, vb, pa, pb) => { if ((va < L) !== (vb < L)) { const tq = (L - va) / (vb - va); pts.push([pa[0] + (pb[0] - pa[0]) * tq, pa[1] + (pb[1] - pa[1]) * tq]); } };
+        edge(v[0], v[1], [xa, ya], [xa + dx, ya]);
+        edge(v[1], v[2], [xa + dx, ya], [xa + dx, ya + dx]);
+        edge(v[2], v[3], [xa + dx, ya + dx], [xa, ya + dx]);
+        edge(v[3], v[0], [xa, ya + dx], [xa, ya]);
+        if (pts.length >= 2) out.push([li, pts[0], pts[1]]);
+        if (pts.length === 4) out.push([li, pts[2], pts[3]]);
+      }
+    });
+    return out;
+  }
+
+  c01(x) { return Math.min(1, Math.max(0, x)); }
+  sm(x) { const t = this.c01(x); return t * t * (3 - 2 * t); }
+
+  prism(Pf, pts, z0, z1, kb, o) {
+    const S = (p) => p[0].toFixed(1) + "," + p[1].toFixed(1);
+    const n = pts.length;
+    const bot = pts.map((p) => Pf(p[0], p[1], z0));
+    const top = pts.map((p) => Pf(p[0], p[1], z1));
+    const faces = [];
+    for (let i = 0; i < n; i++) {
+      const j = (i + 1) % n;
+      faces.push({ d: (pts[i][0] + pts[j][0] + pts[i][1] + pts[j][1]) / 2, pts: [bot[i], bot[j], top[j], top[i]], fill: Math.abs(pts[j][0] - pts[i][0]) >= Math.abs(pts[j][1] - pts[i][1]) ? o.fillL : o.fillR });
+    }
+    faces.sort((a, b) => a.d - b.d);
+    const els = faces.map((f, i2) => React.createElement("polygon", { key: kb + "s" + i2, points: f.pts.map(S).join(" "), fill: f.fill, stroke: o.stroke, strokeWidth: o.sw, strokeLinejoin: "round", strokeDasharray: o.dash || null }));
+    els.push(React.createElement("polygon", { key: kb + "t", points: top.map(S).join(" "), fill: o.fillT, stroke: o.stroke, strokeWidth: o.sw, strokeLinejoin: "round", strokeDasharray: o.dash || null }));
+    return els;
+  }
+
+  iconA(s, cur) {
+    const YEL = "#ffd35c";
+    const P = (x, y, z) => [(x - y) * 0.866 * s, (x + y - 4) * 0.5 * s - z * 0.8 * s];
+    const LN = "rgba(234,242,255,.92)", GRN = "rgba(122,224,178,.75)";
+    const FT = "#1a4694", FL = "#0f316f", FR = "#0b2a61";
+    const els = [];
+    const ln = (k, a, b, o) => els.push(React.createElement("line", Object.assign({ key: "ts" + k, x1: a[0].toFixed(1), y1: a[1].toFixed(1), x2: b[0].toFixed(1), y2: b[1].toFixed(1), stroke: LN, strokeWidth: 1 }, o || {})));
+    for (let i = 0; i <= 5; i++) {
+      const gq = i * 0.8;
+      ln("gu" + i, P(gq, 0, 0), P(gq, 4, 0), { stroke: i % 5 ? "rgba(234,242,255,.08)" : "rgba(234,242,255,.5)" });
+      ln("gv" + i, P(0, gq, 0), P(4, gq, 0), { stroke: i % 5 ? "rgba(234,242,255,.08)" : "rgba(234,242,255,.5)" });
+    }
+    [[0, 0], [4, 0], [4, 4], [0, 4]].forEach(([u, v], i) => {
+      ln("tka" + i, P(u - 0.13, v, 0), P(u + 0.13, v, 0), { stroke: "rgba(255,211,92,.7)", strokeWidth: 0.9 });
+      ln("tkb" + i, P(u, v - 0.13, 0), P(u, v + 0.13, 0), { stroke: "rgba(255,211,92,.7)", strokeWidth: 0.9 });
+    });
+    els.push.apply(els, this.prism(P, [[0.2, 0.2], [3.8, 0.2], [3.8, 3.8], [0.2, 3.8]], 0, 0.28, "tstab", { stroke: LN, sw: 1.05, fillT: FT, fillL: FL, fillR: FR }));
+    const can = this._can7(cur);
+    const N7 = 14;
+    for (let i = 0; i < N7; i++) for (let j = 0; j < N7; j++) {
+      const x = 0.35 + i * 3.3 / (N7 - 1), y = 0.35 + j * 3.3 / (N7 - 1);
+      const hn = this.c01((this._heat7(x, y, can) - 0.08) / 0.6);
+      const d = P(x, y, 0.3 + 0.75 * hn);
+      els.push(React.createElement("circle", { key: "tshd" + i + "_" + j, cx: d[0].toFixed(1), cy: d[1].toFixed(1), r: (0.5 + 2.1 * hn).toFixed(1), fill: hn > 0.55 ? "rgba(255,211,92," + (0.25 + 0.6 * hn).toFixed(2) + ")" : "rgba(234,242,255," + (0.12 + 0.42 * hn).toFixed(2) + ")" }));
+    }
+    this._ctr7(can).forEach(([li, a, b], si) => {
+      const pa = P(a[0], a[1], 0.31), pb = P(b[0], b[1], 0.31);
+      els.push(React.createElement("line", { key: "tsct" + si, x1: pa[0].toFixed(1), y1: pa[1].toFixed(1), x2: pb[0].toFixed(1), y2: pb[1].toFixed(1), stroke: li ? "rgba(255,211,92,.65)" : "rgba(234,242,255,.35)", strokeWidth: li ? 1 : 0.75 }));
+    });
+    [[0.55, 0.55], [3.45, 0.55], [3.45, 3.45], [0.55, 3.45]].forEach(([x, y], i) => {
+      const hot = this._heat7(x, y, can) > 0.5;
+      const b0 = P(x, y, 0.28), b1 = P(x, y, 1.05);
+      ln("sn" + i, b0, b1, { strokeOpacity: 0.5, strokeWidth: 0.8 });
+      els.push(React.createElement("circle", { key: "tssd" + i, cx: b1[0].toFixed(1), cy: b1[1].toFixed(1), r: 1.9, fill: hot ? YEL : "#eaf2ff" }));
+    });
+    const hts = [0.85, 1.05, 0.75, 0.95];
+    can.forEach(([cx, cy, r], i) => {
+      const last = i === can.length - 1;
+      const base = P(cx, cy, 0.28), top = P(cx, cy, 0.28 + hts[i]);
+      if (last) ln("cdr" + i, base, P(cx, cy, 0), { strokeDasharray: "2 4", strokeOpacity: 0.3, strokeWidth: 0.7 });
+      ln("cst" + i, base, top, { strokeOpacity: 0.75 });
+      els.push(React.createElement("circle", { key: "tscn" + i, cx: top[0].toFixed(1), cy: top[1].toFixed(1), r: (r * 0.866 * s * 0.88).toFixed(1), fill: "rgba(122,224,178,.14)", stroke: last ? YEL : GRN, strokeWidth: last ? 1.3 : 1, strokeDasharray: last ? "5 4" : null }));
+    });
+    return els;
+  }
+
+  hero() {
+    const YEL = "#ffd35c";
+    const cyc = this._cyc;
+    const x0 = 30, x1 = 440, sy = 285;
+    const stage = cyc < 0.24 ? "SENSE" : cyc < 0.5 ? "MODEL" : cyc < 0.78 ? "SIMULATE" : "WHAT-IF";
+    const cx = x0 + (x1 - x0) * cyc;
+    const overlay = [
+      React.createElement("line", { key: "sb", x1: x0, y1: sy, x2: x1, y2: sy, stroke: "rgba(234,242,255,.2)", strokeWidth: 1 }),
+      React.createElement("line", { key: "sp", x1: x0, y1: sy, x2: cx, y2: sy, stroke: YEL, strokeWidth: 2 }),
+      React.createElement("circle", { key: "st", cx: cx, cy: sy, r: 3, fill: YEL }),
+      React.createElement("text", { key: "sl", x: cx, y: sy - 7, textAnchor: "middle", fontSize: 8.5, fill: YEL, fontFamily: "'IBM Plex Mono',monospace", letterSpacing: ".14em" }, stage),
+    ];
+    return React.createElement("svg", { key: "hero", width: 470, height: 300, viewBox: "0 0 470 300", style: { display: "block", maxWidth: "100%", height: "auto", cursor: "crosshair" }, onMouseMove: this.onMoveC, onMouseLeave: this.onLeaveC },
+      React.createElement("g", { transform: "translate(235,148)" }, this.iconA(44, this._cC)),
+      React.createElement("g", { key: "ov" }, overlay));
+  }
+
+  renderVals() {
+    return { heroIcon: this.hero() };
+  }
+}
+</script>
+</body>
+</html>

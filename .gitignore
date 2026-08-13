@@ -7,6 +7,12 @@ source-media/
 raw-media/
 originals/
 
+# Local archive (old design variants, raw source media) — synced by OneDrive, not published.
+_archive/
+
+# Claude Design handoff bundle — design reference for the rebuild, not site content.
+design_handoff_genenv_site/
+
 # Large editing exports and temporary files.
 *.psd
 *.ai
@@ -35,3 +41,7 @@ assets/site-media/*.jpeg
 dist/
 build/
 node_modules/
+.gstack/
+
+# Claude Code local settings.
+.claude/

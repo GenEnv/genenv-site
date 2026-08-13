@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700&amp;family=IBM+Plex+Mono:wght@400;500;600;700&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet">
+<script src="image-slot.js"></script>
+<style>
+  html, body { margin: 0; padding: 0; background: #0b2a61; }
+  a { color: #ffd35c; text-decoration: none; }
+  a:hover { color: #ffe49a; }
+  ::selection { background: rgba(255,211,92,.35); }
+</style>
+</helmet>
+<div style="min-height:100vh;background-color:#0b2a61;background-image:radial-gradient(rgba(234,242,255,.10) 1px, transparent 1px);background-size:26px 26px;color:#eaf2ff;font-family:Inter,sans-serif">
+  <header data-screen-label="Header" style="display:flex;justify-content:space-between;align-items:center;padding:18px 4.5vw;border-bottom:1px solid rgba(234,242,255,.16)">
+    <a href="index.html" style="font-family:Archivo,sans-serif;font-weight:700;font-size:17px;letter-spacing:.02em;color:#f4f8ff">GenEnv Lab</a>
+    <div style="display:flex;align-items:center;gap:22px">
+      <span style="font:600 9.5px/1 'IBM Plex Mono',monospace;letter-spacing:.2em;text-transform:uppercase;color:rgba(234,242,255,.5)">Research · Archive</span>
+      <a href="index.html" style="font:600 10px/1 'IBM Plex Mono',monospace;letter-spacing:.16em;text-transform:uppercase;border:1px solid rgba(255,211,92,.55);padding:8px 12px">← Project index</a>
+    </div>
+  </header>
+
+  <section data-screen-label="Hero" style="display:grid;grid-template-columns:minmax(380px,1fr) minmax(420px,560px);gap:5vw;align-items:center;padding:64px 4.5vw 56px;max-width:1560px;margin:0 auto;box-sizing:border-box">
+    <div>
+      <div style="width:46px;height:3px;background:#ffd35c;margin:0 0 20px"></div>
+      <p style="margin:0;font:600 10px/1.7 'IBM Plex Mono',monospace;letter-spacing:.22em;text-transform:uppercase;color:#ffd35c">Professional · Zoning automation · Archive</p>
+      <h1 style="margin:14px 0 0;font-family:Archivo,sans-serif;font-weight:700;font-size:clamp(42px,4.4vw,68px);line-height:.98;text-transform:uppercase;color:#f4f8ff;text-wrap:balance">Code2Code</h1>
+      <p style="margin:18px 0 0;font-family:Archivo,sans-serif;font-weight:600;font-size:20px;color:rgba(234,242,255,.85)">NYC digital zoning automation and analysis.</p>
+      <p style="margin:16px 0 0;font:400 15px/1.7 Inter,sans-serif;color:rgba(234,242,255,.68);max-width:520px">The practice of city-wide zoning defines potentials of both building forms and public space, through a set of static prototypes (i.e. zoning districts, lot types) and rules (i.e. setbacks, incentives). Code2Code is a digital toolkit developed for the New York City Department of City Planning, including automating 3D scenarios of existing and proposed zoning code, enhancing the workflow of rezoning studies, and performance-based planning research.</p>
+      <div style="display:flex;gap:34px;margin:28px 0 0;flex-wrap:wrap">
+        <div><p style="margin:0;font:500 9.5px/1.5 'IBM Plex Mono',monospace;letter-spacing:.16em;text-transform:uppercase;color:rgba(234,242,255,.55)">Duration</p><p style="margin:5px 0 0;font:500 13px/1.5 Inter,sans-serif;color:#f4f8ff">2018 — 2019</p></div>
+        <div><p style="margin:0;font:500 9.5px/1.5 'IBM Plex Mono',monospace;letter-spacing:.16em;text-transform:uppercase;color:rgba(234,242,255,.55)">Status</p><p style="margin:5px 0 0;font:500 13px/1.5 Inter,sans-serif;color:#f4f8ff">Archive</p></div>
+        <div><p style="margin:0;font:500 9.5px/1.5 'IBM Plex Mono',monospace;letter-spacing:.16em;text-transform:uppercase;color:rgba(234,242,255,.55)">Client</p><p style="margin:5px 0 0;font:500 13px/1.5 Inter,sans-serif;color:#f4f8ff">NYC Department of City Planning</p></div>
+      </div>
+    </div>
+    <div style="border:1px solid rgba(234,242,255,.22);background:#0d2f6b">
+      <div style="display:flex;justify-content:space-between;align-items:center;padding:11px 15px;border-bottom:1px solid rgba(234,242,255,.16)">
+        <span style="font:600 9px/1 'IBM Plex Mono',monospace;letter-spacing:.2em;text-transform:uppercase;color:rgba(234,242,255,.5)">Sky exposure plane → envelope → floors</span>
+      </div>
+      <div style="display:flex;justify-content:center;padding:8px 4px 6px">{{ heroIcon }}</div>
+    </div>
+  </section>
+
+  <section data-screen-label="Concept" style="border-top:1px solid rgba(234,242,255,.16);padding:56px 4.5vw 12px;max-width:1560px;margin:0 auto;box-sizing:border-box">
+    <div style="display:grid;grid-template-columns:minmax(300px,420px) 1fr;gap:5vw;align-items:center">
+      <div>
+        <p style="margin:0;font:600 9.5px/1 'IBM Plex Mono',monospace;letter-spacing:.2em;text-transform:uppercase;color:#ffd35c">01 · From code to code</p>
+        <h2 style="margin:12px 0 0;font-family:Archivo,sans-serif;font-weight:700;font-size:28px;line-height:1.05;text-transform:uppercase;color:#f4f8ff">Zoning regulations, translated</h2>
+        <p style="margin:14px 0 0;font:400 14px/1.7 Inter,sans-serif;color:rgba(234,242,255,.68)">It translates zoning regulations into computational languages and automatically generates building massing based on GIS data.</p>
+      </div>
+      <div style="border:1px solid rgba(234,242,255,.22);background:#ffffff">
+        <img src="media/code2code/concept.gif" alt="Zoning code translated into computational code into 3D visualization" style="display:block;width:100%;height:auto"></img>
+      </div>
+    </div>
+  </section>
+
+  <section data-screen-label="Toolkit" style="padding:56px 4.5vw 12px;max-width:1560px;margin:0 auto;box-sizing:border-box">
+    <p style="margin:0;font:600 9.5px/1 'IBM Plex Mono',monospace;letter-spacing:.2em;text-transform:uppercase;color:#ffd35c">02 · The toolkit in Rhino</p>
+    <h2 style="margin:12px 0 0;font-family:Archivo,sans-serif;font-weight:700;font-size:28px;line-height:1.05;text-transform:uppercase;color:#f4f8ff">GIS in, massing out</h2>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:22px;margin:24px 0 0">
+      <figure style="margin:0">
+        <div style="border:1px solid rgba(234,242,255,.22);background:#0d2f6b"><img src="media/code2code/demo-setup.gif" alt="NYC 3D Zoning panel — importing GIS boundaries into Rhino" style="display:block;width:100%;height:auto"></img></div>
+        <figcaption style="margin:10px 0 0;font:600 9px/1.5 'IBM Plex Mono',monospace;letter-spacing:.16em;text-transform:uppercase;color:rgba(234,242,255,.55)">Setup — GIS to Rhino</figcaption>
+      </figure>
+      <figure style="margin:0">
+        <div style="border:1px solid rgba(234,242,255,.22);background:#0d2f6b"><img src="media/code2code/demo-massing.gif" alt="Selecting a lot, assigning a zoning district, and baking generated massing" style="display:block;width:100%;height:auto"></img></div>
+        <figcaption style="margin:10px 0 0;font:600 9px/1.5 'IBM Plex Mono',monospace;letter-spacing:.16em;text-transform:uppercase;color:rgba(234,242,255,.55)">Massing — generate &amp; bake</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section data-screen-label="Design options" style="padding:56px 4.5vw 12px;max-width:1560px;margin:0 auto;box-sizing:border-box">
+    <p style="margin:0;font:600 9.5px/1 'IBM Plex Mono',monospace;letter-spacing:.2em;text-transform:uppercase;color:#ffd35c">03 · Envelope &amp; design options</p>
+    <h2 style="margin:12px 0 0;font-family:Archivo,sans-serif;font-weight:700;font-size:28px;line-height:1.05;text-transform:uppercase;color:#f4f8ff">One lot, many rules</h2>
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin:24px 0 0">
+      <div style="border:1px solid rgba(234,242,255,.22);background:#000"><img src="media/code2code/opt-01.gif" alt="Real-time 3D visualization" style="display:block;width:100%;height:auto"></img></div>
+      <div style="border:1px solid rgba(234,242,255,.22);background:#000"><img src="media/code2code/opt-02.gif" alt="Different envelope options" style="display:block;width:100%;height:auto"></img></div>
+      <div style="border:1px solid rgba(234,242,255,.22);background:#000"><img src="media/code2code/opt-03.gif" alt="Design options — dormers" style="display:block;width:100%;height:auto"></img></div>
+      <div style="border:1px solid rgba(234,242,255,.22);background:#000"><img src="media/code2code/opt-04.gif" alt="Design options — courts" style="display:block;width:100%;height:auto"></img></div>
+      <div style="border:1px solid rgba(234,242,255,.22);background:#000"><img src="media/code2code/opt-05.gif" alt="Design options — street wall of interior lots" style="display:block;width:100%;height:auto"></img></div>
+      <div style="border:1px solid rgba(234,242,255,.22);background:#000"><img src="media/code2code/opt-06.gif" alt="Design options — street wall of corner lots" style="display:block;width:100%;height:auto"></img></div>
+    </div>
+  </section>
+
+  <section data-screen-label="Impact" style="padding:56px 4.5vw 12px;max-width:1560px;margin:0 auto;box-sizing:border-box">
+    <div style="display:grid;grid-template-columns:minmax(300px,420px) 1fr;gap:5vw;align-items:start">
+      <div>
+        <p style="margin:0;font:600 9.5px/1 'IBM Plex Mono',monospace;letter-spacing:.2em;text-transform:uppercase;color:#ffd35c">04 · Impact</p>
+        <h2 style="margin:12px 0 0;font-family:Archivo,sans-serif;font-weight:700;font-size:28px;line-height:1.05;text-transform:uppercase;color:#f4f8ff">Quantitative to qualitative</h2>
+        <p style="margin:14px 0 0;font:400 14px/1.7 Inter,sans-serif;color:rgba(234,242,255,.68)">The new tools significantly speed up the traditional GIS–Modeling–Calculating–Remodeling process; the leap from quantitative to qualitative change enables more relational and integrated studies of the city.</p>
+        <div style="display:flex;gap:36px;margin:26px 0 0">
+          <div>
+            <p style="margin:0;font-family:Archivo,sans-serif;font-weight:700;font-size:44px;line-height:1;color:#ffd35c">90%</p>
+            <p style="margin:7px 0 0;font:500 9.5px/1.5 'IBM Plex Mono',monospace;letter-spacing:.14em;text-transform:uppercase;color:rgba(234,242,255,.6)">Time &amp; cost saved<br>per zoning study</p>
+          </div>
+          <div>
+            <p style="margin:0;font-family:Archivo,sans-serif;font-weight:700;font-size:44px;line-height:1;color:#ffd35c">$100Ks</p>
+            <p style="margin:7px 0 0;font:500 9.5px/1.5 'IBM Plex Mono',monospace;letter-spacing:.14em;text-transform:uppercase;color:rgba(234,242,255,.6)">Cost savings<br>in the agency</p>
+          </div>
+        </div>
+      </div>
+      <div style="border:1px solid rgba(234,242,255,.22);background:#f5f5f3">
+        <img src="media/code2code/city-axon.png" alt="City-scale rezoning study with generated massing highlighted" style="display:block;width:100%;height:auto"></img>
+      </div>
+    </div>
+  </section>
+
+  <section data-screen-label="Behind the scene" style="padding:56px 4.5vw 12px;max-width:1560px;margin:0 auto;box-sizing:border-box">
+    <p style="margin:0;font:600 9.5px/1 'IBM Plex Mono',monospace;letter-spacing:.2em;text-transform:uppercase;color:#ffd35c">05 · Behind the scene</p>
+    <h2 style="margin:12px 0 0;font-family:Archivo,sans-serif;font-weight:700;font-size:28px;line-height:1.05;text-transform:uppercase;color:#f4f8ff">The definition</h2>
+    <div style="border:1px solid rgba(234,242,255,.22);background:#ffffff;margin:24px 0 0"><img src="media/code2code/behind-the-scene.png" alt="The full Grasshopper definition behind Code2Code" style="display:block;width:100%;height:auto"></img></div>
+  </section>
+
+  <section data-screen-label="Related projects" style="padding:52px 4.5vw 64px;max-width:1560px;margin:0 auto;box-sizing:border-box">
+    <h2 style="margin:0;font-family:Archivo,sans-serif;font-weight:700;font-size:26px;text-transform:uppercase;color:#f4f8ff">Related projects</h2>
+    <div style="display:flex;flex-wrap:wrap;gap:22px;margin:24px 0 0">
+      <a href="Project - Decoding Urban Form.dc.html" style="border:1px solid rgba(234,242,255,.22);background:#0d2f6b;padding:20px 22px;display:flex;flex-direction:column;gap:8px;flex:0 1 480px;min-width:280px;box-sizing:border-box" style-hover="border-color:#ffd35c">
+        <span style="font:600 9px/1 'IBM Plex Mono',monospace;letter-spacing:.2em;text-transform:uppercase;color:#ffd35c">Research · Current</span>
+        <span style="font-family:Archivo,sans-serif;font-weight:700;font-size:18px;text-transform:uppercase;color:#f4f8ff">Decoding Urban Form</span>
+        <span style="font:400 12.5px/1.55 Inter,sans-serif;color:rgba(234,242,255,.6)">The line of work Code2Code began — from zoning automation toward transparent urban form visualization, AI agents, and RAG workflows.</span>
+      </a>
+    </div>
+  </section>
+
+  <footer style="border-top:1px solid rgba(234,242,255,.16);display:flex;justify-content:space-between;align-items:center;padding:22px 4.5vw;max-width:1560px;margin:0 auto;box-sizing:border-box">
+    <a href="index.html" style="font:600 10px/1 'IBM Plex Mono',monospace;letter-spacing:.18em;text-transform:uppercase">← Project index</a>
+  </footer>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  state = { cyc: 0.05 };
+  componentDidMount() {
+    this._t0 = performance.now(); this._last = 0;
+    const loop = (now) => {
+      const tt = (now - this._t0) / 1000;
+      if (tt - this._last >= 0.033) { this._last = tt; this.setState({ cyc: (tt / 13) % 1 }); }
+      this._raf = requestAnimationFrame(loop);
+    };
+    this._raf = requestAnimationFrame(loop);
+  }
+  componentWillUnmount() { if (this._raf) cancelAnimationFrame(this._raf); }
+  sm(x) { const t = Math.min(1, Math.max(0, x)); return t * t * (3 - 2 * t); }
+
+  prism(Pf, pts, z0, z1, kb, o) {
+    const S = (p) => p[0].toFixed(1) + "," + p[1].toFixed(1);
+    const bot = pts.map((p) => Pf(p[0], p[1], z0));
+    const top = pts.map((p) => Pf(p[0], p[1], z1));
+    const faces = [];
+    for (let i = 0; i < pts.length; i++) {
+      const j = (i + 1) % pts.length;
+      faces.push({ d: (pts[i][0] + pts[j][0] + pts[i][1] + pts[j][1]) / 2, pts: [bot[i], bot[j], top[j], top[i]], fill: Math.abs(pts[j][0] - pts[i][0]) >= Math.abs(pts[j][1] - pts[i][1]) ? o.fillL : o.fillR });
+    }
+    faces.sort((a, b) => a.d - b.d);
+    const els = faces.map((f, i2) => React.createElement("polygon", { key: kb + "s" + i2, points: f.pts.map(S).join(" "), fill: f.fill, stroke: o.stroke, strokeWidth: o.sw, strokeLinejoin: "round" }));
+    els.push(React.createElement("polygon", { key: kb + "t", points: top.map(S).join(" "), fill: o.fillT, stroke: o.stroke, strokeWidth: o.sw, strokeLinejoin: "round" }));
+    return els;
+  }
+
+  // Code2Code — homage to Hugh Ferriss, "Evolution of a City Building Under the Zoning Law": the dashed
+  // zoning envelope persists (plan: nested rects + corner diagonals) while one cycle runs the four stages.
+  icon9(cyc) {
+    const s = 46;
+    const P = (x, y, z) => [(x - y) * 0.866 * s, (x + y - 4) * 0.5 * s - z * 0.8 * s];
+    const YEL = "#ffd35c", LN = "rgba(234,242,255,.92)", FT = "#12397f", FL = "#0f316f", FR = "#0b2a61";
+    const els = [];
+    for (let i = 0; i <= 5; i++) {
+      const gq = i * 0.8;
+      const a = P(gq, 0, 0), b = P(gq, 4, 0), c = P(0, gq, 0), d = P(4, gq, 0);
+      const st = "rgba(234,242,255," + (i % 5 ? ".09" : ".22") + ")";
+      els.push(React.createElement("line", { key: "gu" + i, x1: a[0], y1: a[1], x2: b[0], y2: b[1], stroke: st, strokeWidth: 1 }));
+      els.push(React.createElement("line", { key: "gv" + i, x1: c[0], y1: c[1], x2: d[0], y2: d[1], stroke: st, strokeWidth: 1 }));
+    }
+    const S9 = (pp) => pp[0].toFixed(1) + "," + pp[1].toFixed(1);
+    const ln = (a, b, o) => els.push(React.createElement("line", Object.assign({ key: "l" + els.length, x1: a[0].toFixed(1), y1: a[1].toFixed(1), x2: b[0].toFixed(1), y2: b[1].toFixed(1), stroke: LN, strokeWidth: 1 }, o || {})));
+    const stg = (a, b) => this.sm((cyc - a) / (b - a));
+    // Sky exposure plane → envelope → buildable floors: the dashed plane leans back from the street,
+    // cuts the extruded lot into the zoning envelope, and the usable form stacks up inside as yellow
+    // FAR floor plates stepping back under the slope (cf. the "three height districts" zoning diagrams).
+    // Plan: street line, plane footprint, envelope rect, nested floor outlines — all readable on the ground.
+    const po9 = (pts, o2) => els.push(React.createElement("polygon", Object.assign({ key: "q" + els.length, points: pts.map(([x, y, z]) => S9(P(x, y, z))).join(" "), strokeLinejoin: "round" }, o2)));
+    const p1 = stg(0.03, 0.2), p2 = stg(0.24, 0.42);
+    if (p1 > 0.01) ln(P(0.3, 3.8, 0), P(0.3 + 3.4 * p1, 3.8, 0), { stroke: YEL, strokeOpacity: 0.85, strokeWidth: 1.05 * 1.2, strokeDasharray: "6 4" });
+    if (p2 > 0.01) {
+      const zs = (z) => z * p2;
+      const eo = { fill: "rgba(234,242,255,.05)", stroke: LN, strokeOpacity: 0.75, strokeWidth: 1.05 * 0.85, strokeDasharray: null };
+      po9([[0.6, 0.5, 0], [3.4, 0.5, 0], [3.4, 0.5, zs(2.4)], [0.6, 0.5, zs(2.4)]], eo);
+      po9([[0.6, 3.3, 0], [0.6, 3.3, zs(1.075)], [0.6, 1.53, zs(2.4)], [0.6, 0.5, zs(2.4)], [0.6, 0.5, 0]], eo);
+      po9([[0.6, 1.53, zs(2.4)], [3.4, 1.53, zs(2.4)], [3.4, 0.5, zs(2.4)], [0.6, 0.5, zs(2.4)]], eo);
+      po9([[0.6, 3.3, zs(1.075)], [3.4, 3.3, zs(1.075)], [3.4, 1.53, zs(2.4)], [0.6, 1.53, zs(2.4)]], eo);
+      po9([[3.4, 3.3, 0], [3.4, 3.3, zs(1.075)], [3.4, 1.53, zs(2.4)], [3.4, 0.5, zs(2.4)], [3.4, 0.5, 0]], eo);
+      po9([[0.6, 3.3, 0], [3.4, 3.3, 0], [3.4, 3.3, zs(1.075)], [0.6, 3.3, zs(1.075)]], eo);
+    }
+    for (let i = 0; i < 8; i++) {
+      const gf = stg(0.46 + i * 0.045, 0.54 + i * 0.045);
+      if (gf <= 0.01) continue;
+      const zi = 0.12 + i * 0.28;
+      const vm = Math.min(3.1, 3.8 - (zi + 0.09 - 0.7) / 0.75);
+      if (vm < 1.0) continue;
+      const fe = this.prism(P, [[0.8, 0.7], [3.2, 0.7], [3.2, vm], [0.8, vm]], zi, zi + 0.09, "fl" + i, { stroke: "rgba(255,211,92,.9)", sw: 1.05 * 0.6, fillT: "rgba(255,211,92,.45)", fillL: "rgba(255,211,92,.22)", fillR: "rgba(255,211,92,.16)" });
+      els.push(React.createElement("g", { key: "flg" + i, opacity: gf.toFixed(2) }, fe));
+    }
+    if (p1 > 0.01) {
+      const vF = 3.8 - 2.27 * p1, zF = 0.7 + 0.75 * (3.8 - vF);
+      po9([[0.6, 3.8, 0.7], [3.4, 3.8, 0.7], [3.4, vF, zF], [0.6, vF, zF]], { fill: "rgba(255,211,92,.06)", stroke: YEL, strokeOpacity: 0.9, strokeWidth: 1.05 * 1.1, strokeDasharray: "6 4" });
+      ln(P(0.6, 3.8, 0), P(0.6, 3.8, 0.7), { stroke: YEL, strokeOpacity: 0.7 * p1, strokeWidth: 1.05, strokeDasharray: "3 3" });
+      ln(P(3.4, 3.8, 0), P(3.4, 3.8, 0.7), { stroke: YEL, strokeOpacity: 0.7 * p1, strokeWidth: 1.05, strokeDasharray: "3 3" });
+    }
+    return els;
+  }
+
+  renderVals() {
+    const heroIcon = React.createElement("svg", { key: "hero", width: 470, height: 300, viewBox: "0 0 470 300", style: { display: "block", maxWidth: "100%", height: "auto" } },
+      React.createElement("g", { transform: "translate(235,190)" }, this.icon9(this.state.cyc)));
+    return { heroIcon };
+  }
+}
+</script>
+</body>
+</html>

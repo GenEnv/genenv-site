@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+
+<helmet>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700&amp;family=IBM+Plex+Mono:wght@400;500;600;700&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet">
+<style>
+  html, body { margin: 0; padding: 0; background: #0b2a61; }
+  a { color: #ffd35c; text-decoration: none; }
+  a:hover { color: #ffe49a; }
+  ::selection { background: rgba(255,211,92,.35); }
+</style>
+</helmet>
+<div style="min-height:100vh;background-color:#0b2a61;background-image:radial-gradient(rgba(234,242,255,.10) 1px, transparent 1px);background-size:26px 26px;color:#eaf2ff;font-family:Inter,sans-serif">
+  <header data-screen-label="Header" style="display:flex;justify-content:space-between;align-items:center;padding:18px 4.5vw;border-bottom:1px solid rgba(234,242,255,.16)">
+    <a href="index.html" style="font-family:Archivo,sans-serif;font-weight:700;font-size:17px;letter-spacing:.02em;color:#f4f8ff">GenEnv Lab</a>
+    <div style="display:flex;align-items:center;gap:22px">
+      <span style="font:600 9.5px/1 'IBM Plex Mono',monospace;letter-spacing:.2em;text-transform:uppercase;color:rgba(234,242,255,.5)">Research</span>
+      <a href="index.html" style="font:600 10px/1 'IBM Plex Mono',monospace;letter-spacing:.16em;text-transform:uppercase;border:1px solid rgba(255,211,92,.55);padding:8px 12px">← Project index</a>
+    </div>
+  </header>
+
+  <section data-screen-label="Hero" style="display:grid;grid-template-columns:minmax(380px,1fr) minmax(420px,560px);gap:5vw;align-items:center;padding:64px 4.5vw 56px;max-width:1560px;margin:0 auto;box-sizing:border-box">
+    <div>
+      <div style="width:46px;height:3px;background:#ffd35c;margin:0 0 20px"></div>
+      <p style="margin:0;font:600 10px/1.7 'IBM Plex Mono',monospace;letter-spacing:.22em;text-transform:uppercase;color:#ffd35c">Research · LLM + Agents · Zoning · Urban Form · WIP</p>
+      <h1 style="margin:14px 0 0;font-family:Archivo,sans-serif;font-weight:700;font-size:clamp(42px,4.4vw,68px);line-height:.98;text-transform:uppercase;color:#f4f8ff;text-wrap:balance">Decoding Urban Form</h1>
+      <p style="margin:18px 0 0;font-family:Archivo,sans-serif;font-weight:600;font-size:20px;color:rgba(234,242,255,.85)">Making zoning visible, testable, and open to more people.</p>
+      <p style="margin:16px 0 0;font:400 15px/1.7 Inter,sans-serif;color:rgba(234,242,255,.68);max-width:500px">Decoding Urban Form investigates how agentic AI can translate complex zoning regulations into accessible spatial knowledge. The platform reads bylaws, retrieves source clauses, structures conditional rules, and turns site-specific requirements into 3D massing proposals. Rather than relying on fixed parametric typologies, modeling agents work directly with parcel geometry and use deterministic measurements, multi-view rendering, and independent reviewer agents to inspect compliance and revise their designs.</p>
+      <div style="display:flex;gap:34px;margin:28px 0 0;flex-wrap:wrap">
+        <div><p style="margin:0;font:500 9.5px/1.5 'IBM Plex Mono',monospace;letter-spacing:.16em;text-transform:uppercase;color:rgba(234,242,255,.55)">Duration</p><p style="margin:5px 0 0;font:500 13px/1.5 Inter,sans-serif;color:#f4f8ff">2026 —</p></div>
+        <div><p style="margin:0;font:500 9.5px/1.5 'IBM Plex Mono',monospace;letter-spacing:.16em;text-transform:uppercase;color:rgba(234,242,255,.55)">PI</p><p style="margin:5px 0 0;font:500 13px/1.5 Inter,sans-serif;color:#f4f8ff">Xun Liu</p></div>
+        <div><p style="margin:0;font:500 9.5px/1.5 'IBM Plex Mono',monospace;letter-spacing:.16em;text-transform:uppercase;color:rgba(234,242,255,.55)">Team</p><p style="margin:5px 0 0;font:500 13px/1.5 Inter,sans-serif;color:#f4f8ff">Christina Chiu <span style="color:rgba(234,242,255,.5)">— RA</span><br>Conrad Jabo <span style="color:rgba(234,242,255,.5)">— RA</span></p></div>
+      </div>
+    </div>
+    <div style="border:1px solid rgba(234,242,255,.22);background:#0d2f6b">
+      <div style="display:flex;justify-content:space-between;align-items:center;padding:11px 15px;border-bottom:1px solid rgba(234,242,255,.16)">
+        <span style="font:600 9px/1 'IBM Plex Mono',monospace;letter-spacing:.2em;text-transform:uppercase;color:rgba(234,242,255,.5)">Traceable scenario</span>
+      </div>
+      <div style="display:flex;justify-content:center;padding:8px 4px 2px">{{ heroIcon }}</div>
+    </div>
+  </section>
+
+  <section data-screen-label="About" style="border-top:1px solid rgba(234,242,255,.16);padding:52px 4.5vw 56px;max-width:1560px;margin:0 auto;box-sizing:border-box">
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:44px">
+      <div>
+        <p style="margin:0;font:600 9.5px/1 'IBM Plex Mono',monospace;letter-spacing:.22em;text-transform:uppercase;color:#ffd35c">Test bed — Vancouver</p>
+        <p style="margin:14px 0 0;font:400 15px/1.7 Inter,sans-serif;color:rgba(234,242,255,.68)">Vancouver serves as the project’s primary test bed, where complex regulations and discretionary planning processes make it difficult to understand how written rules translate into urban form. The research aims to improve regulatory literacy by helping designers, planners, developers, and community members explore development possibilities while preserving citations, uncertainty, and a traceable record of how each proposal was generated and reviewed.</p>
+      </div>
+      <div>
+        <p style="margin:0;font:600 9.5px/1 'IBM Plex Mono',monospace;letter-spacing:.22em;text-transform:uppercase;color:#ffd35c">Status &amp; support</p>
+        <p style="margin:14px 0 0;font:400 15px/1.7 Inter,sans-serif;color:rgba(234,242,255,.68)">This work-in-progress project is currently supported by the Social Sciences and Humanities Research Council (SSHRC), with its initial development supported by the UBC Hampton Grant and UBC APSC PAEI Funding. The current stage focuses on developing and testing a conversational planning platform that connects regulatory interpretation, site information, and three-dimensional visualization. More details are coming soon.</p>
+      </div>
+    </div>
+    <sc-if value="{{ showRecruiting }}" hint-placeholder-val="{{ true }}">
+    <div style="display:flex;justify-content:space-between;align-items:center;gap:24px;flex-wrap:wrap;border:1px solid rgba(255,211,92,.55);background:rgba(255,211,92,.07);padding:20px 24px;margin:44px 0 0">
+      <p style="margin:0;font:400 15px/1.6 Inter,sans-serif;color:#f4f8ff;max-width:760px">The project is currently recruiting Research Assistants and welcoming inquiries from prospective PhD students and postdoctoral researchers interested in joining the team.</p>
+      <a href="index.html" style="font:600 10.5px/1 'IBM Plex Mono',monospace;letter-spacing:.16em;text-transform:uppercase;background:#ffd35c;color:#081f4d;padding:12px 18px;white-space:nowrap">Join the lab →</a>
+    </div>
+    </sc-if>
+  </section>
+
+  <section data-screen-label="Related" style="border-top:1px solid rgba(234,242,255,.16);padding:52px 4.5vw 64px;max-width:1560px;margin:0 auto;box-sizing:border-box">
+    <h2 style="margin:0;font-family:Archivo,sans-serif;font-weight:700;font-size:26px;text-transform:uppercase;color:#f4f8ff">Related</h2>
+    <div style="display:flex;flex-wrap:wrap;gap:22px;margin:24px 0 0">
+      <a href="index.html" style="border:1px solid rgba(234,242,255,.22);background:#0d2f6b;padding:20px 22px;display:flex;flex-direction:column;gap:8px;flex:0 1 420px;min-width:280px;box-sizing:border-box" style-hover="border-color:#ffd35c">
+        <span style="font:600 9px/1 'IBM Plex Mono',monospace;letter-spacing:.2em;text-transform:uppercase;color:#ffd35c">Lab · Hiring</span>
+        <span style="font-family:Archivo,sans-serif;font-weight:700;font-size:18px;text-transform:uppercase;color:#f4f8ff">Join</span>
+      </a>
+      <a href="index.html" style="border:1px solid rgba(234,242,255,.22);background:#0d2f6b;padding:20px 22px;display:flex;flex-direction:column;gap:8px;flex:0 1 420px;min-width:280px;box-sizing:border-box" style-hover="border-color:#ffd35c">
+        <span style="font:600 9px/1 'IBM Plex Mono',monospace;letter-spacing:.2em;text-transform:uppercase;color:#ffd35c">Research · 2019 —</span>
+        <span style="font-family:Archivo,sans-serif;font-weight:700;font-size:18px;text-transform:uppercase;color:#f4f8ff">Code2Code</span>
+      </a>
+    </div>
+  </section>
+
+  <footer style="border-top:1px solid rgba(234,242,255,.16);display:flex;justify-content:space-between;align-items:center;padding:22px 4.5vw;max-width:1560px;margin:0 auto;box-sizing:border-box">
+    <a href="index.html" style="font:600 10px/1 'IBM Plex Mono',monospace;letter-spacing:.18em;text-transform:uppercase">← Project index</a>
+  </footer>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;iconDrift&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Hero icon&quot;},&quot;showRecruiting&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Content&quot;}}">
+class Component extends DCLogic {
+  state = { tt: 0 };
+  _mA = { z: 1.4, active: false }; _cyc = 0.05; _zP = 1.4;
+
+  componentDidMount() {
+    this._t0 = performance.now(); this._last = 0;
+    const loop = () => {
+      const tt = (performance.now() - this._t0) / 1000;
+      const dt = tt - this._last;
+      if (dt >= 0.033) {
+        this._last = tt;
+        if (this.props.iconDrift ?? true) this._cyc = (this._cyc + dt / 18) % 1;
+        this._zP += ((this._mA.active ? this._mA.z : (this.props.iconDrift ?? true) ? 1.4 + 0.55 * Math.sin(tt * 0.38) : 1.4) - this._zP) * 0.15;
+        this.setState({ tt });
+      }
+      this._raf = requestAnimationFrame(loop);
+    };
+    this._raf = requestAnimationFrame(loop);
+  }
+  componentWillUnmount() { if (this._raf) cancelAnimationFrame(this._raf); }
+
+  c01(x) { return Math.min(1, Math.max(0, x)); }
+  sm(x) { const t = this.c01(x); return t * t * (3 - 2 * t); }
+  svgXY(e) { const r = e.currentTarget.getBoundingClientRect(); return [(e.clientX - r.left) * 470 / r.width, (e.clientY - r.top) * 300 / r.height]; }
+  onMoveA = (e) => { this._mA = { z: Math.min(2.6, Math.max(0.25, (185 - this.svgXY(e)[1]) / 38)), active: true }; };
+  onLeaveA = () => { this._mA.active = false; };
+
+  prism(Pf, pts, z0, z1, kb, o) {
+    const S = (p) => p[0].toFixed(1) + "," + p[1].toFixed(1);
+    const n = pts.length;
+    const bot = pts.map((p) => Pf(p[0], p[1], z0));
+    const top = pts.map((p) => Pf(p[0], p[1], z1));
+    const faces = [];
+    for (let i = 0; i < n; i++) {
+      const j = (i + 1) % n;
+      faces.push({ d: (pts[i][0] + pts[j][0] + pts[i][1] + pts[j][1]) / 2, pts: [bot[i], bot[j], top[j], top[i]], fill: Math.abs(pts[j][0] - pts[i][0]) >= Math.abs(pts[j][1] - pts[i][1]) ? o.fillL : o.fillR });
+    }
+    faces.sort((a, b) => a.d - b.d);
+    const els = faces.map((f, i2) => React.createElement("polygon", { key: kb + "s" + i2, points: f.pts.map(S).join(" "), fill: f.fill, stroke: o.stroke, strokeWidth: o.sw, strokeLinejoin: "round", strokeDasharray: o.dash || null }));
+    els.push(React.createElement("polygon", { key: kb + "t", points: top.map(S).join(" "), fill: o.fillT, stroke: o.stroke, strokeWidth: o.sw, strokeLinejoin: "round", strokeDasharray: o.dash || null }));
+    return els;
+  }
+
+  ground(P, els, kb) {
+    for (let i = 0; i <= 5; i++) {
+      const gq = i * 0.6;
+      const a = P(gq, 0, 0), b = P(gq, 3, 0), c = P(0, gq, 0), d = P(3, gq, 0);
+      const st = "rgba(234,242,255," + (i % 5 ? ".09" : ".22") + ")";
+      els.push(React.createElement("line", { key: kb + "gu" + i, x1: a[0], y1: a[1], x2: b[0], y2: b[1], stroke: st, strokeWidth: 1 }));
+      els.push(React.createElement("line", { key: kb + "gv" + i, x1: c[0], y1: c[1], x2: d[0], y2: d[1], stroke: st, strokeWidth: 1 }));
+    }
+    const t1 = P(-0.2, 3, 0), t2 = P(0.3, 3, 0), t3 = P(0, 2.7, 0), t4 = P(0, 3.2, 0);
+    els.push(React.createElement("line", { key: kb + "d1", x1: t1[0], y1: t1[1], x2: t2[0], y2: t2[1], stroke: "rgba(255,211,92,.85)", strokeWidth: 1 }));
+    els.push(React.createElement("line", { key: kb + "d2", x1: t3[0], y1: t3[1], x2: t4[0], y2: t4[1], stroke: "rgba(255,211,92,.85)", strokeWidth: 1 }));
+  }
+
+  iconA(s, cyc, zP) {
+    const YEL = "#ffd35c";
+    const P = (x, y, z) => [(x - y) * 0.866 * s, (x + y - 4) * 0.5 * s - z * 0.8 * s];
+    const LN = "rgba(234,242,255,.92)";
+    const FT = "#1a4694", FL = "#0f316f", FR = "#0b2a61";
+    const S = (p) => p[0].toFixed(1) + "," + p[1].toFixed(1);
+    const els = [];
+    const ln = (k, a, b, o) => els.push(React.createElement("line", Object.assign({ key: "h6" + k, x1: a[0].toFixed(1), y1: a[1].toFixed(1), x2: b[0].toFixed(1), y2: b[1].toFixed(1), stroke: LN, strokeWidth: 1 }, o || {})));
+    const pr = (pts, z0, z1, o) => els.push.apply(els, this.prism(P, pts, z0, z1, "h6p" + els.length, Object.assign({ stroke: LN, sw: 1.05, fillT: FT, fillL: FL, fillR: FR }, o || {})));
+    for (let i = 0; i <= 5; i++) {
+      const gq = i * 0.8;
+      ln("gu" + i, P(gq, 0, 0), P(gq, 4, 0), { stroke: i % 5 ? "rgba(234,242,255,.08)" : "rgba(234,242,255,.5)" });
+      ln("gv" + i, P(0, gq, 0), P(4, gq, 0), { stroke: i % 5 ? "rgba(234,242,255,.08)" : "rgba(234,242,255,.5)" });
+    }
+    [[0, 0], [4, 0], [4, 4], [0, 4]].forEach(([u, v], i) => {
+      ln("tka" + i, P(u - 0.13, v, 0), P(u + 0.13, v, 0), { stroke: "rgba(255,211,92,.7)", strokeWidth: 0.9 });
+      ln("tkb" + i, P(u, v - 0.13, 0), P(u, v + 0.13, 0), { stroke: "rgba(255,211,92,.7)", strokeWidth: 0.9 });
+    });
+    pr([[0.25, 0.6], [0.85, 0.6], [0.85, 3.4], [0.25, 3.4]], 0, 1.6, { dash: "6 4" });
+    for (let i = 0; i < 6; i++) {
+      const tp = this.sm((cyc - 0.02 - i * 0.026) / 0.08);
+      if (tp <= 0.01) continue;
+      const hz = 1.38 - i * 0.22;
+      ln("ftx" + i, P(0.85, 0.8, hz), P(0.85, 0.8 + (1.9 - (i % 2) * 0.5) * tp, hz), { stroke: "rgba(234,242,255,.6)", strokeWidth: 1.1 });
+    }
+    const F0 = 1.15, V0 = 0.15;
+    const fr = [[F0, V0], [F0 + 2.7, V0], [F0 + 2.7, V0 + 2.7], [F0, V0 + 2.7]].map(([u, v]) => P(u, v, 0));
+    els.push(React.createElement("polygon", { key: "h6ff", points: fr.map(S).join(" "), fill: "rgba(255,211,92,.04)", stroke: "rgba(255,211,92,.5)", strokeWidth: 1, strokeDasharray: "7 5" }));
+    const wp = this.sm((cyc - 0.13) / 0.12);
+    if (wp > 0.01) {
+      const a = P(0.85, 2.3, 0.8), b = P(1.35, 2.05, 0.5);
+      const mx = (a[0] + b[0]) / 2, my = Math.min(a[1], b[1]) - 20;
+      els.push(React.createElement("path", { key: "h6w", d: "M " + a[0].toFixed(1) + " " + a[1].toFixed(1) + " Q " + mx.toFixed(1) + " " + my.toFixed(1) + " " + b[0].toFixed(1) + " " + b[1].toFixed(1), fill: "none", stroke: "rgba(255,211,92,.85)", strokeWidth: 1.3, pathLength: 1, strokeDasharray: 1, strokeDashoffset: (1 - wp).toFixed(3) }));
+    }
+    const pcs = [{ u: 1.35, v: 0.35, h: 1.6 }, { u: 2.55, v: 0.35, h: 2.35 }, { u: 1.35, v: 1.55, h: 1.1 }, { u: 2.55, v: 1.55, h: 0.9 }];
+    pcs.slice().sort((a, b) => (a.u + a.v) - (b.u + b.v)).forEach((c, idx) => {
+      const u0 = c.u, v0 = c.v, u1 = c.u + 1.0, v1 = c.v + 1.0;
+      const H = Math.min(c.h, zP);
+      pr([[u0, v0], [u1, v0], [u1, v1], [u0, v1]], 0, H);
+      for (let fz = 0.375; fz < H - 0.04; fz += 0.375) {
+        const f1 = P(u1, v0, fz), f2 = P(u1, v1, fz), f3 = P(u0, v1, fz);
+        ln("fl" + idx + "_" + Math.round(fz * 100) + "a", f1, f2, { stroke: "rgba(234,242,255,.28)", strokeWidth: 0.55 });
+        ln("fl" + idx + "_" + Math.round(fz * 100) + "b", f2, f3, { stroke: "rgba(234,242,255,.28)", strokeWidth: 0.55 });
+      }
+      if (c.h > zP + 0.03) {
+        const gc = [[u0, v0], [u1, v0], [u1, v1], [u0, v1]];
+        els.push(React.createElement("polygon", { key: "h6rim" + idx, points: gc.map(([x, y]) => P(x, y, H)).map(S).join(" "), fill: "rgba(255,211,92,.14)", stroke: YEL, strokeWidth: 1, strokeDasharray: "3 3" }));
+        const gb = gc.map(([x, y]) => P(x, y, zP + 0.2)), gt = gc.map(([x, y]) => P(x, y, 0.2 + c.h));
+        els.push(React.createElement("polygon", { key: "h6gb" + idx, points: gb.map(S).join(" "), fill: "none", stroke: "rgba(234,242,255,.35)", strokeWidth: 0.7, strokeDasharray: "3 3" }));
+        els.push(React.createElement("polygon", { key: "h6gt" + idx, points: gt.map(S).join(" "), fill: "none", stroke: "rgba(234,242,255,.35)", strokeWidth: 0.7, strokeDasharray: "3 3" }));
+        for (let ci = 0; ci < 4; ci++) ln("ge" + idx + "_" + ci, gb[ci], gt[ci], { stroke: "rgba(234,242,255,.35)", strokeWidth: 0.7, strokeDasharray: "3 3" });
+      }
+    });
+    const pl = [P(F0 - 0.12, V0 - 0.12, zP), P(F0 + 2.82, V0 - 0.12, zP), P(F0 + 2.82, V0 + 2.82, zP), P(F0 - 0.12, V0 + 2.82, zP)];
+    els.push(React.createElement("polygon", { key: "h6plane", points: pl.map(S).join(" "), fill: "rgba(255,211,92,.055)", stroke: "rgba(255,211,92,.55)", strokeWidth: 1, strokeDasharray: "7 5" }));
+    const lbl = P(F0 + 2.82, V0 - 0.12, zP);
+    els.push(React.createElement("text", { key: "h6lbl", x: (lbl[0] + 6).toFixed(1), y: (lbl[1] + 3).toFixed(1), fontSize: 8.5, fill: "rgba(255,211,92,.8)", fontFamily: "'IBM Plex Mono',monospace", letterSpacing: ".12em" }, "MAX H"));
+    return els;
+  }
+
+  hero() {
+    const YEL = "#ffd35c";
+    const zP = this._zP, cyc = this._cyc;
+    const yFor = (zz) => 170 - zz * 35.2;
+    const x0 = 30, x1 = 440, sy = 285;
+    const stage = cyc < 0.25 ? "CLAUSE" : cyc < 0.5 ? "CONDITION" : cyc < 0.75 ? "CONSTRAINT" : "FORM";
+    const cx = x0 + (x1 - x0) * cyc;
+    const overlay = [
+      React.createElement("line", { key: "gb", x1: 448, y1: yFor(2.6).toFixed(1), x2: 448, y2: yFor(0.25).toFixed(1), stroke: "rgba(234,242,255,.2)", strokeWidth: 1 }),
+      React.createElement("line", { key: "gt", x1: 442, y1: yFor(zP).toFixed(1), x2: 454, y2: yFor(zP).toFixed(1), stroke: YEL, strokeWidth: 1.6 }),
+      React.createElement("text", { key: "gl", x: 448, y: (yFor(zP) - 6).toFixed(1), textAnchor: "middle", fontSize: 8.5, fill: YEL, fontFamily: "'IBM Plex Mono',monospace" }, zP.toFixed(1)),
+      React.createElement("line", { key: "sb", x1: x0, y1: sy, x2: x1, y2: sy, stroke: "rgba(234,242,255,.2)", strokeWidth: 1 }),
+      React.createElement("line", { key: "sp", x1: x0, y1: sy, x2: cx, y2: sy, stroke: YEL, strokeWidth: 2 }),
+      React.createElement("circle", { key: "st", cx: cx, cy: sy, r: 3, fill: YEL }),
+      React.createElement("text", { key: "sl", x: cx, y: sy - 7, textAnchor: "middle", fontSize: 8.5, fill: YEL, fontFamily: "'IBM Plex Mono',monospace", letterSpacing: ".14em" }, stage),
+    ];
+    return React.createElement("svg", { key: "hero", width: 470, height: 300, viewBox: "0 0 470 300", style: { display: "block", maxWidth: "100%", height: "auto", cursor: "crosshair" }, onMouseMove: this.onMoveA, onMouseLeave: this.onLeaveA },
+      React.createElement("g", { transform: "translate(235,148)" }, this.iconA(44, this._cyc, zP)),
+      React.createElement("g", { key: "ov" }, overlay));
+  }
+
+  renderVals() {
+    return { heroIcon: this.hero(this._cyc), showRecruiting: this.props.showRecruiting ?? true };
+  }
+}
+</script>
+</body>
+</html>
