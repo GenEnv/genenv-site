@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700&amp;family=IBM+Plex+Mono:wght@400;500;600;700&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet">
+<style>
+  html, body { margin: 0; padding: 0; background: #0b2a61; }
+  a { color: #ffd35c; text-decoration: none; }
+  a:hover { color: #ffe49a; }
+  ::selection { background: rgba(255,211,92,.35); }
+</style>
+</helmet>
+<div style="min-height:100vh;background-color:#0b2a61;background-image:radial-gradient(rgba(234,242,255,.10) 1px, transparent 1px);background-size:26px 26px;color:#eaf2ff;font-family:Inter,sans-serif">
+  <header data-screen-label="Header" style="display:flex;justify-content:space-between;align-items:center;padding:18px 4.5vw;border-bottom:1px solid rgba(234,242,255,.16)">
+    <a href="index.html" style="font-family:Archivo,sans-serif;font-weight:700;font-size:17px;letter-spacing:.02em;color:#f4f8ff">GenEnv Lab</a>
+    <div style="display:flex;align-items:center;gap:22px">
+      <span style="font:600 9.5px/1 'IBM Plex Mono',monospace;letter-spacing:.2em;text-transform:uppercase;color:rgba(234,242,255,.5)">Writing</span>
+      <a href="index.html" style="font:600 10px/1 'IBM Plex Mono',monospace;letter-spacing:.16em;text-transform:uppercase;border:1px solid rgba(255,211,92,.55);padding:8px 12px">← Project index</a>
+    </div>
+  </header>
+
+  <section data-screen-label="Hero" style="display:grid;grid-template-columns:minmax(380px,1fr) minmax(360px,470px);gap:5vw;align-items:start;padding:64px 4.5vw 56px;max-width:1560px;margin:0 auto;box-sizing:border-box">
+    <div>
+      <div style="width:46px;height:3px;background:#ffd35c;margin:0 0 20px"></div>
+      <p style="margin:0;font:600 10px/1.7 'IBM Plex Mono',monospace;letter-spacing:.22em;text-transform:uppercase;color:#ffd35c">Writing · LLM + Agents · Parametric · Computational Design</p>
+      <h1 style="margin:14px 0 0;font-family:Archivo,sans-serif;font-weight:700;font-size:clamp(42px,4.4vw,68px);line-height:.98;text-transform:uppercase;color:#f4f8ff;text-wrap:balance">Computational Lexicalization</h1>
+      <p style="margin:18px 0 0;font-family:Archivo,sans-serif;font-weight:600;font-size:20px;color:rgba(234,242,255,.85)">Turning design knowledge into callable language.</p>
+      <p style="margin:16px 0 0;font:400 15px/1.7 Inter,sans-serif;color:rgba(234,242,255,.68);max-width:560px">Computational Lexicalization proposes a way to make design knowledge legible to people and executable by machines. The research responds to a persistent gap in computational design: designers work through intention, judgment, and iterative exploration, while parametric tools require explicit instructions and formal logic.</p>
+      <div style="display:flex;gap:14px;margin:30px 0 0;flex-wrap:wrap">
+        <a href="#" style="font:600 10.5px/1 'IBM Plex Mono',monospace;letter-spacing:.16em;text-transform:uppercase;background:#ffd35c;color:#081f4d;padding:12px 18px">Read article →</a>
+        <a href="Project - Grasshopper MCP.dc.html" style="font:600 10.5px/1 'IBM Plex Mono',monospace;letter-spacing:.16em;text-transform:uppercase;border:1px solid rgba(255,211,92,.55);padding:11px 18px">Related tool</a>
+      </div>
+    </div>
+    <div style="border:1px solid rgba(234,242,255,.22);background:#0d2f6b">
+      <div style="padding:14px 18px;border-bottom:1px solid rgba(234,242,255,.16)">
+        <span style="font:600 9px/1 'IBM Plex Mono',monospace;letter-spacing:.22em;text-transform:uppercase;color:#ffd35c">Publication record</span>
+      </div>
+      <div style="padding:18px;display:flex;flex-direction:column;gap:14px">
+        <p style="margin:0;font:600 15.5px/1.4 Archivo,sans-serif;color:#f4f8ff">Computational Lexicalization: Development and Practice of a Design Agent Framework</p>
+        <div style="display:grid;grid-template-columns:92px 1fr;gap:8px 14px;font:400 12px/1.5 Inter,sans-serif;color:rgba(234,242,255,.78)">
+          <span style="font:600 8.5px/1.8 'IBM Plex Mono',monospace;letter-spacing:.16em;text-transform:uppercase;color:rgba(234,242,255,.45)">Authors</span><span>Xun Liu · Runjia Tian</span>
+          <span style="font:600 8.5px/1.8 'IBM Plex Mono',monospace;letter-spacing:.16em;text-transform:uppercase;color:rgba(234,242,255,.45)">Publication</span><span>Architectural Journal, No. 4, 2026, pp. 36–43</span>
+          <span style="font:600 8.5px/1.8 'IBM Plex Mono',monospace;letter-spacing:.16em;text-transform:uppercase;color:rgba(234,242,255,.45)">DOI</span><span style="font-family:'IBM Plex Mono',monospace;font-size:11px">10.19819/j.cnki.ISSN0529-1399.202604005</span>
+          <span style="font:600 8.5px/1.8 'IBM Plex Mono',monospace;letter-spacing:.16em;text-transform:uppercase;color:rgba(234,242,255,.45)">Year</span><span>2026</span>
+          <span style="font:600 8.5px/1.8 'IBM Plex Mono',monospace;letter-spacing:.16em;text-transform:uppercase;color:rgba(234,242,255,.45)">Status</span><span style="color:#ffd35c">Published</span>
+        </div>
+      </div>
+      <div style="display:flex;gap:8px;padding:0 18px 16px;flex-wrap:wrap">
+        <span style="font:600 8.5px/1 'IBM Plex Mono',monospace;letter-spacing:.18em;text-transform:uppercase;color:rgba(234,242,255,.55);border:1px solid rgba(234,242,255,.25);padding:6px 9px">Name</span>
+        <span style="font:600 8.5px/1 'IBM Plex Mono',monospace;letter-spacing:.18em;text-transform:uppercase;color:rgba(234,242,255,.55);border:1px solid rgba(234,242,255,.25);padding:6px 9px">Bound</span>
+        <span style="font:600 8.5px/1 'IBM Plex Mono',monospace;letter-spacing:.18em;text-transform:uppercase;color:rgba(234,242,255,.55);border:1px solid rgba(234,242,255,.25);padding:6px 9px">Call</span>
+        <span style="font:600 8.5px/1 'IBM Plex Mono',monospace;letter-spacing:.18em;text-transform:uppercase;color:rgba(234,242,255,.55);border:1px solid rgba(234,242,255,.25);padding:6px 9px">Compose</span>
+      </div>
+    </div>
+  </section>
+
+  <section data-screen-label="Framework" style="border-top:1px solid rgba(234,242,255,.16);padding:52px 4.5vw 56px;max-width:1560px;margin:0 auto;box-sizing:border-box">
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(340px,1fr));gap:5vw">
+      <div>
+        <p style="margin:0;font:600 10px/1.7 'IBM Plex Mono',monospace;letter-spacing:.22em;text-transform:uppercase;color:#ffd35c">Framework</p>
+        <p style="margin:14px 0 0;font:400 15px/1.75 Inter,sans-serif;color:rgba(234,242,255,.68)">The framework reorganizes design knowledge as a structured language composed of reusable lexicons and compositional grammars. Language models interpret intent and coordinate actions, while computational tools retain precision, editability, and traceable design logic. Rather than pursuing unrestricted machine autonomy, the research argues for bounded agency: designers define the available vocabulary, permissions, and rules through which an agent can act.</p>
+      </div>
+      <div>
+        <p style="margin:0;font:600 10px/1.7 'IBM Plex Mono',monospace;letter-spacing:.22em;text-transform:uppercase;color:#ffd35c">Positioning</p>
+        <p style="margin:14px 0 0;font:400 15px/1.75 Inter,sans-serif;color:rgba(234,242,255,.68)">Developed through a design-agent framework and tested in the DigitalFUTURES 2025 Landscape Agents workshop, the work positions architects and landscape architects not only as users of intelligent tools, but also as authors of the knowledge systems through which those tools operate.</p>
+      </div>
+    </div>
+  </section>
+
+  <section data-screen-label="Related" style="border-top:1px solid rgba(234,242,255,.16);padding:52px 4.5vw 64px;max-width:1560px;margin:0 auto;box-sizing:border-box">
+    <h2 style="margin:0;font-family:Archivo,sans-serif;font-weight:700;font-size:26px;text-transform:uppercase;color:#f4f8ff">Related</h2>
+    <div style="display:flex;flex-wrap:wrap;gap:22px;margin:24px 0 0">
+      <a href="Project - Grasshopper MCP.dc.html" style="border:1px solid rgba(234,242,255,.22);background:#0d2f6b;padding:20px 22px;display:flex;flex-direction:column;gap:8px;flex:0 1 480px;min-width:280px;box-sizing:border-box" style-hover="border-color:#ffd35c">
+        <span style="font:600 9px/1 'IBM Plex Mono',monospace;letter-spacing:.2em;text-transform:uppercase;color:#ffd35c">Related tool · Current</span>
+        <span style="font-family:Archivo,sans-serif;font-weight:700;font-size:18px;text-transform:uppercase;color:#f4f8ff">Grasshopper MCP</span>
+        <span style="font:400 12.5px/1.55 Inter,sans-serif;color:rgba(234,242,255,.6)">The design-agent framework in practice: callable parametric operations inside Rhino and Grasshopper.</span>
+      </a>
+      <a href="Project - Landscape Agent.dc.html" style="border:1px solid rgba(234,242,255,.22);background:#0d2f6b;padding:20px 22px;display:flex;flex-direction:column;gap:8px;flex:0 1 480px;min-width:280px;box-sizing:border-box" style-hover="border-color:#ffd35c">
+        <span style="font:600 9px/1 'IBM Plex Mono',monospace;letter-spacing:.2em;text-transform:uppercase;color:#ffd35c">Related workshop · DigitalFUTURES 2025</span>
+        <span style="font-family:Archivo,sans-serif;font-weight:700;font-size:18px;text-transform:uppercase;color:#f4f8ff">Landscape Agent</span>
+        <span style="font:400 12.5px/1.55 Inter,sans-serif;color:rgba(234,242,255,.6)">The workshop where the framework was tested: teams taught agents their own landscape vocabularies.</span>
+      </a>
+    </div>
+  </section>
+
+  <footer style="border-top:1px solid rgba(234,242,255,.16);display:flex;justify-content:space-between;align-items:center;padding:22px 4.5vw;max-width:1560px;margin:0 auto;box-sizing:border-box">
+    <a href="index.html" style="font:600 10px/1 'IBM Plex Mono',monospace;letter-spacing:.18em;text-transform:uppercase">← Project index</a>
+  </footer>
+</div>
+</x-dc>
+</body>
+</html>

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700&amp;family=IBM+Plex+Mono:wght@400;500;600;700&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet">
+<style>
+  html, body { margin: 0; padding: 0; background: #0b2a61; }
+  a { color: #ffd35c; text-decoration: none; }
+  a:hover { color: #ffe49a; }
+  ::selection { background: rgba(255,211,92,.35); }
+</style>
+</helmet>
+<div style="min-height:100vh;background-color:#0b2a61;background-image:radial-gradient(rgba(234,242,255,.10) 1px, transparent 1px);background-size:26px 26px;color:#eaf2ff;font-family:Inter,sans-serif">
+  <header data-screen-label="Header" style="display:flex;justify-content:space-between;align-items:center;padding:18px 4.5vw;border-bottom:1px solid rgba(234,242,255,.16)">
+    <a href="index.html" style="font-family:Archivo,sans-serif;font-weight:700;font-size:17px;letter-spacing:.02em;color:#f4f8ff">GenEnv Lab</a>
+    <div style="display:flex;align-items:center;gap:22px">
+      <span style="font:600 9.5px/1 'IBM Plex Mono',monospace;letter-spacing:.2em;text-transform:uppercase;color:rgba(234,242,255,.5)">Writing</span>
+      <a href="index.html" style="font:600 10px/1 'IBM Plex Mono',monospace;letter-spacing:.16em;text-transform:uppercase;border:1px solid rgba(255,211,92,.55);padding:8px 12px">← Project index</a>
+    </div>
+  </header>
+
+  <section data-screen-label="Hero" style="display:grid;grid-template-columns:minmax(380px,1fr) minmax(360px,470px);gap:5vw;align-items:start;padding:64px 4.5vw 56px;max-width:1560px;margin:0 auto;box-sizing:border-box">
+    <div>
+      <div style="width:46px;height:3px;background:#ffd35c;margin:0 0 20px"></div>
+      <p style="margin:0;font:600 10px/1.7 'IBM Plex Mono',monospace;letter-spacing:.22em;text-transform:uppercase;color:#ffd35c">Writing · Deep Learning · Landscape · Computational Design</p>
+      <h1 style="margin:14px 0 0;font-family:Archivo,sans-serif;font-weight:700;font-size:clamp(42px,4.4vw,68px);line-height:.98;text-transform:uppercase;color:#f4f8ff;text-wrap:balance">AI + Landscapes</h1>
+      <p style="margin:18px 0 0;font-family:Archivo,sans-serif;font-weight:600;font-size:20px;color:rgba(234,242,255,.85)">Rethinking landscape form through machine intelligence.</p>
+      <p style="margin:16px 0 0;font:400 15px/1.7 Inter,sans-serif;color:rgba(234,242,255,.68);max-width:560px">AI + Landscapes examines how deep learning changes the ways landscape architecture reads, models, and generates form. Building on the field's long engagement with systems, data, representation, and computation, the dissertation asks what happens when design tools learn from examples rather than operate only through predefined rules.</p>
+      <div style="display:flex;gap:14px;margin:30px 0 0;flex-wrap:wrap">
+        <a href="#" style="font:600 10.5px/1 'IBM Plex Mono',monospace;letter-spacing:.16em;text-transform:uppercase;background:#ffd35c;color:#081f4d;padding:12px 18px">Dissertation record →</a>
+      </div>
+    </div>
+    <div style="border:1px solid rgba(234,242,255,.22);background:#0d2f6b">
+      <div style="padding:14px 18px;border-bottom:1px solid rgba(234,242,255,.16)">
+        <span style="font:600 9px/1 'IBM Plex Mono',monospace;letter-spacing:.22em;text-transform:uppercase;color:#ffd35c">Dissertation record</span>
+      </div>
+      <div style="padding:18px;display:flex;flex-direction:column;gap:14px">
+        <p style="margin:0;font:600 15.5px/1.4 Archivo,sans-serif;color:#f4f8ff">AI + Landscapes: Deep Learning in the Generation and Analysis of Landscape Form</p>
+        <div style="display:grid;grid-template-columns:92px 1fr;gap:8px 14px;font:400 12px/1.5 Inter,sans-serif;color:rgba(234,242,255,.78)">
+          <span style="font:600 8.5px/1.8 'IBM Plex Mono',monospace;letter-spacing:.16em;text-transform:uppercase;color:rgba(234,242,255,.45)">Author</span><span>Xun Liu</span>
+          <span style="font:600 8.5px/1.8 'IBM Plex Mono',monospace;letter-spacing:.16em;text-transform:uppercase;color:rgba(234,242,255,.45)">Advisor</span><span>Bradley Cantrell</span>
+          <span style="font:600 8.5px/1.8 'IBM Plex Mono',monospace;letter-spacing:.16em;text-transform:uppercase;color:rgba(234,242,255,.45)">Institution</span><span>University of Virginia</span>
+          <span style="font:600 8.5px/1.8 'IBM Plex Mono',monospace;letter-spacing:.16em;text-transform:uppercase;color:rgba(234,242,255,.45)">Degree</span><span>PhD in the Constructed Environment, 2025</span>
+          <span style="font:600 8.5px/1.8 'IBM Plex Mono',monospace;letter-spacing:.16em;text-transform:uppercase;color:rgba(234,242,255,.45)">Duration</span><span>2019 — 2025</span>
+          <span style="font:600 8.5px/1.8 'IBM Plex Mono',monospace;letter-spacing:.16em;text-transform:uppercase;color:rgba(234,242,255,.45)">Status</span><span style="color:#ffd35c">Completed</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section data-screen-label="Five relationships" style="border-top:1px solid rgba(234,242,255,.16);padding:44px 4.5vw 48px;max-width:1560px;margin:0 auto;box-sizing:border-box">
+    <p style="margin:0;font:600 10px/1.7 'IBM Plex Mono',monospace;letter-spacing:.22em;text-transform:uppercase;color:#ffd35c">The lexicon — landscape form follows</p>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:1px;background:rgba(234,242,255,.2);border:1px solid rgba(234,242,255,.2);margin:16px 0 0">
+      <div style="background:#0d2f6b;padding:16px 18px"><p style="margin:0;font:600 9px/1 'IBM Plex Mono',monospace;letter-spacing:.18em;color:rgba(234,242,255,.45)">01</p><p style="margin:8px 0 0;font-family:Archivo,sans-serif;font-weight:700;font-size:17px;text-transform:uppercase;color:#f4f8ff">Data</p></div>
+      <div style="background:#0d2f6b;padding:16px 18px"><p style="margin:0;font:600 9px/1 'IBM Plex Mono',monospace;letter-spacing:.18em;color:rgba(234,242,255,.45)">02</p><p style="margin:8px 0 0;font-family:Archivo,sans-serif;font-weight:700;font-size:17px;text-transform:uppercase;color:#f4f8ff">Image</p></div>
+      <div style="background:#0d2f6b;padding:16px 18px"><p style="margin:0;font:600 9px/1 'IBM Plex Mono',monospace;letter-spacing:.18em;color:rgba(234,242,255,.45)">03</p><p style="margin:8px 0 0;font-family:Archivo,sans-serif;font-weight:700;font-size:17px;text-transform:uppercase;color:#f4f8ff">Process</p></div>
+      <div style="background:#0d2f6b;padding:16px 18px"><p style="margin:0;font:600 9px/1 'IBM Plex Mono',monospace;letter-spacing:.18em;color:rgba(234,242,255,.45)">04</p><p style="margin:8px 0 0;font-family:Archivo,sans-serif;font-weight:700;font-size:17px;text-transform:uppercase;color:#f4f8ff">Simulation</p></div>
+      <div style="background:#0d2f6b;padding:16px 18px"><p style="margin:0;font:600 9px/1 'IBM Plex Mono',monospace;letter-spacing:.18em;color:rgba(234,242,255,.45)">05</p><p style="margin:8px 0 0;font-family:Archivo,sans-serif;font-weight:700;font-size:17px;text-transform:uppercase;color:#f4f8ff">Meaning</p></div>
+    </div>
+  </section>
+
+  <section data-screen-label="Framework" style="border-top:1px solid rgba(234,242,255,.16);padding:52px 4.5vw 56px;max-width:1560px;margin:0 auto;box-sizing:border-box">
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(340px,1fr));gap:5vw">
+      <div>
+        <p style="margin:0;font:600 10px/1.7 'IBM Plex Mono',monospace;letter-spacing:.22em;text-transform:uppercase;color:#ffd35c">A new design lexicon</p>
+        <p style="margin:14px 0 0;font:400 15px/1.75 Inter,sans-serif;color:rgba(234,242,255,.68)">The research develops a new design lexicon organized around five relationships: landscape form follows data, image, process, simulation, and meaning. Together, these perspectives connect different forms of machine intelligence with long-standing landscape concerns, including environmental complexity, temporal change, perception, ecological processes, and interpretation.</p>
+      </div>
+      <div>
+        <p style="margin:0;font:600 10px/1.7 'IBM Plex Mono',monospace;letter-spacing:.22em;text-transform:uppercase;color:#ffd35c">Applied experiments</p>
+        <p style="margin:14px 0 0;font:400 15px/1.75 Inter,sans-serif;color:rgba(234,242,255,.68)">The dissertation brings this theoretical framework into applied experiments in streetscape analysis, generative planting design, and landscape ideation. Rather than positioning artificial intelligence as a replacement for design judgment, it presents machine learning as a means of working across objective and subjective knowledge while keeping ecological integrity, interpretation, and human responsibility central to the design process.</p>
+      </div>
+    </div>
+  </section>
+
+  <section data-screen-label="Related" style="border-top:1px solid rgba(234,242,255,.16);padding:52px 4.5vw 64px;max-width:1560px;margin:0 auto;box-sizing:border-box">
+    <h2 style="margin:0;font-family:Archivo,sans-serif;font-weight:700;font-size:26px;text-transform:uppercase;color:#f4f8ff">Related</h2>
+    <div style="display:flex;flex-wrap:wrap;gap:22px;margin:24px 0 0">
+      <a href="Project - Generative Planting.dc.html" style="border:1px solid rgba(234,242,255,.22);background:#0d2f6b;padding:20px 22px;display:flex;flex-direction:column;gap:8px;flex:0 1 400px;min-width:280px;box-sizing:border-box" style-hover="border-color:#ffd35c">
+        <span style="font:600 9px/1 'IBM Plex Mono',monospace;letter-spacing:.2em;text-transform:uppercase;color:#ffd35c">Related research · Published</span>
+        <span style="font-family:Archivo,sans-serif;font-weight:700;font-size:18px;text-transform:uppercase;color:#f4f8ff">Generative Planting</span>
+        <span style="font:400 12.5px/1.55 Inter,sans-serif;color:rgba(234,242,255,.6)">One of the dissertation's applied experiments: GAN-generated planting layouts from site data.</span>
+      </a>
+      <a href="Project - Computational Lexicalization.dc.html" style="border:1px solid rgba(234,242,255,.22);background:#0d2f6b;padding:20px 22px;display:flex;flex-direction:column;gap:8px;flex:0 1 400px;min-width:280px;box-sizing:border-box" style-hover="border-color:#ffd35c">
+        <span style="font:600 9px/1 'IBM Plex Mono',monospace;letter-spacing:.2em;text-transform:uppercase;color:#ffd35c">Related writing · Published</span>
+        <span style="font-family:Archivo,sans-serif;font-weight:700;font-size:18px;text-transform:uppercase;color:#f4f8ff">Computational Lexicalization</span>
+        <span style="font:400 12.5px/1.55 Inter,sans-serif;color:rgba(234,242,255,.6)">The lexicon idea carried forward into a design-agent framework.</span>
+      </a>
+      <div style="border:1px solid rgba(234,242,255,.22);background:#0d2f6b;padding:20px 22px;display:flex;flex-direction:column;gap:8px;flex:0 1 400px;min-width:280px;box-sizing:border-box">
+        <span style="font:600 9px/1 'IBM Plex Mono',monospace;letter-spacing:.2em;text-transform:uppercase;color:#ffd35c">Related research · Early work</span>
+        <span style="font-family:Archivo,sans-serif;font-weight:700;font-size:18px;text-transform:uppercase;color:#f4f8ff">RiverGAN</span>
+        <span style="font:400 12.5px/1.55 Inter,sans-serif;color:rgba(234,242,255,.6)">An earlier deep-learning study generating fluvial landforms, part of the dissertation's experiments.</span>
+      </div>
+    </div>
+  </section>
+
+  <footer style="border-top:1px solid rgba(234,242,255,.16);display:flex;justify-content:space-between;align-items:center;padding:22px 4.5vw;max-width:1560px;margin:0 auto;box-sizing:border-box">
+    <a href="index.html" style="font:600 10px/1 'IBM Plex Mono',monospace;letter-spacing:.18em;text-transform:uppercase">← Project index</a>
+  </footer>
+</div>
+</x-dc>
+</body>
+</html>

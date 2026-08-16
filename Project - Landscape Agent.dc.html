@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700&amp;family=IBM+Plex+Mono:wght@400;500;600;700&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet">
+<style>
+  html, body { margin: 0; padding: 0; background: #0b2a61; }
+  a { color: #ffd35c; text-decoration: none; }
+  a:hover { color: #ffe49a; }
+  ::selection { background: rgba(255,211,92,.35); }
+</style>
+</helmet>
+<div style="min-height:100vh;background-color:#0b2a61;background-image:radial-gradient(rgba(234,242,255,.10) 1px, transparent 1px);background-size:26px 26px;color:#eaf2ff;font-family:Inter,sans-serif">
+  <header data-screen-label="Header" style="display:flex;justify-content:space-between;align-items:center;padding:18px 4.5vw;border-bottom:1px solid rgba(234,242,255,.16)">
+    <a href="index.html" style="font-family:Archivo,sans-serif;font-weight:700;font-size:17px;letter-spacing:.02em;color:#f4f8ff">GenEnv Lab</a>
+    <div style="display:flex;align-items:center;gap:22px">
+      <span style="font:600 9.5px/1 'IBM Plex Mono',monospace;letter-spacing:.2em;text-transform:uppercase;color:rgba(234,242,255,.5)">Teaching</span>
+      <a href="index.html" style="font:600 10px/1 'IBM Plex Mono',monospace;letter-spacing:.16em;text-transform:uppercase;border:1px solid rgba(255,211,92,.55);padding:8px 12px">← Project index</a>
+    </div>
+  </header>
+
+  <section data-screen-label="Hero" style="display:grid;grid-template-columns:minmax(380px,1fr) minmax(420px,560px);gap:5vw;align-items:center;padding:64px 4.5vw 56px;max-width:1560px;margin:0 auto;box-sizing:border-box">
+    <div>
+      <div style="width:46px;height:3px;background:#ffd35c;margin:0 0 20px"></div>
+      <p style="margin:0;font:600 10px/1.7 'IBM Plex Mono',monospace;letter-spacing:.22em;text-transform:uppercase;color:#ffd35c">Workshop · LLM + Agents · Landscape · Parametric</p>
+      <h1 style="margin:14px 0 0;font-family:Archivo,sans-serif;font-weight:700;font-size:clamp(42px,4.4vw,68px);line-height:.98;text-transform:uppercase;color:#f4f8ff;text-wrap:balance">Landscape Agent</h1>
+      <p style="margin:18px 0 0;font-family:Archivo,sans-serif;font-weight:600;font-size:20px;color:rgba(234,242,255,.85)">Designing the vocabulary before designing the form.</p>
+      <p style="margin:16px 0 0;font:400 15px/1.7 Inter,sans-serif;color:rgba(234,242,255,.68);max-width:520px">Landscape Agent was a DigitalFUTURES workshop hosted at Tongji University that explored how designers can teach an AI agent to work with landscape knowledge rather than simply ask it to produce images. As generative systems begin to act inside design software, the workshop asked a more fundamental question: which parts of landscape thinking can be named, structured, and made available for computational action?</p>
+      <div style="display:flex;gap:34px;margin:28px 0 0;flex-wrap:wrap">
+        <div><p style="margin:0;font:500 9.5px/1.5 'IBM Plex Mono',monospace;letter-spacing:.16em;text-transform:uppercase;color:rgba(234,242,255,.55)">Duration</p><p style="margin:5px 0 0;font:500 13px/1.5 Inter,sans-serif;color:#f4f8ff">2025.06.28 — 2025.07.06</p></div>
+        <div><p style="margin:0;font:500 9.5px/1.5 'IBM Plex Mono',monospace;letter-spacing:.16em;text-transform:uppercase;color:rgba(234,242,255,.55)">Status</p><p style="margin:5px 0 0;font:500 13px/1.5 Inter,sans-serif;color:#f4f8ff">Completed</p></div>
+        <div><p style="margin:0;font:500 9.5px/1.5 'IBM Plex Mono',monospace;letter-spacing:.16em;text-transform:uppercase;color:rgba(234,242,255,.55)">Host</p><p style="margin:5px 0 0;font:500 13px/1.5 Inter,sans-serif;color:#f4f8ff">DigitalFUTURES 2025<br><span style="color:rgba(234,242,255,.6)">College of Architecture and Urban Planning, Tongji University · Shanghai, China</span></p></div>
+        <div><p style="margin:0;font:500 9.5px/1.5 'IBM Plex Mono',monospace;letter-spacing:.16em;text-transform:uppercase;color:rgba(234,242,255,.55)">Instructors</p><p style="margin:5px 0 0;font:500 13px/1.5 Inter,sans-serif;color:#f4f8ff">Xun Liu<br>Runjia Tian</p></div>
+      </div>
+      <div style="display:flex;gap:14px;margin:30px 0 0;flex-wrap:wrap">
+        <a href="#" style="font:600 10.5px/1 'IBM Plex Mono',monospace;letter-spacing:.16em;text-transform:uppercase;background:#ffd35c;color:#081f4d;padding:12px 18px">Workshop archive →</a>
+        <a href="#" style="font:600 10.5px/1 'IBM Plex Mono',monospace;letter-spacing:.16em;text-transform:uppercase;border:1px solid rgba(255,211,92,.55);padding:11px 18px">Research paper</a>
+      </div>
+    </div>
+    <div style="border:1px solid rgba(234,242,255,.22);background:#0d2f6b">
+      <div style="display:flex;justify-content:space-between;align-items:center;padding:11px 15px;border-bottom:1px solid rgba(234,242,255,.16)">
+        <span style="font:600 9px/1 'IBM Plex Mono',monospace;letter-spacing:.2em;text-transform:uppercase;color:rgba(234,242,255,.5)">Studio</span>
+      </div>
+      <div style="display:flex;justify-content:center;padding:8px 4px 2px">{{ heroIcon }}</div>
+      <div style="display:flex;justify-content:center;padding:0 15px 13px">
+        <span style="font:600 9px/1 'IBM Plex Mono',monospace;letter-spacing:.22em;text-transform:uppercase;color:rgba(234,242,255,.55)">Observe · Abstract · Teach · Test</span>
+      </div>
+    </div>
+  </section>
+
+  <section data-screen-label="Workshop structure" style="border-top:1px solid rgba(234,242,255,.16);padding:52px 4.5vw 56px;max-width:1560px;margin:0 auto;box-sizing:border-box">
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(340px,1fr));gap:5vw">
+      <div>
+        <p style="margin:0;font:600 10px/1.7 'IBM Plex Mono',monospace;letter-spacing:.22em;text-transform:uppercase;color:#ffd35c">Vocabularies</p>
+        <p style="margin:14px 0 0;font:400 15px/1.75 Inter,sans-serif;color:rgba(234,242,255,.68)">Participants worked in Rhino and Grasshopper to translate design operations involving landform, spatial organization, vegetation, and public space into compact, reusable vocabularies. Each team began with its own design logic, decided what should become a callable operation, defined the relationships and parameters connecting those operations, and tested the resulting systems through agent-assisted modeling.</p>
+      </div>
+      <div>
+        <p style="margin:0;font:600 10px/1.7 'IBM Plex Mono',monospace;letter-spacing:.22em;text-transform:uppercase;color:#ffd35c">What the agent should know</p>
+        <p style="margin:14px 0 0;font:400 15px/1.75 Inter,sans-serif;color:rgba(234,242,255,.68)">The workshop emphasized the translation of tacit design knowledge into a language shared by designers, agents, and software. Its central lesson was that meaningful collaboration depends less on writing elaborate prompts than on deciding what an agent should know, what it may change, and how its actions remain open to design judgment. The workshop subsequently informed the development of Grasshopper MCP and research presented through the NeurIPS Creative AI track and Computational Lexicalization.</p>
+      </div>
+    </div>
+  </section>
+
+  <section data-screen-label="Related" style="border-top:1px solid rgba(234,242,255,.16);padding:52px 4.5vw 64px;max-width:1560px;margin:0 auto;box-sizing:border-box">
+    <h2 style="margin:0;font-family:Archivo,sans-serif;font-weight:700;font-size:26px;text-transform:uppercase;color:#f4f8ff">Related</h2>
+    <div style="display:flex;flex-wrap:wrap;gap:22px;margin:24px 0 0">
+      <a href="Project - Grasshopper MCP.dc.html" style="border:1px solid rgba(234,242,255,.22);background:#0d2f6b;padding:20px 22px;display:flex;flex-direction:column;gap:8px;flex:0 1 400px;min-width:280px;box-sizing:border-box" style-hover="border-color:#ffd35c">
+        <span style="font:600 9px/1 'IBM Plex Mono',monospace;letter-spacing:.2em;text-transform:uppercase;color:#ffd35c">Related tool · Current</span>
+        <span style="font-family:Archivo,sans-serif;font-weight:700;font-size:18px;text-transform:uppercase;color:#f4f8ff">Grasshopper MCP</span>
+        <span style="font:400 12.5px/1.55 Inter,sans-serif;color:rgba(234,242,255,.6)">The workshop's agent-assisted modeling carried forward into a working tool.</span>
+      </a>
+      <a href="Project - Computational Lexicalization.dc.html" style="border:1px solid rgba(234,242,255,.22);background:#0d2f6b;padding:20px 22px;display:flex;flex-direction:column;gap:8px;flex:0 1 400px;min-width:280px;box-sizing:border-box" style-hover="border-color:#ffd35c">
+        <span style="font:600 9px/1 'IBM Plex Mono',monospace;letter-spacing:.2em;text-transform:uppercase;color:#ffd35c">Related writing · Published</span>
+        <span style="font-family:Archivo,sans-serif;font-weight:700;font-size:18px;text-transform:uppercase;color:#f4f8ff">Computational Lexicalization</span>
+        <span style="font:400 12.5px/1.55 Inter,sans-serif;color:rgba(234,242,255,.6)">The design-agent framework the workshop helped test and develop.</span>
+      </a>
+      <div style="border:1px solid rgba(234,242,255,.22);background:#0d2f6b;padding:20px 22px;display:flex;flex-direction:column;gap:8px;flex:0 1 400px;min-width:280px;box-sizing:border-box">
+        <span style="font:600 9px/1 'IBM Plex Mono',monospace;letter-spacing:.2em;text-transform:uppercase;color:#ffd35c">Related publication · NeurIPS 2025 Creative AI</span>
+        <span style="font-family:Archivo,sans-serif;font-weight:700;font-size:18px;text-transform:uppercase;color:#f4f8ff">MCP-Driven Parametric Modeling</span>
+        <span style="font:400 12.5px/1.55 Inter,sans-serif;color:rgba(234,242,255,.6)">Integrating LLM agents into architectural and landscape design workflows.</span>
+      </div>
+    </div>
+  </section>
+
+  <footer style="border-top:1px solid rgba(234,242,255,.16);display:flex;justify-content:space-between;align-items:center;padding:22px 4.5vw;max-width:1560px;margin:0 auto;box-sizing:border-box">
+    <a href="index.html" style="font:600 10px/1 'IBM Plex Mono',monospace;letter-spacing:.18em;text-transform:uppercase">← Project index</a>
+  </footer>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  state = { t: 7.3 };
+  componentDidMount() {
+    this._t0 = performance.now();
+    const loop = (now) => { this.setState({ t: 7.3 + (now - this._t0) / 1000 }); this._raf = requestAnimationFrame(loop); };
+    this._raf = requestAnimationFrame(loop);
+  }
+  componentWillUnmount() { if (this._raf) cancelAnimationFrame(this._raf); }
+  renderVals() {
+    // Icon — study 1c: a live heightfield, three agents grazing it; terrain rises under them,
+    // contours re-plot, dashed trails record where each agent has been.
+    const s = 50;
+    const P = (x, y, z) => [(x - y) * 0.866 * s, (x + y - 4) * 0.5 * s - z * 0.8 * s];
+    const YEL = "#ffd35c", LN = "rgba(234,242,255,.92)", FT = "#12397f", FL = "#0f316f";
+    const els = [];
+    for (let i = 0; i <= 5; i++) {
+      const gq = i * 0.8;
+      const a = P(gq, 0, 0), b = P(gq, 4, 0), c = P(0, gq, 0), d = P(4, gq, 0);
+      const st = "rgba(234,242,255," + (i % 5 ? ".09" : ".22") + ")";
+      els.push(React.createElement("line", { key: "gu" + i, x1: a[0], y1: a[1], x2: b[0], y2: b[1], stroke: st, strokeWidth: 1 }));
+      els.push(React.createElement("line", { key: "gv" + i, x1: c[0], y1: c[1], x2: d[0], y2: d[1], stroke: st, strokeWidth: 1 }));
+    }
+    const S = (pp) => pp[0].toFixed(1) + "," + pp[1].toFixed(1);
+    const ln = (a, b, o) => els.push(React.createElement("line", Object.assign({ key: "l" + els.length, x1: a[0].toFixed(1), y1: a[1].toFixed(1), x2: b[0].toFixed(1), y2: b[1].toFixed(1), stroke: LN, strokeWidth: 1 }, o || {})));
+    const t = this.state.t;
+    const Q = (x, y, z) => P(x + 0.5, y + 0.5, z);
+    const ag = (kk, tq) => { const w1 = 0.21 + kk * 0.05, w2 = 0.16 + kk * 0.045, ph = kk * 2.1; return [1.5 + 1.05 * Math.sin(tq * w1 + ph), 1.5 + 1.05 * Math.sin(tq * w2 + ph * 1.7 + 1.2)]; };
+    const agents = [0, 1, 2].map((kk) => ag(kk, t));
+    const g = (x, y, cx, cy, amp, sg) => amp * Math.exp(-((x - cx) * (x - cx) + (y - cy) * (y - cy)) / (2 * sg * sg));
+    const h1x = 1.05 + 0.35 * Math.sin(t * 0.09), h1y = 1.25 + 0.3 * Math.cos(t * 0.07);
+    const h2x = 2.15 + 0.3 * Math.cos(t * 0.06 + 2), h2y = 2.0 + 0.35 * Math.sin(t * 0.08 + 1);
+    const zf = (x, y) => { let z = g(x, y, h1x, h1y, 0.62, 0.62) + g(x, y, h2x, h2y, 0.48, 0.5); agents.forEach(([ax, ay]) => { z += g(x, y, ax, ay, 0.3, 0.34); }); return z; };
+    const N = 12, F = [];
+    for (let i = 0; i <= N; i++) { F.push([]); for (let j = 0; j <= N; j++) F[i].push(zf(i * 3 / N, j * 3 / N)); }
+    const path = (pts) => pts.map((p, i) => (i ? "L " : "M ") + p[0].toFixed(1) + " " + p[1].toFixed(1)).join(" ");
+    // terrain block — edge skirts down to the datum
+    const skS = [], skE = [];
+    for (let i = 0; i <= N; i++) { skS.push(Q(i * 3 / N, 3, F[i][N])); skE.push(Q(3, i * 3 / N, F[N][i])); }
+    els.push(React.createElement("polygon", { key: "skS", points: [Q(0, 3, 0)].concat(skS, [Q(3, 3, 0)]).map(S).join(" "), fill: "rgba(15,49,111,.8)", stroke: "rgba(234,242,255,.55)", strokeWidth: 0.7 }));
+    els.push(React.createElement("polygon", { key: "skE", points: [Q(3, 0, 0)].concat(skE, [Q(3, 3, 0)]).map(S).join(" "), fill: "rgba(11,42,97,.85)", stroke: "rgba(234,242,255,.55)", strokeWidth: 0.7 }));
+    for (let i = 0; i <= N; i++) {
+      els.push(React.createElement("path", { key: "mr" + i, d: path(Array.from({ length: N + 1 }, (_, j) => Q(i * 3 / N, j * 3 / N, F[i][j]))), fill: "none", stroke: "rgba(234,242,255,.4)", strokeWidth: 0.55 }));
+      els.push(React.createElement("path", { key: "mc" + i, d: path(Array.from({ length: N + 1 }, (_, j) => Q(j * 3 / N, i * 3 / N, F[j][i]))), fill: "none", stroke: "rgba(234,242,255,.4)", strokeWidth: 0.55 }));
+    }
+    // contours — marching squares at two levels
+    [0.38, 0.68].forEach((L, li) => {
+      for (let i = 0; i < N; i++) for (let j = 0; j < N; j++) {
+        const x0 = i * 3 / N, y0 = j * 3 / N, dx = 3 / N;
+        const v = [F[i][j], F[i + 1][j], F[i + 1][j + 1], F[i][j + 1]];
+        const pts = [];
+        const edge = (va, vb, pa, pb) => { if ((va < L) !== (vb < L)) { const tt = (L - va) / (vb - va); pts.push([pa[0] + (pb[0] - pa[0]) * tt, pa[1] + (pb[1] - pa[1]) * tt]); } };
+        edge(v[0], v[1], [x0, y0], [x0 + dx, y0]);
+        edge(v[1], v[2], [x0 + dx, y0], [x0 + dx, y0 + dx]);
+        edge(v[2], v[3], [x0 + dx, y0 + dx], [x0, y0 + dx]);
+        edge(v[3], v[0], [x0, y0 + dx], [x0, y0]);
+        for (let pi = 0; pi + 1 < pts.length; pi += 2) {
+          const a = Q(pts[pi][0], pts[pi][1], L), b = Q(pts[pi + 1][0], pts[pi + 1][1], L);
+          els.push(React.createElement("line", { key: "ct" + li + "_" + i + "_" + j + "_" + pi, x1: a[0].toFixed(1), y1: a[1].toFixed(1), x2: b[0].toFixed(1), y2: b[1].toFixed(1), stroke: li ? "rgba(255,211,92,.7)" : "rgba(234,242,255,.75)", strokeWidth: 0.8 }));
+        }
+      }
+    });
+    // trails — where each agent has been
+    for (let kk = 0; kk < 3; kk++) {
+      const pts = [];
+      for (let a = 10; a >= 1; a--) { const [tx, ty] = ag(kk, t - a * 0.55); pts.push(Q(tx, ty, zf(tx, ty) + 0.03)); }
+      els.push(React.createElement("path", { key: "tr" + kk, d: path(pts), fill: "none", stroke: "rgba(255,211,92,.38)", strokeWidth: 0.8, strokeDasharray: "2 4" }));
+    }
+    // agents on the surface
+    agents.forEach(([ax, ay], kk) => {
+      const az = zf(ax, ay) + 0.02, hh = 0.09;
+      const cpts = [[ax - hh, ay - hh], [ax + hh, ay - hh], [ax + hh, ay + hh], [ax - hh, ay + hh]];
+      const bot = cpts.map(([cx, cy]) => Q(cx, cy, az)), top = cpts.map(([cx, cy]) => Q(cx, cy, az + 0.16));
+      [[1, 2], [2, 3]].forEach(([i1, i2], fi) => els.push(React.createElement("polygon", { key: "agf" + kk + "_" + fi, points: [bot[i1], bot[i2], top[i2], top[i1]].map(S).join(" "), fill: fi ? "#0b2a61" : "#0f316f", stroke: LN, strokeWidth: 0.9, strokeLinejoin: "round" })));
+      els.push(React.createElement("polygon", { key: "agt" + kk, points: top.map(S).join(" "), fill: "rgba(255,211,92,.3)", stroke: LN, strokeWidth: 0.9, strokeLinejoin: "round" }));
+      const vx = Math.cos(t * (0.21 + kk * 0.05) + kk * 2.1), vy = Math.sin(t * (0.16 + kk * 0.045) + kk * 3.5 + 1.2);
+      const L2 = Math.hypot(vx, vy) || 1, hx = ax + 0.32 * vx / L2, hy = ay + 0.32 * vy / L2;
+      ln(Q(ax, ay, az + 0.08), Q(hx, hy, zf(hx, hy) + 0.1), { stroke: YEL, strokeWidth: 1 });
+    });
+    const heroIcon = React.createElement("svg", { key: "hero", width: 470, height: 300, viewBox: "0 0 470 300", style: { display: "block", maxWidth: "100%", height: "auto" } },
+      React.createElement("g", { transform: "translate(235,172)" }, els));
+    return { heroIcon };
+  }
+}
+</script>
+</body>
+</html>

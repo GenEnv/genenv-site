@@ -199,13 +199,9 @@
       </div>
       <div style="position:sticky;top:90px">
         <div style="border:1px solid rgba(234,242,255,.4);background:#0a2757">
-          <div style="height:210px;background:repeating-linear-gradient(45deg,rgba(234,242,255,.06) 0 9px,transparent 9px 18px);border-bottom:1px solid rgba(234,242,255,.3);display:flex;align-items:center;justify-content:center;padding:20px;text-align:center">
-            <p style="margin:0;font:500 9.5px/1.9 'IBM Plex Mono',monospace;letter-spacing:.12em;text-transform:uppercase;color:rgba(234,242,255,.6)">Media slot<br><span style="color:#ffd35c">{{ prevSlug }}</span><br>awaiting real media</p>
-          </div>
           <div style="padding:15px 17px 17px">
-            <p style="margin:0;font:600 9px/1.4 'IBM Plex Mono',monospace;letter-spacing:.16em;text-transform:uppercase;color:rgba(234,242,255,.5)">{{ prevMeta }}</p>
-            <p style="margin:7px 0 0;font-family:Archivo,sans-serif;font-weight:700;font-size:19px;line-height:1.05;text-transform:uppercase;color:#f4f8ff">{{ prevTitle }}</p>
-            <p style="margin:8px 0 0;font:400 11.5px/1.55 Inter,sans-serif;color:rgba(234,242,255,.6)">{{ prevLine }}</p>
+            <h3 style="margin:0;font:600 12.5px/1.35 'IBM Plex Mono',monospace;letter-spacing:.06em;text-transform:uppercase;color:#ffd35c">{{ prevTitle }}</h3>
+            <p style="margin:6px 0 0;font:400 11.5px/1.55 Inter,sans-serif;color:rgba(234,242,255,.78)">{{ prevDesc }}</p>
           </div>
         </div>
       </div>
@@ -248,47 +244,34 @@ const PROJECTS = [
   { id: "np1", title: "More coming soon", ph: true, year: "", type: "", status: "", dist: "research", cat: "projects", venue: "", desc: "", line: "", slug: "np1", map: { u: 6, v: 6, f: 5 } },
   { id: "np2", title: "More coming soon", ph: true, year: "", type: "", status: "", dist: "research", cat: "projects", venue: "", desc: "", line: "", slug: "np2", map: { u: 12, v: 6, f: 5 } },
   { id: "np3", title: "More coming soon", ph: true, year: "", type: "", status: "", dist: "research", cat: "projects", venue: "", desc: "", line: "", slug: "np3", map: { u: 18, v: 6, f: 5 } },
-  { id: "hac", title: "Human-AI Co-Design", year: "2026 —", type: "Research", status: "hiring", dist: "research", cat: "projects", fund: "NSERC", venue: "NSERC", desc: "A co-design framework for performance-aware constructed environments, pairing human designers with AI agents.", line: "performance-aware co-design · NSERC", slug: "human-ai-co-design", map: { u: 6, v: 0, f: 5, arch: "unit" } },
+  { id: "hac", title: "Human-AI Co-Design", year: "2026 —", type: "Research", status: "hiring", dist: "research", cat: "projects", fund: "NSERC", venue: "NSERC", href: "Project - Human-AI Co-Design.dc.html", desc: "Agentic AI as a performance-aware partner in early-stage design: generative proposals connected to live feedback on energy, carbon, structure, and code compliance.", line: "performance in the generative loop · NSERC", slug: "human-ai-co-design", map: { u: 6, v: 0, f: 5, arch: "hacicon" } },
   { id: "th", title: "Digital Thermal Sandbox", year: "2026 —", type: "Research", status: "current", dist: "research", cat: "projects", fund: "LACF", venue: "LACF", href: "Project - Digital Thermal Sandbox.dc.html", desc: "A sandbox where thermal behavior is read while the form is still moving. Microclimate feedback for early design.", line: "microclimate feedback for early design", slug: "digital-thermal-sandbox", map: { u: 18, v: 0, f: 5, arch: "sandbox" } },
 
-  { id: "pl", title: "Generative Planting", year: "2024", type: "Writing", status: "published", dist: "research", cat: "archive", venue: "JoDLA / ASLA", desc: "Generative methods for species mixes and planting plans at scale.", line: "planting design at scale", slug: "generative-planting", map: { u: 6, v: 14, f: 5 } },
-  { id: "lex", title: "Computational Lexicalization", year: "2026", type: "Writing", status: "in press", dist: "research", cat: "writing", venue: "Architectural Journal", desc: "A theoretical article for Architectural Journal on design agents, computational design, and language-based modeling.", line: "the theory behind the design agents", slug: "computational-lexicalization", lineage: "Companion to — Grasshopper MCP", map: { u: 24, v: 0, f: 2, pu: 3.9, arch: "unit" } },
-  { id: "diss", title: "AI + Landscapes", year: "2025", type: "PhD dissertation", status: "published", dist: "research", cat: "writing", venue: "", desc: "PhD dissertation on artificial intelligence and landscapes: how machine intelligence can read, model, and generate landscape environments.", line: "AI methods for landscape environments", slug: "ai-landscapes", map: { u: 24, v: 3, f: 2, pu: 3.9, arch: "unit" } },
+  { id: "pl", title: "Generative Planting", year: "2024", type: "Writing", status: "published", dist: "research", cat: "archive", venue: "JoDLA / ASLA", href: "Project - Generative Planting.dc.html", desc: "An AI-driven tool embedding ecological intelligence into planting design: GANs trained on topography, soil, and climate data generate planting layouts.", line: "planting design at scale", slug: "generative-planting", map: { u: 6, v: 14, f: 5, arch: "plicon" } },
+  { id: "lex", title: "Computational Lexicalization", year: "2026", type: "Writing", status: "published", dist: "research", cat: "writing", venue: "Architectural Journal", href: "Project - Computational Lexicalization.dc.html", desc: "A methodological framework that turns design knowledge into human-readable and machine-executable language for bounded collaboration between designers, agents, and computational tools.", line: "design knowledge as callable language", icoTop: "Lexicon", icoLine: "Name · Bound · Call · Compose", slug: "computational-lexicalization", lineage: "Companion to — Grasshopper MCP", map: { u: 24, v: 0, f: 2, pu: 3.9, arch: "unit" } },
+  { id: "diss", title: "AI + Landscapes", year: "2025", type: "PhD dissertation", status: "published", dist: "research", cat: "writing", venue: "University of Virginia", href: "Project - AI + Landscapes.dc.html", desc: "A doctoral dissertation examining how deep learning can analyze, represent, and generate landscape form across data, images, temporal processes, simulations, and meaning.", line: "a new lexicon for landscape form", icoTop: "Form", icoLine: "Data · Image · Process · Simulation · Meaning", slug: "ai-landscapes", map: { u: 24, v: 3, f: 2, pu: 3.9, arch: "unit" } },
 
   { id: "na1", title: "More coming soon", ph: true, year: "", type: "", status: "", dist: "research", cat: "archive", venue: "", desc: "", line: "", slug: "na1", map: { u: 12, v: 14, f: 5 } },
 
-  { id: "a515", title: "ARCH 515", year: "2026", type: "Course", status: "course", dist: "teaching", cat: "teaching", venue: "UBC SALA", desc: "MLA design media: representation and computational workflows for landscape architecture. Selected student work is credited inside the course archive.", line: "MLA design media", slug: "arch-515", map: { u: 54, v: 0, f: 5, arch: "unit" } },
-  { id: "d212", title: "DES 212", year: "2026", type: "Course", status: "course", dist: "teaching", cat: "teaching", venue: "UBC SALA", desc: "BDES design media: foundations of design representation and computation. Selected student work is credited inside the course archive.", line: "BDES design media", slug: "des-212", map: { u: 60, v: 0, f: 5, arch: "unit" } },
-  { id: "a540", title: "ARCH 540", year: "2026", type: "Option studio", status: "course", dist: "teaching", cat: "teaching", venue: "UBC SALA", desc: "Architecture option studio: generative and agentic workflows tested at studio scale. Selected student work is credited inside the course archive.", line: "architecture option studio", slug: "arch-540", map: { u: 54, v: 6, f: 5, arch: "unit" } },
-  { id: "ad", title: "AI4DM", year: "2026 —", type: "Teaching platform", status: "in development", dist: "teaching", cat: "platform", venue: "UBC SALA", href: "Project - AI4DM.dc.html", desc: "A teaching platform for design representation in the age of generative AI, reconnecting AI workflows with the broader culture of design media.", line: "AI + design media teaching platform", slug: "ai4dm", map: { u: 34, v: 8, f: 5, arch: "ai4dmicon" } },
-  { id: "la", title: "Landscape Agent", year: "2025", type: "Workshop / Research", status: "published", dist: "teaching", cat: "workshop", venue: "DigitalFUTURES · NeurIPS Creative AI", desc: "A DigitalFUTURES workshop and research project testing landform modeling tasks with AI agents; published in the NeurIPS Creative AI track.", line: "agentic landform modeling · NeurIPS", slug: "landscape-agents", map: { u: 54, v: 14, f: 5, arch: "unit" } },
+  { id: "d212", title: "DES 212 · Design Media II", lbl: "Design Media II", year: "2026", type: "Course", status: "completed", href: "Project - DES 212.dc.html", dist: "teaching", cat: "teaching", venue: "UBC SALA", desc: "BDes design media: computational thinking as a generative medium — designing relationships, rules, and feedback systems in Rhino and Grasshopper.", line: "BDES design media", slug: "des-212", map: { u: 34, v: 0, f: 5, arch: "d212icon" } },
+  { id: "a515", title: "ARCH 515 · Design Media I", lbl: "Design Media I", year: "2025", type: "Course", status: "completed", href: "Project - ARCH 515.dc.html", dist: "teaching", cat: "teaching", venue: "UBC SALA", desc: "MLA design media: learning to see through media — representation as both a practical skill and a way of thinking in landscape architecture.", line: "MLA design media · landscape session", slug: "arch-515", map: { u: 40, v: 0, f: 5, arch: "a515icon" } },
+  { id: "a540", title: "ARCH 540 · Designing the Design", lbl: "Designing the Design", year: "2025", type: "Option studio", status: "completed", href: "Project - ARCH 540.dc.html", dist: "teaching", cat: "teaching", venue: "UBC SALA", desc: "MArch option studio: designing the design — treating AI-era workflows, methods, and tools as objects of design rather than producing a conventional building proposal.", line: "MArch option studio", slug: "arch-540", map: { u: 46, v: 0, f: 5, arch: "a540icon" } },
+  { id: "ad", title: "AI4DM", year: "2026 —", type: "Teaching platform", status: "in development", dist: "teaching", cat: "platform", venue: "UBC SALA", href: "Project - AI4DM.dc.html", desc: "A teaching platform for design representation in the age of generative AI, reconnecting AI workflows with the broader culture of design media.", line: "AI + design media teaching platform", slug: "ai4dm", map: { u: 34, v: 9, f: 5, arch: "ai4dmicon" } },
+  { id: "la", title: "Landscape Agent", year: "2025", type: "Workshop / Research", status: "completed", dist: "teaching", cat: "workshop", venue: "DigitalFUTURES · Tongji University", href: "Project - Landscape Agent.dc.html", desc: "A DigitalFUTURES workshop at Tongji University in which participants translated landscape design knowledge into callable vocabularies for agent-assisted parametric modeling.", line: "design vocabularies for landscape agents", slug: "landscape-agents", map: { u: 54, v: 0, f: 5, arch: "laicon" } },
 
-  { id: "sims", title: "Arch Sims", year: "—", type: "Graduate project", status: "current", dist: "teaching", cat: "students", venue: "UBC SALA", desc: "A graduate project developed in the lab as supervised work, a directed study.", line: "graduate project · directed study", slug: "arch-sims", lineage: "Supervised work — directed study", map: { u: 34, v: 0, f: 5, arch: "unit" } },
-  { id: "story", title: "Story Editor", year: "—", type: "Graduate project", status: "current", dist: "teaching", cat: "students", venue: "UBC SALA", desc: "A graduate project developed in the lab as supervised work, a directed study.", line: "graduate project · directed study", slug: "story-editor", lineage: "Supervised work — directed study", map: { u: 40, v: 0, f: 5, arch: "unit" } },
-  { id: "s212", title: "Selected work — DES 212", lbl: "Selected · DES 212", year: "—", type: "Course archive", status: "curating", dist: "teaching", cat: "students", venue: "UBC SALA", desc: "Selected student work from DES 212, credited with permission, the course's public archive.", line: "from the BDES media course", slug: "selected-des-212", lineage: "From — DES 212", map: { u: 46, v: 0, f: 2, arch: "unit" } },
-  { id: "s515", title: "Selected work — ARCH 515", lbl: "Selected · ARCH 515", year: "—", type: "Course archive", status: "curating", dist: "teaching", cat: "students", venue: "UBC SALA", desc: "Selected student work from ARCH 515, credited with permission, the course's public archive.", line: "from the MLA media course", slug: "selected-arch-515", lineage: "From — ARCH 515", map: { u: 49, v: 0, f: 2, arch: "unit" } },
-  { id: "s540", title: "Selected work — ARCH 540", lbl: "Selected · ARCH 540", year: "—", type: "Course archive", status: "curating", dist: "teaching", cat: "students", venue: "UBC SALA", desc: "Selected student work from the ARCH 540 option studio, credited with permission, the course's public archive.", line: "from the option studio", slug: "selected-arch-540", lineage: "From — ARCH 540", map: { u: 46, v: 3, f: 2, arch: "unit" } },
 
-  { id: "t515", title: "ARCH 515 \u00b7 2025", year: "2025", type: "Course archive", status: "archive", dist: "teaching", cat: "archive", venue: "UBC SALA", desc: "Past edition. Selected projects to be curated.", line: "course archive", slug: "arch515-2025", map: { u: 34, v: 23, f: 5, arch: "unit", off: true } },
-  { id: "t212", title: "DES 212 \u00b7 2025", year: "2025", type: "Course archive", status: "archive", dist: "teaching", cat: "archive", venue: "UBC SALA", desc: "Past edition. Selected projects to be curated.", line: "course archive", slug: "des212-2025", map: { u: 40, v: 23, f: 5, arch: "unit", off: true } },
-  { id: "t540", title: "ARCH 540 \u00b7 2025", year: "2025", type: "Course archive", status: "archive", dist: "teaching", cat: "archive", venue: "UBC SALA", desc: "Past edition. Selected projects to be curated.", line: "course archive", slug: "arch540-2025", map: { u: 46, v: 23, f: 5, arch: "unit", off: true } },
 
   { id: "people", title: "People", year: "—", type: "Lab", status: "current", dist: "about", cat: "about", venue: "UBC SALA", desc: "Faculty, graduate researchers, and alumni: the people behind the lab's projects.", line: "who is in the lab", slug: "people" },
-  { id: "pp1", title: "Faculty 01", year: "—", type: "Faculty", status: "placeholder", dist: "about", cat: "about", venue: "UBC SALA", desc: "Real name, role, and portrait to drop in.", line: "placeholder profile", slug: "person-01", map: { u: 38, v: 25, f: 5, arch: "unit" } },
-  { id: "pp2", title: "Researcher 01", year: "—", type: "Graduate researcher", status: "placeholder", dist: "about", cat: "about", venue: "UBC SALA", desc: "Real name, role, and portrait to drop in.", line: "placeholder profile", slug: "person-02", map: { u: 44, v: 25, f: 5, arch: "unit" } },
-  { id: "pp3", title: "Researcher 02", year: "—", type: "Graduate researcher", status: "placeholder", dist: "about", cat: "about", venue: "UBC SALA", desc: "Real name, role, and portrait to drop in.", line: "placeholder profile", slug: "person-03", map: { u: 50, v: 25, f: 5, arch: "unit" } },
-  { id: "pp4", title: "Researcher 03", year: "—", type: "Graduate researcher", status: "placeholder", dist: "about", cat: "about", venue: "UBC SALA", desc: "Real name, role, and portrait to drop in.", line: "placeholder profile", slug: "person-04", map: { u: 38, v: 31, f: 5, arch: "unit" } },
-  { id: "pp5", title: "Alum 01", year: "—", type: "Alumni", status: "placeholder", dist: "about", cat: "about", venue: "UBC SALA", desc: "Real name, role, and portrait to drop in.", line: "placeholder profile", slug: "person-05", map: { u: 44, v: 31, f: 5, arch: "unit" } },
-  { id: "pp6", title: "Alum 02", year: "—", type: "Alumni", status: "placeholder", dist: "about", cat: "about", venue: "UBC SALA", desc: "Real name, role, and portrait to drop in.", line: "placeholder profile", slug: "person-06", map: { u: 50, v: 31, f: 5, arch: "unit" } },
+  { id: "pp1", title: "Xun Liu", year: "—", type: "Faculty", status: "current", dist: "about", cat: "about", venue: "UBC SALA", desc: "Assistant Professor, UBC SALA. Directs the lab's research on generative environments, agentic AI, and performance-aware design.", line: "faculty · PI", slug: "xun-liu", map: { u: 38, v: 25, f: 5, arch: "person" } },
   { id: "open", title: "Openings", year: "2026", type: "Opportunity", status: "open", dist: "join", cat: "join", venue: "UBC SALA", desc: "PhD positions and research assistantships on the lab's funded projects. Contact the lab with a focused proposal and relevant work.", line: "PhD + RA on funded projects", slug: "openings", map: { u: 21, v: 25, f: 5, arch: "unit" } },
   { id: "partners", title: "Partners", year: "2026", type: "Collaboration", status: "open", dist: "join", cat: "join", venue: "", desc: "External collaborators: workshops, open tools, and industry pilots.", line: "workshops · tools · pilots", slug: "partners", map: { u: 27, v: 25, f: 5, arch: "unit" } },
 ];
 const BY_ID = {};
 PROJECTS.forEach((p) => { BY_ID[p.id] = p; });
 
-const FEED_MAIN = ["uf", "hac", "mcp", "th", "lex", "diss", "ad", "a540", "s540", "d212", "s212", "a515", "s515", "sims", "story", "open", "partners", "people", "la"];
-const FEED_ARCH = ["c2", "pl", "t515", "t212", "t540"];
-const FILTERS = [["all", "All"], ["projects", "Projects"], ["writing", "Writing"], ["teaching", "Teaching"], ["workshop", "Workshops"], ["platform", "Platform"], ["students", "Student work"], ["about", "People"], ["join", "Join"], ["archive", "Archive"]];
+const FEED_MAIN = ["uf", "hac", "mcp", "th", "lex", "diss", "ad", "a515", "d212", "a540", "open", "partners", "people", "la"];
+const FEED_ARCH = ["c2", "pl"];
+const FILTERS = [["all", "All"], ["projects", "Projects"], ["writing", "Writing"], ["teaching", "Teaching"], ["workshop", "Workshops"], ["platform", "Platform"], ["about", "People"], ["join", "Join"], ["archive", "Archive"]];
 
 const ROADS = [
   { a: "c2", b: "uf", w: 3 },
@@ -296,10 +279,6 @@ const ROADS = [
   { a: "ad", b: "d212", w: 1 },
   { a: "uf", b: "open", w: 1 },
   { a: "hac", b: "open", w: 1 },
-  { a: "sims", b: "story", w: 1 },
-  { a: "d212", b: "s212", w: 2, stu: true },
-  { a: "a515", b: "s515", w: 2, stu: true },
-  { a: "a540", b: "s540", w: 2, stu: true },
 ];
 
 const WIN = {
@@ -315,10 +294,9 @@ const SUBZONES = [
   { lbl: "Projects", color: CAT.projects, ids: ["uf", "hac", "mcp", "th", "np1", "np2", "np3"], win: WIN.projects },
   { lbl: "Writing", color: CAT.writing, ids: ["lex", "diss"], win: WIN.writing },
   { lbl: "Archive", color: CAT.archive, ids: ["c2", "pl", "na1"], win: WIN.archive },
-  { lbl: "Supervised student work", color: CAT.students, ids: ["sims", "story", "s212", "s515", "s540"], win: { a: 0.505, b: 0.535 } },
-  { lbl: "Courses", color: CAT.teaching, ids: ["a515", "d212", "a540"], win: { a: 0.535, b: 0.565 } },
+  { lbl: "Courses", color: CAT.teaching, ids: ["a515", "d212", "a540"], win: { a: 0.505, b: 0.535 } },
   { lbl: "Teaching platform", color: CAT.platform, ids: ["ad"], win: { a: 0.565, b: 0.595 } },
-  { lbl: "Workshops", color: CAT.workshop, ids: ["la"], win: { a: 0.595, b: 0.625 } },
+  { lbl: "Workshops", color: CAT.workshop, ids: ["la"], win: { a: 0.535, b: 0.575 } },
 ];
 
 const CHAPTERS = [
@@ -330,7 +308,9 @@ const CHAPTERS = [
   { n: "06", name: "The city", mid: 0.96, start: 0.895 },
 ];
 
-const ARCH_NAMES = { tower: "Tower", fabric: "Fabric", terrain: "Terrain", stack: "Stack", tablet: "Tablet", sandbox: "Sandbox", ai4dmicon: "Prompt to image", c2icon: "Zoning envelope", bridge: "Bridge", cluster: "Cluster", podium: "Podium", sheaf: "Sheaf", canopy: "Canopy", unit: "Unit", plot: "Plot", mcpicon: "Canvas as plan", uficon: "Fabric read" };
+const ARCH_NAMES = { person: "Portrait block", tower: "Tower", fabric: "Fabric", terrain: "Terrain", stack: "Stack", tablet: "Tablet", sandbox: "Sandbox", ai4dmicon: "Prompt to image", c2icon: "Setback tiers", hacicon: "Human ↔ agent", bridge: "Bridge", cluster: "Cluster", podium: "Podium", sheaf: "Sheaf", canopy: "Canopy", unit: "Unit", plot: "Plot", mcpicon: "Canvas as plan", uficon: "Fabric read", plicon: "Planted terrain", a515icon: "Sheet to model", d212icon: "Rule to row", a540icon: "Friction prototype", laicon: "Agents on terrain" };
+
+const XL_PX = { w: 12, h: 10, rows: [[[4,1,"#040203"],[5,1,"#020202"],[6,2,"#010000"]],[[1,1,"#010101"],[2,1,"#030303"],[3,1,"#1a1a1a"],[4,1,"#181816"],[5,1,"#1d1d1d"],[6,1,"#1a1c19"],[7,1,"#171717"],[8,1,"#1b1b1d"],[9,1,"#070707"]],[[1,1,"#010101"],[2,1,"#171717"],[3,1,"#191917"],[4,1,"#1a1a1a"],[5,1,"#181816"],[6,1,"#1a1819"],[7,1,"#1a1a1a"],[8,1,"#191b1a"],[9,1,"#181818"],[10,1,"#000000"]],[[1,1,"#373737"],[2,1,"#393738"],[3,1,"#191917"],[4,1,"#000000"],[5,1,"#e0ae8d"],[6,1,"#f9c8a7"],[7,1,"#facdae"],[8,1,"#fccaa9"],[9,1,"#010101"],[10,1,"#1f1f1f"]],[[0,1,"#0d0d0d"],[1,1,"#37383a"],[2,1,"#191917"],[3,1,"#3d3d3b"],[4,1,"#edc2a0"],[5,1,"#efc3a0"],[6,1,"#eec3a0"],[7,1,"#efc3a0"],[8,1,"#f0c5a2"],[9,1,"#d49c7b"],[10,1,"#020202"],[11,1,"#010000"]],[[0,1,"#0a0c0b"],[1,1,"#1b191a"],[2,1,"#1c1e1d"],[3,1,"#383836"],[4,1,"#f2c5a4"],[5,1,"#eec3a0"],[6,1,"#efc19f"],[7,1,"#f1c3a2"],[8,1,"#efc3a0"],[9,1,"#f0c09c"],[10,1,"#000000"],[11,1,"#040404"]],[[0,1,"#0b0b09"],[1,1,"#191919"],[2,1,"#1b1b19"],[3,1,"#010101"],[4,1,"#efc19f"],[5,1,"#040301"],[6,1,"#efc4a2"],[7,1,"#eec3a1"],[8,1,"#010103"],[9,1,"#efc19f"],[10,1,"#000000"],[11,1,"#010101"]],[[0,1,"#0b0b0b"],[1,1,"#1c1a1b"],[2,1,"#1b1b1b"],[3,1,"#070707"],[4,1,"#edbf9d"],[5,1,"#0a0100"],[6,1,"#eec3a1"],[7,1,"#efc2a1"],[8,1,"#090000"],[9,1,"#efc4a4"],[10,1,"#0c0402"],[11,1,"#010101"]],[[0,1,"#0e0d0b"],[1,1,"#1a1a1a"],[2,1,"#1b1a18"],[3,1,"#030303"],[4,1,"#eec29f"],[5,1,"#efbe9d"],[6,1,"#edc4a4"],[7,1,"#efc2a3"],[8,1,"#f1c6a6"],[9,1,"#f0c2a0"],[10,1,"#3d1f14"],[11,1,"#010101"]],[[0,1,"#0b0a08"],[1,1,"#191919"],[2,1,"#1a1a18"],[3,1,"#050304"],[4,1,"#eec09e"],[5,1,"#edc19c"],[6,1,"#f0c4a1"],[7,1,"#edc09f"],[8,1,"#ebbf9c"],[9,1,"#401e14"],[10,1,"#1b1d1c"]]] };
 
 class Component extends DCLogic {
   state = { prog: 0, sy: 0, vw: 1440, vh: 900, hover: null, lastHover: null, filter: "all", feedHover: null, detail: null, page: null, legend: false, anim: null, rScroll: 0, tScroll: 0 };
@@ -388,12 +368,12 @@ class Component extends DCLogic {
   _hoverOn(id) {
     this.setState({ hover: id, lastHover: id });
     const mm = BY_ID[id], a2 = mm && mm.map && mm.map.arch;
-    if ((a2 === "mcpicon" || a2 === "uficon" || a2 === "sandbox" || a2 === "ai4dmicon" || a2 === "c2icon") && !this._aRaf) {
+    if ((a2 === "mcpicon" || a2 === "uficon" || a2 === "sandbox" || a2 === "ai4dmicon" || a2 === "c2icon" || a2 === "hacicon" || a2 === "plicon" || a2 === "laicon" || a2 === "a515icon" || a2 === "d212icon" || a2 === "a540icon") && !this._aRaf) {
       this._a0 = performance.now();
       const loop = (now) => {
         const h = this.state.hover, hm = h && BY_ID[h];
         const ar = hm && hm.map && hm.map.arch;
-        if (ar !== "mcpicon" && ar !== "uficon" && ar !== "sandbox" && ar !== "ai4dmicon" && ar !== "c2icon") { this._aRaf = null; if (this.state.anim != null) this.setState({ anim: null }); return; }
+        if (ar !== "mcpicon" && ar !== "uficon" && ar !== "sandbox" && ar !== "ai4dmicon" && ar !== "c2icon" && ar !== "hacicon" && ar !== "plicon" && ar !== "laicon" && ar !== "a515icon" && ar !== "d212icon" && ar !== "a540icon") { this._aRaf = null; if (this.state.anim != null) this.setState({ anim: null }); return; }
         this.setState({ anim: ((now - this._a0) / 4600) % 1 });
         this._aRaf = requestAnimationFrame(loop);
       };
@@ -492,6 +472,12 @@ class Component extends DCLogic {
 
     if (arch === "unit") {
       prism(rect(0.5, 0.5, 3.5, 3.5), 0, 1.3);
+    } else if (arch === "person") {
+      // Portrait block: the uploaded pixelized avatar image laid flat on the plinth's top face.
+      prism(rect(0.4, 0.4, 3.6, 3.6), 0, 0.55);
+      const x9 = 0.4, y9 = 0.4, w9 = 3.2;
+      const O9 = Pl(x9, y9, 0.55), X9 = Pl(x9 + 1, y9, 0.55), Y9 = Pl(x9, y9 + 1, 0.55);
+      els.push(React.createElement("image", { key: kb + "ava", href: "media/avatar_pixel.png", x: 0, y: 0, width: w9, height: w9, preserveAspectRatio: "xMidYMid meet", transform: "matrix(" + [X9[0] - O9[0], X9[1] - O9[1], Y9[0] - O9[0], Y9[1] - O9[1], O9[0], O9[1]].map((n9) => n9.toFixed(4)).join(",") + ")", style: { imageRendering: "pixelated" } }));
     } else if (arch === "terrain") {
       prism([[0.2, 0.6], [2.2, 0], [3.9, 0.5], [4, 3.2], [2, 4], [0, 3.1]], 0, 0.55);
       prism([[0.9, 1.1], [3.1, 0.8], [3.4, 2.7], [1.7, 3.2]], 0.55, 1.15);
@@ -610,6 +596,158 @@ class Component extends DCLogic {
         if (ii === 0 || ii === 2) els.push(React.createElement("polygon", { key: kb + "fg" + ii, points: tp[0].toFixed(1) + "," + tp[1].toFixed(1) + " " + (tp[0] + 8 * k).toFixed(1) + "," + (tp[1] + 2.5 * k).toFixed(1) + " " + tp[0].toFixed(1) + "," + (tp[1] + 5.5 * k).toFixed(1), fill: "rgba(255,211,92,.9)" }));
       });
       prism(rect(1.5, 1.5, 2.5, 2.5), 0, 1.1, { fillT: "rgba(255,211,92,.06)", fillL: "rgba(255,211,92,.02)", fillR: "rgba(255,211,92,.02)", stroke: "rgba(255,211,92,.85)", dash: "5 5" });
+    } else if (arch === "a515icon") {
+      // ARCH 515 — the hand draws: contours sketch themselves on the sheet, project across, and the model lifts.
+      const an5 = opt.anim;
+      const st5 = (aa, bb) => an5 == null ? 1 : this.ss(an5, aa, bb);
+      const S5 = (p) => p[0].toFixed(1) + "," + p[1].toFixed(1);
+      const SH5 = [[1.0, 0.12], [0.62, 0.72], [-0.05, 0.98], [-0.72, 0.66], [-1.02, 0.02], [-0.66, -0.62], [0.02, -0.95], [0.7, -0.66]];
+      const JIT5 = [0.06, -0.05, 0.07, -0.06, 0.04, 0.06, -0.07, 0.05];
+      const blob5 = (bx, by, k2, z, o, wob) => {
+        const q = SH5.map(([dx, dy], i) => Pl(bx + dx * k2 * (1 + (wob ? JIT5[i] : 0)), by + dy * k2 * (1 + (wob ? JIT5[(i + 3) % 8] : 0)), z));
+        const md = (a2, b2) => ((a2[0] + b2[0]) / 2).toFixed(1) + " " + ((a2[1] + b2[1]) / 2).toFixed(1);
+        let d = "M " + md(q[7], q[0]);
+        for (let i = 0; i < 8; i++) d += " Q " + q[i][0].toFixed(1) + " " + q[i][1].toFixed(1) + " " + md(q[i], q[(i + 1) % 8]);
+        els.push(React.createElement("path", Object.assign({ key: kb + "b" + els.length, d: d + " Z", strokeLinejoin: "round" }, o)));
+      };
+      els.push(React.createElement("polygon", { key: kb + "sheet", points: [[0.3, 0.75], [1.75, 0.75], [1.75, 3.25], [0.3, 3.25]].map(([x, y]) => S5(Pl(x, y, 0))).join(" "), fill: "rgba(234,242,255,.03)", stroke: opt.stroke, strokeOpacity: 0.6, strokeWidth: swD, strokeDasharray: "6 4", strokeLinejoin: "miter" }));
+      // the hand draws its two contours (wobbled, self-drawing strokes)
+      const dr1 = st5(0.02, 0.24), dr2 = st5(0.14, 0.36);
+      if (dr1 > 0.01) blob5(1.02, 2.0, 0.52, 0, { fill: "none", stroke: YEL, strokeWidth: swD * 1.5, strokeLinecap: "round", pathLength: 1, strokeDasharray: 1, strokeDashoffset: (1 - dr1).toFixed(3) }, true);
+      if (dr2 > 0.01) blob5(1.02, 2.0, 0.26, 0, { fill: "none", stroke: YEL, strokeWidth: swD * 1.2, pathLength: 1, strokeDasharray: 1, strokeDashoffset: (1 - dr2).toFixed(3) }, true);
+      // projection sweeps east; the ghost plan appears on the plot
+      const prj5 = st5(0.34, 0.46);
+      if (prj5 > 0.02) {
+        ln(Pl(1.78, 1.55, 0), Pl(1.78 + 0.38 * prj5, 1.55, 0), { stroke: YEL, strokeOpacity: 0.6, strokeWidth: swD, strokeDasharray: "4 3" });
+        ln(Pl(1.78, 2.45, 0), Pl(1.78 + 0.38 * prj5, 2.45, 0), { stroke: YEL, strokeOpacity: 0.6, strokeWidth: swD, strokeDasharray: "4 3" });
+      }
+      const gh5 = st5(0.4, 0.52);
+      if (gh5 > 0.02) blob5(2.9, 2.0, 0.72, 0, { fill: "none", stroke: YEL, strokeOpacity: 0.4 * gh5, strokeWidth: swD, strokeDasharray: "4 3" });
+      // the model lifts, terrace by terrace
+      const z1 = 0.38 * st5(0.5, 0.68), z2 = z1 + 0.34 * st5(0.62, 0.84);
+      const v1 = st5(0.5, 0.62), v2 = st5(0.62, 0.74);
+      if (v1 > 0.02) {
+        [0, 1, 7].forEach((ix) => { const [dx, dy] = SH5[ix]; ln(Pl(2.9 + dx * 0.72, 2.0 + dy * 0.72, z1), Pl(2.9 + dx * 0.72, 2.0 + dy * 0.72, 0), { strokeOpacity: 0.35 * v1, strokeWidth: swD * 0.9 }); });
+        blob5(2.9, 2.0, 0.72, z1, { fill: "#0f316f", stroke: opt.stroke, strokeWidth: swD * 1.05 });
+      }
+      if (v2 > 0.02) {
+        [0, 1, 7].forEach((ix) => { const [dx, dy] = SH5[ix]; ln(Pl(2.9 + dx * 0.38, 2.0 + dy * 0.38, z2), Pl(2.9 + dx * 0.38, 2.0 + dy * 0.38, z1), { strokeOpacity: 0.35 * v2, strokeWidth: swD * 0.9 }); });
+        blob5(2.9, 2.0, 0.38, z2, { fill: "#12397f", stroke: opt.stroke, strokeWidth: swD * 1.05 });
+      }
+    } else if (arch === "d212icon") {
+      // DES 212 — parametric: the rule curve itself morphs, and the whole family of blocks follows live.
+      const an2 = opt.anim;
+      const ph2 = an2 == null ? 0 : an2 * Math.PI * 2;
+      const S2 = (p) => p[0].toFixed(1) + "," + p[1].toFixed(1);
+      const fpar = (q) => 0.45 + 0.3 * q + 0.21 * Math.sin(q * 3.93 + 0.4) * Math.cos(ph2) + 0.18 * Math.cos(q * 2.6 + 1.1) * Math.sin(ph2);
+      els.push(React.createElement("polygon", { key: kb + "sh2", points: [[0.3, 0.7], [1.5, 0.7], [1.5, 3.3], [0.3, 3.3]].map(([x, y]) => S2(Pl(x, y, 0))).join(" "), fill: "rgba(234,242,255,.03)", stroke: opt.stroke, strokeOpacity: 0.6, strokeWidth: swD, strokeDasharray: "6 4", strokeLinejoin: "miter" }));
+      const cps = [];
+      for (let i = 0; i <= 16; i++) { const q = i / 16; cps.push(Pl(0.55 + fpar(q) * 0.75, 0.95 + q * 2.1, 0)); }
+      els.push(React.createElement("path", { key: kb + "cv", d: cps.map((p, i) => (i ? "L " : "M ") + p[0].toFixed(1) + " " + p[1].toFixed(1)).join(" "), fill: "none", stroke: YEL, strokeWidth: swD * 1.5, strokeLinecap: "round" }));
+      for (let i = 0; i <= 5; i++) { const y2 = 0.95 + (i / 5) * 2.1; ln(Pl(0.42, y2, 0), Pl(0.52, y2, 0), { stroke: YEL, strokeOpacity: 0.5, strokeWidth: swD * 0.8 }); }
+      ln(Pl(1.55, 2.0, 0), Pl(1.9, 2.0, 0), { stroke: YEL, strokeOpacity: 0.6, strokeWidth: swD, strokeDasharray: "4 3" });
+      const tops2 = [];
+      for (let i = 0; i < 6; i++) {
+        const q = i / 5, y0 = 0.85 + q * 2.0;
+        const h2 = 0.3 + fpar(q) * 0.85;
+        prism(rect(2.05, y0, 3.55, y0 + 0.28), 0, h2);
+        tops2.push(Pl(2.8, y0 + 0.14, h2));
+      }
+      els.push(React.createElement("path", { key: kb + "tc", d: tops2.map((p, i) => (i ? "L " : "M ") + p[0].toFixed(1) + " " + p[1].toFixed(1)).join(" "), fill: "none", stroke: YEL, strokeOpacity: 0.75, strokeWidth: swD, strokeDasharray: "3 3" }));
+      if (an2 != null) {
+        const qd = an2, dp2 = Pl(0.55 + fpar(qd) * 0.75, 0.95 + qd * 2.1, 0);
+        els.push(React.createElement("circle", { key: kb + "dot", cx: dp2[0].toFixed(1), cy: dp2[1].toFixed(1), r: (4 * k).toFixed(1), fill: YEL }));
+      }
+    } else if (arch === "a540icon") {
+      // ARCH 540 — run the workflow, hit the friction point, prototype the fix.
+      const an4 = opt.anim;
+      const st4 = (aa, bb) => an4 == null ? 1 : this.ss(an4, aa, bb);
+      const S4 = (p) => p[0].toFixed(1) + "," + p[1].toFixed(1);
+      els.push(React.createElement("polygon", { key: kb + "map4", points: [[0.35, 0.7], [3.65, 0.7], [3.65, 3.5], [0.35, 3.5]].map(([x, y]) => S4(Pl(x, y, 0))).join(" "), fill: "none", stroke: "rgba(234,242,255,.3)", strokeWidth: swD, strokeDasharray: "3 4", strokeLinejoin: "miter" }));
+      const N4 = [[0.7, 3.2], [1.6, 2.9], [1.25, 2.0], [2.35, 2.35], [2.15, 1.15], [3.15, 1.6]];
+      [[0, 1], [1, 2], [1, 3], [2, 4], [3, 5], [4, 5]].forEach(([a, b]) => ln(Pl(N4[a][0], N4[a][1], 0), Pl(N4[b][0], N4[b][1], 0), { strokeOpacity: 0.55, strokeWidth: swD }));
+      // the run — a pulse travels the main chain and leaves it lit
+      const chain4 = [[0, 1], [1, 3], [3, 5]];
+      const run4 = st4(0.05, 0.5);
+      chain4.forEach(([a, b], ci) => {
+        const p = this.c01(run4 * 3 - ci);
+        if (p < 0.02) return;
+        const pa = Pl(N4[a][0], N4[a][1], 0), pb = Pl(N4[a][0] + (N4[b][0] - N4[a][0]) * p, N4[a][1] + (N4[b][1] - N4[a][1]) * p, 0);
+        ln(pa, pb, { stroke: YEL, strokeOpacity: 0.85, strokeWidth: swD * 1.4 });
+      });
+      if (an4 != null && run4 > 0.01 && run4 < 0.99) {
+        const e4 = Math.min(2, Math.floor(run4 * 3)), u4 = run4 * 3 - e4;
+        const [a, b] = chain4[e4];
+        const dp4 = Pl(N4[a][0] + (N4[b][0] - N4[a][0]) * u4, N4[a][1] + (N4[b][1] - N4[a][1]) * u4, 0);
+        els.push(React.createElement("circle", { key: kb + "pulse", cx: dp4[0].toFixed(1), cy: dp4[1].toFixed(1), r: (4 * k).toFixed(1), fill: YEL }));
+      }
+      const fl4 = st4(0.5, 0.6);
+      N4.forEach(([x, y], i) => {
+        const hh = 0.09, pk = i === 5;
+        els.push(React.createElement("polygon", { key: kb + "nd" + i, points: [[x - hh, y - hh], [x + hh, y - hh], [x + hh, y + hh], [x - hh, y + hh]].map(([a2, b2]) => S4(Pl(a2, b2, 0))).join(" "), fill: pk ? "rgba(255,211,92," + (0.4 * fl4).toFixed(2) + ")" : "none", stroke: pk && fl4 > 0.3 ? YEL : opt.stroke, strokeWidth: swD * (pk ? 1.2 : 0.9) }));
+      });
+      if (fl4 > 0.02) els.push(React.createElement("polygon", { key: kb + "ring", points: [[2.8, 1.25], [3.5, 1.25], [3.5, 1.95], [2.8, 1.95]].map(([x, y]) => S4(Pl(x, y, 0))).join(" "), fill: "none", stroke: YEL, strokeOpacity: 0.6 * fl4, strokeWidth: swD, strokeDasharray: "4 3", strokeLinejoin: "miter" }));
+      // the prototype rises from the friction point
+      const rs4 = st4(0.62, 0.86);
+      if (rs4 > 0.02) {
+        const AP4 = Pl(3.15, 1.6, 0.7 * rs4);
+        const B4 = [[2.92, 1.37], [3.38, 1.37], [3.38, 1.83], [2.92, 1.83]].map(([x, y]) => Pl(x, y, 0.02));
+        els.push(React.createElement("polygon", { key: kb + "pf1", points: S4(B4[1]) + " " + S4(B4[2]) + " " + S4(AP4), fill: "rgba(255,211,92," + (0.14 * rs4).toFixed(2) + ")" }));
+        els.push(React.createElement("polygon", { key: kb + "pf2", points: S4(B4[2]) + " " + S4(B4[3]) + " " + S4(AP4), fill: "rgba(255,211,92," + (0.08 * rs4).toFixed(2) + ")" }));
+        els.push(React.createElement("polygon", { key: kb + "pb", points: B4.map(S4).join(" "), fill: "none", stroke: YEL, strokeWidth: swD * 1.1, strokeLinejoin: "round" }));
+        B4.forEach((bp) => ln(bp, AP4, { stroke: YEL, strokeWidth: swD * 1.1, strokeOpacity: rs4 }));
+      }
+    } else if (arch === "laicon") {
+      // Landscape Agent — icon study 1c: live heightfield, three agents grazing it, contours re-plot. Hover runs the agents.
+      const anim9 = opt.anim;
+      const t9 = 7.3 + (anim9 == null ? 0 : anim9 * 20);
+      const P9 = (x, y, z) => Pl(x + 0.5, y + 0.5, z);
+      const ag9 = (kk, tq) => { const w1 = 0.21 + kk * 0.05, w2 = 0.16 + kk * 0.045, ph = kk * 2.1; return [1.5 + 1.05 * Math.sin(tq * w1 + ph), 1.5 + 1.05 * Math.sin(tq * w2 + ph * 1.7 + 1.2)]; };
+      const agents9 = [0, 1, 2].map((kk) => ag9(kk, t9));
+      const g9 = (x, y, cx, cy, amp, sg) => amp * Math.exp(-((x - cx) * (x - cx) + (y - cy) * (y - cy)) / (2 * sg * sg));
+      const h1x = 1.05 + 0.35 * Math.sin(t9 * 0.09), h1y = 1.25 + 0.3 * Math.cos(t9 * 0.07);
+      const h2x = 2.15 + 0.3 * Math.cos(t9 * 0.06 + 2), h2y = 2.0 + 0.35 * Math.sin(t9 * 0.08 + 1);
+      const zf9 = (x, y) => { let z = g9(x, y, h1x, h1y, 0.85, 0.62) + g9(x, y, h2x, h2y, 0.66, 0.5); agents9.forEach(([ax, ay]) => { z += g9(x, y, ax, ay, 0.4, 0.34); }); return z; };
+      const N9 = 10, F9 = [];
+      for (let i = 0; i <= N9; i++) { F9.push([]); for (let j = 0; j <= N9; j++) F9[i].push(zf9(i * 3 / N9, j * 3 / N9)); }
+      const pth9 = (pts) => pts.map((p, i) => (i ? "L " : "M ") + p[0].toFixed(1) + " " + p[1].toFixed(1)).join(" ");
+      const gp9 = (p) => p[0].toFixed(1) + "," + p[1].toFixed(1);
+      const skS9 = [], skE9 = [];
+      for (let i = 0; i <= N9; i++) { skS9.push(P9(i * 3 / N9, 3, F9[i][N9])); skE9.push(P9(3, i * 3 / N9, F9[N9][i])); }
+      els.push(React.createElement("polygon", { key: kb + "skS", points: [P9(0, 3, 0)].concat(skS9, [P9(3, 3, 0)]).map(gp9).join(" "), fill: "rgba(15,49,111,.8)", stroke: opt.stroke, strokeWidth: swD }));
+      els.push(React.createElement("polygon", { key: kb + "skE", points: [P9(3, 0, 0)].concat(skE9, [P9(3, 3, 0)]).map(gp9).join(" "), fill: "rgba(11,42,97,.85)", stroke: opt.stroke, strokeWidth: swD }));
+      for (let i = 0; i <= N9; i++) {
+        els.push(React.createElement("path", { key: kb + "mr" + i, d: pth9(Array.from({ length: N9 + 1 }, (_, j) => P9(i * 3 / N9, j * 3 / N9, F9[i][j]))), fill: "none", stroke: "rgba(234,242,255,.4)", strokeWidth: swD * 0.8 }));
+        els.push(React.createElement("path", { key: kb + "mc" + i, d: pth9(Array.from({ length: N9 + 1 }, (_, j) => P9(j * 3 / N9, i * 3 / N9, F9[j][i]))), fill: "none", stroke: "rgba(234,242,255,.4)", strokeWidth: swD * 0.8 }));
+      }
+      [0.52, 0.92].forEach((L, li) => {
+        for (let i = 0; i < N9; i++) for (let j = 0; j < N9; j++) {
+          const x0 = i * 3 / N9, y0 = j * 3 / N9, dx9 = 3 / N9;
+          const v = [F9[i][j], F9[i + 1][j], F9[i + 1][j + 1], F9[i][j + 1]];
+          const pts = [];
+          const edge = (va, vb, pa, pb) => { if ((va < L) !== (vb < L)) { const tt = (L - va) / (vb - va); pts.push([pa[0] + (pb[0] - pa[0]) * tt, pa[1] + (pb[1] - pa[1]) * tt]); } };
+          edge(v[0], v[1], [x0, y0], [x0 + dx9, y0]);
+          edge(v[1], v[2], [x0 + dx9, y0], [x0 + dx9, y0 + dx9]);
+          edge(v[2], v[3], [x0 + dx9, y0 + dx9], [x0, y0 + dx9]);
+          edge(v[3], v[0], [x0, y0 + dx9], [x0, y0]);
+          for (let pi = 0; pi + 1 < pts.length; pi += 2) {
+            const a = P9(pts[pi][0], pts[pi][1], L), b = P9(pts[pi + 1][0], pts[pi + 1][1], L);
+            els.push(React.createElement("line", { key: kb + "ct" + li + "_" + i + "_" + j + "_" + pi, x1: a[0].toFixed(1), y1: a[1].toFixed(1), x2: b[0].toFixed(1), y2: b[1].toFixed(1), stroke: li ? "rgba(255,211,92,.7)" : "rgba(234,242,255,.6)", strokeWidth: swD * (li ? 1.1 : 0.85) }));
+          }
+        }
+      });
+      for (let kk = 0; kk < 3; kk++) {
+        const pts = [];
+        for (let a = 8; a >= 1; a--) { const [tx, ty] = ag9(kk, t9 - a * 0.55); pts.push(P9(tx, ty, zf9(tx, ty) + 0.03)); }
+        els.push(React.createElement("path", { key: kb + "tr" + kk, d: pth9(pts), fill: "none", stroke: "rgba(255,211,92,.38)", strokeWidth: swD * 0.9, strokeDasharray: "2 4" }));
+      }
+      agents9.forEach(([ax, ay], kk) => {
+        const az = zf9(ax, ay) + 0.02, hh = 0.1;
+        els.push.apply(els, this.prism(P9, [[ax - hh, ay - hh], [ax + hh, ay - hh], [ax + hh, ay + hh], [ax - hh, ay + hh]], az, az + 0.22, kb + "ag" + kk, { stroke: opt.stroke, sw: swD * 1.2, fillT: "rgba(255,211,92,.3)", fillL: "#0f316f", fillR: "#0b2a61" }));
+        const vx = Math.cos(t9 * (0.21 + kk * 0.05) + kk * 2.1), vy = Math.sin(t9 * (0.16 + kk * 0.045) + kk * 3.5 + 1.2);
+        const L2 = Math.hypot(vx, vy) || 1, hx = ax + 0.34 * vx / L2, hy = ay + 0.34 * vy / L2;
+        ln(P9(ax, ay, az + 0.12), P9(hx, hy, zf9(hx, hy) + 0.14), { stroke: YEL, strokeWidth: swD * 1.4 });
+      });
     } else if (arch === "mcpicon") {
       // 3a "canvas as plan": prompt slab, floating node graph, wire corridors, twisting stack. Hover (opt.anim) runs the pipeline; opt.flat crossfades prompt ticks plan⇄face.
       const fl = opt.flat || 0, anim = opt.anim;
@@ -718,44 +856,156 @@ class Component extends DCLogic {
         els.push(React.createElement("circle", { key: kb + "ims", cx: sun[0].toFixed(1), cy: sun[1].toFixed(1), r: (swD * 3).toFixed(1), fill: "none", stroke: YEL, strokeWidth: swD, opacity: im.toFixed(2) }));
       }
     } else if (arch === "c2icon") {
-      // Code2Code — sky exposure plane cuts the envelope; yellow FAR floors stack inside (see icon9 comments).
+      // Code2Code — see icon9 in Project - Code2Code.dc.html; developed in plan first.
       const anim = opt.anim;
       const stg = (a, b) => (anim == null ? 1 : this.ss(anim, a, b));
       const S9 = (pp) => pp[0].toFixed(1) + "," + pp[1].toFixed(1);
-    // Sky exposure plane → envelope → buildable floors: the dashed plane leans back from the street,
-    // cuts the extruded lot into the zoning envelope, and the usable form stacks up inside as yellow
-    // FAR floor plates stepping back under the slope (cf. the "three height districts" zoning diagrams).
-    // Plan: street line, plane footprint, envelope rect, nested floor outlines — all readable on the ground.
-    const po9 = (pts, o2) => els.push(React.createElement("polygon", Object.assign({ key: "q" + els.length, points: pts.map(([x, y, z]) => S9(Pl(x, y, z))).join(" "), strokeLinejoin: "round" }, o2)));
-    const p1 = stg(0.03, 0.2), p2 = stg(0.24, 0.42);
-    if (p1 > 0.01) ln(Pl(0.3, 3.8, 0), Pl(0.3 + 3.4 * p1, 3.8, 0), { stroke: YEL, strokeOpacity: 0.85, strokeWidth: swD * 1.05 * 1.2, strokeDasharray: "6 4" });
-    if (p2 > 0.01) {
-      const zs = (z) => z * p2;
-      const eo = { fill: "rgba(234,242,255,.05)", stroke: opt.stroke, strokeOpacity: 0.75, strokeWidth: opt.sw * 0.85, strokeDasharray: opt.dash || null };
-      po9([[0.6, 0.5, 0], [3.4, 0.5, 0], [3.4, 0.5, zs(2.4)], [0.6, 0.5, zs(2.4)]], eo);
-      po9([[0.6, 3.3, 0], [0.6, 3.3, zs(1.075)], [0.6, 1.53, zs(2.4)], [0.6, 0.5, zs(2.4)], [0.6, 0.5, 0]], eo);
-      po9([[0.6, 1.53, zs(2.4)], [3.4, 1.53, zs(2.4)], [3.4, 0.5, zs(2.4)], [0.6, 0.5, zs(2.4)]], eo);
-      po9([[0.6, 3.3, zs(1.075)], [3.4, 3.3, zs(1.075)], [3.4, 1.53, zs(2.4)], [0.6, 1.53, zs(2.4)]], eo);
-      po9([[3.4, 3.3, 0], [3.4, 3.3, zs(1.075)], [3.4, 1.53, zs(2.4)], [3.4, 0.5, zs(2.4)], [3.4, 0.5, 0]], eo);
-      po9([[0.6, 3.3, 0], [3.4, 3.3, 0], [3.4, 3.3, zs(1.075)], [0.6, 3.3, zs(1.075)]], eo);
+      const LN = opt.stroke, FT = opt.fillT, FL = opt.fillL, FR = opt.fillR;
+      // Plan first: the street line and the setback contours draw flat on the lot — three nested tier
+    // footprints stepping back from the street plus the tower rectangle over the rear quarter — then each
+    // contour extrudes into its tier, and the dashed sky exposure plane (z = 0.35 + setback, slope 1:1)
+    // grazes every tier nose; the yellow tower punches through it (the 25% rule). Plan alone = full diagram.
+    const po9 = (pts, o2) => els.push(React.createElement("polygon", Object.assign({ key: kb + "q" + els.length, points: pts.map(([x, y, z]) => S9(Pl(x, y, z))).join(" "), strokeLinejoin: "round" }, o2)));
+    const fl9 = opt.flat || 0;
+    const T9 = [[0.6, 3.4, 3.3, 0, 0.85], [0.6, 3.4, 2.55, 0.85, 1.6], [0.6, 3.4, 1.8, 1.6, 2.3], [1.35, 2.65, 1.45, 2.3, 3.15]];
+    const p1 = stg(0.03, 0.16);
+    if (p1 > 0.01) ln(Pl(0.3, 3.8, 0), Pl(0.3 + 3.4 * p1, 3.8, 0), { stroke: YEL, strokeOpacity: 0.85, strokeWidth: swD * 1.25, strokeDasharray: "6 4" });
+    T9.forEach(([x0, x1, yN], i) => {
+      const cf = stg(0.14 + i * 0.05, 0.24 + i * 0.05);
+      if (cf <= 0.01) return;
+      po9([[x0, 0.5, 0], [x1, 0.5, 0], [x1, yN, 0], [x0, yN, 0]], { fill: "none", stroke: YEL, strokeOpacity: (0.55 * cf).toFixed(2), strokeWidth: swD * 0.9, strokeDasharray: "4 3" });
+    });
+    T9.forEach(([x0, x1, yN, z0, z1], i) => {
+      const e = stg(0.4 + i * 0.13, 0.54 + i * 0.13);
+      if (e <= 0.01) return;
+      const fp9 = [[x0, 0.5], [x1, 0.5], [x1, yN], [x0, yN]];
+      prism(fp9, z0, z0 + (z1 - z0) * e, i === 3 ? { stroke: "rgba(255,211,92,.9)", fillT: "rgba(255,211,92,.45)", fillL: "rgba(255,211,92,.22)", fillR: "rgba(255,211,92,.16)" } : undefined);
+    });
+    const p3 = stg(0.3, 0.55);
+    if (p3 > 0.01 && fl9 < 0.97) {
+      const vF = 3.8 - 2.0 * p3, zF = 0.35 + (3.8 - vF);
+      po9([[0.6, 3.8, 0.35], [3.4, 3.8, 0.35], [3.4, vF, zF], [0.6, vF, zF]], { fill: "rgba(255,211,92,.06)", stroke: YEL, strokeOpacity: (0.9 * (1 - fl9)).toFixed(2), strokeWidth: swD * 1.15, strokeDasharray: "6 4" });
+      ln(Pl(0.6, 3.8, 0), Pl(0.6, 3.8, 0.35), { stroke: YEL, strokeOpacity: 0.7 * (1 - fl9), strokeWidth: swD, strokeDasharray: "3 3" });
+      ln(Pl(3.4, 3.8, 0), Pl(3.4, 3.8, 0.35), { stroke: YEL, strokeOpacity: 0.7 * (1 - fl9), strokeWidth: swD, strokeDasharray: "3 3" });
     }
-    for (let i = 0; i < 8; i++) {
-      const gf = stg(0.46 + i * 0.045, 0.54 + i * 0.045);
-      if (gf <= 0.01) continue;
-      const zi = 0.12 + i * 0.28;
-      const vm = Math.min(3.1, 3.8 - (zi + 0.09 - 0.7) / 0.75);
-      if (vm < 1.0) continue;
-      const fe = this.prism(Pl, [[0.8, 0.7], [3.2, 0.7], [3.2, vm], [0.8, vm]], zi, zi + 0.09, "fl" + i, { stroke: "rgba(255,211,92,.9)", sw: opt.sw * 0.6, fillT: "rgba(255,211,92,.45)", fillL: "rgba(255,211,92,.22)", fillR: "rgba(255,211,92,.16)" });
-      els.push(React.createElement("g", { key: "flg" + i, opacity: gf.toFixed(2) }, fe));
-    }
-    if (p1 > 0.01) {
-      const vF = 3.8 - 2.27 * p1, zF = 0.7 + 0.75 * (3.8 - vF);
-      po9([[0.6, 3.8, 0.7], [3.4, 3.8, 0.7], [3.4, vF, zF], [0.6, vF, zF]], { fill: "rgba(255,211,92,.06)", stroke: YEL, strokeOpacity: 0.9, strokeWidth: swD * 1.05 * 1.1, strokeDasharray: "6 4" });
-      ln(Pl(0.6, 3.8, 0), Pl(0.6, 3.8, 0.7), { stroke: YEL, strokeOpacity: 0.7 * p1, strokeWidth: swD * 1.05, strokeDasharray: "3 3" });
-      ln(Pl(3.4, 3.8, 0), Pl(3.4, 3.8, 0.7), { stroke: YEL, strokeOpacity: 0.7 * p1, strokeWidth: swD * 1.05, strokeDasharray: "3 3" });
-    }
-    return els;
-    } else if (arch === "bridge") {    } else if (arch === "bridge") {
+    
+    } else if (arch === "hacicon") {
+      // Human-AI Co-Design — see icon11 in Icon Studies; no boxes: the human's freehand stroke
+      // and the machine's orthogonal node path arrive at the two ends of one spine; plan ribs
+      // rise into a gridshell, nodes evaluate, ribs settle, the yellow ridge is the agreed line.
+      const anim = opt.anim;
+      const stg = (a, b) => (anim == null ? 1 : this.ss(anim, a, b));
+      const S0 = (pp) => pp[0].toFixed(1) + "," + pp[1].toFixed(1);
+      const qd = (PTS, key, o, prog) => {
+        let d = "M " + PTS[0][0].toFixed(1) + " " + PTS[0][1].toFixed(1);
+        for (let i = 1; i < PTS.length - 1; i++) { const mx = (PTS[i][0] + PTS[i + 1][0]) / 2, my = (PTS[i][1] + PTS[i + 1][1]) / 2; d += " Q " + PTS[i][0].toFixed(1) + " " + PTS[i][1].toFixed(1) + " " + mx.toFixed(1) + " " + my.toFixed(1); }
+        const lp2 = PTS[PTS.length - 1];
+        d += " L " + lp2[0].toFixed(1) + " " + lp2[1].toFixed(1);
+        els.push(React.createElement("path", Object.assign({ key, d, fill: "none", strokeLinecap: "round", strokeLinejoin: "round", pathLength: 1, strokeDasharray: 1, strokeDashoffset: (1 - Math.min(1, Math.max(0, prog))).toFixed(3) }, o)));
+      };
+      const H = [[0.35, 3.62], [0.85, 3.38], [0.55, 3.05], [1.02, 2.88], [0.72, 2.62], [1.05, 2.55]];
+      const sk = stg(0.02, 0.13);
+      if (sk > 0.01) qd(H.map(([x, y]) => Pl(x, y, 0)), kb + "sk", { stroke: YEL, strokeWidth: swD * 1.6 }, sk);
+      const M = [[3.68, 0.38], [3.68, 0.95], [3.15, 0.95], [3.15, 1.45]];
+      for (let i = 0; i < 3; i++) {
+        const pv = stg(0.05 + i * 0.03, 0.09 + i * 0.03);
+        if (pv > 0.01) ln(Pl(M[i][0], M[i][1], 0), Pl(M[i][0] + (M[i + 1][0] - M[i][0]) * pv, M[i][1] + (M[i + 1][1] - M[i][1]) * pv, 0), { strokeOpacity: 0.85, strokeWidth: swD });
+      }
+      M.forEach(([x, y], i) => {
+        const ap = stg(0.04 + i * 0.03, 0.06 + i * 0.03);
+        if (ap <= 0.01) return;
+        const lit = stg(0.56 + i * 0.025, 0.6 + i * 0.025);
+        const hh = 0.08;
+        els.push(React.createElement("polygon", { key: kb + "nd" + i, points: [[x - hh, y - hh], [x + hh, y - hh], [x + hh, y + hh], [x - hh, y + hh]].map(([a2, b2]) => S0(Pl(a2, b2, 0))).join(" "), fill: lit > 0.5 ? "rgba(255,211,92,.55)" : "none", stroke: lit > 0.5 ? YEL : "rgba(234,242,255," + (0.8 * ap).toFixed(2) + ")", strokeWidth: swD * 0.85 }));
+      });
+      const SP = [[1.05, 2.55], [1.55, 2.38], [2.1, 2.0], [2.65, 1.66], [3.15, 1.45]];
+      const sp = stg(0.14, 0.25);
+      if (sp > 0.01) qd(SP.map(([x, y]) => Pl(x, y, 0)), kb + "sp", { stroke: YEL, strokeOpacity: 0.9, strokeWidth: swD * 1.25 }, sp);
+      const RIB = [[1.28, 2.47, 0.32, 0.94, 0.5, 0.55], [1.65, 2.31, 0.42, 0.91, 0.68, 0.85], [2.02, 2.06, 0.52, 0.86, 0.8, 1.05], [2.42, 1.8, 0.5, 0.87, 0.8, 1.05], [2.79, 1.58, 0.42, 0.9, 0.66, 0.85], [3.04, 1.49, 0.36, 0.93, 0.48, 0.6]];
+      const apex = [];
+      RIB.forEach(([cx, cy, nx, ny, w, h], i) => {
+        const A = Pl(cx - nx * w, cy - ny * w, 0), B2 = Pl(cx + nx * w, cy + ny * w, 0);
+        const pl2 = stg(0.24 + i * 0.03, 0.31 + i * 0.03);
+        if (pl2 > 0.01) ln(A, B2, { strokeOpacity: (0.5 * pl2).toFixed(2), strokeWidth: swD * 0.85 });
+        const gh = stg(0.38 + i * 0.03, 0.48 + i * 0.03), st2 = stg(0.62 + i * 0.03, 0.72 + i * 0.03);
+        const arc = (hh2, o) => { const C = Pl(cx, cy, hh2 * 2); els.push(React.createElement("path", Object.assign({ key: kb + "rb" + els.length, d: "M " + A[0].toFixed(1) + " " + A[1].toFixed(1) + " Q " + C[0].toFixed(1) + " " + C[1].toFixed(1) + " " + B2[0].toFixed(1) + " " + B2[1].toFixed(1), fill: "none" }, o))); };
+        if (gh > 0.01 && st2 < 0.97) arc(h * 1.35 * gh, { stroke: "rgba(234,242,255,.5)", strokeWidth: swD * 0.8, strokeDasharray: "4 4", opacity: (1 - st2).toFixed(2) });
+        if (st2 > 0.01) arc(h, { stroke: opt.stroke, strokeWidth: swD * 1.1, opacity: st2.toFixed(2) });
+        apex.push(Pl(cx, cy, h));
+      });
+      const rd = stg(0.8, 0.9);
+      if (rd > 0.01) qd(apex, kb + "rd", { stroke: YEL, strokeWidth: swD * 1.35 }, rd);
+      if (anim != null) {
+        const fp = (anim - 0.91) / 0.08;
+        if (fp > 0 && fp < 1) {
+          const u = (1 - fp) * (SP.length - 1), i2 = Math.min(SP.length - 2, Math.floor(u)), f2 = u - i2;
+          const c2 = Pl(SP[i2][0] + (SP[i2 + 1][0] - SP[i2][0]) * f2, SP[i2][1] + (SP[i2 + 1][1] - SP[i2][1]) * f2, 0);
+          els.push(React.createElement("circle", { key: kb + "pu", cx: c2[0].toFixed(1), cy: c2[1].toFixed(1), r: swD * 2.8, fill: YEL }));
+        }
+      }
+    } else if (arch === "plicon") {
+      // Generative Planting — see icon12 in Icon Studies: terrain + trees, a different mark per
+      // species. Contours lift into terraces, the sweep places plan symbols, each grows a tree.
+      const anim = opt.anim;
+      const stg = (a, b) => (anim == null ? 1 : this.ss(anim, a, b));
+      const gs = (o2) => "rgba(122,224,178," + o2 + ")";
+      const SH = [[1.0, 0.12], [0.62, 0.72], [-0.05, 0.98], [-0.72, 0.66], [-1.02, 0.02], [-0.66, -0.62], [0.02, -0.95], [0.7, -0.66]];
+      const blob = (bx, by, k2, z, o) => {
+        const q = SH.map(([dx, dy]) => Pl(bx + dx * k2, by + dy * k2, z));
+        const md = (a2, b2) => ((a2[0] + b2[0]) / 2).toFixed(1) + " " + ((a2[1] + b2[1]) / 2).toFixed(1);
+        let d = "M " + md(q[7], q[0]);
+        for (let i = 0; i < 8; i++) d += " Q " + q[i][0].toFixed(1) + " " + q[i][1].toFixed(1) + " " + md(q[i], q[(i + 1) % 8]);
+        els.push(React.createElement("path", Object.assign({ key: kb + "b" + els.length, d: d + " Z", strokeLinejoin: "round" }, o)));
+      };
+      [[2.0, 2.1, 1.55], [1.85, 1.95, 0.85]].forEach(([bx, by, k2], i) => {
+        const cf = stg(0.03 + i * 0.05, 0.13 + i * 0.05);
+        if (cf > 0.01) blob(bx, by, k2, 0, { fill: "none", stroke: YEL, strokeOpacity: (0.5 * cf).toFixed(2), strokeWidth: swD * 0.9, strokeDasharray: "4 3" });
+      });
+      const l1 = stg(0.15, 0.26), l2 = stg(0.21, 0.33);
+      const z1 = 0.3 * l1, z2 = z1 + 0.32 * l2;
+      if (l1 > 0.02) {
+        [0, 1, 7].forEach((ix) => { const [dx, dy] = SH[ix]; ln(Pl(2.0 + dx * 1.55, 2.1 + dy * 1.55, z1), Pl(2.0 + dx * 1.55, 2.1 + dy * 1.55, 0), { strokeOpacity: 0.35, strokeWidth: swD * 0.85 }); });
+        blob(2.0, 2.1, 1.55, z1, { fill: opt.fillL, stroke: opt.stroke, strokeWidth: swD });
+      }
+      if (l2 > 0.02) {
+        [0, 1, 7].forEach((ix) => { const [dx, dy] = SH[ix]; ln(Pl(1.85 + dx * 0.85, 1.95 + dy * 0.85, z2), Pl(1.85 + dx * 0.85, 1.95 + dy * 0.85, z1), { strokeOpacity: 0.35, strokeWidth: swD * 0.85 }); });
+        blob(1.85, 1.95, 0.85, z2, { fill: opt.fillT, stroke: opt.stroke, strokeWidth: swD });
+      }
+      if (anim != null) {
+        const swp = (anim - 0.34) / 0.26;
+        if (swp > 0 && swp < 1) ln(Pl(0.1, 0.1 + 3.8 * swp, 0), Pl(3.9, 0.1 + 3.8 * swp, 0), { stroke: YEL, strokeOpacity: 0.75, strokeWidth: swD * 1.1, strokeDasharray: "6 4" });
+      }
+      const ZT = [0, z1, z2];
+      const TREES = [[1.05, 1.3, "c", 1.15, 1], [1.5, 0.95, "c", 0.95, 1], [1.55, 1.6, "r", 0.8, 2], [0.85, 2.6, "c", 0.8, 1], [2.45, 1.1, "l", 0.9, 1], [3.15, 0.5, "b", 0.55, 0], [0.45, 3.3, "b", 0.55, 0], [1.9, 1.95, "r", 1.2, 2, 1], [2.85, 1.35, "l", 0.85, 1], [1.35, 3.0, "r", 0.65, 1], [2.25, 2.3, "r", 0.95, 2], [2.95, 2.2, "r", 0.75, 1], [2.55, 3.0, "r", 0.6, 1], [3.7, 2.5, "b", 0.5, 0]];
+      TREES.forEach(([x, y, tp, sz, ter, yl], ti) => {
+        const zb = ZT[ter];
+        const sym = stg(0.34 + y * 0.066, 0.41 + y * 0.066);
+        const ex = tp === "b" ? 0 : stg(0.56 + y * 0.05, 0.7 + y * 0.05);
+        if (sym <= 0.01) return;
+        const C = Pl(x, y, zb);
+        if (tp === "b") { [[-4, -7], [0, -9], [4, -7]].forEach(([ox, oy], j) => ln([C[0], C[1]], [C[0] + ox * sz * 1.4 * k, C[1] + oy * sz * 1.4 * k], { stroke: gs((0.8 * sym).toFixed(2)), strokeWidth: swD, strokeLinecap: "round" })); return; }
+        const so = gs((0.7 * sym * (1 - 0.5 * ex)).toFixed(2));
+        if (tp === "r") els.push(React.createElement("circle", { key: kb + "ps" + ti, cx: C[0].toFixed(1), cy: C[1].toFixed(1), r: (sz * 13 * k * sym).toFixed(1), fill: "none", stroke: so, strokeWidth: swD * 0.8 }));
+        else if (tp === "c") {
+          els.push(React.createElement("circle", { key: kb + "ps" + ti, cx: C[0].toFixed(1), cy: C[1].toFixed(1), r: (sz * 9 * k * sym).toFixed(1), fill: "none", stroke: so, strokeWidth: swD * 0.8 }));
+          [[1, 1], [-1, 1], [1, -1], [-1, -1]].forEach(([qx, qy], j) => ln([C[0] + qx * sz * 7 * k, C[1] + qy * sz * 5 * k], [C[0] + qx * sz * 11 * k, C[1] + qy * sz * 8 * k], { stroke: so, strokeWidth: swD * 0.8 }));
+        } else els.push(React.createElement("ellipse", { key: kb + "ps" + ti, cx: C[0].toFixed(1), cy: C[1].toFixed(1), rx: (sz * 7 * k * sym).toFixed(1), ry: (sz * 4 * k * sym).toFixed(1), fill: "none", stroke: so, strokeWidth: swD * 0.8 }));
+        if (ex > 0.01) {
+          if (tp === "r") {
+            const T2 = Pl(x, y, zb + 0.72 * sz * ex);
+            ln(C, T2, { strokeOpacity: 0.85, strokeWidth: swD * 0.9 });
+            els.push(React.createElement("circle", { key: kb + "cn" + ti, cx: T2[0].toFixed(1), cy: T2[1].toFixed(1), r: (sz * 15 * k * ex).toFixed(1), fill: yl ? "rgba(255,211,92,.2)" : gs(0.15), stroke: yl ? YEL : opt.stroke, strokeWidth: swD }));
+          } else if (tp === "c") {
+            const A2 = Pl(x, y, zb + 1.15 * sz * ex), B3 = Pl(x, y, zb + 0.04);
+            els.push(React.createElement("polygon", { key: kb + "cn" + ti, points: A2[0].toFixed(1) + "," + A2[1].toFixed(1) + " " + (B3[0] - sz * 11 * k * ex).toFixed(1) + "," + B3[1].toFixed(1) + " " + (B3[0] + sz * 11 * k * ex).toFixed(1) + "," + B3[1].toFixed(1), fill: gs(0.13), stroke: opt.stroke, strokeWidth: swD * 0.95, strokeLinejoin: "round" }));
+          } else {
+            const md2 = Pl(x, y, zb + 0.55 * sz * ex);
+            ln(C, Pl(x, y, zb + 0.14), { strokeOpacity: 0.8, strokeWidth: swD * 0.9 });
+            els.push(React.createElement("ellipse", { key: kb + "cn" + ti, cx: md2[0].toFixed(1), cy: md2[1].toFixed(1), rx: (sz * 5 * k).toFixed(1), ry: (sz * 16 * k * ex).toFixed(1), fill: gs(0.13), stroke: opt.stroke, strokeWidth: swD * 0.95 }));
+          }
+        }
+      });
+    } else if (arch === "bridge") {
       prism(rect(0.2, 1.2, 1.2, 2.8), 0, 2.0);
       prism(rect(2.8, 1.2, 3.8, 2.8), 0, 2.0);
       prism(rect(0.2, 1.55, 3.8, 2.45), 2.0, 2.4);
@@ -780,7 +1030,7 @@ class Component extends DCLogic {
     const CW = EI * C30, SH = EI * 0.5;
     const basis = (t) => ({ ux: EP + (CW - EP) * t, uy: SH * t, vx: -CW * t, vy: EP + (SH - EP) * t, wz: EI * t });
 
-    const U0 = -3, U1 = 54, V0 = -3, V1 = 31;
+    const U0 = -3, U1 = 63, V0 = -3, V1 = 31;
     const cU = (U0 + U1) / 2, cV = (V0 + V1) / 2;
     const fitInfo = (t, pw, ph) => {
       const Bt = basis(t);
@@ -797,8 +1047,10 @@ class Component extends DCLogic {
     };
     const FP = fitInfo(0, 0.9, 0.82), FA = fitInfo(1, 0.94, 0.92);
     const fp = FP.z, fa = FA.z;
-    // Chapter zoom: research (widest, 30 modules) fits at the left margin; 21-module frame height plus the title band fit vertically.
-    const zCh = Math.min(vw * 0.9 / (35 * EP), (vh * 0.88 - 50) / (19 * EP));
+    // Chapter zoom: width-driven — the 30-module frame always shows at full width; the frame bottom
+    // adapts to the viewport (a bit more than one module of ground below), and overflow scrolls inside.
+    const zCh = vw * 0.9 / (34.5 * EP);
+    const chFrB = -2 + Math.max(12, Math.floor(vh * 0.84 / (EP * zCh) - 1.2)); // shared frame bottom (v)
     const ctr = (F, z) => ({ ax: 0.5 - F.ox * z / vw, ay: 0.5 - F.oy * z / vh });
     const aX = ctr(FA, fa * 0.97);
     aX.ax += 0.02;
@@ -810,8 +1062,8 @@ class Component extends DCLogic {
       // to the same screen point, so title + first icon sit in the identical spot on every chapter page.
       { p: 0.27, t: 0, u: -2, v: -2, z: zCh, ax: 0.07, ay: 0.16 },
       { p: 0.42, t: 0, u: -2, v: -2, z: zCh, ax: 0.07, ay: 0.16 },
-      { p: 0.5, t: 0, u: 32, v: -2, z: zCh, ax: 0.07, ay: 0.16 },
-      { p: 0.64, t: 0, u: 32, v: -2, z: zCh, ax: 0.07, ay: 0.16 },
+      { p: 0.5, t: 0, u: 33, v: -2, z: zCh, ax: 0.07, ay: 0.16 },
+      { p: 0.64, t: 0, u: 33, v: -2, z: zCh, ax: 0.07, ay: 0.16 },
       { p: 0.7, t: 0, u: 19, v: 23, z: zCh, ax: 0.07, ay: 0.16 },
       { p: 0.76, t: 0, u: 19, v: 23, z: zCh, ax: 0.07, ay: 0.16 },
       { p: 0.8, t: 0, u: 36, v: 23, z: zCh, ax: 0.07, ay: 0.16 },
@@ -838,9 +1090,9 @@ class Component extends DCLogic {
     const bR = this.bell(p, 0.27, 0.42, 0.028);
     const bT = this.bell(p, 0.5, 0.64, 0.028);
     const bJ = this.bell(p, 0.7, 0.76, 0.028);
-    const bA = this.bell(p, 0.8, 0.86, 0.03); // About: text page over a dimmed map, now after Join
-    const rScroll = this.state.rScroll || 0, rShift = rScroll * 10.5; // research-frame scroll mock
-    const tScroll = this.state.tScroll || 0, tShift = tScroll * 10.5; // teaching-frame scroll mock
+    const bA = this.bell(p, 0.8, 0.86, 0.03); // People: a normal chapter view on the map, after Join
+    const rScroll = this.state.rScroll || 0, rShift = rScroll * Math.max(0, 22 - chFrB); // research-frame scroll
+    const tScroll = this.state.tScroll || 0, tShift = tScroll * Math.max(0, 28 - chFrB); // teaching-frame scroll
     const dO = {
       research: this.c01(1 - (bT + bJ + bA) * (1 - dim)),
       teaching: this.c01(1 - (bR + bJ + bA) * (1 - dim)),
@@ -896,7 +1148,8 @@ class Component extends DCLogic {
 
     const members = {};
     MAPPED.forEach((m) => { if (m.map.off) return; (members[m.dist] = members[m.dist] || []).push(m); });
-    const zoomFade = 1 - this.ss(zf, 2.6, 3.4);
+    const zChf = zCh / fa; // fade plan text only when zoomed well past the chapter view
+    const zoomFade = 1 - this.ss(zf, Math.max(2.6, zChf * 1.2), Math.max(3.4, zChf * 1.6));
     const S = (pt) => pt[0].toFixed(1) + "," + pt[1].toFixed(1);
     const flatTag = (key, x, y, txt, col, fs, op) => {
       const chw = fs * 0.78, rh = fs * 1.45;
@@ -920,6 +1173,11 @@ class Component extends DCLogic {
     const distFrames = {};
     Object.keys(members).forEach((id) => {
       const fr = frameOf(members[id], 2);
+      // Research & Teaching share one fixed-width frame in the flat chapter view (equal size, overflow
+      // scrolls); on the axon overview the frame grows to wrap every block inside it.
+      const axB = this.ss(cam.t, 0.3, 0.7);
+      if (id === "research") { const bbB = fr[3]; fr[0] = -2; fr[1] = -2; fr[2] = 31; fr[3] = chFrB + (Math.max(bbB, chFrB) - chFrB) * axB; }
+      if (id === "teaching") { const bbB = fr[3]; fr[0] = 33; fr[1] = -2; fr[2] = 66; fr[3] = chFrB + (Math.max(bbB, chFrB) - chFrB) * axB; }
       distFrames[id] = fr;
       const col = DIST[id];
       const zo = dO[id] * zoomFade;
@@ -938,6 +1196,41 @@ class Component extends DCLogic {
       zzE.push(React.createElement("polygon", { key: "sz" + si, points: frPts(fr).map(S).join(" "), fill: sz.color, fillOpacity: 0.05 * chB * zo, stroke: sz.color, strokeOpacity: (0.24 + 0.55 * chB) * zo, strokeWidth: 1, strokeDasharray: "3 3", strokeLinejoin: "miter" }));
       zzT.push(flatTag("st" + si, fr[0], fr[1] - 0.75, sz.lbl.toUpperCase(), sz.color, 0.48, this.c01(zo)));
     });
+    // Course archive — a plain list written on the plan, no blocks.
+    {
+      const zoA = this.c01(dO.teaching * zoomFade) * this.c01(1 - cam.t * 1.3); // plan text: flat chapter view only, never on the axon
+      if (zoA > 0.02) {
+        tzTags.push(flatTag("arcT", 34, 16.4 - tShift, "COURSE ARCHIVE", CAT.archive, 0.55, zoA));
+        const flatTxt = (key, x, y, txt, col, fs) => {
+          const np2 = P(x, y, 0);
+          const m2 = "matrix(" + (B.ux * cam.z).toFixed(3) + " " + (B.uy * cam.z).toFixed(3) + " " + (B.vx * cam.z).toFixed(3) + " " + (B.vy * cam.z).toFixed(3) + " " + np2[0].toFixed(1) + " " + np2[1].toFixed(1) + ")";
+          return React.createElement("text", { key, transform: m2, fontSize: fs, fill: col, letterSpacing: ".08em", fontFamily: "'IBM Plex Mono',monospace", opacity: zoA.toFixed(3) }, txt);
+        };
+        const ARC = [
+          ["UBC SALA", [
+            "ARCH 501: Architecture Studio II — Everyday Assemblies",
+          ]],
+          ["UNIVERSITY OF SOUTHERN CALIFORNIA", [
+            "ARCH 639: Media for Landscape Architecture III — Dynamic Systems · Fall 2022–2024",
+            "ARCH 548: Media for Landscape Architecture II — 3D Design · Spring 2023",
+            "ARCH 539: Media for Landscape Architecture I · Fall 2022",
+            "ARCH 439: Landscape Foundation Workshop · Fall 2022–2024",
+          ]],
+          ["UNIVERSITY OF VIRGINIA", [
+            "LAR 7500: Responsive Landscapes · Spring 2021–2022",
+            "ARCH/LAR 6710: Design Computation I · Fall 2020–2021",
+            "ALAR 5010/5020/5030: Introduction to Design / Design Visualization / Design Theory & Analysis · Summer 2021–2022",
+          ]],
+        ];
+        let ay = 18.0 - tShift;
+        ARC.forEach(([sch, rows], gi) => {
+          tzTags.push(flatTxt("arcS" + gi, 34, ay, sch, CAT.archive, 0.42));
+          ay += 0.85;
+          rows.forEach((t2, i2) => { tzTags.push(flatTxt("arcL" + gi + "_" + i2, 34, ay, t2, "rgba(234,242,255,.58)", 0.4)); ay += 0.78; });
+          ay += 0.5;
+        });
+      }
+    }
     sceneEls.push(React.createElement("g", { key: "zones" }, zEls));
     // Chapter titles: name + brief drawn in the plan, top-left aligned to the district frame (pushed above models later).
     const CH_DESC = {
@@ -1019,7 +1312,7 @@ class Component extends DCLogic {
       const hot = hover === m.id;
       const ghost = m.status === "archive";
       const draft = m.status === "in press";
-      const isDash = (m.cat === "archive" && !m.map.arch) || m.ph;
+      const isDash = (m.ph || !m.href || (m.cat === "archive" && !m.map.arch)) && m.map.arch !== "person";
       const isFlat = m.cat === "students" && fpOf(m) <= 2;
       const stroke = hot ? YEL : ghost ? "rgba(234,242,255,.55)" : LN;
       const shapes = (isDash || isFlat) ? [] : this.shapesFor(Pl, m.map.arch, {
@@ -1040,7 +1333,7 @@ class Component extends DCLogic {
         cardEls.push(React.createElement("polygon", { key: "dz", points: cpts.map(S).join(" "), fill: "rgba(234,242,255,.03)", stroke: hot ? YEL : "rgba(234,242,255,.5)", strokeWidth: hot ? 1.4 : 1, strokeDasharray: "5 5", strokeLinejoin: "miter" }));
         const cc = P(m.map.u + hf / 2, mv + hf / 2, 0);
         const fsD = 0.3 * EP * cam.z, availD = (hf - 0.5) * EP * cam.z;
-        const txtD = m.title.toUpperCase();
+        const txtD = (m.lbl || m.title).toUpperCase();
         const dAttrs = { key: "dt", x: cc[0].toFixed(1), y: cc[1].toFixed(1), fontSize: fsD.toFixed(1), fill: hot ? YEL : "rgba(234,242,255,.6)", textAnchor: "middle", fontFamily: "'IBM Plex Mono',monospace", letterSpacing: ".12em" };
         if (txtD.length * fsD * 0.68 > availD) { dAttrs.textLength = availD.toFixed(1); dAttrs.lengthAdjust = "spacingAndGlyphs"; }
         cardEls.push(React.createElement("text", dAttrs, txtD));
@@ -1088,7 +1381,7 @@ class Component extends DCLogic {
     const endHide = this.ss(p, 0.87, 0.92);
     const tagEls = [], rTagEls = [], tTagEls = [];
     MAPPED.forEach((m) => {
-      if (m.ph || (m.cat === "archive" && !m.map.arch)) return;
+      if (m.ph || (!m.href && m.map.arch !== "person")) return;
       const lf = fpOf(m);
       const mv = m.map.v + (m.dist === "research" ? -rShift : m.dist === "teaching" ? -tShift : 0);
       const np0 = P(m.map.u + lf / 2, mv + lf + 0.4, 0);
@@ -1121,7 +1414,8 @@ class Component extends DCLogic {
         const need = Math.max(...lines.map((lt) => lt.length)) * wf * fs + padX + 0.18;
         const pw2 = Math.max(pw, Math.min(need, isWr ? 4 : lf + 1.7));
         const avail2 = pw2 - padX - 0.18;
-        const rh = lines.length === 2 ? 1.0 : 0.6;
+        const hasIco = !!(m.icoTop || m.icoLine);
+        const rh = hasIco ? (lines.length === 2 ? 1.85 : 1.45) : (lines.length === 2 ? 1.0 : 0.6);
         const npl = isWr ? P(m.map.u + lf + 1, mv + 0.2, 0) : P(m.map.u, mv + lf + 0.28, 0);
         const mtx = "matrix(" + (B.ux * cam.z).toFixed(3) + " " + (B.uy * cam.z).toFixed(3) + " " + (B.vx * cam.z).toFixed(3) + " " + (B.vy * cam.z).toFixed(3) + " " + npl[0].toFixed(1) + " " + npl[1].toFixed(1) + ")";
         const kids = [
@@ -1129,10 +1423,16 @@ class Component extends DCLogic {
           React.createElement("rect", { key: "c", x: 0, y: 0, width: 0.1, height: rh, fill: CAT[m.cat] }),
         ];
         lines.forEach((lt, li) => {
-          const tAttrs = { key: "t" + li, x: padX, y: lines.length === 2 ? 0.12 + fs * (1.02 + li * 1.38) : rh / 2 + fs * 0.36, fontSize: fs, fill: hot2 ? YEL : "#eaf2ff", letterSpacing: ".05em", fontWeight: 600, fontFamily: "'IBM Plex Mono',monospace" };
+          const tAttrs = { key: "t" + li, x: padX, y: hasIco ? 0.44 + fs * (1.02 + li * 1.38) : lines.length === 2 ? 0.12 + fs * (1.02 + li * 1.38) : rh / 2 + fs * 0.36, fontSize: fs, fill: hot2 ? YEL : "#eaf2ff", letterSpacing: ".05em", fontWeight: 600, fontFamily: "'IBM Plex Mono',monospace" };
           if (lt.length * wf * fs > avail2) { tAttrs.textLength = avail2; tAttrs.lengthAdjust = "spacingAndGlyphs"; }
           kids.push(React.createElement("text", tAttrs, lt));
         });
+        if (hasIco && m.icoTop) kids.push(React.createElement("text", { key: "ktop", x: padX, y: 0.33, fontSize: 0.19, fill: YEL, letterSpacing: ".22em", fontWeight: 600, fontFamily: "'IBM Plex Mono',monospace" }, m.icoTop.toUpperCase()));
+        if (hasIco && m.icoLine) {
+          const lAttrs = { key: "kline", x: padX, y: rh - 0.17, fontSize: 0.18, fill: "rgba(234,242,255,.55)", letterSpacing: ".1em", fontWeight: 500, fontFamily: "'IBM Plex Mono',monospace" };
+          if (m.icoLine.length * 0.62 * 0.18 > avail2) { lAttrs.textLength = avail2; lAttrs.lengthAdjust = "spacingAndGlyphs"; }
+          kids.push(React.createElement("text", lAttrs, m.icoLine.toUpperCase()));
+        }
         const cEl = React.createElement("g", { key: "pt" + m.id, transform: mtx, opacity: lo.toFixed(3) }, kids);
         (m.dist === "research" ? rTagEls : m.dist === "teaching" ? tTagEls : tagEls).push(cEl);
       } else {
@@ -1158,6 +1458,17 @@ class Component extends DCLogic {
     sceneEls.push(React.createElement("g", { key: "ztags", style: { pointerEvents: "none" } }, zTags));
     sceneEls.push(React.createElement("g", { key: "chapters", style: { pointerEvents: "none" } }, hEls));
     this._rFrame = null;
+    if (rClipOn && bR > 0.5) {
+      const frR = distFrames.research;
+      const c0 = P(frR[0], frR[1], 0), c1 = P(frR[2], frR[3], 0);
+      this._rFrame = { x0: Math.min(c0[0], c1[0]), x1: Math.max(c0[0], c1[0]), y0: Math.min(c0[1], c1[1]), y1: Math.max(c0[1], c1[1]) };
+      const r0 = P(frR[2] + 0.5, frR[1], 0), r1 = P(frR[2] + 0.5, frR[3], 0);
+      const rTrackH = r1[1] - r0[1], rThumbH = rTrackH * 0.75, rThumbY = r0[1] + (rTrackH - rThumbH) * rScroll;
+      sceneEls.push(React.createElement("g", { key: "rscroll", opacity: bR.toFixed(3), style: { pointerEvents: "none" } }, [
+        React.createElement("line", { key: "rr", x1: r0[0].toFixed(1), y1: r0[1].toFixed(1), x2: r1[0].toFixed(1), y2: r1[1].toFixed(1), stroke: "rgba(234,242,255,.18)", strokeWidth: 2 }),
+        React.createElement("rect", { key: "rh", x: (r0[0] - 1.5).toFixed(1), y: rThumbY.toFixed(1), width: 3, height: rThumbH.toFixed(1), fill: rScroll > 0.01 ? YEL : "rgba(234,242,255,.45)" }),
+      ]));
+    }
 
     this._tFrame = null;
     if (tClipOn && bT > 0.5) {
@@ -1170,7 +1481,6 @@ class Component extends DCLogic {
       sceneEls.push(React.createElement("g", { key: "tscroll", opacity: bT.toFixed(3), style: { pointerEvents: "none" } }, [
         React.createElement("line", { key: "tr", x1: t0[0].toFixed(1), y1: t0[1].toFixed(1), x2: t1[0].toFixed(1), y2: t1[1].toFixed(1), stroke: "rgba(234,242,255,.18)", strokeWidth: 2 }),
         React.createElement("rect", { key: "th", x: (t0[0] - 1.5).toFixed(1), y: thumbY.toFixed(1), width: 3, height: thumbH.toFixed(1), fill: tScroll > 0.01 ? YEL : "rgba(234,242,255,.45)" }),
-        React.createElement("text", { key: "hx", x: hp[0].toFixed(1), y: hp[1].toFixed(1), fontSize: (0.32 * EP * cam.z).toFixed(1), fill: "rgba(234,242,255,.5)", textAnchor: "end", fontFamily: "'IBM Plex Mono',monospace", letterSpacing: ".16em" }, "SCROLL INSIDE THE FRAME: 03 ARCHIVE COURSES BELOW"),
       ]));
     }
 
@@ -1184,7 +1494,7 @@ class Component extends DCLogic {
       ]),
     ]));
 
-    out.scene = React.createElement("g", { key: "scene", opacity: ((0.28 + 0.72 * this.ss(p, 0.055, 0.105)) * (1 - 0.85 * bA)).toFixed(3) }, sceneEls);
+    out.scene = React.createElement("g", { key: "scene", opacity: ((0.28 + 0.72 * this.ss(p, 0.055, 0.105))).toFixed(3) }, sceneEls);
 
     const fx = (o, ty) => "opacity:" + o.toFixed(3) + ";transform:translateY(" + ty.toFixed(1) + "px)" + (o < 0.02 ? ";visibility:hidden" : "");
     const o0 = 1 - this.ss(p, 0.085, 0.12);
@@ -1301,10 +1611,8 @@ class Component extends DCLogic {
     out.archShow = archList.length > 0;
 
     const cur = (feedHover && BY_ID[feedHover]) || mainList[0] || archList[0] || PROJECTS[0];
-    out.prevSlug = cur.slug + " / hero";
-    out.prevTitle = cur.title;
-    out.prevMeta = (cur.year === "—" ? "ongoing" : cur.year) + " · " + CAT_LBL[cur.cat] + " · " + cur.status;
-    out.prevLine = cur.line;
+    out.prevTitle = (cur.lbl || cur.title).toUpperCase();
+    out.prevDesc = cur.desc;
 
     return out;
   }

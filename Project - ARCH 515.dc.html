@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700&amp;family=IBM+Plex+Mono:wght@400;500;600;700&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet">
+<style>
+  html, body { margin: 0; padding: 0; background: #0b2a61; }
+  a { color: #ffd35c; text-decoration: none; }
+  a:hover { color: #ffe49a; }
+  ::selection { background: rgba(255,211,92,.35); }
+</style>
+</helmet>
+<div style="min-height:100vh;background-color:#0b2a61;background-image:radial-gradient(rgba(234,242,255,.10) 1px, transparent 1px);background-size:26px 26px;color:#eaf2ff;font-family:Inter,sans-serif">
+  <header data-screen-label="Header" style="display:flex;justify-content:space-between;align-items:center;padding:18px 4.5vw;border-bottom:1px solid rgba(234,242,255,.16)">
+    <a href="index.html" style="font-family:Archivo,sans-serif;font-weight:700;font-size:17px;letter-spacing:.02em;color:#f4f8ff">GenEnv Lab</a>
+    <div style="display:flex;align-items:center;gap:22px">
+      <span style="font:600 9.5px/1 'IBM Plex Mono',monospace;letter-spacing:.2em;text-transform:uppercase;color:rgba(234,242,255,.5)">Teaching</span>
+      <a href="index.html" style="font:600 10px/1 'IBM Plex Mono',monospace;letter-spacing:.16em;text-transform:uppercase;border:1px solid rgba(255,211,92,.55);padding:8px 12px">← Project index</a>
+    </div>
+  </header>
+
+  <section data-screen-label="Hero" style="display:grid;grid-template-columns:minmax(380px,1fr) minmax(420px,560px);gap:5vw;align-items:center;padding:64px 4.5vw 56px;max-width:1560px;margin:0 auto;box-sizing:border-box">
+    <div>
+      <div style="width:46px;height:3px;background:#ffd35c;margin:0 0 20px"></div>
+      <p style="margin:0;font:600 10px/1.7 'IBM Plex Mono',monospace;letter-spacing:.22em;text-transform:uppercase;color:#ffd35c">Teaching · Landscape · Design Media · Course</p>
+      <h1 style="margin:14px 0 0;font-family:Archivo,sans-serif;font-weight:700;font-size:clamp(38px,4vw,60px);line-height:.98;text-transform:uppercase;color:#f4f8ff;text-wrap:balance">ARCH 515 Design Media I <span style="color:rgba(234,242,255,.55)">(Landscape Session)</span></h1>
+      <p style="margin:18px 0 0;font-family:Archivo,sans-serif;font-weight:600;font-size:20px;color:rgba(234,242,255,.85)">Learning to see through media.</p>
+      <p style="margin:16px 0 0;font:400 15px/1.7 Inter,sans-serif;color:rgba(234,242,255,.68);max-width:520px">ARCH 515 Design Media I introduces representation as both a practical skill and a way of thinking in landscape architecture. Drawings and models do more than document finished ideas. Decisions about projection, scale, line, composition, and medium determine what becomes visible, comparable, and open to revision.</p>
+      <div style="display:flex;gap:34px;margin:28px 0 0;flex-wrap:wrap">
+        <div><p style="margin:0;font:500 9.5px/1.5 'IBM Plex Mono',monospace;letter-spacing:.16em;text-transform:uppercase;color:rgba(234,242,255,.55)">Program</p><p style="margin:5px 0 0;font:500 13px/1.5 Inter,sans-serif;color:#f4f8ff">MLA · UBC SALA · Winter Term 1</p></div>
+      </div>
+    </div>
+    <div style="border:1px solid rgba(234,242,255,.22);background:#0d2f6b">
+      <div style="display:flex;justify-content:space-between;align-items:center;padding:11px 15px;border-bottom:1px solid rgba(234,242,255,.16)">
+        <span style="font:600 9px/1 'IBM Plex Mono',monospace;letter-spacing:.2em;text-transform:uppercase;color:rgba(234,242,255,.5)">Media shapes thought</span>
+      </div>
+      <div style="display:flex;justify-content:center;padding:8px 4px 2px">{{ heroIcon }}</div>
+      <div style="display:flex;justify-content:center;padding:0 15px 13px">
+        <span style="font:600 9px/1 'IBM Plex Mono',monospace;letter-spacing:.22em;text-transform:uppercase;color:rgba(234,242,255,.55)">Sketch · Project · Model · Compose</span>
+      </div>
+    </div>
+  </section>
+
+  <section data-screen-label="Course structure" style="border-top:1px solid rgba(234,242,255,.16);padding:52px 4.5vw 56px;max-width:1560px;margin:0 auto;box-sizing:border-box">
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(340px,1fr));gap:5vw">
+      <div>
+        <p style="margin:0;font:600 10px/1.7 'IBM Plex Mono',monospace;letter-spacing:.22em;text-transform:uppercase;color:#ffd35c">Structure</p>
+        <p style="margin:14px 0 0;font:400 15px/1.75 Inter,sans-serif;color:rgba(234,242,255,.68)">Developed in coordination with LARC 501, the course moves across sketching, measured drawing, diagrams, hybrid representation, geometric projection, topographic modeling, physical models, and portfolio composition.</p>
+      </div>
+      <div>
+        <p style="margin:0;font:600 10px/1.7 'IBM Plex Mono',monospace;letter-spacing:.22em;text-transform:uppercase;color:#ffd35c">Practice</p>
+        <p style="margin:14px 0 0;font:400 15px/1.75 Inter,sans-serif;color:rgba(234,242,255,.68)">Students combine manual and digital techniques through an iterative practice in which representation becomes a method for observing, testing, and communicating landscape.</p>
+      </div>
+    </div>
+  </section>
+
+  <section data-screen-label="Related" style="border-top:1px solid rgba(234,242,255,.16);padding:52px 4.5vw 64px;max-width:1560px;margin:0 auto;box-sizing:border-box">
+    <h2 style="margin:0;font-family:Archivo,sans-serif;font-weight:700;font-size:26px;text-transform:uppercase;color:#f4f8ff">Related</h2>
+    <div style="display:flex;flex-wrap:wrap;gap:22px;margin:24px 0 0">
+      <div style="border:1px solid rgba(234,242,255,.22);background:#0d2f6b;padding:20px 22px;display:flex;flex-direction:column;gap:8px;flex:0 1 480px;min-width:280px;box-sizing:border-box">
+        <span style="font:600 9px/1 'IBM Plex Mono',monospace;letter-spacing:.2em;text-transform:uppercase;color:#ffd35c">Related course · MLA studio</span>
+        <span style="font-family:Archivo,sans-serif;font-weight:700;font-size:18px;text-transform:uppercase;color:#f4f8ff">LARC 501 · Landscape Architecture Studio I</span>
+        <span style="font:400 12.5px/1.55 Inter,sans-serif;color:rgba(234,242,255,.6)">ARCH 515 is developed in coordination with the first MLA design studio.</span>
+      </div>
+      <a href="Project - AI4DM.dc.html" style="border:1px solid rgba(234,242,255,.22);background:#0d2f6b;padding:20px 22px;display:flex;flex-direction:column;gap:8px;flex:0 1 480px;min-width:280px;box-sizing:border-box" style-hover="border-color:#ffd35c">
+        <span style="font:600 9px/1 'IBM Plex Mono',monospace;letter-spacing:.2em;text-transform:uppercase;color:#ffd35c">Teaching platform · In development</span>
+        <span style="font-family:Archivo,sans-serif;font-weight:700;font-size:18px;text-transform:uppercase;color:#f4f8ff">AI4DM</span>
+        <span style="font:400 12.5px/1.55 Inter,sans-serif;color:rgba(234,242,255,.6)">AI4DM provides teaching resources for the representation and AI components of the design media courses.</span>
+      </a>
+    </div>
+  </section>
+
+  <footer style="border-top:1px solid rgba(234,242,255,.16);display:flex;justify-content:space-between;align-items:center;padding:22px 4.5vw;max-width:1560px;margin:0 auto;box-sizing:border-box">
+    <a href="index.html" style="font:600 10px/1 'IBM Plex Mono',monospace;letter-spacing:.18em;text-transform:uppercase">← Project index</a>
+  </footer>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  renderVals() {
+    // Icon: the sketched contour plan on a sheet (west) projects into the topographic model (east).
+    const s = 50;
+    const P = (x, y, z) => [(x - y) * 0.866 * s, (x + y - 4) * 0.5 * s - z * 0.8 * s];
+    const YEL = "#ffd35c", LN = "rgba(234,242,255,.92)", FT = "#12397f", FL = "#0f316f";
+    const els = [];
+    for (let i = 0; i <= 5; i++) {
+      const gq = i * 0.8;
+      const a = P(gq, 0, 0), b = P(gq, 4, 0), c = P(0, gq, 0), d = P(4, gq, 0);
+      const st = "rgba(234,242,255," + (i % 5 ? ".09" : ".22") + ")";
+      els.push(React.createElement("line", { key: "gu" + i, x1: a[0], y1: a[1], x2: b[0], y2: b[1], stroke: st, strokeWidth: 1 }));
+      els.push(React.createElement("line", { key: "gv" + i, x1: c[0], y1: c[1], x2: d[0], y2: d[1], stroke: st, strokeWidth: 1 }));
+    }
+    const S = (pp) => pp[0].toFixed(1) + "," + pp[1].toFixed(1);
+    const ln = (a, b, o) => els.push(React.createElement("line", Object.assign({ key: "l" + els.length, x1: a[0].toFixed(1), y1: a[1].toFixed(1), x2: b[0].toFixed(1), y2: b[1].toFixed(1), stroke: LN, strokeWidth: 1 }, o || {})));
+    const SH = [[1.0, 0.12], [0.62, 0.72], [-0.05, 0.98], [-0.72, 0.66], [-1.02, 0.02], [-0.66, -0.62], [0.02, -0.95], [0.7, -0.66]];
+    const blob = (bx, by, k2, z, o) => {
+      const q = SH.map(([dx, dy]) => P(bx + dx * k2, by + dy * k2, z));
+      const md = (a2, b2) => ((a2[0] + b2[0]) / 2).toFixed(1) + " " + ((a2[1] + b2[1]) / 2).toFixed(1);
+      let d = "M " + md(q[7], q[0]);
+      for (let i = 0; i < 8; i++) d += " Q " + q[i][0].toFixed(1) + " " + q[i][1].toFixed(1) + " " + md(q[i], q[(i + 1) % 8]);
+      els.push(React.createElement("path", Object.assign({ key: "b" + els.length, d: d + " Z", strokeLinejoin: "round" }, o)));
+    };
+    // the sheet — a drawing on the ground, hand contours in yellow
+    els.push(React.createElement("polygon", { key: "sheet", points: [[0.3, 0.75], [1.75, 0.75], [1.75, 3.25], [0.3, 3.25]].map(([x, y]) => S(P(x, y, 0))).join(" "), fill: "rgba(234,242,255,.03)", stroke: LN, strokeOpacity: 0.6, strokeWidth: 1, strokeDasharray: "6 4", strokeLinejoin: "miter" }));
+    blob(1.02, 2.0, 0.52, 0, { fill: "none", stroke: YEL, strokeWidth: 1.5, strokeLinecap: "round" });
+    blob(1.02, 2.0, 0.26, 0, { fill: "none", stroke: YEL, strokeWidth: 1.2 });
+    // projection — the drawing crosses to the model
+    ln(P(1.78, 1.55, 0), P(2.16, 1.55, 0), { stroke: YEL, strokeOpacity: 0.6, strokeWidth: 1, strokeDasharray: "4 3" });
+    ln(P(1.78, 2.45, 0), P(2.16, 2.45, 0), { stroke: YEL, strokeOpacity: 0.6, strokeWidth: 1, strokeDasharray: "4 3" });
+    // the model — the same contours, lifted into terraces
+    blob(2.9, 2.0, 0.72, 0, { fill: "none", stroke: YEL, strokeOpacity: 0.4, strokeWidth: 0.95, strokeDasharray: "4 3" });
+    [0, 1, 7].forEach((ix) => { const [dx, dy] = SH[ix]; ln(P(2.9 + dx * 0.72, 2.0 + dy * 0.72, 0.38), P(2.9 + dx * 0.72, 2.0 + dy * 0.72, 0), { strokeOpacity: 0.35, strokeWidth: 0.9 }); });
+    blob(2.9, 2.0, 0.72, 0.38, { fill: FL, stroke: LN, strokeWidth: 1.05 });
+    [0, 1, 7].forEach((ix) => { const [dx, dy] = SH[ix]; ln(P(2.9 + dx * 0.38, 2.0 + dy * 0.38, 0.72), P(2.9 + dx * 0.38, 2.0 + dy * 0.38, 0.38), { strokeOpacity: 0.35, strokeWidth: 0.9 }); });
+    blob(2.9, 2.0, 0.38, 0.72, { fill: FT, stroke: LN, strokeWidth: 1.05 });
+    const heroIcon = React.createElement("svg", { key: "hero", width: 470, height: 300, viewBox: "0 0 470 300", style: { display: "block", maxWidth: "100%", height: "auto" } },
+      React.createElement("g", { transform: "translate(235,172)" }, els));
+    return { heroIcon };
+  }
+}
+</script>
+</body>
+</html>

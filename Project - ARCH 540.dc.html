@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700&amp;family=IBM+Plex+Mono:wght@400;500;600;700&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet">
+<style>
+  html, body { margin: 0; padding: 0; background: #0b2a61; }
+  a { color: #ffd35c; text-decoration: none; }
+  a:hover { color: #ffe49a; }
+  ::selection { background: rgba(255,211,92,.35); }
+</style>
+</helmet>
+<div style="min-height:100vh;background-color:#0b2a61;background-image:radial-gradient(rgba(234,242,255,.10) 1px, transparent 1px);background-size:26px 26px;color:#eaf2ff;font-family:Inter,sans-serif">
+  <header data-screen-label="Header" style="display:flex;justify-content:space-between;align-items:center;padding:18px 4.5vw;border-bottom:1px solid rgba(234,242,255,.16)">
+    <a href="index.html" style="font-family:Archivo,sans-serif;font-weight:700;font-size:17px;letter-spacing:.02em;color:#f4f8ff">GenEnv Lab</a>
+    <div style="display:flex;align-items:center;gap:22px">
+      <span style="font:600 9.5px/1 'IBM Plex Mono',monospace;letter-spacing:.2em;text-transform:uppercase;color:rgba(234,242,255,.5)">Teaching</span>
+      <a href="index.html" style="font:600 10px/1 'IBM Plex Mono',monospace;letter-spacing:.16em;text-transform:uppercase;border:1px solid rgba(255,211,92,.55);padding:8px 12px">← Project index</a>
+    </div>
+  </header>
+
+  <section data-screen-label="Hero" style="display:grid;grid-template-columns:minmax(380px,1fr) minmax(420px,560px);gap:5vw;align-items:center;padding:64px 4.5vw 56px;max-width:1560px;margin:0 auto;box-sizing:border-box">
+    <div>
+      <div style="width:46px;height:3px;background:#ffd35c;margin:0 0 20px"></div>
+      <p style="margin:0;font:600 10px/1.7 'IBM Plex Mono',monospace;letter-spacing:.22em;text-transform:uppercase;color:#ffd35c">Teaching · AI · Architecture · Course</p>
+      <h1 style="margin:14px 0 0;font-family:Archivo,sans-serif;font-weight:700;font-size:clamp(42px,4.4vw,68px);line-height:.98;text-transform:uppercase;color:#f4f8ff;text-wrap:balance">ARCH 540 Designing the Design</h1>
+      <p style="margin:18px 0 0;font-family:Archivo,sans-serif;font-weight:600;font-size:20px;color:rgba(234,242,255,.85)">What should AI do for architecture?</p>
+      <p style="margin:16px 0 0;font:400 15px/1.7 Inter,sans-serif;color:rgba(234,242,255,.68);max-width:520px">ARCH 540 Designing the Design investigates how artificial intelligence might reshape architectural practice by shifting attention from generated artifacts to the systems through which design work is organized. Rather than producing a conventional building proposal, students treat workflows, methods, and tools as objects of design.</p>
+      <div style="display:flex;gap:34px;margin:28px 0 0;flex-wrap:wrap">
+        <div><p style="margin:0;font:500 9.5px/1.5 'IBM Plex Mono',monospace;letter-spacing:.16em;text-transform:uppercase;color:rgba(234,242,255,.55)">Program</p><p style="margin:5px 0 0;font:500 13px/1.5 Inter,sans-serif;color:#f4f8ff">MArch · UBC SALA · Option Studio</p></div>
+      </div>
+    </div>
+    <div style="border:1px solid rgba(234,242,255,.22);background:#0d2f6b">
+      <div style="display:flex;justify-content:space-between;align-items:center;padding:11px 15px;border-bottom:1px solid rgba(234,242,255,.16)">
+        <span style="font:600 9px/1 'IBM Plex Mono',monospace;letter-spacing:.2em;text-transform:uppercase;color:rgba(234,242,255,.5)">Method as design</span>
+      </div>
+      <div style="display:flex;justify-content:center;padding:8px 4px 2px">{{ heroIcon }}</div>
+      <div style="display:flex;justify-content:center;padding:0 15px 13px">
+        <span style="font:600 9px/1 'IBM Plex Mono',monospace;letter-spacing:.22em;text-transform:uppercase;color:rgba(234,242,255,.55)">Test · Map · Speculate · Build</span>
+      </div>
+    </div>
+  </section>
+
+  <section data-screen-label="Studio structure" style="border-top:1px solid rgba(234,242,255,.16);padding:52px 4.5vw 56px;max-width:1560px;margin:0 auto;box-sizing:border-box">
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(340px,1fr));gap:5vw">
+      <div>
+        <p style="margin:0;font:600 10px/1.7 'IBM Plex Mono',monospace;letter-spacing:.22em;text-transform:uppercase;color:#ffd35c">Three stages</p>
+        <p style="margin:14px 0 0;font:400 15px/1.75 Inter,sans-serif;color:rgba(234,242,255,.68)">The studio progresses through three stages: experimentation, investigation, and prototyping. Students test emerging AI techniques, map a specific professional workflow, and identify its assumptions, stakeholders, and points of friction. They then translate their findings into a focused proof of concept that makes a possible future workflow visible, testable, and open to critique.</p>
+      </div>
+      <div>
+        <p style="margin:0;font:600 10px/1.7 'IBM Plex Mono',monospace;letter-spacing:.22em;text-transform:uppercase;color:#ffd35c">The questions</p>
+        <p style="margin:14px 0 0;font:400 15px/1.75 Inter,sans-serif;color:rgba(234,242,255,.68)">The course asks not only what AI can automate, but where it can meaningfully assist architectural work, what knowledge should remain legible, who benefits from its introduction, and how the architect's role may change.</p>
+      </div>
+    </div>
+  </section>
+
+  <footer style="border-top:1px solid rgba(234,242,255,.16);display:flex;justify-content:space-between;align-items:center;padding:22px 4.5vw;max-width:1560px;margin:0 auto;box-sizing:border-box">
+    <a href="index.html" style="font:600 10px/1 'IBM Plex Mono',monospace;letter-spacing:.18em;text-transform:uppercase">← Project index</a>
+  </footer>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  renderVals() {
+    // Icon: a professional workflow mapped flat on the plan as a node graph; the friction point
+    // is picked out in yellow and prototyped — a small proof-of-concept pyramid rises from it.
+    const s = 50;
+    const P = (x, y, z) => [(x - y) * 0.866 * s, (x + y - 4) * 0.5 * s - z * 0.8 * s];
+    const YEL = "#ffd35c", LN = "rgba(234,242,255,.92)";
+    const els = [];
+    for (let i = 0; i <= 5; i++) {
+      const gq = i * 0.8;
+      const a = P(gq, 0, 0), b = P(gq, 4, 0), c = P(0, gq, 0), d = P(4, gq, 0);
+      const st = "rgba(234,242,255," + (i % 5 ? ".09" : ".22") + ")";
+      els.push(React.createElement("line", { key: "gu" + i, x1: a[0], y1: a[1], x2: b[0], y2: b[1], stroke: st, strokeWidth: 1 }));
+      els.push(React.createElement("line", { key: "gv" + i, x1: c[0], y1: c[1], x2: d[0], y2: d[1], stroke: st, strokeWidth: 1 }));
+    }
+    const S = (pp) => pp[0].toFixed(1) + "," + pp[1].toFixed(1);
+    const ln = (a, b, o) => els.push(React.createElement("line", Object.assign({ key: "l" + els.length, x1: a[0].toFixed(1), y1: a[1].toFixed(1), x2: b[0].toFixed(1), y2: b[1].toFixed(1), stroke: LN, strokeWidth: 1 }, o || {})));
+    // the mapped workflow — bounded field, nodes, links, all flat on the plan
+    els.push(React.createElement("polygon", { key: "map", points: [[0.35, 0.7], [3.65, 0.7], [3.65, 3.5], [0.35, 3.5]].map(([x, y]) => S(P(x, y, 0))).join(" "), fill: "none", stroke: "rgba(234,242,255,.3)", strokeWidth: 0.9, strokeDasharray: "3 4", strokeLinejoin: "miter" }));
+    const N = [[0.7, 3.2], [1.6, 2.9], [1.25, 2.0], [2.35, 2.35], [2.15, 1.15], [3.15, 1.6]];
+    [[0, 1], [1, 2], [1, 3], [2, 4], [3, 5], [4, 5]].forEach(([a, b]) => ln(P(N[a][0], N[a][1], 0), P(N[b][0], N[b][1], 0), { strokeOpacity: 0.55, strokeWidth: 1 }));
+    N.forEach(([x, y], i) => {
+      const hh = 0.09, pk = i === 5;
+      els.push(React.createElement("polygon", { key: "nd" + i, points: [[x - hh, y - hh], [x + hh, y - hh], [x + hh, y + hh], [x - hh, y + hh]].map(([a2, b2]) => S(P(a2, b2, 0))).join(" "), fill: pk ? "rgba(255,211,92,.4)" : "none", stroke: pk ? YEL : LN, strokeWidth: pk ? 1.1 : 0.9 }));
+    });
+    // the friction point, ringed in plan and prototyped in section
+    els.push(React.createElement("polygon", { key: "ring", points: [[2.8, 1.25], [3.5, 1.25], [3.5, 1.95], [2.8, 1.95]].map(([x, y]) => S(P(x, y, 0))).join(" "), fill: "none", stroke: YEL, strokeOpacity: 0.6, strokeWidth: 0.95, strokeDasharray: "4 3", strokeLinejoin: "miter" }));
+    const AP = P(3.15, 1.6, 0.7);
+    const B = [[2.92, 1.37], [3.38, 1.37], [3.38, 1.83], [2.92, 1.83]].map(([x, y]) => P(x, y, 0.02));
+    els.push(React.createElement("polygon", { key: "pf1", points: S(B[1]) + " " + S(B[2]) + " " + S(AP), fill: "rgba(255,211,92,.14)", stroke: "none" }));
+    els.push(React.createElement("polygon", { key: "pf2", points: S(B[2]) + " " + S(B[3]) + " " + S(AP), fill: "rgba(255,211,92,.08)", stroke: "none" }));
+    els.push(React.createElement("polygon", { key: "pb", points: B.map(S).join(" "), fill: "none", stroke: YEL, strokeWidth: 1, strokeLinejoin: "round" }));
+    B.forEach((bp, i) => ln(bp, AP, { stroke: YEL, strokeWidth: 1 }));
+    const heroIcon = React.createElement("svg", { key: "hero", width: 470, height: 300, viewBox: "0 0 470 300", style: { display: "block", maxWidth: "100%", height: "auto" } },
+      React.createElement("g", { transform: "translate(235,172)" }, els));
+    return { heroIcon };
+  }
+}
+</script>
+</body>
+</html>

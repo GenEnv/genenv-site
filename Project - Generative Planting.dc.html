@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700&amp;family=IBM+Plex+Mono:wght@400;500;600;700&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet">
+<script src="image-slot.js"></script>
+<style>
+  html, body { margin: 0; padding: 0; background: #0b2a61; }
+  a { color: #ffd35c; text-decoration: none; }
+  a:hover { color: #ffe49a; }
+  ::selection { background: rgba(255,211,92,.35); }
+</style>
+</helmet>
+<div style="min-height:100vh;background-color:#0b2a61;background-image:radial-gradient(rgba(234,242,255,.10) 1px, transparent 1px);background-size:26px 26px;color:#eaf2ff;font-family:Inter,sans-serif">
+  <header data-screen-label="Header" style="display:flex;justify-content:space-between;align-items:center;padding:18px 4.5vw;border-bottom:1px solid rgba(234,242,255,.16)">
+    <a href="index.html" style="font-family:Archivo,sans-serif;font-weight:700;font-size:17px;letter-spacing:.02em;color:#f4f8ff">GenEnv Lab</a>
+    <div style="display:flex;align-items:center;gap:22px">
+      <span style="font:600 9.5px/1 'IBM Plex Mono',monospace;letter-spacing:.2em;text-transform:uppercase;color:rgba(234,242,255,.5)">Research</span>
+      <a href="index.html" style="font:600 10px/1 'IBM Plex Mono',monospace;letter-spacing:.16em;text-transform:uppercase;border:1px solid rgba(255,211,92,.55);padding:8px 12px">← Project index</a>
+    </div>
+  </header>
+
+  <section data-screen-label="Hero" style="display:grid;grid-template-columns:minmax(380px,1fr) minmax(420px,560px);gap:5vw;align-items:center;padding:64px 4.5vw 56px;max-width:1560px;margin:0 auto;box-sizing:border-box">
+    <div>
+      <div style="width:46px;height:3px;background:#ffd35c;margin:0 0 20px"></div>
+      <p style="margin:0;font:600 10px/1.7 'IBM Plex Mono',monospace;letter-spacing:.22em;text-transform:uppercase;color:#ffd35c">Research · Computation + Landscape · Archive</p>
+      <h1 style="margin:14px 0 0;font-family:Archivo,sans-serif;font-weight:700;font-size:clamp(42px,4.4vw,68px);line-height:.98;text-transform:uppercase;color:#f4f8ff;text-wrap:balance">Generative Planting</h1>
+      <p style="margin:18px 0 0;font-family:Archivo,sans-serif;font-weight:600;font-size:20px;color:rgba(234,242,255,.85)">Reinventing planting design — a generative AI approach.</p>
+      <p style="margin:16px 0 0;font:400 15px/1.7 Inter,sans-serif;color:rgba(234,242,255,.68);max-width:520px">In the field of landscape architecture, the integration of ecological principles with aesthetic design is a critical yet complex task. This research introduces an innovative AI-driven tool designed to revolutionize planting design by embedding ecological intelligence into the design process. This paper presents the methodology, including data synthesis, AI model training with generative adversarial networks (GANs), and integration into a practical design interface. The model is trained on multifaceted input data such as topography, soil, and climate data. The results indicate the AI model's effectiveness in generating planting layouts that balance ecological accuracy with aesthetic appeal. Significantly, this research extends the professional practice of landscape architecture.</p>
+      <div style="display:flex;gap:34px;margin:28px 0 0;flex-wrap:wrap">
+        <div><p style="margin:0;font:500 9.5px/1.5 'IBM Plex Mono',monospace;letter-spacing:.16em;text-transform:uppercase;color:rgba(234,242,255,.55)">Duration</p><p style="margin:5px 0 0;font:500 13px/1.5 Inter,sans-serif;color:#f4f8ff">2023 — 2024</p></div>
+        <div><p style="margin:0;font:500 9.5px/1.5 'IBM Plex Mono',monospace;letter-spacing:.16em;text-transform:uppercase;color:rgba(234,242,255,.55)">Published</p><p style="margin:5px 0 0;font:500 13px/1.5 Inter,sans-serif;color:#f4f8ff">JoDLA / ASLA</p></div>
+        <div><p style="margin:0;font:500 9.5px/1.5 'IBM Plex Mono',monospace;letter-spacing:.16em;text-transform:uppercase;color:rgba(234,242,255,.55)">Team</p><p style="margin:5px 0 0;font:500 13px/1.5 Inter,sans-serif;color:#f4f8ff">Xun Liu <span style="color:rgba(234,242,255,.5)">— PI</span><br>Nandi Yang <span style="color:rgba(234,242,255,.5)">— Collaborator, SWA</span></p></div>
+      </div>
+      <div style="display:flex;gap:34px;margin:22px 0 0;flex-wrap:wrap">
+        <div><p style="margin:0;font:500 9.5px/1.5 'IBM Plex Mono',monospace;letter-spacing:.16em;text-transform:uppercase;color:rgba(234,242,255,.55)">Funding</p><p style="margin:5px 0 0;font:500 13px/1.5 Inter,sans-serif;color:#f4f8ff">Patrick T. Curran Fellowship</p></div>
+      </div>
+    </div>
+    <figure style="margin:0">
+      <div style="border:1px solid rgba(234,242,255,.22);background:#ffffff;padding:26px 22px">
+        <img src="media/planting/plants-gan.gif" alt="Site conditions fed into Plants GAN, producing a plants distribution" style="display:block;width:100%;height:auto"></img>
+      </div>
+      <figcaption style="margin:10px 0 0;font:600 9px/1.5 'IBM Plex Mono',monospace;letter-spacing:.16em;text-transform:uppercase;color:rgba(234,242,255,.55)">Site conditions → Plants GAN → plants distribution</figcaption>
+    </figure>
+  </section>
+
+  <section data-screen-label="Methodology" style="border-top:1px solid rgba(234,242,255,.16);padding:52px 4.5vw 56px;max-width:1560px;margin:0 auto;box-sizing:border-box">
+    <p style="margin:0;font:600 9.5px/1 'IBM Plex Mono',monospace;letter-spacing:.2em;text-transform:uppercase;color:#ffd35c">01 · Method</p>
+    <h2 style="margin:12px 0 0;font-family:Archivo,sans-serif;font-weight:700;font-size:28px;line-height:1.05;text-transform:uppercase;color:#f4f8ff">Methodology framework</h2>
+    <div style="border:1px solid rgba(234,242,255,.22);background:#ffffff;margin:24px 0 0">
+      <img src="media/planting/method.png" alt="Methodology framework — training dataset, data preprocessing, model evaluation, data postprocessing" style="display:block;width:100%;height:auto"></img>
+    </div>
+  </section>
+
+  <section data-screen-label="ECO GEN interface" style="border-top:1px solid rgba(234,242,255,.16);padding:52px 4.5vw 56px;max-width:1560px;margin:0 auto;box-sizing:border-box">
+    <p style="margin:0;font:600 9.5px/1 'IBM Plex Mono',monospace;letter-spacing:.2em;text-transform:uppercase;color:#ffd35c">02 · Tool</p>
+    <h2 style="margin:12px 0 0;font-family:Archivo,sans-serif;font-weight:700;font-size:28px;line-height:1.05;text-transform:uppercase;color:#f4f8ff">ECO GEN</h2>
+    <p style="margin:14px 0 0;font:400 14.5px/1.7 Inter,sans-serif;color:rgba(234,242,255,.68);max-width:640px">The Rhino/Grasshopper interface, prototyped as ECO GEN using HumanUI in Grasshopper.</p>
+    <div style="border:1px solid rgba(234,242,255,.22);background:#0d2f6b;margin:24px 0 0">
+      <img src="media/planting/ecogen.png" alt="ECO GEN interface in Rhino — soil and topo inputs, AI generation panel, design tools" style="display:block;width:100%;height:auto"></img>
+    </div>
+  </section>
+
+  <section data-screen-label="Process" style="border-top:1px solid rgba(234,242,255,.16);padding:52px 4.5vw 56px;max-width:1560px;margin:0 auto;box-sizing:border-box">
+    <p style="margin:0;font:600 9.5px/1 'IBM Plex Mono',monospace;letter-spacing:.2em;text-transform:uppercase;color:#ffd35c">03 · Results</p>
+    <h2 style="margin:12px 0 0;font-family:Archivo,sans-serif;font-weight:700;font-size:28px;line-height:1.05;text-transform:uppercase;color:#f4f8ff">Generated plants zones</h2>
+    <div style="border:1px solid rgba(234,242,255,.22);background:#ffffff;margin:24px 0 0">
+      <img src="media/planting/results.jpg" alt="Three sites — soil and topo inputs, synthesized AI input, generated plants zones with species lists" style="display:block;width:100%;height:auto"></img>
+    </div>
+    <p style="margin:12px 0 0;font:600 9px/1.5 'IBM Plex Mono',monospace;letter-spacing:.16em;text-transform:uppercase;color:rgba(234,242,255,.55)">Three sites — soil + topo in, plants zones and species lists out</p>
+  </section>
+
+  <section data-screen-label="Design application" style="border-top:1px solid rgba(234,242,255,.16);padding:52px 4.5vw 56px;max-width:1560px;margin:0 auto;box-sizing:border-box">
+    <p style="margin:0;font:600 9.5px/1 'IBM Plex Mono',monospace;letter-spacing:.2em;text-transform:uppercase;color:#ffd35c">04 · Design</p>
+    <h2 style="margin:12px 0 0;font-family:Archivo,sans-serif;font-weight:700;font-size:28px;line-height:1.05;text-transform:uppercase;color:#f4f8ff">From zones to planting design</h2>
+    <div style="border:1px solid rgba(234,242,255,.22);background:#ffffff;margin:24px 0 0">
+      <img src="media/planting/unit-500m.png" alt="500m x 500m design unit — programs over the generated planting: forest labyrinth, punting canal, moon garden, skyline loop, mountain stream" style="display:block;width:100%;height:auto"></img>
+    </div>
+    <p style="margin:12px 0 0;font:600 9px/1.5 'IBM Plex Mono',monospace;letter-spacing:.16em;text-transform:uppercase;color:rgba(234,242,255,.55)">500m × 500m unit — programs over the generated planting</p>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:22px;margin:24px 0 0">
+      <figure style="margin:0">
+        <div style="border:1px solid rgba(234,242,255,.22);background:#ffffff">
+          <img src="media/planting/plan.jpg" alt="Planting plan of the unit — species dots over contours" style="display:block;width:100%;height:auto"></img>
+        </div>
+        <figcaption style="margin:10px 0 0;font:600 9px/1.5 'IBM Plex Mono',monospace;letter-spacing:.16em;text-transform:uppercase;color:rgba(234,242,255,.55)">Planting plan — one unit</figcaption>
+      </figure>
+      <figure style="margin:0">
+        <div style="border:1px solid rgba(234,242,255,.22);background:#000000">
+          <img src="media/planting/tiles.png" alt="Generated units tiled across the whole site" style="display:block;width:100%;height:auto"></img>
+        </div>
+        <figcaption style="margin:10px 0 0;font:600 9px/1.5 'IBM Plex Mono',monospace;letter-spacing:.16em;text-transform:uppercase;color:rgba(234,242,255,.55)">Units tiled across the site</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section data-screen-label="Related projects" style="border-top:1px solid rgba(234,242,255,.16);padding:52px 4.5vw 64px;max-width:1560px;margin:0 auto;box-sizing:border-box">
+    <h2 style="margin:0;font-family:Archivo,sans-serif;font-weight:700;font-size:26px;text-transform:uppercase;color:#f4f8ff">Related projects</h2>
+    <div style="display:flex;flex-wrap:wrap;gap:22px;margin:24px 0 0">
+      <a href="index.html" style="border:1px solid rgba(234,242,255,.22);background:#0d2f6b;padding:20px 22px;display:flex;flex-direction:column;gap:8px;flex:0 1 420px;min-width:280px;box-sizing:border-box" style-hover="border-color:#ffd35c">
+        <span style="font:600 9px/1 'IBM Plex Mono',monospace;letter-spacing:.2em;text-transform:uppercase;color:#ffd35c">Workshop / Research · NeurIPS Creative AI</span>
+        <span style="font-family:Archivo,sans-serif;font-weight:700;font-size:18px;text-transform:uppercase;color:#f4f8ff">Landscape Agent</span>
+      </a>
+      <a href="index.html" style="border:1px solid rgba(234,242,255,.22);background:#0d2f6b;padding:20px 22px;display:flex;flex-direction:column;gap:8px;flex:0 1 420px;min-width:280px;box-sizing:border-box" style-hover="border-color:#ffd35c">
+        <span style="font:600 9px/1 'IBM Plex Mono',monospace;letter-spacing:.2em;text-transform:uppercase;color:#ffd35c">PhD dissertation · 2025</span>
+        <span style="font-family:Archivo,sans-serif;font-weight:700;font-size:18px;text-transform:uppercase;color:#f4f8ff">AI + Landscapes</span>
+      </a>
+    </div>
+  </section>
+
+  <footer style="border-top:1px solid rgba(234,242,255,.16);display:flex;justify-content:space-between;align-items:center;padding:22px 4.5vw;max-width:1560px;margin:0 auto;box-sizing:border-box">
+    <a href="index.html" style="font:600 10px/1 'IBM Plex Mono',monospace;letter-spacing:.18em;text-transform:uppercase">← Project index</a>
+  </footer>
+</div>
+</x-dc>
+</body>
+</html>

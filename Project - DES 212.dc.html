@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700&amp;family=IBM+Plex+Mono:wght@400;500;600;700&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet">
+<style>
+  html, body { margin: 0; padding: 0; background: #0b2a61; }
+  a { color: #ffd35c; text-decoration: none; }
+  a:hover { color: #ffe49a; }
+  ::selection { background: rgba(255,211,92,.35); }
+</style>
+</helmet>
+<div style="min-height:100vh;background-color:#0b2a61;background-image:radial-gradient(rgba(234,242,255,.10) 1px, transparent 1px);background-size:26px 26px;color:#eaf2ff;font-family:Inter,sans-serif">
+  <header data-screen-label="Header" style="display:flex;justify-content:space-between;align-items:center;padding:18px 4.5vw;border-bottom:1px solid rgba(234,242,255,.16)">
+    <a href="index.html" style="font-family:Archivo,sans-serif;font-weight:700;font-size:17px;letter-spacing:.02em;color:#f4f8ff">GenEnv Lab</a>
+    <div style="display:flex;align-items:center;gap:22px">
+      <span style="font:600 9.5px/1 'IBM Plex Mono',monospace;letter-spacing:.2em;text-transform:uppercase;color:rgba(234,242,255,.5)">Teaching</span>
+      <a href="index.html" style="font:600 10px/1 'IBM Plex Mono',monospace;letter-spacing:.16em;text-transform:uppercase;border:1px solid rgba(255,211,92,.55);padding:8px 12px">← Project index</a>
+    </div>
+  </header>
+
+  <section data-screen-label="Hero" style="display:grid;grid-template-columns:minmax(380px,1fr) minmax(420px,560px);gap:5vw;align-items:center;padding:64px 4.5vw 56px;max-width:1560px;margin:0 auto;box-sizing:border-box">
+    <div>
+      <div style="width:46px;height:3px;background:#ffd35c;margin:0 0 20px"></div>
+      <p style="margin:0;font:600 10px/1.7 'IBM Plex Mono',monospace;letter-spacing:.22em;text-transform:uppercase;color:#ffd35c">Teaching · Course · Computational Design</p>
+      <h1 style="margin:14px 0 0;font-family:Archivo,sans-serif;font-weight:700;font-size:clamp(42px,4.4vw,68px);line-height:.98;text-transform:uppercase;color:#f4f8ff;text-wrap:balance">DES 212 Design Media II</h1>
+      <p style="margin:18px 0 0;font-family:Archivo,sans-serif;font-weight:600;font-size:20px;color:rgba(234,242,255,.85)">Designing rules, not just forms.</p>
+      <p style="margin:16px 0 0;font:400 15px/1.7 Inter,sans-serif;color:rgba(234,242,255,.68);max-width:520px">DES 212 Design Media II introduces computational thinking as a generative medium for design. Moving beyond the use of digital tools to document finished ideas, the course asks students to design relationships, rules, and feedback systems that can produce and transform form. Rhino and Grasshopper provide the primary working environment, connecting technical precision with a broader understanding of how computational tools influence design decisions.</p>
+      <div style="display:flex;gap:34px;margin:28px 0 0;flex-wrap:wrap">
+        <div><p style="margin:0;font:500 9.5px/1.5 'IBM Plex Mono',monospace;letter-spacing:.16em;text-transform:uppercase;color:rgba(234,242,255,.55)">Program</p><p style="margin:5px 0 0;font:500 13px/1.5 Inter,sans-serif;color:#f4f8ff">BDes · UBC SALA · Winter Term 2</p></div>
+        <div><p style="margin:0;font:500 9.5px/1.5 'IBM Plex Mono',monospace;letter-spacing:.16em;text-transform:uppercase;color:rgba(234,242,255,.55)">Course archive</p><p style="margin:5px 0 0;font:500 13px/1.5 Inter,sans-serif;color:#f4f8ff"><a href="#">2026 Winter Term 2 · Course link ↗</a></p></div>
+      </div>
+      <div style="display:flex;gap:14px;margin:30px 0 0;flex-wrap:wrap">
+        <a href="#" style="font:600 10.5px/1 'IBM Plex Mono',monospace;letter-spacing:.16em;text-transform:uppercase;background:#ffd35c;color:#081f4d;padding:12px 18px">Course archive →</a>
+      </div>
+    </div>
+    <div style="border:1px solid rgba(234,242,255,.22);background:#0d2f6b">
+      <div style="display:flex;justify-content:space-between;align-items:center;padding:11px 15px;border-bottom:1px solid rgba(234,242,255,.16)">
+        <span style="font:600 9px/1 'IBM Plex Mono',monospace;letter-spacing:.2em;text-transform:uppercase;color:rgba(234,242,255,.5)">Designing relationships</span>
+      </div>
+      <div style="display:flex;justify-content:center;padding:8px 4px 2px">{{ heroIcon }}</div>
+      <div style="display:flex;justify-content:center;padding:0 15px 13px">
+        <span style="font:600 9px/1 'IBM Plex Mono',monospace;letter-spacing:.22em;text-transform:uppercase;color:rgba(234,242,255,.55)">Rule · Matter · Data · Performance</span>
+      </div>
+    </div>
+  </section>
+
+  <section data-screen-label="Course structure" style="border-top:1px solid rgba(234,242,255,.16);padding:52px 4.5vw 56px;max-width:1560px;margin:0 auto;box-sizing:border-box">
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(340px,1fr));gap:5vw">
+      <div>
+        <p style="margin:0;font:600 10px/1.7 'IBM Plex Mono',monospace;letter-spacing:.22em;text-transform:uppercase;color:#ffd35c">Structure</p>
+        <p style="margin:14px 0 0;font:400 15px/1.75 Inter,sans-serif;color:rgba(234,242,255,.68)">The course moves through three interconnected areas: the logic of form, the intelligence of matter, and advanced form-finding. Students connect parametric systems with AI-assisted workflows, digital fabrication, spatial data, environmental simulation, and evolutionary design. Lectures, technical tutorials, and project-based assignments develop both computational fluency and the ability to communicate how a design was generated, evaluated, and revised.</p>
+      </div>
+      <div>
+        <p style="margin:0;font:600 10px/1.7 'IBM Plex Mono',monospace;letter-spacing:.22em;text-transform:uppercase;color:#ffd35c">Authorship</p>
+        <p style="margin:14px 0 0;font:400 15px/1.75 Inter,sans-serif;color:rgba(234,242,255,.68)">Throughout the course, students are encouraged to treat emerging technologies as collaborators while remaining responsible for authorship, technical decisions, and the consequences of generated results.</p>
+      </div>
+    </div>
+  </section>
+
+  <section data-screen-label="Related platform" style="border-top:1px solid rgba(234,242,255,.16);padding:52px 4.5vw 64px;max-width:1560px;margin:0 auto;box-sizing:border-box">
+    <h2 style="margin:0;font-family:Archivo,sans-serif;font-weight:700;font-size:26px;text-transform:uppercase;color:#f4f8ff">Related platform</h2>
+    <div style="display:flex;flex-wrap:wrap;gap:22px;margin:24px 0 0">
+      <a href="Project - AI4DM.dc.html" style="border:1px solid rgba(234,242,255,.22);background:#0d2f6b;padding:20px 22px;display:flex;flex-direction:column;gap:8px;flex:0 1 480px;min-width:280px;box-sizing:border-box" style-hover="border-color:#ffd35c">
+        <span style="font:600 9px/1 'IBM Plex Mono',monospace;letter-spacing:.2em;text-transform:uppercase;color:#ffd35c">Teaching platform · In development</span>
+        <span style="font-family:Archivo,sans-serif;font-weight:700;font-size:18px;text-transform:uppercase;color:#f4f8ff">AI4DM</span>
+        <span style="font:400 12.5px/1.55 Inter,sans-serif;color:rgba(234,242,255,.6)">AI4DM provides teaching resources for the AI and design-representation components of DES 212.</span>
+      </a>
+    </div>
+  </section>
+
+  <footer style="border-top:1px solid rgba(234,242,255,.16);display:flex;justify-content:space-between;align-items:center;padding:22px 4.5vw;max-width:1560px;margin:0 auto;box-sizing:border-box">
+    <a href="index.html" style="font:600 10px/1 'IBM Plex Mono',monospace;letter-spacing:.18em;text-transform:uppercase">← Project index</a>
+  </footer>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  prism(Pf, pts, z0, z1, kb, o) {
+    const S = (p) => p[0].toFixed(1) + "," + p[1].toFixed(1);
+    const bot = pts.map((p) => Pf(p[0], p[1], z0));
+    const top = pts.map((p) => Pf(p[0], p[1], z1));
+    const faces = [];
+    for (let i = 0; i < pts.length; i++) {
+      const j = (i + 1) % pts.length;
+      faces.push({ d: (pts[i][0] + pts[j][0] + pts[i][1] + pts[j][1]) / 2, pts: [bot[i], bot[j], top[j], top[i]], fill: Math.abs(pts[j][0] - pts[i][0]) >= Math.abs(pts[j][1] - pts[i][1]) ? "#0f316f" : "#0b2a61" });
+    }
+    faces.sort((a, b) => a.d - b.d);
+    const els = faces.map((f, i2) => React.createElement("polygon", { key: kb + "s" + i2, points: f.pts.map(S).join(" "), fill: f.fill, stroke: o.stroke, strokeWidth: o.sw, strokeLinejoin: "round" }));
+    els.push(React.createElement("polygon", { key: kb + "t", points: top.map(S).join(" "), fill: "#12397f", stroke: o.stroke, strokeWidth: o.sw, strokeLinejoin: "round" }));
+    return els;
+  }
+  renderVals() {
+    const s = 50;
+    const P = (x, y, z) => [(x - y) * 0.866 * s, (x + y - 4) * 0.5 * s - z * 0.8 * s];
+    const els = [];
+    for (let i = 0; i <= 5; i++) {
+      const gq = i * 0.8;
+      const a = P(gq, 0, 0), b = P(gq, 4, 0), c = P(0, gq, 0), d = P(4, gq, 0);
+      const st = "rgba(234,242,255," + (i % 5 ? ".09" : ".22") + ")";
+      els.push(React.createElement("line", { key: "gu" + i, x1: a[0], y1: a[1], x2: b[0], y2: b[1], stroke: st, strokeWidth: 1 }));
+      els.push(React.createElement("line", { key: "gv" + i, x1: c[0], y1: c[1], x2: d[0], y2: d[1], stroke: st, strokeWidth: 1 }));
+    }
+    // Icon: parametric — a yellow rule curve on the sheet (west) drives a row of blocks (east).
+    const YEL = "#ffd35c", LN = "rgba(234,242,255,.92)";
+    const S = (pp) => pp[0].toFixed(1) + "," + pp[1].toFixed(1);
+    const ln = (a, b, o) => els.push(React.createElement("line", Object.assign({ key: "l" + els.length, x1: a[0].toFixed(1), y1: a[1].toFixed(1), x2: b[0].toFixed(1), y2: b[1].toFixed(1), stroke: LN, strokeWidth: 1 }, o || {})));
+    const fpar = (q) => 0.35 + 0.55 * Math.sin(q * Math.PI * 1.25 + 0.4) + 0.35 * q;
+    // the sheet — the rule written flat, with its sampled parameter ticks
+    els.push(React.createElement("polygon", { key: "sheet", points: [[0.3, 0.7], [1.5, 0.7], [1.5, 3.3], [0.3, 3.3]].map(([x, y]) => S(P(x, y, 0))).join(" "), fill: "rgba(234,242,255,.03)", stroke: LN, strokeOpacity: 0.6, strokeWidth: 1, strokeDasharray: "6 4", strokeLinejoin: "miter" }));
+    const cps = [];
+    for (let i = 0; i <= 12; i++) { const q = i / 12; cps.push(P(0.55 + fpar(q) * 0.75, 0.95 + q * 2.1, 0)); }
+    els.push(React.createElement("path", { key: "cv", d: cps.map((p, i) => (i ? "L " : "M ") + p[0].toFixed(1) + " " + p[1].toFixed(1)).join(" "), fill: "none", stroke: YEL, strokeWidth: 1.5, strokeLinecap: "round" }));
+    for (let i = 0; i <= 5; i++) { const y2 = 0.95 + (i / 5) * 2.1; ln(P(0.42, y2, 0), P(0.52, y2, 0), { stroke: YEL, strokeOpacity: 0.5, strokeWidth: 0.9 }); }
+    // projection — the rule crosses to the row
+    ln(P(1.55, 2.0, 0), P(1.9, 2.0, 0), { stroke: YEL, strokeOpacity: 0.6, strokeWidth: 1, strokeDasharray: "4 3" });
+    // the row — six bars, heights read off the curve; tops echo the rule
+    const tops = [];
+    for (let i = 0; i < 6; i++) {
+      const q = i / 5, y0 = 0.85 + q * 2.0;
+      const h2 = 0.35 + fpar(q) * 0.85;
+      els.push.apply(els, this.prism(P, [[2.05, y0], [3.55, y0], [3.55, y0 + 0.28], [2.05, y0 + 0.28]], 0, h2, "bar" + i, { stroke: LN, sw: 1 }));
+      tops.push(P(2.8, y0 + 0.14, h2));
+    }
+    els.push(React.createElement("path", { key: "tc", d: tops.map((p, i) => (i ? "L " : "M ") + p[0].toFixed(1) + " " + p[1].toFixed(1)).join(" "), fill: "none", stroke: YEL, strokeOpacity: 0.75, strokeWidth: 1, strokeDasharray: "3 3" }));
+    const heroIcon = React.createElement("svg", { key: "hero", width: 470, height: 300, viewBox: "0 0 470 300", style: { display: "block", maxWidth: "100%", height: "auto" } },
+      React.createElement("g", { transform: "translate(235,172)" }, els));
+    return { heroIcon };
+  }
+}
+</script>
+</body>
+</html>
