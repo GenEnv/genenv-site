@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>GenEnv — Page moved</title>
+<script>
+/* Old URL schemes redirect to the current clean slugs:
+   - "Project - <Name>.dc.html" (Claude design export names, v1/v2)
+   - "pages/<slug>.html" (pre-redesign site)
+   - /join variants -> /join (Openings deep link)                     */
+(() => {
+  const MAP = {
+    'project - ai + landscapes.dc.html': 'ai-landscapes.html',
+    'project - ai4dm.dc.html': 'ai4dm.html',
+    'project - arch 515.dc.html': 'arch-515.html',
+    'project - arch 540.dc.html': 'arch-540.html',
+    'project - code2code.dc.html': 'code2code.html',
+    'project - computational lexicalization.dc.html': 'computational-lexicalization.html',
+    'project - des 212.dc.html': 'des-212.html',
+    'project - decoding urban form.dc.html': 'decoding-urban-form.html',
+    'project - digital thermal sandbox.dc.html': 'digital-thermal-sandbox.html',
+    'project - generative planting.dc.html': 'generative-planting.html',
+    'project - grasshopper mcp.dc.html': 'grasshopper-mcp.html',
+    'project - human-ai co-design.dc.html': 'human-ai-co-design.html',
+    'project - landscape agent.dc.html': 'landscape-agent.html',
+    'landscape-agents.html': 'landscape-agent.html',
+    'open-positions.html': 'join',
+    'openings': 'join',
+    'open-positions': 'join',
+    'join': 'join'
+  };
+  const NEW = new Set(Object.values(MAP));
+  let p = decodeURIComponent(location.pathname).toLowerCase()
+    .replace(/^\/+|\/+$/g, '').replace(/^pages\//, '');
+  const target = MAP[p] || (NEW.has(p) ? p : null);
+  if (target) location.replace('/' + target);
+})();
+</script>
+<style>body{background:#081f4d;color:#eaf2ff;font:500 13px/1.6 monospace;display:flex;align-items:center;justify-content:center;min-height:100vh;margin:0;text-align:center}</style>
+</head>
+<body>
+<p>Page not found.<br><br><a href="/" style="color:#ffd35c">GenEnv — Generative Environments Lab →</a></p>
+</body>
+</html>

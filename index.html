@@ -238,26 +238,26 @@ const CAT_LBL = { projects: "Projects", writing: "Writing", archive: "Archive", 
 // Module grid: standard plot 5, pitch 6 (columns 0/6/12/18…); small unit 2, pitch 3 — a 2x2 cluster of smalls fills one big plot.
 // Zone frames snap to integer grid lines: subzone = block bbox +1, district = +2 (so frames nest with a 1-module gap).
 const PROJECTS = [
-  { id: "uf", title: "Decoding Urban Form", year: "2026 —", type: "Research", status: "hiring", dist: "research", cat: "projects", fund: "SSHRC", venue: "SSHRC", href: "Project - Decoding Urban Form.dc.html", desc: "Reading the city's tissue computationally: parcel fabric, block form, and zoning code. The Vancouver successor to the Code2Code line of work.", line: "the Vancouver Code2Code · SSHRC", slug: "decoding-urban-form", lineage: "Lineage — Code2Code · NYC DCP", map: { u: 0, v: 0, f: 5, arch: "uficon" } },
-  { id: "c2", title: "Code2Code", year: "2018 — 2019", type: "Archive", status: "archive", dist: "research", cat: "archive", venue: "NYC Dept. of City Planning", href: "Project - Code2Code.dc.html", desc: "A line of work beginning with NYC Department of City Planning and moving toward transparent urban form visualization, AI agents, and RAG workflows.", line: "urban form · AI agents · RAG workflows", slug: "code2code", map: { u: 0, v: 14, f: 5, arch: "c2icon" } },
-  { id: "mcp", title: "Grasshopper MCP v2", year: "2026", type: "Tool", status: "current", dist: "research", cat: "projects", venue: "GitHub + live demo", href: "Project - Grasshopper MCP.dc.html", desc: "An evolving tool that connects LLM agents to Grasshopper through MCP, tool calls, skills, and multiple modes of interaction.", line: "LLM agents inside Grasshopper", slug: "grasshopper-mcp", map: { u: 12, v: 0, f: 5, arch: "mcpicon" } },
+  { id: "uf", title: "Decoding Urban Form", year: "2026 —", type: "Research", status: "hiring", dist: "research", cat: "projects", fund: "SSHRC", venue: "SSHRC", href: "decoding-urban-form.html", desc: "Reading the city's tissue computationally: parcel fabric, block form, and zoning code. The Vancouver successor to the Code2Code line of work.", line: "the Vancouver Code2Code · SSHRC", slug: "decoding-urban-form", lineage: "Lineage — Code2Code · NYC DCP", map: { u: 0, v: 0, f: 5, arch: "uficon" } },
+  { id: "c2", title: "Code2Code", year: "2018 — 2019", type: "Archive", status: "archive", dist: "research", cat: "archive", venue: "NYC Dept. of City Planning", href: "code2code.html", desc: "A line of work beginning with NYC Department of City Planning and moving toward transparent urban form visualization, AI agents, and RAG workflows.", line: "urban form · AI agents · RAG workflows", slug: "code2code", map: { u: 0, v: 14, f: 5, arch: "c2icon" } },
+  { id: "mcp", title: "Grasshopper MCP v2", year: "2026", type: "Tool", status: "current", dist: "research", cat: "projects", venue: "GitHub + live demo", href: "grasshopper-mcp.html", desc: "An evolving tool that connects LLM agents to Grasshopper through MCP, tool calls, skills, and multiple modes of interaction.", line: "LLM agents inside Grasshopper", slug: "grasshopper-mcp", map: { u: 12, v: 0, f: 5, arch: "mcpicon" } },
   { id: "np1", title: "More coming soon", ph: true, year: "", type: "", status: "", dist: "research", cat: "projects", venue: "", desc: "", line: "", slug: "np1", map: { u: 6, v: 6, f: 5 } },
   { id: "np2", title: "More coming soon", ph: true, year: "", type: "", status: "", dist: "research", cat: "projects", venue: "", desc: "", line: "", slug: "np2", map: { u: 12, v: 6, f: 5 } },
   { id: "np3", title: "More coming soon", ph: true, year: "", type: "", status: "", dist: "research", cat: "projects", venue: "", desc: "", line: "", slug: "np3", map: { u: 18, v: 6, f: 5 } },
-  { id: "hac", title: "Human-AI Co-Design", year: "2026 —", type: "Research", status: "hiring", dist: "research", cat: "projects", fund: "NSERC", venue: "NSERC", href: "Project - Human-AI Co-Design.dc.html", desc: "Agentic AI as a performance-aware partner in early-stage design: generative proposals connected to live feedback on energy, carbon, structure, and code compliance.", line: "performance in the generative loop · NSERC", slug: "human-ai-co-design", map: { u: 6, v: 0, f: 5, arch: "hacicon" } },
-  { id: "th", title: "Digital Thermal Sandbox", year: "2026 —", type: "Research", status: "current", dist: "research", cat: "projects", fund: "LACF", venue: "LACF", href: "Project - Digital Thermal Sandbox.dc.html", desc: "A sandbox where thermal behavior is read while the form is still moving. Microclimate feedback for early design.", line: "microclimate feedback for early design", slug: "digital-thermal-sandbox", map: { u: 18, v: 0, f: 5, arch: "sandbox" } },
+  { id: "hac", title: "Human-AI Co-Design", year: "2026 —", type: "Research", status: "hiring", dist: "research", cat: "projects", fund: "NSERC", venue: "NSERC", href: "human-ai-co-design.html", desc: "Agentic AI as a performance-aware partner in early-stage design: generative proposals connected to live feedback on energy, carbon, structure, and code compliance.", line: "performance in the generative loop · NSERC", slug: "human-ai-co-design", map: { u: 6, v: 0, f: 5, arch: "hacicon" } },
+  { id: "th", title: "Digital Thermal Sandbox", year: "2026 —", type: "Research", status: "current", dist: "research", cat: "projects", fund: "LACF", venue: "LACF", href: "digital-thermal-sandbox.html", desc: "A sandbox where thermal behavior is read while the form is still moving. Microclimate feedback for early design.", line: "microclimate feedback for early design", slug: "digital-thermal-sandbox", map: { u: 18, v: 0, f: 5, arch: "sandbox" } },
 
-  { id: "pl", title: "Generative Planting", year: "2024", type: "Writing", status: "published", dist: "research", cat: "archive", venue: "JoDLA / ASLA", href: "Project - Generative Planting.dc.html", desc: "An AI-driven tool embedding ecological intelligence into planting design: GANs trained on topography, soil, and climate data generate planting layouts.", line: "planting design at scale", slug: "generative-planting", map: { u: 6, v: 14, f: 5, arch: "plicon" } },
-  { id: "lex", title: "Computational Lexicalization", year: "2026", type: "Writing", status: "published", dist: "research", cat: "writing", venue: "Architectural Journal", href: "Project - Computational Lexicalization.dc.html", desc: "A methodological framework that turns design knowledge into human-readable and machine-executable language for bounded collaboration between designers, agents, and computational tools.", line: "design knowledge as callable language", icoTop: "Lexicon", icoLine: "Name · Bound · Call · Compose", slug: "computational-lexicalization", lineage: "Companion to — Grasshopper MCP", map: { u: 24, v: 0, f: 2, pu: 3.9, arch: "unit" } },
-  { id: "diss", title: "AI + Landscapes", year: "2025", type: "PhD dissertation", status: "published", dist: "research", cat: "writing", venue: "University of Virginia", href: "Project - AI + Landscapes.dc.html", desc: "A doctoral dissertation examining how deep learning can analyze, represent, and generate landscape form across data, images, temporal processes, simulations, and meaning.", line: "a new lexicon for landscape form", icoTop: "Form", icoLine: "Data · Image · Process · Simulation · Meaning", slug: "ai-landscapes", map: { u: 24, v: 3, f: 2, pu: 3.9, arch: "unit" } },
+  { id: "pl", title: "Generative Planting", year: "2024", type: "Writing", status: "published", dist: "research", cat: "archive", venue: "JoDLA / ASLA", href: "generative-planting.html", desc: "An AI-driven tool embedding ecological intelligence into planting design: GANs trained on topography, soil, and climate data generate planting layouts.", line: "planting design at scale", slug: "generative-planting", map: { u: 6, v: 14, f: 5, arch: "plicon" } },
+  { id: "lex", title: "Computational Lexicalization", year: "2026", type: "Writing", status: "published", dist: "research", cat: "writing", venue: "Architectural Journal", href: "computational-lexicalization.html", desc: "A methodological framework that turns design knowledge into human-readable and machine-executable language for bounded collaboration between designers, agents, and computational tools.", line: "design knowledge as callable language", icoTop: "Lexicon", icoLine: "Name · Bound · Call · Compose", slug: "computational-lexicalization", lineage: "Companion to — Grasshopper MCP", map: { u: 24, v: 0, f: 2, pu: 3.9, arch: "unit" } },
+  { id: "diss", title: "AI + Landscapes", year: "2025", type: "PhD dissertation", status: "published", dist: "research", cat: "writing", venue: "University of Virginia", href: "ai-landscapes.html", desc: "A doctoral dissertation examining how deep learning can analyze, represent, and generate landscape form across data, images, temporal processes, simulations, and meaning.", line: "a new lexicon for landscape form", icoTop: "Form", icoLine: "Data · Image · Process · Simulation · Meaning", slug: "ai-landscapes", map: { u: 24, v: 3, f: 2, pu: 3.9, arch: "unit" } },
 
   { id: "na1", title: "More coming soon", ph: true, year: "", type: "", status: "", dist: "research", cat: "archive", venue: "", desc: "", line: "", slug: "na1", map: { u: 12, v: 14, f: 5 } },
 
-  { id: "d212", title: "DES 212 · Design Media II", lbl: "Design Media II", year: "2026", type: "Course", status: "completed", href: "Project - DES 212.dc.html", dist: "teaching", cat: "teaching", venue: "UBC SALA", desc: "BDes design media: computational thinking as a generative medium — designing relationships, rules, and feedback systems in Rhino and Grasshopper.", line: "BDES design media", slug: "des-212", map: { u: 34, v: 0, f: 5, arch: "d212icon" } },
-  { id: "a515", title: "ARCH 515 · Design Media I", lbl: "Design Media I", year: "2025", type: "Course", status: "completed", href: "Project - ARCH 515.dc.html", dist: "teaching", cat: "teaching", venue: "UBC SALA", desc: "MLA design media: learning to see through media — representation as both a practical skill and a way of thinking in landscape architecture.", line: "MLA design media · landscape session", slug: "arch-515", map: { u: 40, v: 0, f: 5, arch: "a515icon" } },
-  { id: "a540", title: "ARCH 540 · Designing the Design", lbl: "Designing the Design", year: "2025", type: "Option studio", status: "completed", href: "Project - ARCH 540.dc.html", dist: "teaching", cat: "teaching", venue: "UBC SALA", desc: "MArch option studio: designing the design — treating AI-era workflows, methods, and tools as objects of design rather than producing a conventional building proposal.", line: "MArch option studio", slug: "arch-540", map: { u: 46, v: 0, f: 5, arch: "a540icon" } },
-  { id: "ad", title: "AI4DM", year: "2026 —", type: "Teaching platform", status: "in development", dist: "teaching", cat: "platform", venue: "UBC SALA", href: "Project - AI4DM.dc.html", desc: "A teaching platform for design representation in the age of generative AI, reconnecting AI workflows with the broader culture of design media.", line: "AI + design media teaching platform", slug: "ai4dm", map: { u: 34, v: 9, f: 5, arch: "ai4dmicon" } },
-  { id: "la", title: "Landscape Agent", year: "2025", type: "Workshop / Research", status: "completed", dist: "teaching", cat: "workshop", venue: "DigitalFUTURES · Tongji University", href: "Project - Landscape Agent.dc.html", desc: "A DigitalFUTURES workshop at Tongji University in which participants translated landscape design knowledge into callable vocabularies for agent-assisted parametric modeling.", line: "design vocabularies for landscape agents", slug: "landscape-agents", map: { u: 54, v: 0, f: 5, arch: "laicon" } },
+  { id: "d212", title: "DES 212 · Design Media II", lbl: "Design Media II", year: "2026", type: "Course", status: "completed", href: "des-212.html", dist: "teaching", cat: "teaching", venue: "UBC SALA", desc: "BDes design media: computational thinking as a generative medium — designing relationships, rules, and feedback systems in Rhino and Grasshopper.", line: "BDES design media", slug: "des-212", map: { u: 34, v: 0, f: 5, arch: "d212icon" } },
+  { id: "a515", title: "ARCH 515 · Design Media I", lbl: "Design Media I", year: "2025", type: "Course", status: "completed", href: "arch-515.html", dist: "teaching", cat: "teaching", venue: "UBC SALA", desc: "MLA design media: learning to see through media — representation as both a practical skill and a way of thinking in landscape architecture.", line: "MLA design media · landscape session", slug: "arch-515", map: { u: 40, v: 0, f: 5, arch: "a515icon" } },
+  { id: "a540", title: "ARCH 540 · Designing the Design", lbl: "Designing the Design", year: "2025", type: "Option studio", status: "completed", href: "arch-540.html", dist: "teaching", cat: "teaching", venue: "UBC SALA", desc: "MArch option studio: designing the design — treating AI-era workflows, methods, and tools as objects of design rather than producing a conventional building proposal.", line: "MArch option studio", slug: "arch-540", map: { u: 46, v: 0, f: 5, arch: "a540icon" } },
+  { id: "ad", title: "AI4DM", year: "2026 —", type: "Teaching platform", status: "in development", dist: "teaching", cat: "platform", venue: "UBC SALA", href: "ai4dm.html", desc: "A teaching platform for design representation in the age of generative AI, reconnecting AI workflows with the broader culture of design media.", line: "AI + design media teaching platform", slug: "ai4dm", map: { u: 34, v: 9, f: 5, arch: "ai4dmicon" } },
+  { id: "la", title: "Landscape Agent", year: "2025", type: "Workshop / Research", status: "completed", dist: "teaching", cat: "workshop", venue: "DigitalFUTURES · Tongji University", href: "landscape-agent.html", desc: "A DigitalFUTURES workshop at Tongji University in which participants translated landscape design knowledge into callable vocabularies for agent-assisted parametric modeling.", line: "design vocabularies for landscape agents", slug: "landscape-agents", map: { u: 54, v: 0, f: 5, arch: "laicon" } },
 
 
 
@@ -856,7 +856,7 @@ class Component extends DCLogic {
         els.push(React.createElement("circle", { key: kb + "ims", cx: sun[0].toFixed(1), cy: sun[1].toFixed(1), r: (swD * 3).toFixed(1), fill: "none", stroke: YEL, strokeWidth: swD, opacity: im.toFixed(2) }));
       }
     } else if (arch === "c2icon") {
-      // Code2Code — see icon9 in Project - Code2Code.dc.html; developed in plan first.
+      // Code2Code — see icon9 in code2code.html; developed in plan first.
       const anim = opt.anim;
       const stg = (a, b) => (anim == null ? 1 : this.ss(anim, a, b));
       const S9 = (pp) => pp[0].toFixed(1) + "," + pp[1].toFixed(1);
@@ -1617,6 +1617,29 @@ class Component extends DCLogic {
     return out;
   }
 }
+</script>
+<script>
+/* Deep link: genenv.ai/#join (via the /join stub) lands on the Openings
+   section. Mirrors the nav Join button's goJoin = _go(0.73), which is
+   window.scrollTo(0.73 * 11 * vh). Retries until the runtime has grown
+   the page tall enough for that offset to be reachable. */
+(() => {
+  if (location.hash !== '#join') return;
+  let tries = 0;
+  const attempt = () => {
+    const vh = window.innerHeight;
+    const top = 0.73 * 11 * vh;
+    const ready = vh > 0 &&
+      document.documentElement.scrollHeight >= top + vh;
+    if (ready) {
+      window.scrollTo({ top, behavior: 'smooth' });
+      setTimeout(() => {
+        if (Math.abs(window.scrollY - top) > 50) window.scrollTo(0, top);
+      }, 1200);
+    } else if (++tries < 25) setTimeout(attempt, 400);
+  };
+  window.addEventListener('load', () => setTimeout(attempt, 300));
+})();
 </script>
 </body>
 </html>

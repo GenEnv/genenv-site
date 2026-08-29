@@ -14,12 +14,23 @@ The site is a self-contained export from Claude design (no build step).
 
 - `index.html`: homepage (renamed from the `GenEnv Home` screen; back-links
   in subpages rewritten from `GenEnv Home.dc.html` to `index.html`).
-- `Project - *.dc.html`: 13 project/course subpages, all linked from the
-  homepage (research projects plus ARCH 515/540 and DES 212).
+- 13 project/course subpages with clean slug filenames (`des-212.html`,
+  `grasshopper-mcp.html`, ...), renamed from the export's
+  `Project - <Name>.dc.html` screen files; every internal link rewritten
+  and a per-page `<title>` injected.
+- `join.html`: standalone URL for Openings (`genenv.ai/join`) — redirects
+  to `/#join`, which a small script appended to `index.html` turns into a
+  scroll to the Join chapter (mirrors the nav button's `_go(0.73)`).
+- `404.html`: redirects old URL schemes (`Project - *.dc.html` names and
+  the pre-redesign `pages/*.html` names) to the current slugs.
 - `support.js`, `image-slot.js`: runtime helpers required by the export.
 - `media/`: all site images (webp/png/gif), including per-project folders.
 - `CNAME`: custom domain (`genenv.ai`) for GitHub Pages.
 - `.nojekyll`: serve files as-is (no Jekyll processing).
+
+Redeploying a new export must reapply: home rename + back-link rewrite,
+slug renames (map in `404.html`), title injection, and must keep
+`join.html`, `404.html`, and the `#join` deep-link script.
 
 To edit content, iterate in Claude design and re-export, or edit the HTML
 directly — but note the export inlines its styles per page.
