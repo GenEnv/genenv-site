@@ -21,6 +21,10 @@ The site is a self-contained export from Claude design (no build step).
 - `join.html`: standalone URL for Openings (`genenv.ai/join`) — redirects
   to `/#join`, which a small script appended to `index.html` turns into a
   scroll to the Join chapter (mirrors the nav button's `_go(0.73)`).
+- `openings.html`: hand-built standalone Openings page (`genenv.ai/openings`)
+  in the export's visual language; the homepage "Openings" record links to
+  it via its `href` (copy sourced from the homepage record + join chapter —
+  keep in sync if that copy changes in Claude design).
 - `404.html`: redirects old URL schemes (`Project - *.dc.html` names and
   the pre-redesign `pages/*.html` names) to the current slugs.
 - `support.js`, `image-slot.js`: runtime helpers required by the export.
