@@ -259,6 +259,7 @@ const PROJECTS = [
   { id: "a540", title: "ARCH 540 · Designing the Design", lbl: "Designing the Design", year: "2025", type: "Option studio", status: "completed", href: "arch-540", dist: "teaching", cat: "teaching", venue: "UBC SALA", desc: "MArch option studio: designing the design — treating AI-era workflows, methods, and tools as objects of design rather than producing a conventional building proposal.", line: "MArch option studio", slug: "arch-540", map: { u: 46, v: 0, f: 5, arch: "a540icon" } },
   { id: "ad", title: "AI4DM", year: "2026 —", type: "Teaching platform", status: "in development", dist: "teaching", cat: "platform", venue: "UBC SALA", href: "ai4dm", desc: "A teaching platform for design representation in the age of generative AI, reconnecting AI workflows with the broader culture of design media.", line: "AI + design media teaching platform", slug: "ai4dm", map: { u: 34, v: 9, f: 5, arch: "ai4dmicon" } },
   { id: "la", title: "Landscape Agent", year: "2025", type: "Workshop / Research", status: "completed", dist: "teaching", cat: "workshop", venue: "DigitalFUTURES · Tongji University", href: "landscape-agent", desc: "A DigitalFUTURES workshop at Tongji University in which participants translated landscape design knowledge into callable vocabularies for agent-assisted parametric modeling.", line: "design vocabularies for landscape agents", slug: "landscape-agents", map: { u: 54, v: 0, f: 5, arch: "laicon" } },
+  { id: "asim", title: "ArchSim", year: "2026", type: "M.Arch thesis", status: "completed", dist: "teaching", cat: "students", venue: "UBC SALA", href: "arch-sim", desc: "Karl Lam's M.Arch thesis: a multi-agent negotiation system for schematic design, where AI consultants for structure, MEP, cost, and code deliberate over live parametric simulation, supervised by the architect.", line: "multi-agent negotiation for schematic design", slug: "arch-sim", map: { u: 60, v: 0, f: 3, arch: "unit" } },
 
 
 
@@ -270,7 +271,7 @@ const PROJECTS = [
 const BY_ID = {};
 PROJECTS.forEach((p) => { BY_ID[p.id] = p; });
 
-const FEED_MAIN = ["uf", "hac", "mcp", "th", "lex", "diss", "ad", "a515", "d212", "a540", "open", "partners", "people", "la"];
+const FEED_MAIN = ["uf", "hac", "mcp", "th", "lex", "diss", "ad", "a515", "d212", "a540", "open", "partners", "people", "la", "asim"];
 const FEED_ARCH = ["c2", "pl"];
 const FILTERS = [["all", "All"], ["projects", "Projects"], ["writing", "Writing"], ["teaching", "Teaching"], ["workshop", "Workshops"], ["platform", "Platform"], ["about", "People"], ["join", "Join"], ["archive", "Archive"]];
 
