@@ -2,10 +2,11 @@
 
 Static site for `genenv.ai`, published via GitHub Pages from `main` (root).
 
-Open `index.html` directly in a browser, or run a simple local server from this folder:
+Run the local preview server from this folder (it mirrors GitHub Pages'
+clean-URL behavior — internal links are extensionless, e.g. `/des-212`):
 
 ```sh
-python3 -m http.server 4173
+python3 tools/serve.py 4173
 ```
 
 ## Current build (2026-08-16): Claude design redesign, v2
@@ -32,9 +33,15 @@ The site is a self-contained export from Claude design (no build step).
 - `CNAME`: custom domain (`genenv.ai`) for GitHub Pages.
 - `.nojekyll`: serve files as-is (no Jekyll processing).
 
+Internal links are extensionless (`href="des-212"`, back-links `./`) so
+the address bar shows clean URLs; GitHub Pages resolves them to the
+`.html` files, and each page carries a canonical tag. Preview locally
+with `tools/serve.py` (plain `http.server` cannot resolve them).
+
 Redeploying a new export must reapply: home rename + back-link rewrite,
-slug renames (map in `404.html`), title injection, and must keep
-`join.html`, `404.html`, and the `#join` deep-link script.
+slug renames (map in `404.html`), extensionless link rewrite + canonical
+tags, title injection, and must keep `join.html`, `openings.html`,
+`404.html`, and the `#join` deep-link script.
 
 To edit content, iterate in Claude design and re-export, or edit the HTML
 directly — but note the export inlines its styles per page.
