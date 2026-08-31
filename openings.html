@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Openings — GenEnv</title>
+<title>Join GenEnv — Openings</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700&amp;family=IBM+Plex+Mono:wght@400;500;600;700&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet">
@@ -12,8 +12,12 @@
   a { color: #ffd35c; text-decoration: none; }
   a:hover { color: #ffe49a; }
   ::selection { background: rgba(255,211,92,.35); }
-  .proj-card { display: block; border: 1px solid rgba(234,242,255,.22); background: #0d2f6b; padding: 20px 22px; transition: border-color .2s; }
-  .proj-card:hover { border-color: rgba(255,211,92,.6); }
+  .body-list { margin: 12px 0 0; padding: 0; list-style: none; }
+  .body-list li { position: relative; padding-left: 18px; margin: 8px 0 0; font: 400 14px/1.65 Inter, sans-serif; color: rgba(234,242,255,.8); }
+  .body-list li::before { content: "—"; position: absolute; left: 0; color: rgba(255,211,92,.7); }
+  .sub-list { margin: 6px 0 0; padding: 0; list-style: none; }
+  .sub-list li { position: relative; padding-left: 16px; margin: 4px 0 0; font: 400 13.5px/1.6 Inter, sans-serif; color: rgba(234,242,255,.72); }
+  .sub-list li::before { content: "·"; position: absolute; left: 2px; color: rgba(255,211,92,.7); }
 </style>
 </head>
 <body>
@@ -29,58 +33,64 @@
   <section style="padding:72px 4.5vw 56px;max-width:760px;margin:0 auto;box-sizing:border-box">
     <div style="width:46px;height:3px;background:#ffd35c;margin:0 0 20px"></div>
     <p style="margin:0;font:600 10px/1.7 'IBM Plex Mono',monospace;letter-spacing:.22em;text-transform:uppercase;color:#ffd35c">Opportunity · UBC SALA · Open</p>
-    <h1 style="margin:14px 0 0;font-family:Archivo,sans-serif;font-weight:700;font-size:clamp(42px,4.4vw,68px);line-height:.98;text-transform:uppercase;color:#f4f8ff;text-wrap:balance">Openings</h1>
-    <p style="margin:18px 0 0;font-family:Archivo,sans-serif;font-weight:600;font-size:20px;color:rgba(234,242,255,.85)">Fully funded PhD positions, master's students, and open collaborations.</p>
-    <p style="margin:16px 0 0;font:400 15px/1.7 Inter,sans-serif;color:rgba(234,242,255,.68)">The lab recruits PhD students and research assistants on its funded projects, welcomes master's students in UBC SALA's MASA and MASLA programs, and is open to collaborations and contributions in many forms.</p>
-    <div style="display:flex;gap:34px;margin:28px 0 0;flex-wrap:wrap">
-      <div><p style="margin:0;font:500 9.5px/1.5 'IBM Plex Mono',monospace;letter-spacing:.16em;text-transform:uppercase;color:rgba(234,242,255,.55)">Interviews</p><p style="margin:5px 0 0;font:500 13px/1.5 Inter,sans-serif;color:#f4f8ff">From late October 2026</p></div>
-      <div><p style="margin:0;font:500 9.5px/1.5 'IBM Plex Mono',monospace;letter-spacing:.16em;text-transform:uppercase;color:rgba(234,242,255,.55)">Contact</p><p style="margin:5px 0 0;font:500 13px/1.5 'IBM Plex Mono',monospace"><a href="mailto:xliu@sala.ubc.ca">xliu@sala.ubc.ca</a></p></div>
+    <h1 style="margin:14px 0 0;font-family:Archivo,sans-serif;font-weight:700;font-size:clamp(42px,4.4vw,68px);line-height:.98;text-transform:uppercase;color:#f4f8ff;text-wrap:balance">Join GenEnv</h1>
+    <p style="margin:18px 0 0;font:400 15px/1.7 Inter,sans-serif;color:rgba(234,242,255,.68)">The <a href="index.html">Generative Environments Lab (GenEnv)</a> welcomes students and collaborators interested in artificial intelligence, computational design, and interdisciplinary research on the built environment.</p>
+  </section>
+
+  <section style="border-top:1px solid rgba(234,242,255,.16);padding:48px 4.5vw 52px;max-width:760px;margin:0 auto;box-sizing:border-box">
+    <p style="margin:0;font:600 10px/1.7 'IBM Plex Mono',monospace;letter-spacing:.22em;text-transform:uppercase;color:#ffd35c">Fully funded PhD opportunities</p>
+    <p style="margin:16px 0 0;font:400 15px/1.7 Inter,sans-serif;color:rgba(234,242,255,.68)">GenEnv is recruiting PhD students for September 2027 admission through SALA's <a href="https://sala.ubc.ca/program/ph-d-in-design-technology-and-society/" target="_blank">PhD in Design, Technology and Society</a> program. Selected PhD students will receive funding for four years, with the specific package confirmed in the official offer of admission.</p>
+    <p style="margin:16px 0 0;font:400 15px/1.7 Inter,sans-serif;color:rgba(234,242,255,.68)">Research may develop across three interconnected areas:</p>
+    <div style="display:grid;gap:18px;margin:20px 0 0">
+      <div><p style="margin:0;font:500 9.5px/1.5 'IBM Plex Mono',monospace;letter-spacing:.16em;text-transform:uppercase;color:rgba(234,242,255,.55)">Human-AI co-design</p><p style="margin:5px 0 0;font:400 14px/1.65 Inter,sans-serif;color:rgba(234,242,255,.8)">Developing generative AI methods, interactive systems, and computational workflows that support design exploration and collaboration in architecture, landscape architecture, and urban design.</p></div>
+      <div><p style="margin:0;font:500 9.5px/1.5 'IBM Plex Mono',monospace;letter-spacing:.16em;text-transform:uppercase;color:rgba(234,242,255,.55)">Performance-informed design</p><p style="margin:5px 0 0;font:400 14px/1.65 Inter,sans-serif;color:rgba(234,242,255,.8)">Integrating environmental, material, structural, and other performance considerations into early-stage design processes through AI and computational methods.</p></div>
+      <div><p style="margin:0;font:500 9.5px/1.5 'IBM Plex Mono',monospace;letter-spacing:.16em;text-transform:uppercase;color:rgba(234,242,255,.55)">Agentic AI for urban knowledge</p><p style="margin:5px 0 0;font:400 14px/1.65 Inter,sans-serif;color:rgba(234,242,255,.8)">Developing AI systems that connect planning documents, regulations, spatial data, and design information, making complex urban knowledge more accessible and actionable.</p></div>
     </div>
+    <p style="margin:20px 0 0;font:400 15px/1.7 Inter,sans-serif;color:rgba(234,242,255,.68)">Projects may involve computational prototyping, design research, spatial analysis, interface development, or user studies. Applicants are not expected to work across all three areas.</p>
+    <p style="margin:16px 0 0;font:400 15px/1.7 Inter,sans-serif;color:rgba(234,242,255,.68)">Applicants may come from architecture, landscape architecture, urban design, planning, engineering, computer science, human-computer interaction, or related fields. Strong candidates should demonstrate research potential and relevant experience in one or more of the following:</p>
+    <ul class="body-list">
+      <li>Computational design, programming, or digital prototyping</li>
+      <li>Generative AI, large language models, or agentic systems</li>
+      <li>Parametric modelling, simulation, GIS, or spatial data analysis</li>
+      <li>Environmental or building performance analysis</li>
+      <li>Interaction design, user research, or participatory methods</li>
+      <li>Design research, academic writing, and research communication</li>
+    </ul>
+    <p style="margin:20px 0 0;font:400 15px/1.7 Inter,sans-serif;color:rgba(234,242,255,.68)">Interdisciplinary backgrounds and approaches are encouraged.</p>
   </section>
 
   <section style="border-top:1px solid rgba(234,242,255,.16);padding:48px 4.5vw 52px;max-width:760px;margin:0 auto;box-sizing:border-box">
-    <p style="margin:0;font:600 10px/1.7 'IBM Plex Mono',monospace;letter-spacing:.22em;text-transform:uppercase;color:#ffd35c">PhD positions · Fully funded</p>
-    <p style="margin:16px 0 0;font:400 15px/1.7 Inter,sans-serif;color:rgba(234,242,255,.68)">PhD positions are fully funded and center on the lab's funded research projects: developing agentic AI systems that interpret regulations and design intent, generate editable and verifiable proposals, and connect generative design with real performance feedback.</p>
-    <div style="display:grid;gap:16px;margin:24px 0 0">
-      <a class="proj-card" href="decoding-urban-form.html">
-        <p style="margin:0;font:500 9.5px/1.5 'IBM Plex Mono',monospace;letter-spacing:.16em;text-transform:uppercase;color:rgba(234,242,255,.55)">Social Sciences and Humanities Research Council (SSHRC)</p>
-        <p style="margin:8px 0 0;font-family:Archivo,sans-serif;font-weight:700;font-size:20px;color:#f4f8ff">Decoding Urban Form</p>
-        <p style="margin:8px 0 0;font:400 13.5px/1.65 Inter,sans-serif;color:rgba(234,242,255,.68)">Making zoning visible, testable, and open to more people — agentic AI that translates zoning regulations into accessible spatial knowledge and site-specific 3D massing proposals.</p>
-      </a>
-      <a class="proj-card" href="human-ai-co-design.html">
-        <p style="margin:0;font:500 9.5px/1.5 'IBM Plex Mono',monospace;letter-spacing:.16em;text-transform:uppercase;color:rgba(234,242,255,.55)">Natural Sciences and Engineering Research Council of Canada (NSERC)</p>
-        <p style="margin:8px 0 0;font-family:Archivo,sans-serif;font-weight:700;font-size:20px;color:#f4f8ff">Human-AI Co-Design</p>
-        <p style="margin:8px 0 0;font:400 13.5px/1.65 Inter,sans-serif;color:rgba(234,242,255,.68)">Bringing performance into the generative design process — a performance-aware agentic framework that connects generative design with feedback on energy, carbon, structural feasibility, and regulatory compliance. The PhD student will lead the development of its agentic AI framework and verification protocols.</p>
-      </a>
-    </div>
+    <p style="margin:0;font:600 10px/1.7 'IBM Plex Mono',monospace;letter-spacing:.22em;text-transform:uppercase;color:#ffd35c">Master's research students</p>
+    <p style="margin:16px 0 0;font:400 15px/1.7 Inter,sans-serif;color:rgba(234,242,255,.68)">GenEnv also welcomes inquiries from prospective students in SALA's <a href="https://sala.ubc.ca/program/master-of-advanced-studies-in-architecture/" target="_blank">Master of Advanced Studies in Architecture (MASA)</a> and <a href="https://sala.ubc.ca/program/master-of-advanced-studies-in-landscape-architecture/" target="_blank">Master of Advanced Studies in Landscape Architecture (MASLA)</a> programs.</p>
+    <p style="margin:16px 0 0;font:400 15px/1.7 Inter,sans-serif;color:rgba(234,242,255,.68)">Prospective master's students should propose an independent research direction that aligns with GenEnv's research. Supervision depends on research fit, faculty capacity, and the requirements of the relevant SALA program. Funding for master's students is not guaranteed.</p>
   </section>
 
   <section style="border-top:1px solid rgba(234,242,255,.16);padding:48px 4.5vw 52px;max-width:760px;margin:0 auto;box-sizing:border-box">
-    <p style="margin:0;font:600 10px/1.7 'IBM Plex Mono',monospace;letter-spacing:.22em;text-transform:uppercase;color:#ffd35c">Master's students · MASA / MASLA</p>
-    <p style="margin:16px 0 0;font:400 15px/1.7 Inter,sans-serif;color:rgba(234,242,255,.68)">The lab also welcomes master's students in UBC SALA's Master of Advanced Studies in Architecture (MASA) and Master of Advanced Studies in Landscape Architecture (MASLA) programs to develop research aligned with the lab's directions.</p>
-  </section>
-
-  <section style="border-top:1px solid rgba(234,242,255,.16);padding:48px 4.5vw 52px;max-width:760px;margin:0 auto;box-sizing:border-box">
-    <p style="margin:0;font:600 10px/1.7 'IBM Plex Mono',monospace;letter-spacing:.22em;text-transform:uppercase;color:#ffd35c">Collaborations</p>
-    <p style="margin:16px 0 0;font:400 15px/1.7 Inter,sans-serif;color:rgba(234,242,255,.68)">Beyond formal positions, the lab is interested in other types of collaboration and contribution. Researchers, practitioners, and students who want to work on the lab's projects and tools — in any capacity — are welcome to reach out.</p>
+    <p style="margin:0;font:600 10px/1.7 'IBM Plex Mono',monospace;letter-spacing:.22em;text-transform:uppercase;color:#ffd35c">Other collaborations and contributions</p>
+    <p style="margin:16px 0 0;font:400 15px/1.7 Inter,sans-serif;color:rgba(234,242,255,.68)">GenEnv is open to collaborations with UBC students, visiting researchers, designers, developers, community organizations, and academic or industry partners.</p>
+    <p style="margin:16px 0 0;font:400 15px/1.7 Inter,sans-serif;color:rgba(234,242,255,.68)">Depending on research fit, project needs, capacity, and UBC policies, participation may include research assistantships, thesis or course-based research, visiting collaborations, workshops, short-term projects, or independent project contributions. Not all opportunities are funded, and the scope and arrangement will be discussed before participation begins.</p>
   </section>
 
   <section style="border-top:1px solid rgba(234,242,255,.16);padding:48px 4.5vw 64px;max-width:760px;margin:0 auto;box-sizing:border-box">
-    <p style="margin:0;font:600 10px/1.7 'IBM Plex Mono',monospace;letter-spacing:.22em;text-transform:uppercase;color:#ffd35c">Reaching out · What to include</p>
-    <div style="display:grid;gap:18px;margin:20px 0 0">
-      <div><p style="margin:0;font:500 9.5px/1.5 'IBM Plex Mono',monospace;letter-spacing:.16em;text-transform:uppercase;color:rgba(234,242,255,.55)">CV</p><p style="margin:5px 0 0;font:400 14px/1.65 Inter,sans-serif;color:rgba(234,242,255,.8)">Academic and professional background.</p></div>
-      <div><p style="margin:0;font:500 9.5px/1.5 'IBM Plex Mono',monospace;letter-spacing:.16em;text-transform:uppercase;color:rgba(234,242,255,.55)">Work sample</p><p style="margin:5px 0 0;font:400 14px/1.65 Inter,sans-serif;color:rgba(234,242,255,.8)">Portfolio, writing sample, or GitHub link, where applicable.</p></div>
-      <div><p style="margin:0;font:500 9.5px/1.5 'IBM Plex Mono',monospace;letter-spacing:.16em;text-transform:uppercase;color:rgba(234,242,255,.55)">Cover letter</p><p style="margin:5px 0 0;font:400 14px/1.65 Inter,sans-serif;color:rgba(234,242,255,.8)">Why you are interested, relevant experience and skills, and a brief research direction.</p></div>
-    </div>
-    <p style="margin:24px 0 0;font:400 15px/1.7 Inter,sans-serif;color:rgba(234,242,255,.68)">Interviews begin around late October 2026.</p>
-
-    <div style="display:flex;gap:34px;margin:34px 0 0;flex-wrap:wrap">
-      <div><p style="margin:0;font:500 9.5px/1.5 'IBM Plex Mono',monospace;letter-spacing:.16em;text-transform:uppercase;color:rgba(234,242,255,.55)">Prospective PhD applicants</p><p style="margin:5px 0 0;font:500 13px/1.5 'IBM Plex Mono',monospace;color:#f4f8ff"><a href="mailto:xliu@sala.ubc.ca">xliu@sala.ubc.ca</a></p></div>
-      <div><p style="margin:0;font:500 9.5px/1.5 'IBM Plex Mono',monospace;letter-spacing:.16em;text-transform:uppercase;color:rgba(234,242,255,.55)">Lab / general</p><p style="margin:5px 0 0;font:500 13px/1.5 'IBM Plex Mono',monospace;color:#f4f8ff"><a href="mailto:genenvlab@gmail.com">genenvlab@gmail.com</a></p></div>
-    </div>
+    <p style="margin:0;font:600 10px/1.7 'IBM Plex Mono',monospace;letter-spacing:.22em;text-transform:uppercase;color:#ffd35c">How to express interest</p>
+    <p style="margin:16px 0 0;font:400 15px/1.7 Inter,sans-serif;color:rgba(234,242,255,.68)">Please email Xun Liu at <a href="mailto:xliu@sala.ubc.ca">xliu@sala.ubc.ca</a> and identify the opportunity or research area in the subject line.</p>
+    <p style="margin:16px 0 0;font:400 15px/1.7 Inter,sans-serif;color:rgba(234,242,255,.68)">Include:</p>
+    <ul class="body-list">
+      <li>A current CV, including your publication record if applicable</li>
+      <li>Relevant work samples, such as a portfolio or writing sample</li>
+      <li>A GitHub or other project repository link, if applicable</li>
+      <li>A cover letter describing:
+        <ul class="sub-list">
+          <li>why you are interested in GenEnv</li>
+          <li>your relevant experience and skills</li>
+          <li>the research direction you would like to explore</li>
+        </ul>
+      </li>
+    </ul>
+    <p style="margin:24px 0 0;font:400 15px/1.7 Inter,sans-serif;color:rgba(234,242,255,.68)">Review of inquiries and interviews for the 2027 PhD intake will begin in late October 2026. Shortlisted candidates must also complete the official UBC and SALA application process. Faculty interest or an invitation to interview does not guarantee admission.</p>
 
     <div style="display:flex;gap:14px;margin:36px 0 0;flex-wrap:wrap">
-      <a href="mailto:xliu@sala.ubc.ca" style="font:600 10.5px/1 'IBM Plex Mono',monospace;letter-spacing:.16em;text-transform:uppercase;background:#ffd35c;color:#081f4d;padding:12px 18px">Write to the lab →</a>
+      <a href="mailto:xliu@sala.ubc.ca" style="font:600 10.5px/1 'IBM Plex Mono',monospace;letter-spacing:.16em;text-transform:uppercase;background:#ffd35c;color:#081f4d;padding:12px 18px">Email Xun Liu →</a>
       <a href="index.html" style="font:600 10.5px/1 'IBM Plex Mono',monospace;letter-spacing:.16em;text-transform:uppercase;border:1px solid rgba(234,242,255,.4);color:#eaf2ff;padding:12px 18px">Explore the lab</a>
     </div>
   </section>
