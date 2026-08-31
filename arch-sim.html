@@ -61,10 +61,44 @@
       <div style="display:flex;justify-content:space-between;align-items:center;padding:11px 15px;border-bottom:1px solid rgba(234,242,255,.16)">
         <span style="font:600 9px/1 'IBM Plex Mono',monospace;letter-spacing:.2em;text-transform:uppercase;color:rgba(234,242,255,.5)">Prototype</span>
       </div>
-      <div class="sheet-body" style="background:#0d2f6b;padding:0">
-        <img src="media/arch-sim/interface.png" alt="The ArchSim interface — massing viewer, the multi-agent office scene mid-negotiation, and live analysis panels" style="display:block;width:100%;height:auto">
+      <div style="display:flex;justify-content:center;padding:8px 4px 2px">
+        <svg width="470" height="300" viewBox="0 0 470 300" style="display:block;max-width:100%;height:auto" font-family="'IBM Plex Mono',monospace">
+          <g transform="translate(235,168)">
+            <g stroke="rgba(234,242,255,.22)">
+              <line x1="-173" y1="0" x2="0" y2="-100"/><line x1="0" y1="-100" x2="173" y2="0"/>
+              <line x1="173" y1="0" x2="0" y2="100"/><line x1="0" y1="100" x2="-173" y2="0"/>
+              <line x1="-138.4" y1="-20" x2="34.6" y2="-120" opacity=".35"/>
+              <line x1="-138.4" y1="20" x2="34.6" y2="120" opacity=".35"/>
+              <line x1="138.4" y1="-20" x2="-34.6" y2="-120" opacity=".35"/>
+              <line x1="138.4" y1="20" x2="-34.6" y2="120" opacity=".35"/>
+            </g>
+            <g>
+              <polygon points="0,-34 30,-17 0,0 -30,-17" fill="rgba(255,211,92,.3)" stroke="rgba(234,242,255,.9)"/>
+              <polygon points="-30,-17 0,0 0,26 -30,9" fill="#0f316f" stroke="rgba(234,242,255,.9)"/>
+              <polygon points="30,-17 0,0 0,26 30,9" fill="#0b2a61" stroke="rgba(234,242,255,.9)"/>
+            </g>
+            <g stroke="rgba(234,242,255,.8)">
+              <g transform="translate(-92,-46)"><polygon points="0,-14 12,-7 0,0 -12,-7" fill="rgba(158,196,255,.35)"/><polygon points="-12,-7 0,0 0,12 -12,5" fill="#0f316f"/><polygon points="12,-7 0,0 0,12 12,5" fill="#0b2a61"/></g>
+              <g transform="translate(92,-46)"><polygon points="0,-14 12,-7 0,0 -12,-7" fill="rgba(158,196,255,.35)"/><polygon points="-12,-7 0,0 0,12 -12,5" fill="#0f316f"/><polygon points="12,-7 0,0 0,12 12,5" fill="#0b2a61"/></g>
+              <g transform="translate(-92,52)"><polygon points="0,-14 12,-7 0,0 -12,-7" fill="rgba(158,196,255,.35)"/><polygon points="-12,-7 0,0 0,12 -12,5" fill="#0f316f"/><polygon points="12,-7 0,0 0,12 12,5" fill="#0b2a61"/></g>
+              <g transform="translate(92,52)"><polygon points="0,-14 12,-7 0,0 -12,-7" fill="rgba(158,196,255,.35)"/><polygon points="-12,-7 0,0 0,12 -12,5" fill="#0f316f"/><polygon points="12,-7 0,0 0,12 12,5" fill="#0b2a61"/></g>
+            </g>
+            <g stroke="rgba(255,211,92,.5)" fill="none" stroke-dasharray="3 4">
+              <line x1="-80" y1="-42" x2="-24" y2="-18"/>
+              <line x1="80" y1="-42" x2="24" y2="-18"/>
+              <line x1="-80" y1="46" x2="-24" y2="10"/>
+              <line x1="80" y1="46" x2="24" y2="10"/>
+            </g>
+            <g font-size="8" fill="rgba(234,242,255,.55)" letter-spacing="1">
+              <text x="-92" y="-72" text-anchor="middle">STRUCT</text>
+              <text x="92" y="-72" text-anchor="middle">MEP</text>
+              <text x="-92" y="80" text-anchor="middle">COST</text>
+              <text x="92" y="80" text-anchor="middle">CODE</text>
+            </g>
+          </g>
+        </svg>
       </div>
-      <div style="display:flex;justify-content:center;padding:11px 15px 13px;border-top:1px solid rgba(234,242,255,.16)">
+      <div style="display:flex;justify-content:center;padding:0 15px 13px">
         <span style="font:600 9px/1 'IBM Plex Mono',monospace;letter-spacing:.22em;text-transform:uppercase;color:rgba(234,242,255,.55)">Brief · Deliberate · Simulate · Ratify</span>
       </div>
     </div>
@@ -76,6 +110,10 @@
     <p style="margin:14px 0 0;font:400 14px/1.7 Inter,sans-serif;color:rgba(234,242,255,.68);max-width:640px">A natural-language client brief is parsed into design parameters, and a planner agent sequences rounds of negotiation between four specialist consultants — each grounded in real engineering data: Karamba structural analysis, Ladybug environmental simulation, BC cost data, and the BC Building Code with City of Vancouver zoning bylaws. Every decision and its rationale is recorded in an auditable log, and a constrained multi-disciplinary optimisation pass consolidates the deliberation into a final design.</p>
     <div class="sheets">
       <div class="sheet sheet--wide">
+        <div class="sheet-head">The interface · manual mode</div>
+        <div class="sheet-body" style="background:#0d2f6b"><img src="media/arch-sim/interface.png" alt="The ArchSim interface — massing viewer, the multi-agent office scene mid-negotiation, and live analysis panels" style="width:100%;max-height:none"></div>
+      </div>
+      <div class="sheet">
         <div class="sheet-head">The multi-agent system</div>
         <div class="sheet-body"><img src="media/arch-sim/multi-agent-system.png" alt="ArchSim's multi-agent system — planner, four consultants, and the architect around live simulation"></div>
       </div>
