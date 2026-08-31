@@ -25,6 +25,7 @@
   .sheet-head { padding: 10px 14px; border-bottom: 1px solid rgba(234,242,255,.16); font: 600 9px/1 'IBM Plex Mono', monospace; letter-spacing: .2em; text-transform: uppercase; color: rgba(234,242,255,.55); }
   .sheet-body { background: #ffffff; flex: 1; min-height: 0; display: flex; align-items: center; justify-content: center; padding: 0; cursor: zoom-in; }
   .sheet-body img { max-width: 100%; max-height: 100%; width: auto; height: auto; display: block; }
+  .sheet-body svg { width: 100%; height: auto; display: block; }
   .sheet-body--flush { background: #0d2f6b; }
   .sheet-body--flush img { width: 100%; max-height: none; }
   .sheet-body--blue { background: transparent; padding: 22px; box-sizing: border-box; }
@@ -99,7 +100,88 @@
     <div class="sheets">
       <div class="sheet sheet--wide">
         <div class="sheet-head">Vocabularize · Grammaize</div>
-        <div class="sheet-body sheet-body--blue"><img src="media/landscape-agent/vocabulary-grammar-t.png" alt="Vocabularize and Grammaize — prototypes described as callable operations, then wired into grammars"></div>
+        <div class="sheet-body sheet-body--blue">
+<svg viewBox="0 0 940 330" xmlns="http://www.w3.org/2000/svg" font-family="'IBM Plex Mono',monospace" role="img" aria-label="Vocabularize and Grammaize — prototypes described as callable operations, then wired into grammars">
+  <text x="235" y="34" font-size="12" font-weight="700" letter-spacing="2" fill="#f4f8ff" text-anchor="middle">VOCABULARIZE</text>
+  <text x="700" y="34" font-size="12" font-weight="700" letter-spacing="2" fill="#f4f8ff" text-anchor="middle">GRAMMAIZE</text>
+  <g>
+    <g transform="translate(90,60)">
+      <rect width="110" height="52" rx="5" fill="rgba(13,47,107,.7)" stroke="rgba(234,242,255,.55)"/>
+      <rect x="66" y="6" width="16" height="40" rx="3" fill="rgba(234,242,255,.1)" stroke="rgba(234,242,255,.4)"/>
+      <text x="90" y="32" font-size="10" font-weight="700" fill="#f4f8ff" text-anchor="middle">A1</text>
+      <g font-size="6.5" fill="rgba(234,242,255,.45)"><text x="8" y="16">input 1</text><text x="8" y="26">input 2</text><text x="8" y="36">…</text></g>
+      <text x="0" y="68" font-size="7" fill="rgba(255,211,92,.8)">Prompt:</text>
+      <text x="34" y="68" font-size="7" fill="rgba(234,242,255,.5)">A1 will generate…</text>
+    </g>
+    <g transform="translate(250,60)">
+      <rect width="110" height="52" rx="5" fill="rgba(13,47,107,.7)" stroke="rgba(234,242,255,.55)"/>
+      <rect x="66" y="6" width="16" height="40" rx="3" fill="rgba(234,242,255,.1)" stroke="rgba(234,242,255,.4)"/>
+      <text x="90" y="32" font-size="10" font-weight="700" fill="#f4f8ff" text-anchor="middle">B1</text>
+      <g font-size="6.5" fill="rgba(234,242,255,.45)"><text x="8" y="16">input 1</text><text x="8" y="26">input 2</text><text x="8" y="36">…</text></g>
+      <text x="0" y="68" font-size="7" fill="rgba(255,211,92,.8)">Prompt:</text>
+      <text x="34" y="68" font-size="7" fill="rgba(234,242,255,.5)">B1 will modify…</text>
+    </g>
+    <g transform="translate(90,160)">
+      <rect width="110" height="52" rx="5" fill="rgba(13,47,107,.7)" stroke="rgba(234,242,255,.55)"/>
+      <rect x="66" y="6" width="16" height="40" rx="3" fill="rgba(234,242,255,.1)" stroke="rgba(234,242,255,.4)"/>
+      <text x="90" y="32" font-size="10" font-weight="700" fill="#f4f8ff" text-anchor="middle">A2</text>
+      <g font-size="6.5" fill="rgba(234,242,255,.45)"><text x="8" y="16">input 1</text><text x="8" y="26">input 2</text><text x="8" y="36">…</text></g>
+      <text x="0" y="68" font-size="7" fill="rgba(255,211,92,.8)">Prompt:</text>
+      <text x="34" y="68" font-size="7" fill="rgba(234,242,255,.5)">A2 will generate…</text>
+    </g>
+    <g transform="translate(250,160)">
+      <rect width="110" height="52" rx="5" fill="rgba(13,47,107,.7)" stroke="rgba(234,242,255,.55)"/>
+      <rect x="66" y="6" width="16" height="40" rx="3" fill="rgba(234,242,255,.1)" stroke="rgba(234,242,255,.4)"/>
+      <text x="90" y="32" font-size="10" font-weight="700" fill="#f4f8ff" text-anchor="middle">B2</text>
+      <g font-size="6.5" fill="rgba(234,242,255,.45)"><text x="8" y="16">input 1</text><text x="8" y="26">input 2</text><text x="8" y="36">…</text></g>
+      <text x="0" y="68" font-size="7" fill="rgba(255,211,92,.8)">Prompt:</text>
+      <text x="34" y="68" font-size="7" fill="rgba(234,242,255,.5)">B2 will modify…</text>
+    </g>
+  </g>
+  <line x1="470" y1="52" x2="470" y2="290" stroke="rgba(234,242,255,.15)" stroke-dasharray="3 5"/>
+  <g stroke="rgba(234,242,255,.45)" fill="none" stroke-dasharray="4 4">
+    <rect x="520" y="66" width="34" height="14" rx="4"/>
+    <rect x="520" y="196" width="34" height="14" rx="4"/>
+    <path d="M554 73 C580 73 580 96 600 96"/>
+    <path d="M554 203 C580 203 580 176 600 176"/>
+    <path d="M554 73 C580 73 580 160 600 168"/>
+    <path d="M700 100 C726 100 726 120 748 120"/>
+    <path d="M700 180 C726 180 726 200 748 200"/>
+    <path d="M700 100 C726 100 726 196 748 196"/>
+    <path d="M848 124 C872 124 872 160 886 160"/>
+    <path d="M848 204 C872 204 872 168 886 164"/>
+  </g>
+  <g>
+    <g transform="translate(600,78)">
+      <rect width="100" height="44" rx="5" fill="rgba(13,47,107,.7)" stroke="rgba(234,242,255,.55)"/>
+      <rect x="58" y="5" width="14" height="34" rx="3" fill="rgba(234,242,255,.1)" stroke="rgba(234,242,255,.4)"/>
+      <text x="82" y="27" font-size="10" font-weight="700" fill="#f4f8ff" text-anchor="middle">A1</text>
+    </g>
+    <g transform="translate(600,158)">
+      <rect width="100" height="44" rx="5" fill="rgba(13,47,107,.7)" stroke="rgba(234,242,255,.55)"/>
+      <rect x="58" y="5" width="14" height="34" rx="3" fill="rgba(234,242,255,.1)" stroke="rgba(234,242,255,.4)"/>
+      <text x="82" y="27" font-size="10" font-weight="700" fill="#f4f8ff" text-anchor="middle">A2</text>
+    </g>
+    <g transform="translate(748,102)">
+      <rect width="100" height="44" rx="5" fill="rgba(13,47,107,.7)" stroke="rgba(255,211,92,.5)"/>
+      <rect x="58" y="5" width="14" height="34" rx="3" fill="rgba(255,211,92,.08)" stroke="rgba(255,211,92,.4)"/>
+      <text x="82" y="27" font-size="10" font-weight="700" fill="#ffd35c" text-anchor="middle">B1</text>
+    </g>
+    <g transform="translate(748,182)">
+      <rect width="100" height="44" rx="5" fill="rgba(13,47,107,.7)" stroke="rgba(255,211,92,.5)"/>
+      <rect x="58" y="5" width="14" height="34" rx="3" fill="rgba(255,211,92,.08)" stroke="rgba(255,211,92,.4)"/>
+      <text x="82" y="27" font-size="10" font-weight="700" fill="#ffd35c" text-anchor="middle">B2</text>
+    </g>
+    <g stroke="rgba(234,242,255,.6)" fill="rgba(234,242,255,.6)">
+      <path d="M886 157 L898 162 L886 167 Z" stroke="none"/>
+    </g>
+    <rect x="898" y="155" width="30" height="14" rx="4" fill="none" stroke="rgba(234,242,255,.45)" stroke-dasharray="4 4"/>
+  </g>
+  <text x="700" y="262" font-size="7.5" fill="rgba(255,211,92,.8)">Prompt:</text>
+  <text x="740" y="262" font-size="7.5" fill="rgba(234,242,255,.5)">A1, A2 are used to…</text>
+  <text x="700" y="276" font-size="7.5" fill="rgba(234,242,255,.5)">the output of A1 always connects to B1 or B2 input…</text>
+</svg>
+        </div>
       </div>
       <div class="sheet">
         <div class="sheet-head">Landform vocabulary → components</div>
@@ -145,7 +227,32 @@
     <div class="sheets">
       <div class="sheet sheet--wide">
         <div class="sheet-head">LLM ⇄ MCP ⇄ Rhino</div>
-        <div class="sheet-body sheet-body--blue"><img src="media/landscape-agent/mcp-concept-t.png" alt="Concept — a large language model speaks to Rhino through the Model Context Protocol"></div>
+        <div class="sheet-body sheet-body--blue">
+<svg viewBox="0 0 900 130" xmlns="http://www.w3.org/2000/svg" font-family="'IBM Plex Mono',monospace" role="img" aria-label="A large language model speaks to Rhino and Grasshopper through the Model Context Protocol">
+  <g>
+    <rect x="70" y="42" width="130" height="46" rx="8" fill="rgba(13,47,107,.7)" stroke="rgba(234,242,255,.6)"/>
+    <text x="135" y="70" font-size="13" font-weight="700" fill="#f4f8ff" text-anchor="middle">LLM</text>
+  </g>
+  <g stroke="rgba(234,242,255,.6)" fill="rgba(234,242,255,.6)">
+    <line x1="215" y1="57" x2="345" y2="57" stroke-width="1.6"/><path d="M345 52 L357 57 L345 62 Z" stroke="none"/>
+    <line x1="357" y1="74" x2="227" y2="74" stroke-width="1.6"/><path d="M227 69 L215 74 L227 79 Z" stroke="none"/>
+  </g>
+  <g>
+    <rect x="372" y="36" width="156" height="58" rx="8" fill="rgba(255,211,92,.14)" stroke="rgba(255,211,92,.6)"/>
+    <text x="450" y="62" font-size="13" font-weight="700" fill="#ffd35c" text-anchor="middle">MCP</text>
+    <text x="450" y="80" font-size="7.5" letter-spacing="1.2" fill="rgba(234,242,255,.55)" text-anchor="middle">MODEL CONTEXT PROTOCOL</text>
+  </g>
+  <g stroke="rgba(234,242,255,.6)" fill="rgba(234,242,255,.6)">
+    <line x1="543" y1="57" x2="673" y2="57" stroke-width="1.6"/><path d="M673 52 L685 57 L673 62 Z" stroke="none"/>
+    <line x1="685" y1="74" x2="555" y2="74" stroke-width="1.6"/><path d="M555 69 L543 74 L555 79 Z" stroke="none"/>
+  </g>
+  <g>
+    <rect x="700" y="42" width="130" height="46" rx="8" fill="rgba(13,47,107,.7)" stroke="rgba(234,242,255,.6)"/>
+    <text x="765" y="62" font-size="11" font-weight="700" fill="#f4f8ff" text-anchor="middle">RHINO · GH</text>
+    <text x="765" y="78" font-size="7.5" letter-spacing="1.2" fill="rgba(234,242,255,.55)" text-anchor="middle">TOOL</text>
+  </g>
+</svg>
+        </div>
       </div>
       <div class="sheet">
         <div class="sheet-head">User prompt → MCP → geometry</div>
@@ -277,6 +384,18 @@ class Component extends DCLogic {
     document.addEventListener('keydown', esc);
     document.body.appendChild(ov);
   };
+  const openSvg = (svg) => {
+    const ov = document.createElement('div');
+    ov.style.cssText = 'position:fixed;inset:0;z-index:999;background:rgba(4,15,40,.94);display:flex;align-items:center;justify-content:center;cursor:zoom-out;padding:4vh 4vw;box-sizing:border-box';
+    const clone = svg.cloneNode(true);
+    clone.style.cssText = 'width:min(92vw,1400px);height:auto;max-height:88vh';
+    ov.appendChild(clone);
+    const esc = (e) => { if (e.key === 'Escape') close(); };
+    const close = () => { ov.remove(); document.removeEventListener('keydown', esc); };
+    ov.addEventListener('click', close);
+    document.addEventListener('keydown', esc);
+    document.body.appendChild(ov);
+  };
   document.addEventListener('click', (e) => {
     if (!e.target.closest) return;
     const body = e.target.closest('.sheet-body');
@@ -284,7 +403,10 @@ class Component extends DCLogic {
     if (img && img.src.indexOf('/media/landscape-agent/') !== -1) {
       e.preventDefault();
       openLightbox(img.src, img.alt);
+      return;
     }
+    const svg = body && body.querySelector('svg');
+    if (svg) { e.preventDefault(); openSvg(svg); }
   });
 })();
 </script>
