@@ -18,6 +18,20 @@
   a { color: #ffd35c; text-decoration: none; }
   a:hover { color: #ffe49a; }
   ::selection { background: rgba(255,211,92,.35); }
+  .sheets { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; margin: 28px 0 0; }
+  .sheet { border: 1px solid rgba(234,242,255,.22); background: #0d2f6b; transition: border-color .2s; display: flex; flex-direction: column; }
+  .sheet:hover { border-color: rgba(255,211,92,.65); }
+  .sheet--wide { grid-column: span 2; }
+  .sheet-head { padding: 10px 14px; border-bottom: 1px solid rgba(234,242,255,.16); font: 600 9px/1 'IBM Plex Mono', monospace; letter-spacing: .2em; text-transform: uppercase; color: rgba(234,242,255,.55); }
+  .sheet-body { background: #ffffff; flex: 1; min-height: 0; display: flex; align-items: center; justify-content: center; padding: 0; cursor: zoom-in; }
+  .sheet-body img { max-width: 100%; max-height: 100%; width: auto; height: auto; display: block; }
+  .sheet-body--flush { background: #0d2f6b; }
+  .sheet-body--flush img { width: 100%; max-height: none; }
+  .sheet-body--blue { background: transparent; padding: 22px; box-sizing: border-box; }
+  .sheet-body--video { background: #000; cursor: default; }
+  .sheet-body--video iframe { width: 100%; max-height: 100%; aspect-ratio: 16/9; border: 0; }
+  @media (max-width: 1100px) { .sheets { grid-template-columns: repeat(2, minmax(0, 1fr)); } .sheet--wide { grid-column: 1 / -1; } }
+  @media (max-width: 680px) { .sheets { grid-template-columns: 1fr; } .sheet--wide { grid-column: auto; } }
 </style>
 </helmet>
 <div style="min-height:100vh;background-color:#0b2a61;background-image:radial-gradient(rgba(234,242,255,.10) 1px, transparent 1px);background-size:26px 26px;color:#eaf2ff;font-family:Inter,sans-serif">
@@ -39,13 +53,13 @@
       <div style="display:flex;gap:34px;margin:28px 0 0;flex-wrap:wrap">
         <div><p style="margin:0;font:500 9.5px/1.5 'IBM Plex Mono',monospace;letter-spacing:.16em;text-transform:uppercase;color:rgba(234,242,255,.55)">Duration</p><p style="margin:5px 0 0;font:500 13px/1.5 Inter,sans-serif;color:#f4f8ff">2025.06.28 — 2025.07.06</p></div>
         <div><p style="margin:0;font:500 9.5px/1.5 'IBM Plex Mono',monospace;letter-spacing:.16em;text-transform:uppercase;color:rgba(234,242,255,.55)">Status</p><p style="margin:5px 0 0;font:500 13px/1.5 Inter,sans-serif;color:#f4f8ff">Completed</p></div>
-        <div><p style="margin:0;font:500 9.5px/1.5 'IBM Plex Mono',monospace;letter-spacing:.16em;text-transform:uppercase;color:rgba(234,242,255,.55)">Host</p><p style="margin:5px 0 0;font:500 13px/1.5 Inter,sans-serif;color:#f4f8ff">DigitalFUTURES 2025<br><span style="color:rgba(234,242,255,.6)">College of Architecture and Urban Planning, Tongji University · Shanghai, China</span></p></div>
+        <div><p style="margin:0;font:500 9.5px/1.5 'IBM Plex Mono',monospace;letter-spacing:.16em;text-transform:uppercase;color:rgba(234,242,255,.55)">Host</p><p style="margin:5px 0 0;font:500 13px/1.5 Inter,sans-serif;color:#f4f8ff"><a href="https://digitalfutures.world/Data/List/ws2025" target="_blank">DigitalFUTURES 2025 ↗</a><br><span style="color:rgba(234,242,255,.6)">College of Architecture and Urban Planning, Tongji University · Shanghai, China</span></p></div>
         <div><p style="margin:0;font:500 9.5px/1.5 'IBM Plex Mono',monospace;letter-spacing:.16em;text-transform:uppercase;color:rgba(234,242,255,.55)">Instructors</p><p style="margin:5px 0 0;font:500 13px/1.5 Inter,sans-serif;color:#f4f8ff">Xun Liu<br>Runjia Tian</p></div>
       </div>
       <div style="display:flex;gap:14px;margin:30px 0 0;flex-wrap:wrap">
         <a href="https://neurips.cc/virtual/2025/loc/san-diego/129297" target="_blank" style="font:600 10.5px/1 'IBM Plex Mono',monospace;letter-spacing:.16em;text-transform:uppercase;background:#ffd35c;color:#081f4d;padding:12px 18px">Workshop archive →</a>
         <a href="https://doi.org/10.19819/j.cnki.ISSN0529-1399.202604005" target="_blank" style="font:600 10.5px/1 'IBM Plex Mono',monospace;letter-spacing:.16em;text-transform:uppercase;border:1px solid rgba(255,211,92,.55);padding:11px 18px">Research paper</a>
-        <a href="https://youtu.be/pfJYAp7J2_Q" target="_blank" style="font:600 10.5px/1 'IBM Plex Mono',monospace;letter-spacing:.16em;text-transform:uppercase;border:1px solid rgba(234,242,255,.4);color:#eaf2ff;padding:11px 18px">Video</a>
+        <a href="https://github.com/Archolic95/rhino_gh_mcp" target="_blank" style="font:600 10.5px/1 'IBM Plex Mono',monospace;letter-spacing:.16em;text-transform:uppercase;border:1px solid rgba(234,242,255,.4);color:#eaf2ff;padding:11px 18px">Source · v1</a>
       </div>
     </div>
     <div style="border:1px solid rgba(234,242,255,.22);background:#0d2f6b">
@@ -55,6 +69,18 @@
       <div style="display:flex;justify-content:center;padding:8px 4px 2px">{{ heroIcon }}</div>
       <div style="display:flex;justify-content:center;padding:0 15px 13px">
         <span style="font:600 9px/1 'IBM Plex Mono',monospace;letter-spacing:.22em;text-transform:uppercase;color:rgba(234,242,255,.55)">Observe · Abstract · Teach · Test</span>
+      </div>
+    </div>
+  </section>
+
+  <section data-screen-label="From dialogue to landform" style="border-top:1px solid rgba(234,242,255,.16);padding:52px 4.5vw 56px;max-width:1560px;margin:0 auto;box-sizing:border-box">
+    <p style="margin:0;font:600 9.5px/1 'IBM Plex Mono',monospace;letter-spacing:.2em;text-transform:uppercase;color:#ffd35c">01 · From dialogue to landform</p>
+    <h2 style="margin:12px 0 0;font-family:Archivo,sans-serif;font-weight:700;font-size:28px;line-height:1.05;text-transform:uppercase;color:#f4f8ff">One conversation, one terrain</h2>
+    <p style="margin:14px 0 0;font:400 14px/1.7 Inter,sans-serif;color:rgba(234,242,255,.68);max-width:640px">Participants briefed the agent instead of prompting it for pictures. Intent stated in conversation — mounds and low areas, wetland islands opening to lawns — became a modeling plan, then executable operations, then a terrain whose contours stayed editable at every step.</p>
+    <div class="sheets">
+      <div class="sheet sheet--wide">
+        <div class="sheet-head">Dialogue → geometry → scene</div>
+        <div class="sheet-body sheet-body--flush"><img src="media/landscape-agent/poster.jpg" alt="A conversation with the agent becomes code, then a modeled landform blending contour mesh and rendered landscape"></div>
       </div>
     </div>
   </section>
@@ -70,13 +96,69 @@
         <p style="margin:14px 0 0;font:400 15px/1.75 Inter,sans-serif;color:rgba(234,242,255,.68)">The workshop emphasized the translation of tacit design knowledge into a language shared by designers, agents, and software. Its central lesson was that meaningful collaboration depends less on writing elaborate prompts than on deciding what an agent should know, what it may change, and how its actions remain open to design judgment. The workshop subsequently informed the development of Grasshopper MCP and research presented through the NeurIPS Creative AI track and Computational Lexicalization.</p>
       </div>
     </div>
+    <div class="sheets">
+      <div class="sheet sheet--wide">
+        <div class="sheet-head">Vocabularize · Grammaize</div>
+        <div class="sheet-body sheet-body--blue"><img src="media/landscape-agent/vocabulary-grammar-t.png" alt="Vocabularize and Grammaize — prototypes described as callable operations, then wired into grammars"></div>
+      </div>
+      <div class="sheet">
+        <div class="sheet-head">Landform vocabulary → components</div>
+        <div class="sheet-body"><img src="media/landscape-agent/landform-vocabulary.png" alt="A landform vocabulary — create base landform, place geometric attractors, apply modifiers, visualize result, each backed by a Grasshopper component"></div>
+      </div>
+    </div>
+  </section>
+
+  <section data-screen-label="Agent at work" style="border-top:1px solid rgba(234,242,255,.16);padding:52px 4.5vw 56px;max-width:1560px;margin:0 auto;box-sizing:border-box">
+    <p style="margin:0;font:600 9.5px/1 'IBM Plex Mono',monospace;letter-spacing:.2em;text-transform:uppercase;color:#ffd35c">02 · The agent at work</p>
+    <h2 style="margin:12px 0 0;font-family:Archivo,sans-serif;font-weight:700;font-size:28px;line-height:1.05;text-transform:uppercase;color:#f4f8ff">Modeling by conversation</h2>
+    <p style="margin:14px 0 0;font:400 14px/1.7 Inter,sans-serif;color:rgba(234,242,255,.68);max-width:640px">A session inside Rhino and Grasshopper: instructions typed in the chat become components, parameters, and geometry in the model. The workshop video walks through the process and results.</p>
+    <div class="sheets">
+      <div class="sheet">
+        <div class="sheet-head">Agent session · Rhino + Grasshopper</div>
+        <div class="sheet-body sheet-body--flush"><img src="media/landscape-agent/agent-demo.gif" alt="Screen recording — chat instructions driving Grasshopper components and Rhino geometry"></div>
+      </div>
+      <div class="sheet">
+        <div class="sheet-head">Workshop video · LandMCP</div>
+        <div class="sheet-body sheet-body--video">
+          <iframe src="https://www.youtube-nocookie.com/embed/pfJYAp7J2_Q" title="Landscape Agent workshop video" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen loading="lazy"></iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section data-screen-label="Language to layouts" style="border-top:1px solid rgba(234,242,255,.16);padding:52px 4.5vw 56px;max-width:1560px;margin:0 auto;box-sizing:border-box">
+    <p style="margin:0;font:600 9.5px/1 'IBM Plex Mono',monospace;letter-spacing:.2em;text-transform:uppercase;color:#ffd35c">03 · From language to layouts</p>
+    <h2 style="margin:12px 0 0;font-family:Archivo,sans-serif;font-weight:700;font-size:28px;line-height:1.05;text-transform:uppercase;color:#f4f8ff">Same vocabulary, different sentences</h2>
+    <p style="margin:14px 0 0;font:400 14px/1.7 Inter,sans-serif;color:rgba(234,242,255,.68);max-width:640px">Once operations are named, dialogue can be parsed into precise parameters and assembled into alternative schemes — one vocabulary system producing multiple layouts from different language inputs.</p>
+    <div class="sheets">
+      <div class="sheet">
+        <div class="sheet-head">One vocabulary → four layouts</div>
+        <div class="sheet-body"><img src="media/landscape-agent/language-to-layouts.png" alt="User dialogue parsed into parameters, vocabulary selection, and four alternative parametric park layouts"></div>
+      </div>
+    </div>
+  </section>
+
+  <section data-screen-label="How it works" style="border-top:1px solid rgba(234,242,255,.16);padding:52px 4.5vw 56px;max-width:1560px;margin:0 auto;box-sizing:border-box">
+    <p style="margin:0;font:600 9.5px/1 'IBM Plex Mono',monospace;letter-spacing:.2em;text-transform:uppercase;color:#ffd35c">04 · How it works</p>
+    <h2 style="margin:12px 0 0;font-family:Archivo,sans-serif;font-weight:700;font-size:28px;line-height:1.05;text-transform:uppercase;color:#f4f8ff">Language to parametric operations</h2>
+    <p style="margin:14px 0 0;font:400 14px/1.7 Inter,sans-serif;color:rgba(234,242,255,.68);max-width:640px">An MCP–Grasshopper integration lets a large language model act as a design agent inside Rhino: natural-language instructions travel through the Model Context Protocol to a repository of parametric landscape components and return as live, editable geometry.</p>
+    <div class="sheets">
+      <div class="sheet sheet--wide">
+        <div class="sheet-head">LLM ⇄ MCP ⇄ Rhino</div>
+        <div class="sheet-body sheet-body--blue"><img src="media/landscape-agent/mcp-concept-t.png" alt="Concept — a large language model speaks to Rhino through the Model Context Protocol"></div>
+      </div>
+      <div class="sheet">
+        <div class="sheet-head">User prompt → MCP → geometry</div>
+        <div class="sheet-body"><img src="media/landscape-agent/workflow.png" alt="System workflow — user prompt to LLM host with MCP client, Rhino MCP server, Grasshopper meta landscape repository, 3D model and rendering"></div>
+      </div>
+    </div>
   </section>
 
   <section data-screen-label="Related" style="border-top:1px solid rgba(234,242,255,.16);padding:52px 4.5vw 64px;max-width:1560px;margin:0 auto;box-sizing:border-box">
     <h2 style="margin:0;font-family:Archivo,sans-serif;font-weight:700;font-size:26px;text-transform:uppercase;color:#f4f8ff">Related</h2>
     <div style="display:flex;flex-wrap:wrap;gap:22px;margin:24px 0 0">
       <a href="grasshopper-mcp" style="border:1px solid rgba(234,242,255,.22);background:#0d2f6b;padding:20px 22px;display:flex;flex-direction:column;gap:8px;flex:0 1 400px;min-width:280px;box-sizing:border-box" style-hover="border-color:#ffd35c">
-        <span style="font:600 9px/1 'IBM Plex Mono',monospace;letter-spacing:.2em;text-transform:uppercase;color:#ffd35c">Related tool · Current</span>
+        <span style="font:600 9px/1 'IBM Plex Mono',monospace;letter-spacing:.2em;text-transform:uppercase;color:#ffd35c">Related tool · v2 · Current</span>
         <span style="font-family:Archivo,sans-serif;font-weight:700;font-size:18px;text-transform:uppercase;color:#f4f8ff">Grasshopper MCP</span>
         <span style="font:400 12.5px/1.55 Inter,sans-serif;color:rgba(234,242,255,.6)">The workshop's agent-assisted modeling carried forward into a working tool.</span>
       </a>
@@ -177,6 +259,34 @@ class Component extends DCLogic {
     return { heroIcon };
   }
 }
+</script>
+<script>
+/* Click-to-enlarge for project figures. Delegated on document so it
+   survives the runtime's re-render of the x-dc template. */
+(() => {
+  const openLightbox = (src, alt) => {
+    const ov = document.createElement('div');
+    ov.style.cssText = 'position:fixed;inset:0;z-index:999;background:rgba(4,15,40,.94);display:flex;align-items:center;justify-content:center;cursor:zoom-out;padding:4vh 4vw;box-sizing:border-box';
+    const im = document.createElement('img');
+    im.src = src; im.alt = alt || '';
+    im.style.cssText = 'max-width:100%;max-height:100%;border:1px solid rgba(234,242,255,.35)';
+    ov.appendChild(im);
+    const esc = (e) => { if (e.key === 'Escape') close(); };
+    const close = () => { ov.remove(); document.removeEventListener('keydown', esc); };
+    ov.addEventListener('click', close);
+    document.addEventListener('keydown', esc);
+    document.body.appendChild(ov);
+  };
+  document.addEventListener('click', (e) => {
+    if (!e.target.closest) return;
+    const body = e.target.closest('.sheet-body');
+    const img = body ? body.querySelector('img') : e.target.closest('img');
+    if (img && img.src.indexOf('/media/landscape-agent/') !== -1) {
+      e.preventDefault();
+      openLightbox(img.src, img.alt);
+    }
+  });
+})();
 </script>
 </body>
 </html>
