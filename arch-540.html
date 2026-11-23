@@ -19,6 +19,13 @@
   a { color: #ffd35c; text-decoration: none; }
   a:hover { color: #ffe49a; }
   ::selection { background: rgba(255,211,92,.35); }
+  .sheets { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; margin: 28px 0 0; }
+  .sheet { border: 1px solid rgba(234,242,255,.22); background: #0d2f6b; transition: border-color .2s; display: flex; flex-direction: column; }
+  .sheet:hover { border-color: rgba(255,211,92,.65); }
+  .sheet-head { padding: 10px 14px; border-bottom: 1px solid rgba(234,242,255,.16); font: 600 9px/1 'IBM Plex Mono', monospace; letter-spacing: .2em; text-transform: uppercase; color: rgba(234,242,255,.55); }
+  .sheet img { display: block; width: 100%; height: auto; }
+  @media (max-width: 1100px) { .sheets { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+  @media (max-width: 680px) { .sheets { grid-template-columns: 1fr; } }
 </style>
 </helmet>
 <div style="min-height:100vh;background-color:#0b2a61;background-image:radial-gradient(rgba(234,242,255,.10) 1px, transparent 1px);background-size:26px 26px;color:#eaf2ff;font-family:Inter,sans-serif">
@@ -35,10 +42,16 @@
       <div style="width:46px;height:3px;background:#ffd35c;margin:0 0 20px"></div>
       <p style="margin:0;font:600 10px/1.7 'IBM Plex Mono',monospace;letter-spacing:.22em;text-transform:uppercase;color:#ffd35c">Teaching · AI · Architecture · Course</p>
       <h1 style="margin:14px 0 0;font-family:Archivo,sans-serif;font-weight:700;font-size:clamp(42px,4.4vw,68px);line-height:.98;text-transform:uppercase;color:#f4f8ff;text-wrap:balance">ARCH 540 Designing the Design</h1>
-      <p style="margin:18px 0 0;font-family:Archivo,sans-serif;font-weight:600;font-size:20px;color:rgba(234,242,255,.85)">What should AI do for architecture?</p>
-      <p style="margin:16px 0 0;font:400 15px/1.7 Inter,sans-serif;color:rgba(234,242,255,.68);max-width:520px">ARCH 540 Designing the Design investigates how artificial intelligence might reshape architectural practice by shifting attention from generated artifacts to the systems through which design work is organized. Rather than producing a conventional building proposal, students treat workflows, methods, and tools as objects of design.</p>
+      <p style="margin:18px 0 0;font-family:Archivo,sans-serif;font-weight:600;font-size:20px;color:rgba(234,242,255,.85)">Building custom AI tools for architectural workflows.</p>
+      <p style="margin:16px 0 0;font:400 15px/1.7 Inter,sans-serif;color:rgba(234,242,255,.68);max-width:520px">The studio’s position is that the object of design is no longer only the building; it is also the workflow that produces, checks, and acts on design decisions. Students do not deliver a building proposal. They design, build, and govern working tools that make architectural knowledge operational, each grounded in a real workflow, fully documented, and shared as openly as its context allows.</p>
       <div style="display:flex;gap:34px;margin:28px 0 0;flex-wrap:wrap">
-        <div><p style="margin:0;font:500 9.5px/1.5 'IBM Plex Mono',monospace;letter-spacing:.16em;text-transform:uppercase;color:rgba(234,242,255,.55)">Program</p><p style="margin:5px 0 0;font:500 13px/1.5 Inter,sans-serif;color:#f4f8ff">MArch · UBC SALA · Option Studio</p></div>
+        <div><p style="margin:0;font:500 9.5px/1.5 'IBM Plex Mono',monospace;letter-spacing:.16em;text-transform:uppercase;color:rgba(234,242,255,.55)">Program</p><p style="margin:5px 0 0;font:500 13px/1.5 Inter,sans-serif;color:#f4f8ff">MArch + MLA · UBC SALA · Design Studio</p></div>
+        <div><p style="margin:0;font:500 9.5px/1.5 'IBM Plex Mono',monospace;letter-spacing:.16em;text-transform:uppercase;color:rgba(234,242,255,.55)">Term</p><p style="margin:5px 0 0;font:500 13px/1.5 Inter,sans-serif;color:#f4f8ff">Fall 2026</p></div>
+      </div>
+      <div style="display:flex;gap:14px;margin:30px 0 0;flex-wrap:wrap">
+        <a href="https://genenv.github.io/arch540-2026-projects/" target="_blank" style="font:600 10.5px/1 'IBM Plex Mono',monospace;letter-spacing:.16em;text-transform:uppercase;background:#ffd35c;color:#081f4d;padding:12px 18px">Student projects →</a>
+        <a href="https://genenv.github.io/arch540-a1-toolkit/" target="_blank" style="font:600 10.5px/1 'IBM Plex Mono',monospace;letter-spacing:.16em;text-transform:uppercase;border:1px solid rgba(234,242,255,.4);color:#eaf2ff;padding:11px 18px">Vancouver Regulation Toolkit</a>
+        <a href="https://github.com/GenEnv/Arch540_2026" target="_blank" style="font:600 10.5px/1 'IBM Plex Mono',monospace;letter-spacing:.16em;text-transform:uppercase;border:1px solid rgba(234,242,255,.4);color:#eaf2ff;padding:11px 18px">Course materials</a>
       </div>
     </div>
     <div style="border:1px solid rgba(234,242,255,.22);background:#0d2f6b">
@@ -55,13 +68,31 @@
   <section data-screen-label="Studio structure" style="border-top:1px solid rgba(234,242,255,.16);padding:52px 4.5vw 56px;max-width:1560px;margin:0 auto;box-sizing:border-box">
     <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(340px,1fr));gap:5vw">
       <div>
-        <p style="margin:0;font:600 10px/1.7 'IBM Plex Mono',monospace;letter-spacing:.22em;text-transform:uppercase;color:#ffd35c">Three stages</p>
-        <p style="margin:14px 0 0;font:400 15px/1.75 Inter,sans-serif;color:rgba(234,242,255,.68)">The studio progresses through three stages: experimentation, investigation, and prototyping. Students test emerging AI techniques, map a specific professional workflow, and identify its assumptions, stakeholders, and points of friction. They then translate their findings into a focused proof of concept that makes a possible future workflow visible, testable, and open to critique.</p>
+        <p style="margin:0;font:600 10px/1.7 'IBM Plex Mono',monospace;letter-spacing:.22em;text-transform:uppercase;color:#ffd35c">Phase 1 · Learning to work with AI</p>
+        <p style="margin:14px 0 0;font:400 15px/1.75 Inter,sans-serif;color:rgba(234,242,255,.68)">The first month is learned by making. Students describe the tool they want, test what the AI agent builds, and revise, building four capabilities: Build, Connect, Ground, and Automate. In Assignment 1, Making Design Knowledge Interactive, each student takes one piece of a Vancouver regulation or design guideline and builds an interactive tool that explains, computes, and visualizes it. Together the studio produces the Vancouver Regulation Toolkit.</p>
       </div>
       <div>
-        <p style="margin:0;font:600 10px/1.7 'IBM Plex Mono',monospace;letter-spacing:.22em;text-transform:uppercase;color:#ffd35c">The questions</p>
-        <p style="margin:14px 0 0;font:400 15px/1.75 Inter,sans-serif;color:rgba(234,242,255,.68)">The course asks not only what AI can automate, but where it can meaningfully assist architectural work, what knowledge should remain legible, who benefits from its introduction, and how the architect's role may change.</p>
+        <p style="margin:0;font:600 10px/1.7 'IBM Plex Mono',monospace;letter-spacing:.22em;text-transform:uppercase;color:#ffd35c">Phase 2 · Applied practice project</p>
+        <p style="margin:14px 0 0;font:400 15px/1.75 Inter,sans-serif;color:rgba(234,242,255,.68)">Working individually or in pairs, students develop a working tool around a real workflow in architecture or landscape architecture. The project begins not with an idea for a tool but with a careful study of a process, and moves through four stages: Investigate, Build, Harden, and Deliver. Every tool runs live at the final review.</p>
       </div>
+    </div>
+  </section>
+
+  <section data-screen-label="Student work" style="border-top:1px solid rgba(234,242,255,.16);padding:52px 4.5vw 56px;max-width:1560px;margin:0 auto;box-sizing:border-box">
+    <p style="margin:0;font:600 10px/1.7 'IBM Plex Mono',monospace;letter-spacing:.22em;text-transform:uppercase;color:#ffd35c">Student work · Fall 2026</p>
+    <div class="sheets">
+      <a class="sheet" href="https://genenv.github.io/arch540-2026-projects/" target="_blank">
+        <div class="sheet-head">Student projects</div>
+        <img src="media/arch-540/student-projects.jpg" alt="The ARCH 540 student projects page, opening on the final project mid-review">
+      </a>
+      <a class="sheet" href="https://genenv.github.io/arch540-2026-projects/" target="_blank">
+        <div class="sheet-head">Final project · Mid-review</div>
+        <img src="media/arch-540/mid-review-grid.jpg" alt="Thumbnails of the final projects presented at the mid-review">
+      </a>
+      <a class="sheet" href="https://genenv.github.io/arch540-a1-toolkit/" target="_blank">
+        <div class="sheet-head">Assignment 1 · Vancouver Regulation Toolkit</div>
+        <img src="media/arch-540/regulation-toolkit.jpg" alt="The Vancouver Regulation Toolkit page, listing the Assignment 1 tools">
+      </a>
     </div>
   </section>
 

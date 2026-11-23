@@ -26,6 +26,18 @@ The site is a self-contained export from Claude design (no build step).
   in the export's visual language; the homepage "Openings" record links to
   it via its `href` (copy sourced from the homepage record + join chapter —
   keep in sync if that copy changes in Claude design).
+- `the-shape-of-elsewhere.html`: hand-built project page (2026-11-22) for the
+  walkable museum; links out to the public page
+  `https://genenv.github.io/the-shape-of-elsewhere-museum/` (repo
+  `GenEnv/the-shape-of-elsewhere-museum`, a copy of `index.html` from the
+  private `GenEnv/the-shape-of-elsewhere`). Screenshots in
+  `media/the-shape-of-elsewhere/`. Homepage record `soe` (replaces the `np1`
+  placeholder plot) plus `"soe"` in `FEED_MAIN` and the Projects subzone.
+- `arch-540.html`: hand-edited 2026-11-22 for Fall 2026 (syllabus text, links
+  to the student projects site, the Vancouver Regulation Toolkit and the
+  course repo, screenshots in `media/arch-540/`).
+- People: homepage records `pp2` to `pp6` (2026-11-22) use the `person` block
+  with `noAva: true` (no portrait) until avatars exist.
 - `404.html`: redirects old URL schemes (`Project - *.dc.html` names and
   the pre-redesign `pages/*.html` names) to the current slugs.
 - `support.js`, `image-slot.js`: runtime helpers required by the export.
